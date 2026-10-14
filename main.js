@@ -1,6 +1,6 @@
 import {
   BackofficeService
-} from "./chunk-IYENB2SJ.js";
+} from "./chunk-PX5ZQJ23.js";
 import {
   ChangeDetectionStrategy,
   Component,
@@ -16,7 +16,7 @@ import {
   ɵsetClassDebugInfo,
   ɵɵdefineComponent,
   ɵɵelement
-} from "./chunk-74DERVJA.js";
+} from "./chunk-E3LVDSZH.js";
 
 // src/app/core/guards/admin-auth.guard.ts
 var adminAuthGuard = () => {
@@ -32,16 +32,20 @@ var adminAuthGuard = () => {
 var routes = [
   {
     path: "",
-    loadComponent: () => import("./chunk-B3HB7X3L.js").then((m) => m.LandingComponent)
+    loadComponent: () => import("./chunk-I63CMGLB.js").then((m) => m.LandingComponent)
   },
   {
     path: "backoffice/login",
-    loadComponent: () => import("./chunk-JZJZDD6N.js").then((m) => m.AdminLoginComponent)
+    loadComponent: () => import("./chunk-A6AQJXH6.js").then(
+      (m) => m.AdminLoginComponent
+    )
   },
   {
     path: "backoffice",
     canActivate: [adminAuthGuard],
-    loadComponent: () => import("./chunk-IYAW4SEP.js").then((m) => m.AdminDashboardComponent)
+    loadComponent: () => import("./chunk-TBVIFQK2.js").then(
+      (m) => m.AdminDashboardComponent
+    )
   },
   {
     path: "**",
@@ -81,4 +85,3 @@ var App = class _App {
 
 // src/main.ts
 bootstrapApplication(App, appConfig).catch((err) => console.error(err));
-//# sourceMappingURL=main.js.map

@@ -12,7 +12,7 @@ import {
   tap,
   throwError,
   ɵɵdefineInjectable
-} from "./chunk-74DERVJA.js";
+} from "./chunk-E3LVDSZH.js";
 
 // src/app/core/services/backoffice.service.ts
 var SESSION_STORAGE_KEY = "cbb_backoffice_session";
@@ -122,4 +122,3 @@ var BackofficeService = class _BackofficeService {
 export {
   BackofficeService
 };
-//# sourceMappingURL=chunk-IYENB2SJ.js.map

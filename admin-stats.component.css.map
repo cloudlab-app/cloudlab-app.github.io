@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["src/app/features/backoffice/components/admin-stats/admin-stats.component.css"],
-  "sourcesContent": [".stat-card {\n  transition: transform 0.2s ease, box-shadow 0.2s ease;\n}\n\n.stat-card:hover {\n  transform: translateY(-2px);\n  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);\n}\n"],
-  "mappings": ";AAAA,CAAA;AACE,cAAA,UAAA,KAAA,IAAA,EAAA,WAAA,KAAA;AACF;AAEA,CAJA,SAIA;AACE,aAAA,WAAA;AACA,cAAA,EAAA,KAAA,KAAA,KAAA,KAAA,CAAA,EAAA,CAAA,EAAA,CAAA,EAAA;AACF;",
-  "names": []
-}

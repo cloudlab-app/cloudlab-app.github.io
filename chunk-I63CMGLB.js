@@ -60,7 +60,7 @@ import {
   ɵɵtextInterpolate,
   ɵɵtextInterpolate1,
   ɵɵviewQuerySignal
-} from "./chunk-74DERVJA.js";
+} from "./chunk-E3LVDSZH.js";
 
 // src/app/features/landing/components/navbar/navbar.component.ts
 var NavbarComponent = class _NavbarComponent {
@@ -2638,7 +2638,6 @@ var Rn = T.parse;
 var Tn = R.lex;
 
 // node_modules/dompurify/dist/purify.es.mjs
-/*! @license DOMPurify 3.4.16 | (c) Cure53 and other contributors | Released under the Apache license 2.0 and Mozilla Public License 2.0 | github.com/cure53/DOMPurify/blob/3.4.16/LICENSE */
 function _OverloadYield(e, d) {
   this.v = e, this.k = d;
 }
@@ -2674,7 +2673,6 @@ function _iterableToArrayLimit(r, l3) {
 function _nonIterableRest() {
   throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
 }
-/*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/babel/babel/blob/main/packages/babel-helpers/LICENSE */
 function _slicedToArray(r, e) {
   return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest();
 }
@@ -5454,4 +5452,3 @@ var LandingComponent = class _LandingComponent {
 export {
   LandingComponent
 };
-//# sourceMappingURL=chunk-B3HB7X3L.js.map

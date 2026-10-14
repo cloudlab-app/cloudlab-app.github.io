@@ -1,6 +1,6 @@
 import {
   BackofficeService
-} from "./chunk-IYENB2SJ.js";
+} from "./chunk-PX5ZQJ23.js";
 import {
   ChangeDetectionStrategy,
   Component,
@@ -23,7 +23,7 @@ import {
   ɵɵtext,
   ɵɵtextInterpolate,
   ɵɵtextInterpolate1
-} from "./chunk-74DERVJA.js";
+} from "./chunk-E3LVDSZH.js";
 
 // src/app/features/backoffice/pages/admin-login/admin-login.component.ts
 function AdminLoginComponent_Conditional_38_Template(rf, ctx) {
@@ -220,7 +220,7 @@ var AdminLoginComponent = class _AdminLoginComponent {
       \u0275\u0275advance();
       \u0275\u0275conditional(ctx.isLoading() ? 41 : 42);
     }
-  }, dependencies: [RouterLink], styles: ["\n.login-card[_ngcontent-%COMP%] {\n  animation: _ngcontent-%COMP%_fadeInUp 0.25s ease-out;\n}\n@keyframes _ngcontent-%COMP%_fadeInUp {\n  from {\n    opacity: 0;\n    transform: translateY(12px);\n  }\n  to {\n    opacity: 1;\n    transform: translateY(0);\n  }\n}\n/*# sourceMappingURL=admin-login.component.css.map */"], changeDetection: 0 });
+  }, dependencies: [RouterLink], styles: ["\n.login-card[_ngcontent-%COMP%] {\n  animation: _ngcontent-%COMP%_fadeInUp 0.25s ease-out;\n}\n@keyframes _ngcontent-%COMP%_fadeInUp {\n  from {\n    opacity: 0;\n    transform: translateY(12px);\n  }\n  to {\n    opacity: 1;\n    transform: translateY(0);\n  }\n}"], changeDetection: 0 });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(AdminLoginComponent, [{
@@ -338,7 +338,7 @@ var AdminLoginComponent = class _AdminLoginComponent {
 
   </div>
 </div>
-`, styles: ["/* src/app/features/backoffice/pages/admin-login/admin-login.component.css */\n.login-card {\n  animation: fadeInUp 0.25s ease-out;\n}\n@keyframes fadeInUp {\n  from {\n    opacity: 0;\n    transform: translateY(12px);\n  }\n  to {\n    opacity: 1;\n    transform: translateY(0);\n  }\n}\n/*# sourceMappingURL=admin-login.component.css.map */\n"] }]
+`, styles: ["/* src/app/features/backoffice/pages/admin-login/admin-login.component.css */\n.login-card {\n  animation: fadeInUp 0.25s ease-out;\n}\n@keyframes fadeInUp {\n  from {\n    opacity: 0;\n    transform: translateY(12px);\n  }\n  to {\n    opacity: 1;\n    transform: translateY(0);\n  }\n}\n"] }]
   }], null, null);
 })();
 (() => {
@@ -347,4 +347,3 @@ var AdminLoginComponent = class _AdminLoginComponent {
 export {
   AdminLoginComponent
 };
-//# sourceMappingURL=chunk-JZJZDD6N.js.map
