@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/features/backoffice/components/confirm-delete-modal/confirm-delete-modal.component.css"],
+  "sourcesContent": [".delete-modal {\n  animation: popIn 0.18s ease-out;\n}\n\n@keyframes popIn {\n  from {\n    opacity: 0;\n    transform: scale(0.95);\n  }\n  to {\n    opacity: 1;\n    transform: scale(1);\n  }\n}\n"],
+  "mappings": ";AAAA,CAAA;AACE,aAAA,MAAA,MAAA;AACF;AAEA,WAHE;AAIA;AACE,aAAA;AACA,eAAA,MAAA;AACF;AACA;AACE,aAAA;AACA,eAAA,MAAA;AACF;AACF;",
+  "names": []
+}

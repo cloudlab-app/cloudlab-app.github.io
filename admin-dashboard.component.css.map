@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/features/backoffice/pages/admin-dashboard/admin-dashboard.component.css"],
+  "sourcesContent": [".toast-item {\n  animation: slideInRight 0.25s cubic-bezier(0.16, 1, 0.3, 1);\n}\n\n@keyframes slideInRight {\n  from {\n    opacity: 0;\n    transform: translateX(20px);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n"],
+  "mappings": ";AAAA,CAAA;AACE,aAAA,aAAA,MAAA,aAAA,IAAA,EAAA,CAAA,EAAA,GAAA,EAAA;AACF;AAEA,WAHE;AAIA;AACE,aAAA;AACA,eAAA,WAAA;AACF;AACA;AACE,aAAA;AACA,eAAA,WAAA;AACF;AACF;",
+  "names": []
+}

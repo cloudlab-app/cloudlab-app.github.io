@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/features/backoffice/pages/admin-login/admin-login.component.css"],
+  "sourcesContent": [".login-card {\n  animation: fadeInUp 0.25s ease-out;\n}\n\n@keyframes fadeInUp {\n  from {\n    opacity: 0;\n    transform: translateY(12px);\n  }\n  to {\n    opacity: 1;\n    transform: translateY(0);\n  }\n}\n"],
+  "mappings": ";AAAA,CAAA;AACE,aAAA,SAAA,MAAA;AACF;AAEA,WAHE;AAIA;AACE,aAAA;AACA,eAAA,WAAA;AACF;AACA;AACE,aAAA;AACA,eAAA,WAAA;AACF;AACF;",
+  "names": []
+}

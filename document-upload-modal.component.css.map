@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/features/backoffice/components/document-upload-modal/document-upload-modal.component.css"],
+  "sourcesContent": [".modal-card {\n  animation: modalAppear 0.2s cubic-bezier(0.16, 1, 0.3, 1);\n}\n\n@keyframes modalAppear {\n  from {\n    opacity: 0;\n    transform: scale(0.96) translateY(8px);\n  }\n  to {\n    opacity: 1;\n    transform: scale(1) translateY(0);\n  }\n}\n"],
+  "mappings": ";AAAA,CAAA;AACE,aAAA,YAAA,KAAA,aAAA,IAAA,EAAA,CAAA,EAAA,GAAA,EAAA;AACF;AAEA,WAHE;AAIA;AACE,aAAA;AACA,eAAA,MAAA,MAAA,WAAA;AACF;AACA;AACE,aAAA;AACA,eAAA,MAAA,GAAA,WAAA;AACF;AACF;",
+  "names": []
+}
