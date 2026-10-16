@@ -3573,7 +3573,8 @@ var MarkdownPipe = class _MarkdownPipe {
   transform(value) {
     if (!value)
       return "";
-    const parsedHtml = k.parse(value);
+    const normalizedText = value.replace(/\$(\d+)\^\\circ\$/g, "$1.\xB0").replace(/\$(\d+)\^\\text\{([^}]+)\}\$/g, "$1.$2");
+    const parsedHtml = k.parse(normalizedText);
     const cleanHtml = purify_default.sanitize(parsedHtml);
     return this.sanitizer.bypassSecurityTrustHtml(cleanHtml);
   }

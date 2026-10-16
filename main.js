@@ -32,7 +32,7 @@ var adminAuthGuard = () => {
 var routes = [
   {
     path: "",
-    loadComponent: () => import("./chunk-B3QUG4LP.js").then((m) => m.AssistantComponent)
+    loadComponent: () => import("./chunk-4S2QALT4.js").then((m) => m.AssistantComponent)
   },
   {
     path: "backoffice/login",
