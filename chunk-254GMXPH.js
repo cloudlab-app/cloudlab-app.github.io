@@ -1,11 +1,11 @@
 import {
-  BackofficeService
-} from "./chunk-PX5ZQJ23.js";
+  BackofficeService,
+  Router,
+  RouterLink
+} from "./chunk-K2FKSCDE.js";
 import {
   ChangeDetectionStrategy,
   Component,
-  Router,
-  RouterLink,
   inject,
   setClassMetadata,
   signal,
@@ -23,7 +23,7 @@ import {
   ɵɵtext,
   ɵɵtextInterpolate,
   ɵɵtextInterpolate1
-} from "./chunk-E3LVDSZH.js";
+} from "./chunk-OMSE2WG5.js";
 
 // src/app/features/backoffice/pages/admin-login/admin-login.component.ts
 function AdminLoginComponent_Conditional_38_Template(rf, ctx) {

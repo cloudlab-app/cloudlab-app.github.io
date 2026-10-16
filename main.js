@@ -1,22 +1,22 @@
 import {
-  BackofficeService
-} from "./chunk-PX5ZQJ23.js";
+  BackofficeService,
+  Router,
+  RouterOutlet,
+  provideRouter
+} from "./chunk-K2FKSCDE.js";
 import {
   ChangeDetectionStrategy,
   Component,
-  Router,
-  RouterOutlet,
   bootstrapApplication,
   inject,
   provideBrowserGlobalErrorListeners,
   provideHttpClient,
-  provideRouter,
   setClassMetadata,
   withFetch,
   ɵsetClassDebugInfo,
   ɵɵdefineComponent,
   ɵɵelement
-} from "./chunk-E3LVDSZH.js";
+} from "./chunk-OMSE2WG5.js";
 
 // src/app/core/guards/admin-auth.guard.ts
 var adminAuthGuard = () => {
@@ -32,18 +32,18 @@ var adminAuthGuard = () => {
 var routes = [
   {
     path: "",
-    loadComponent: () => import("./chunk-I63CMGLB.js").then((m) => m.LandingComponent)
+    loadComponent: () => import("./chunk-B3QUG4LP.js").then((m) => m.AssistantComponent)
   },
   {
     path: "backoffice/login",
-    loadComponent: () => import("./chunk-A6AQJXH6.js").then(
+    loadComponent: () => import("./chunk-254GMXPH.js").then(
       (m) => m.AdminLoginComponent
     )
   },
   {
     path: "backoffice",
     canActivate: [adminAuthGuard],
-    loadComponent: () => import("./chunk-TBVIFQK2.js").then(
+    loadComponent: () => import("./chunk-KZLAIDPT.js").then(
       (m) => m.AdminDashboardComponent
     )
   },

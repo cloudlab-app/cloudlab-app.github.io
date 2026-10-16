@@ -1,14 +1,14 @@
 import {
-  BackofficeService
-} from "./chunk-PX5ZQJ23.js";
+  BackofficeService,
+  Router,
+  RouterLink
+} from "./chunk-K2FKSCDE.js";
 import {
   ChangeDetectionStrategy,
   Component,
   DatePipe,
   Input,
   Output,
-  Router,
-  RouterLink,
   ViewChild,
   computed,
   effect,
@@ -50,7 +50,7 @@ import {
   ɵɵtextInterpolate1,
   ɵɵtextInterpolate2,
   ɵɵviewQuerySignal
-} from "./chunk-E3LVDSZH.js";
+} from "./chunk-OMSE2WG5.js";
 
 // src/app/features/backoffice/components/admin-navbar/admin-navbar.component.ts
 function AdminNavbarComponent_Conditional_19_Template(rf, ctx) {

@@ -8,11 +8,11 @@ import {
   Input,
   Output,
   Pipe,
-  RouterLink,
   ViewChild,
   __spreadProps,
   __spreadValues,
   catchError,
+  computed,
   effect,
   environment,
   inject,
@@ -52,7 +52,6 @@ import {
   ɵɵqueryAdvance,
   ɵɵrepeater,
   ɵɵrepeaterCreate,
-  ɵɵrepeaterTrackByIdentity,
   ɵɵresetView,
   ɵɵrestoreView,
   ɵɵsanitizeHtml,
@@ -60,951 +59,7 @@ import {
   ɵɵtextInterpolate,
   ɵɵtextInterpolate1,
   ɵɵviewQuerySignal
-} from "./chunk-E3LVDSZH.js";
-
-// src/app/features/landing/components/navbar/navbar.component.ts
-var NavbarComponent = class _NavbarComponent {
-  openChat = output();
-  static \u0275fac = function NavbarComponent_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _NavbarComponent)();
-  };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _NavbarComponent, selectors: [["app-navbar"]], outputs: { openChat: "openChat" }, decls: 32, vars: 0, consts: [[1, "sticky", "top-0", "z-40", "bg-white/95", "backdrop-blur-md", "border-b", "border-slate-200/80", "shadow-xs", "transition-all"], [1, "max-w-7xl", "mx-auto", "px-4", "sm:px-6", "lg:px-8"], [1, "flex", "items-center", "justify-between", "h-20"], [1, "flex", "items-center", "gap-3"], [1, "w-12", "h-12", "rounded-xl", "bg-gradient-to-tr", "from-[#99001f]", "to-[#b00725]", "flex", "items-center", "justify-center", "text-white", "font-bold", "text-xl", "shadow-md", "shadow-red-900/10", "tracking-wider"], [1, "block", "font-black", "text-slate-900", "text-lg", "leading-tight", "tracking-tight"], [1, "block", "text-xs", "font-medium", "text-slate-500"], [1, "hidden", "md:flex", "items-center", "gap-8", "text-sm", "font-semibold", "text-slate-700"], ["href", "#inicio", 1, "hover:text-[#b00725]", "transition-colors"], ["href", "#servicios", 1, "hover:text-[#b00725]", "transition-colors"], ["href", "#sedes", 1, "hover:text-[#b00725]", "transition-colors"], ["href", "#contacto", 1, "hover:text-[#b00725]", "transition-colors"], [1, "flex", "items-center", "gap-2.5"], ["routerLink", "/backoffice", 1, "inline-flex", "items-center", "gap-1.5", "px-3.5", "py-2.5", "rounded-full", "border", "border-slate-200", "bg-slate-50", "hover:bg-slate-100", "text-slate-700", "text-xs", "font-bold", "transition-all", "cursor-pointer"], [1, "hidden", "sm:inline"], ["type", "button", 1, "inline-flex", "items-center", "gap-2.5", "px-4", "py-2.5", "rounded-full", "bg-[#b00725]", "hover:bg-[#92061e]", "text-white", "text-sm", "font-bold", "shadow-md", "shadow-red-900/20", "hover:shadow-lg", "transition-all", "transform", "hover:-translate-y-0.5", "active:translate-y-0", "cursor-pointer", 3, "click"], [1, "relative", "flex", "h-2.5", "w-2.5"], [1, "animate-ping", "absolute", "inline-flex", "h-full", "w-full", "rounded-full", "bg-emerald-400", "opacity-75"], [1, "relative", "inline-flex", "rounded-full", "h-2.5", "w-2.5", "bg-emerald-400"]], template: function NavbarComponent_Template(rf, ctx) {
-    if (rf & 1) {
-      \u0275\u0275elementStart(0, "header", 0)(1, "div", 1)(2, "div", 2)(3, "div", 3)(4, "div", 4);
-      \u0275\u0275text(5, " CBB ");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(6, "div")(7, "span", 5);
-      \u0275\u0275text(8, " Colegio Bertolt Brecht ");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(9, "span", 6);
-      \u0275\u0275text(10, " Atenci\xF3n al Cliente & Servicios Escolares ");
-      \u0275\u0275elementEnd()()();
-      \u0275\u0275elementStart(11, "nav", 7)(12, "a", 8);
-      \u0275\u0275text(13, "Inicio");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(14, "a", 9);
-      \u0275\u0275text(15, "Servicios & Tr\xE1mites");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(16, "a", 10);
-      \u0275\u0275text(17, "Nuestras Sedes");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(18, "a", 11);
-      \u0275\u0275text(19, "Contacto");
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(20, "div", 12)(21, "a", 13)(22, "span");
-      \u0275\u0275text(23, "\u{1F510}");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(24, "span", 14);
-      \u0275\u0275text(25, "Backoffice");
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(26, "button", 15);
-      \u0275\u0275listener("click", function NavbarComponent_Template_button_click_26_listener() {
-        return ctx.openChat.emit();
-      });
-      \u0275\u0275elementStart(27, "span", 16);
-      \u0275\u0275element(28, "span", 17)(29, "span", 18);
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(30, "span");
-      \u0275\u0275text(31, "Asistente Virtual 24/7");
-      \u0275\u0275elementEnd()()()()()();
-    }
-  }, dependencies: [RouterLink], encapsulation: 2, changeDetection: 0 });
-};
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(NavbarComponent, [{
-    type: Component,
-    args: [{
-      selector: "app-navbar",
-      changeDetection: ChangeDetectionStrategy.OnPush,
-      imports: [RouterLink],
-      template: `
-    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-xs transition-all">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-20">
-          
-          <!-- Logo & Instituci\xF3n -->
-          <div class="flex items-center gap-3">
-            <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-[#99001f] to-[#b00725] flex items-center justify-center text-white font-bold text-xl shadow-md shadow-red-900/10 tracking-wider">
-              CBB
-            </div>
-            <div>
-              <span class="block font-black text-slate-900 text-lg leading-tight tracking-tight">
-                Colegio Bertolt Brecht
-              </span>
-              <span class="block text-xs font-medium text-slate-500">
-                Atenci\xF3n al Cliente & Servicios Escolares
-              </span>
-            </div>
-          </div>
-
-          <!-- Navegaci\xF3n Escritorio -->
-          <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-700">
-            <a href="#inicio" class="hover:text-[#b00725] transition-colors">Inicio</a>
-            <a href="#servicios" class="hover:text-[#b00725] transition-colors">Servicios & Tr\xE1mites</a>
-            <a href="#sedes" class="hover:text-[#b00725] transition-colors">Nuestras Sedes</a>
-            <a href="#contacto" class="hover:text-[#b00725] transition-colors">Contacto</a>
-          </nav>
-
-          <!-- Botones de Acci\xF3n (Admin & Asistente Virtual) -->
-          <div class="flex items-center gap-2.5">
-            <a
-              routerLink="/backoffice"
-              class="inline-flex items-center gap-1.5 px-3.5 py-2.5 rounded-full border border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-700 text-xs font-bold transition-all cursor-pointer">
-              <span>\u{1F510}</span>
-              <span class="hidden sm:inline">Backoffice</span>
-            </a>
-
-            <button
-              type="button"
-              (click)="openChat.emit()"
-              class="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-full bg-[#b00725] hover:bg-[#92061e] text-white text-sm font-bold shadow-md shadow-red-900/20 hover:shadow-lg transition-all transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer">
-              <span class="relative flex h-2.5 w-2.5">
-                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-400"></span>
-              </span>
-              <span>Asistente Virtual 24/7</span>
-            </button>
-          </div>
-
-        </div>
-      </div>
-    </header>
-  `
-    }]
-  }], null, { openChat: [{ type: Output, args: ["openChat"] }] });
-})();
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(NavbarComponent, { className: "NavbarComponent", filePath: "src/app/features/landing/components/navbar/navbar.component.ts", lineNumber: 62 });
-})();
-
-// src/app/features/landing/components/hero/hero.component.ts
-var HeroComponent = class _HeroComponent {
-  openChat = output();
-  askPrompt = output();
-  static \u0275fac = function HeroComponent_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _HeroComponent)();
-  };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _HeroComponent, selectors: [["app-hero"]], outputs: { openChat: "openChat", askPrompt: "askPrompt" }, decls: 57, vars: 0, consts: [["id", "inicio", 1, "relative", "overflow-hidden", "bg-gradient-to-b", "from-slate-50", "via-white", "to-slate-50", "py-16", "lg:py-24", "border-b", "border-slate-200/60"], [1, "absolute", "inset-0", "pointer-events-none", "-z-10", "opacity-30"], [1, "absolute", "-top-40", "-right-40", "w-96", "h-96", "rounded-full", "bg-red-100", "blur-3xl"], [1, "absolute", "-bottom-40", "-left-40", "w-96", "h-96", "rounded-full", "bg-sky-100", "blur-3xl"], [1, "max-w-7xl", "mx-auto", "px-4", "sm:px-6", "lg:px-8"], [1, "grid", "grid-cols-1", "lg:grid-cols-12", "gap-12", "items-center"], [1, "lg:col-span-7", "space-y-6", "text-center", "lg:text-left"], [1, "inline-flex", "items-center", "gap-2", "px-3.5", "py-1.5", "rounded-full", "bg-red-50", "border", "border-red-200/80", "text-[#b00725]", "text-xs", "font-bold", "uppercase", "tracking-wider"], [1, "text-4xl", "sm:text-5xl", "lg:text-6xl", "font-black", "text-slate-900", "tracking-tight", "leading-[1.15]"], [1, "text-lg", "text-slate-600", "max-w-2xl", "mx-auto", "lg:mx-0", "leading-relaxed", "font-normal"], [1, "flex", "flex-wrap", "items-center", "justify-center", "lg:justify-start", "gap-4", "pt-2"], ["type", "button", 1, "px-6", "py-3.5", "rounded-xl", "bg-[#b00725]", "hover:bg-[#92061e]", "text-white", "font-bold", "shadow-lg", "shadow-red-900/25", "hover:shadow-xl", "transition-all", "transform", "hover:-translate-y-0.5", "cursor-pointer", "flex", "items-center", "gap-2.5", 3, "click"], ["fill", "none", "stroke", "currentColor", "viewBox", "0 0 24 24", 1, "w-5", "h-5"], ["stroke-linecap", "round", "stroke-linejoin", "round", "stroke-width", "2", "d", "M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"], ["href", "#servicios", 1, "px-6", "py-3.5", "rounded-xl", "bg-white", "hover:bg-slate-100", "text-slate-800", "font-bold", "border", "border-slate-300", "shadow-xs", "hover:shadow-md", "transition-all", "cursor-pointer"], [1, "pt-4", "text-xs", "text-slate-500"], [1, "font-semibold", "text-slate-700", "mb-2"], [1, "flex", "flex-wrap", "gap-2", "justify-center", "lg:justify-start"], ["type", "button", 1, "px-3", "py-1.5", "rounded-lg", "bg-white", "border", "border-slate-200", "hover:border-[#b00725]", "hover:text-[#b00725]", "text-slate-600", "transition-colors", "shadow-2xs", "cursor-pointer", 3, "click"], [1, "lg:col-span-5", "flex", "justify-center"], [1, "w-full", "max-w-md", "bg-white", "rounded-2xl", "shadow-2xl", "border", "border-slate-200/90", "p-6", "relative", "overflow-hidden"], [1, "flex", "items-center", "gap-3.5", "pb-4", "border-b", "border-slate-100"], [1, "w-12", "h-12", "rounded-full", "bg-gradient-to-tr", "from-[#99001f]", "to-[#b00725]", "flex", "items-center", "justify-center", "text-white", "text-xl", "font-bold", "shadow-inner"], [1, "font-bold", "text-slate-900", "text-base", "leading-tight"], [1, "flex", "items-center", "gap-1.5", "mt-0.5"], [1, "w-2", "h-2", "rounded-full", "bg-emerald-500"], [1, "text-xs", "font-medium", "text-emerald-600"], [1, "py-5", "space-y-3.5", "text-sm"], [1, "p-3.5", "bg-slate-50", "rounded-2xl", "rounded-tl-xs", "border", "border-slate-100", "text-slate-700", "leading-relaxed"], [1, "p-3", "bg-red-50/70", "rounded-xl", "border", "border-red-100", "text-xs", "text-red-900", "font-medium"], ["type", "button", 1, "w-full", "py-3", "rounded-xl", "bg-gradient-to-r", "from-[#b00725]", "to-[#c8102e]", "text-white", "font-bold", "text-sm", "shadow-md", "hover:shadow-lg", "transition-all", "cursor-pointer", "text-center", "block", 3, "click"]], template: function HeroComponent_Template(rf, ctx) {
-    if (rf & 1) {
-      \u0275\u0275domElementStart(0, "section", 0)(1, "div", 1);
-      \u0275\u0275domElement(2, "div", 2)(3, "div", 3);
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(4, "div", 4)(5, "div", 5)(6, "div", 6)(7, "div", 7)(8, "span");
-      \u0275\u0275text(9, "\u2605 M\xE1s de 25 a\xF1os de excelencia educativa");
-      \u0275\u0275domElementEnd()();
-      \u0275\u0275domElementStart(10, "h1", 8);
-      \u0275\u0275text(11, " Atenci\xF3n y Servicios Escolares al alcance de tu mano ");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(12, "p", 9);
-      \u0275\u0275text(13, " Bienvenido al portal de atenci\xF3n de la comunidad ");
-      \u0275\u0275domElementStart(14, "strong");
-      \u0275\u0275text(15, "Colegio Bertolt Brecht");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275text(16, ". Resuelve al instante dudas sobre tr\xE1mites, pensiones, plataformas, actividades acad\xE9micas y matr\xEDculas 2026 con nuestro asistente virtual inteligente. ");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(17, "div", 10)(18, "button", 11);
-      \u0275\u0275domListener("click", function HeroComponent_Template_button_click_18_listener() {
-        return ctx.openChat.emit();
-      });
-      \u0275\u0275namespaceSVG();
-      \u0275\u0275domElementStart(19, "svg", 12);
-      \u0275\u0275domElement(20, "path", 13);
-      \u0275\u0275domElementEnd();
-      \u0275\u0275namespaceHTML();
-      \u0275\u0275domElementStart(21, "span");
-      \u0275\u0275text(22, "Hacer una consulta ahora");
-      \u0275\u0275domElementEnd()();
-      \u0275\u0275domElementStart(23, "a", 14);
-      \u0275\u0275text(24, " Explorar Servicios ");
-      \u0275\u0275domElementEnd()();
-      \u0275\u0275domElementStart(25, "div", 15)(26, "p", 16);
-      \u0275\u0275text(27, "Consultas m\xE1s solicitadas por las familias:");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(28, "div", 17)(29, "button", 18);
-      \u0275\u0275domListener("click", function HeroComponent_Template_button_click_29_listener() {
-        return ctx.askPrompt.emit("\xBFCu\xE1les son los canales y fechas de pago de pensiones?");
-      });
-      \u0275\u0275text(30, " \u{1F4B3} Fechas y canales de pago ");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(31, "button", 18);
-      \u0275\u0275domListener("click", function HeroComponent_Template_button_click_31_listener() {
-        return ctx.askPrompt.emit("\xBFC\xF3mo solicito una constancia de estudios o certificado?");
-      });
-      \u0275\u0275text(32, " \u{1F4C4} Emisi\xF3n de certificados ");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(33, "button", 18);
-      \u0275\u0275domListener("click", function HeroComponent_Template_button_click_33_listener() {
-        return ctx.askPrompt.emit("\xBFCu\xE1les son los requisitos de matr\xEDcula 2026?");
-      });
-      \u0275\u0275text(34, " \u{1F393} Requisitos de matr\xEDcula 2026 ");
-      \u0275\u0275domElementEnd()()()();
-      \u0275\u0275domElementStart(35, "div", 19)(36, "div", 20)(37, "div", 21)(38, "div", 22);
-      \u0275\u0275text(39, " \u{1F916} ");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(40, "div")(41, "h2", 23);
-      \u0275\u0275text(42, "Asistente Virtual CBB");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(43, "div", 24);
-      \u0275\u0275domElement(44, "span", 25);
-      \u0275\u0275domElementStart(45, "span", 26);
-      \u0275\u0275text(46, "En l\xEDnea y listo para responder");
-      \u0275\u0275domElementEnd()()()();
-      \u0275\u0275domElementStart(47, "div", 27)(48, "div", 28);
-      \u0275\u0275text(49, " \xA1Hola! Soy tu asistente institucional del ");
-      \u0275\u0275domElementStart(50, "strong");
-      \u0275\u0275text(51, "Colegio Bertolt Brecht");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275text(52, ". Puedo ayudarte con dudas sobre secretar\xEDa, pagos, plataformas, horarios, talleres extracurriculares o admisi\xF3n. \xBFQu\xE9 consulta tienes hoy? ");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(53, "div", 29);
-      \u0275\u0275text(54, " \u{1F4A1} Respuestas verificadas con los documentos oficiales de la instituci\xF3n. ");
-      \u0275\u0275domElementEnd()();
-      \u0275\u0275domElementStart(55, "button", 30);
-      \u0275\u0275domListener("click", function HeroComponent_Template_button_click_55_listener() {
-        return ctx.openChat.emit();
-      });
-      \u0275\u0275text(56, " Abrir chat interactivo ");
-      \u0275\u0275domElementEnd()()()()()();
-    }
-  }, encapsulation: 2, changeDetection: 0 });
-};
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(HeroComponent, [{
-    type: Component,
-    args: [{
-      selector: "app-hero",
-      changeDetection: ChangeDetectionStrategy.OnPush,
-      template: `
-    <section id="inicio" class="relative overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50 py-16 lg:py-24 border-b border-slate-200/60">
-      
-      <!-- Decoraci\xF3n de fondo -->
-      <div class="absolute inset-0 pointer-events-none -z-10 opacity-30">
-        <div class="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-red-100 blur-3xl"></div>
-        <div class="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-sky-100 blur-3xl"></div>
-      </div>
-
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
-          <!-- Contenido Principal -->
-          <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-            
-            <!-- Badge superior -->
-            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-50 border border-red-200/80 text-[#b00725] text-xs font-bold uppercase tracking-wider">
-              <span>\u2605 M\xE1s de 25 a\xF1os de excelencia educativa</span>
-            </div>
-
-            <!-- T\xEDtulo Principal -->
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.15]">
-              Atenci\xF3n y Servicios Escolares al alcance de tu mano
-            </h1>
-
-            <!-- Descripci\xF3n -->
-            <p class="text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
-              Bienvenido al portal de atenci\xF3n de la comunidad <strong>Colegio Bertolt Brecht</strong>. Resuelve al instante dudas sobre tr\xE1mites, pensiones, plataformas, actividades acad\xE9micas y matr\xEDculas 2026 con nuestro asistente virtual inteligente.
-            </p>
-
-            <!-- Acciones Principales -->
-            <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
-              <button
-                type="button"
-                (click)="openChat.emit()"
-                class="px-6 py-3.5 rounded-xl bg-[#b00725] hover:bg-[#92061e] text-white font-bold shadow-lg shadow-red-900/25 hover:shadow-xl transition-all transform hover:-translate-y-0.5 cursor-pointer flex items-center gap-2.5">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-                </svg>
-                <span>Hacer una consulta ahora</span>
-              </button>
-
-              <a
-                href="#servicios"
-                class="px-6 py-3.5 rounded-xl bg-white hover:bg-slate-100 text-slate-800 font-bold border border-slate-300 shadow-xs hover:shadow-md transition-all cursor-pointer">
-                Explorar Servicios
-              </a>
-            </div>
-
-            <!-- Preguntas frecuentes de ejemplo (Quick Triggers) -->
-            <div class="pt-4 text-xs text-slate-500">
-              <p class="font-semibold text-slate-700 mb-2">Consultas m\xE1s solicitadas por las familias:</p>
-              <div class="flex flex-wrap gap-2 justify-center lg:justify-start">
-                <button
-                  type="button"
-                  (click)="askPrompt.emit('\xBFCu\xE1les son los canales y fechas de pago de pensiones?')"
-                  class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 hover:border-[#b00725] hover:text-[#b00725] text-slate-600 transition-colors shadow-2xs cursor-pointer">
-                  \u{1F4B3} Fechas y canales de pago
-                </button>
-                <button
-                  type="button"
-                  (click)="askPrompt.emit('\xBFC\xF3mo solicito una constancia de estudios o certificado?')"
-                  class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 hover:border-[#b00725] hover:text-[#b00725] text-slate-600 transition-colors shadow-2xs cursor-pointer">
-                  \u{1F4C4} Emisi\xF3n de certificados
-                </button>
-                <button
-                  type="button"
-                  (click)="askPrompt.emit('\xBFCu\xE1les son los requisitos de matr\xEDcula 2026?')"
-                  class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 hover:border-[#b00725] hover:text-[#b00725] text-slate-600 transition-colors shadow-2xs cursor-pointer">
-                  \u{1F393} Requisitos de matr\xEDcula 2026
-                </button>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Tarjeta Visual Destacada (Preview del Asistente) -->
-          <div class="lg:col-span-5 flex justify-center">
-            <div class="w-full max-w-md bg-white rounded-2xl shadow-2xl border border-slate-200/90 p-6 relative overflow-hidden">
-              
-              <div class="flex items-center gap-3.5 pb-4 border-b border-slate-100">
-                <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-[#99001f] to-[#b00725] flex items-center justify-center text-white text-xl font-bold shadow-inner">
-                  \u{1F916}
-                </div>
-                <div>
-                  <h2 class="font-bold text-slate-900 text-base leading-tight">Asistente Virtual CBB</h2>
-                  <div class="flex items-center gap-1.5 mt-0.5">
-                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-                    <span class="text-xs font-medium text-emerald-600">En l\xEDnea y listo para responder</span>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Mensaje de muestra -->
-              <div class="py-5 space-y-3.5 text-sm">
-                <div class="p-3.5 bg-slate-50 rounded-2xl rounded-tl-xs border border-slate-100 text-slate-700 leading-relaxed">
-                  \xA1Hola! Soy tu asistente institucional del <strong>Colegio Bertolt Brecht</strong>. Puedo ayudarte con dudas sobre secretar\xEDa, pagos, plataformas, horarios, talleres extracurriculares o admisi\xF3n. \xBFQu\xE9 consulta tienes hoy?
-                </div>
-
-                <div class="p-3 bg-red-50/70 rounded-xl border border-red-100 text-xs text-red-900 font-medium">
-                  \u{1F4A1} Respuestas verificadas con los documentos oficiales de la instituci\xF3n.
-                </div>
-              </div>
-
-              <!-- Bot\xF3n interactivo -->
-              <button
-                type="button"
-                (click)="openChat.emit()"
-                class="w-full py-3 rounded-xl bg-gradient-to-r from-[#b00725] to-[#c8102e] text-white font-bold text-sm shadow-md hover:shadow-lg transition-all cursor-pointer text-center block">
-                Abrir chat interactivo
-              </button>
-
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-  `
-    }]
-  }], null, { openChat: [{ type: Output, args: ["openChat"] }], askPrompt: [{ type: Output, args: ["askPrompt"] }] });
-})();
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(HeroComponent, { className: "HeroComponent", filePath: "src/app/features/landing/components/hero/hero.component.ts", lineNumber: 126 });
-})();
-
-// src/app/features/landing/components/services-grid/services-grid.component.ts
-var _forTrack0 = ($index, $item) => $item.id;
-function ServicesGridComponent_For_11_Conditional_5_Template(rf, ctx) {
-  if (rf & 1) {
-    \u0275\u0275domElementStart(0, "span", 10);
-    \u0275\u0275text(1);
-    \u0275\u0275domElementEnd();
-  }
-  if (rf & 2) {
-    const service_r2 = \u0275\u0275nextContext().$implicit;
-    \u0275\u0275advance();
-    \u0275\u0275textInterpolate1(" ", service_r2.badge, " ");
-  }
-}
-function ServicesGridComponent_For_11_Template(rf, ctx) {
-  if (rf & 1) {
-    const _r1 = \u0275\u0275getCurrentView();
-    \u0275\u0275domElementStart(0, "div", 7)(1, "div")(2, "div", 8)(3, "div", 9);
-    \u0275\u0275text(4);
-    \u0275\u0275domElementEnd();
-    \u0275\u0275conditionalCreate(5, ServicesGridComponent_For_11_Conditional_5_Template, 2, 1, "span", 10);
-    \u0275\u0275domElementEnd();
-    \u0275\u0275domElementStart(6, "h3", 11);
-    \u0275\u0275text(7);
-    \u0275\u0275domElementEnd();
-    \u0275\u0275domElementStart(8, "p", 12);
-    \u0275\u0275text(9);
-    \u0275\u0275domElementEnd()();
-    \u0275\u0275domElementStart(10, "div", 13)(11, "button", 14);
-    \u0275\u0275domListener("click", function ServicesGridComponent_For_11_Template_button_click_11_listener() {
-      const service_r2 = \u0275\u0275restoreView(_r1).$implicit;
-      const ctx_r2 = \u0275\u0275nextContext();
-      return \u0275\u0275resetView(ctx_r2.askPrompt.emit(service_r2.promptExample));
-    });
-    \u0275\u0275domElementStart(12, "span");
-    \u0275\u0275text(13, "Consultar sobre este servicio");
-    \u0275\u0275domElementEnd();
-    \u0275\u0275domElementStart(14, "span", 15);
-    \u0275\u0275text(15, "\u2192");
-    \u0275\u0275domElementEnd()()()();
-  }
-  if (rf & 2) {
-    const service_r2 = ctx.$implicit;
-    \u0275\u0275advance(4);
-    \u0275\u0275textInterpolate1(" ", service_r2.icon, " ");
-    \u0275\u0275advance();
-    \u0275\u0275conditional(service_r2.badge ? 5 : -1);
-    \u0275\u0275advance(2);
-    \u0275\u0275textInterpolate1(" ", service_r2.title, " ");
-    \u0275\u0275advance(2);
-    \u0275\u0275textInterpolate1(" ", service_r2.description, " ");
-  }
-}
-var ServicesGridComponent = class _ServicesGridComponent {
-  askPrompt = output();
-  services = [
-    {
-      id: "tramites",
-      title: "Secretar\xEDa y Tr\xE1mites",
-      description: "Gesti\xF3n de certificados oficiales de estudios, constancias de matr\xEDcula, r\xE9cord de notas y traslados internos o externos.",
-      icon: "\u{1F4C4}",
-      badge: "Atenci\xF3n Regular",
-      promptExample: "\xBFC\xF3mo solicito una constancia de estudios o certificado y cu\xE1l es el plazo de entrega?"
-    },
-    {
-      id: "tesoreria",
-      title: "Pensiones y Tesorer\xEDa",
-      description: "Cronogramas de pago de pensiones, canales bancarios afiliados (BCP, BBVA, Interbank) y consultas sobre comprobantes electr\xF3nicos.",
-      icon: "\u{1F4B3}",
-      badge: "Finanzas",
-      promptExample: "\xBFCu\xE1les son las fechas de pago y canales autorizados para las pensiones?"
-    },
-    {
-      id: "talleres",
-      title: "Talleres Extracurriculares",
-      description: "Programas de rob\xF3tica educativa, teatro, m\xFAsica, ajedrez, disciplinas deportivas (f\xFAtbol, b\xE1squet, v\xF3ley) y formaci\xF3n art\xEDstica.",
-      icon: "\u{1F3A8}",
-      badge: "Integral",
-      promptExample: "\xBFQu\xE9 talleres extracurriculares y disciplinas deportivas est\xE1n disponibles?"
-    },
-    {
-      id: "psicopedagogia",
-      title: "Psicopedagog\xEDa y Tutor\xEDa",
-      description: "Acompa\xF1amiento socioemocional, orientaci\xF3n vocacional y seguimiento continuo al desarrollo formativo de cada estudiante.",
-      icon: "\u{1F91D}",
-      badge: "Bienestar",
-      promptExample: "\xBFC\xF3mo funciona el acompa\xF1amiento del \xE1rea de psicopedagog\xEDa y tutor\xEDa?"
-    },
-    {
-      id: "plataformas",
-      title: "Plataformas Virtuales",
-      description: "Soporte e informaci\xF3n sobre acceso a la intranet escolar, registro de asistencias, aula virtual y comunicaci\xF3n docente-familia.",
-      icon: "\u{1F4BB}",
-      badge: "Tecnolog\xEDa",
-      promptExample: "\xBFC\xF3mo puedo acceder o recuperar mi contrase\xF1a de la plataforma virtual escolar?"
-    },
-    {
-      id: "matriculas",
-      title: "Admisi\xF3n y Matr\xEDcula 2026",
-      description: "Informaci\xF3n sobre vacantes para Inicial, Primaria y Secundaria, requisitos documentarios, costos de ingreso y visitas guiadas a las sedes.",
-      icon: "\u{1F393}",
-      badge: "Vacantes 2026",
-      promptExample: "\xBFCu\xE1les son los requisitos y el procedimiento para la matr\xEDcula 2026?"
-    }
-  ];
-  static \u0275fac = function ServicesGridComponent_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _ServicesGridComponent)();
-  };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ServicesGridComponent, selectors: [["app-services-grid"]], outputs: { askPrompt: "askPrompt" }, decls: 12, vars: 0, consts: [["id", "servicios", 1, "py-20", "bg-white", "border-b", "border-slate-200/60"], [1, "max-w-7xl", "mx-auto", "px-4", "sm:px-6", "lg:px-8"], [1, "text-center", "max-w-3xl", "mx-auto", "mb-14"], [1, "inline-block", "px-3.5", "py-1", "rounded-full", "bg-red-50", "text-[#b00725]", "text-xs", "font-bold", "tracking-wider", "uppercase", "mb-3", "border", "border-red-100"], [1, "text-3xl", "sm:text-4xl", "font-black", "text-slate-900", "tracking-tight"], [1, "mt-3", "text-base", "text-slate-600"], [1, "grid", "grid-cols-1", "md:grid-cols-2", "lg:grid-cols-3", "gap-6"], [1, "group", "bg-slate-50/70", "hover:bg-white", "rounded-2xl", "p-6", "border", "border-slate-200", "hover:border-red-200", "shadow-2xs", "hover:shadow-xl", "transition-all", "duration-200", "flex", "flex-col", "justify-between"], [1, "flex", "items-center", "justify-between", "mb-4"], [1, "w-12", "h-12", "rounded-xl", "bg-white", "border", "border-slate-200", "group-hover:border-[#b00725]/30", "flex", "items-center", "justify-center", "text-2xl", "shadow-2xs", "group-hover:scale-105", "transition-transform"], [1, "px-2.5", "py-1", "rounded-full", "text-xs", "font-bold", "bg-sky-50", "text-sky-700", "border", "border-sky-100"], [1, "text-lg", "font-bold", "text-slate-900", "group-hover:text-[#b00725]", "transition-colors", "mb-2"], [1, "text-sm", "text-slate-600", "leading-relaxed"], [1, "mt-6", "pt-4", "border-t", "border-slate-200/60"], ["type", "button", 1, "w-full", "inline-flex", "items-center", "justify-between", "text-xs", "font-bold", "text-[#b00725]", "hover:text-[#92061e]", "py-1.5", "cursor-pointer", 3, "click"], [1, "text-base", "group-hover:translate-x-1", "transition-transform"]], template: function ServicesGridComponent_Template(rf, ctx) {
-    if (rf & 1) {
-      \u0275\u0275domElementStart(0, "section", 0)(1, "div", 1)(2, "div", 2)(3, "span", 3);
-      \u0275\u0275text(4, " Nuestros Servicios ");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(5, "h2", 4);
-      \u0275\u0275text(6, " Atenci\xF3n integral a toda la comunidad educativa ");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(7, "p", 5);
-      \u0275\u0275text(8, " Conoce las \xE1reas y servicios a tu disposici\xF3n. Puedes consultar cualquier duda puntual a nuestro asistente virtual en tiempo real. ");
-      \u0275\u0275domElementEnd()();
-      \u0275\u0275domElementStart(9, "div", 6);
-      \u0275\u0275repeaterCreate(10, ServicesGridComponent_For_11_Template, 16, 4, "div", 7, _forTrack0);
-      \u0275\u0275domElementEnd()()();
-    }
-    if (rf & 2) {
-      \u0275\u0275advance(10);
-      \u0275\u0275repeater(ctx.services);
-    }
-  }, encapsulation: 2, changeDetection: 0 });
-};
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ServicesGridComponent, [{
-    type: Component,
-    args: [{
-      selector: "app-services-grid",
-      changeDetection: ChangeDetectionStrategy.OnPush,
-      template: `
-    <section id="servicios" class="py-20 bg-white border-b border-slate-200/60">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <!-- Cabecera de secci\xF3n -->
-        <div class="text-center max-w-3xl mx-auto mb-14">
-          <span class="inline-block px-3.5 py-1 rounded-full bg-red-50 text-[#b00725] text-xs font-bold tracking-wider uppercase mb-3 border border-red-100">
-            Nuestros Servicios
-          </span>
-          <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
-            Atenci\xF3n integral a toda la comunidad educativa
-          </h2>
-          <p class="mt-3 text-base text-slate-600">
-            Conoce las \xE1reas y servicios a tu disposici\xF3n. Puedes consultar cualquier duda puntual a nuestro asistente virtual en tiempo real.
-          </p>
-        </div>
-
-        <!-- Rejilla de Servicios -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          @for (service of services; track service.id) {
-            <div class="group bg-slate-50/70 hover:bg-white rounded-2xl p-6 border border-slate-200 hover:border-red-200 shadow-2xs hover:shadow-xl transition-all duration-200 flex flex-col justify-between">
-              <div>
-                <div class="flex items-center justify-between mb-4">
-                  <div class="w-12 h-12 rounded-xl bg-white border border-slate-200 group-hover:border-[#b00725]/30 flex items-center justify-center text-2xl shadow-2xs group-hover:scale-105 transition-transform">
-                    {{ service.icon }}
-                  </div>
-                  @if (service.badge) {
-                    <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-sky-50 text-sky-700 border border-sky-100">
-                      {{ service.badge }}
-                    </span>
-                  }
-                </div>
-
-                <h3 class="text-lg font-bold text-slate-900 group-hover:text-[#b00725] transition-colors mb-2">
-                  {{ service.title }}
-                </h3>
-
-                <p class="text-sm text-slate-600 leading-relaxed">
-                  {{ service.description }}
-                </p>
-              </div>
-
-              <div class="mt-6 pt-4 border-t border-slate-200/60">
-                <button
-                  type="button"
-                  (click)="askPrompt.emit(service.promptExample)"
-                  class="w-full inline-flex items-center justify-between text-xs font-bold text-[#b00725] hover:text-[#92061e] py-1.5 cursor-pointer">
-                  <span>Consultar sobre este servicio</span>
-                  <span class="text-base group-hover:translate-x-1 transition-transform">\u2192</span>
-                </button>
-              </div>
-            </div>
-          }
-        </div>
-
-      </div>
-    </section>
-  `
-    }]
-  }], null, { askPrompt: [{ type: Output, args: ["askPrompt"] }] });
-})();
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ServicesGridComponent, { className: "ServicesGridComponent", filePath: "src/app/features/landing/components/services-grid/services-grid.component.ts", lineNumber: 66 });
-})();
-
-// src/app/features/landing/components/campuses/campuses.component.ts
-var _forTrack02 = ($index, $item) => $item.name;
-function CampusesComponent_For_11_For_30_Template(rf, ctx) {
-  if (rf & 1) {
-    \u0275\u0275domElementStart(0, "span", 21);
-    \u0275\u0275text(1);
-    \u0275\u0275domElementEnd();
-  }
-  if (rf & 2) {
-    const level_r2 = ctx.$implicit;
-    \u0275\u0275advance();
-    \u0275\u0275textInterpolate1(" ", level_r2, " ");
-  }
-}
-function CampusesComponent_For_11_Template(rf, ctx) {
-  if (rf & 1) {
-    const _r1 = \u0275\u0275getCurrentView();
-    \u0275\u0275domElementStart(0, "div", 7)(1, "div")(2, "div", 8)(3, "span", 9);
-    \u0275\u0275text(4, "\u{1F3EB}");
-    \u0275\u0275domElementEnd();
-    \u0275\u0275domElementStart(5, "span", 10);
-    \u0275\u0275text(6);
-    \u0275\u0275domElementEnd()();
-    \u0275\u0275domElementStart(7, "h3", 11);
-    \u0275\u0275text(8);
-    \u0275\u0275domElementEnd();
-    \u0275\u0275domElementStart(9, "p", 12)(10, "span", 13);
-    \u0275\u0275text(11, "\u{1F4CD}");
-    \u0275\u0275domElementEnd();
-    \u0275\u0275domElementStart(12, "span");
-    \u0275\u0275text(13);
-    \u0275\u0275domElementEnd()();
-    \u0275\u0275domElementStart(14, "div", 14)(15, "div", 15)(16, "span", 16);
-    \u0275\u0275text(17, "\u{1F4DE}");
-    \u0275\u0275domElementEnd();
-    \u0275\u0275domElementStart(18, "span", 17);
-    \u0275\u0275text(19);
-    \u0275\u0275domElementEnd()();
-    \u0275\u0275domElementStart(20, "div", 15)(21, "span", 16);
-    \u0275\u0275text(22, "\u2709\uFE0F");
-    \u0275\u0275domElementEnd();
-    \u0275\u0275domElementStart(23, "span");
-    \u0275\u0275text(24);
-    \u0275\u0275domElementEnd()()();
-    \u0275\u0275domElementStart(25, "div", 18)(26, "span", 19);
-    \u0275\u0275text(27, " Niveles impartidos: ");
-    \u0275\u0275domElementEnd();
-    \u0275\u0275domElementStart(28, "div", 20);
-    \u0275\u0275repeaterCreate(29, CampusesComponent_For_11_For_30_Template, 2, 1, "span", 21, \u0275\u0275repeaterTrackByIdentity);
-    \u0275\u0275domElementEnd()()();
-    \u0275\u0275domElementStart(31, "div", 22)(32, "button", 23);
-    \u0275\u0275domListener("click", function CampusesComponent_For_11_Template_button_click_32_listener() {
-      const campus_r3 = \u0275\u0275restoreView(_r1).$implicit;
-      const ctx_r3 = \u0275\u0275nextContext();
-      return \u0275\u0275resetView(ctx_r3.askPrompt.emit("\xBFCu\xE1les son los horarios y servicios de la " + campus_r3.name + "?"));
-    });
-    \u0275\u0275text(33, " Consultar sobre esta sede ");
-    \u0275\u0275domElementEnd()()();
-  }
-  if (rf & 2) {
-    const campus_r3 = ctx.$implicit;
-    \u0275\u0275advance(6);
-    \u0275\u0275textInterpolate1(" ", campus_r3.district, " ");
-    \u0275\u0275advance(2);
-    \u0275\u0275textInterpolate1(" ", campus_r3.name, " ");
-    \u0275\u0275advance(5);
-    \u0275\u0275textInterpolate(campus_r3.address);
-    \u0275\u0275advance(6);
-    \u0275\u0275textInterpolate(campus_r3.phone);
-    \u0275\u0275advance(5);
-    \u0275\u0275textInterpolate(campus_r3.email);
-    \u0275\u0275advance(5);
-    \u0275\u0275repeater(campus_r3.levels);
-  }
-}
-var CampusesComponent = class _CampusesComponent {
-  askPrompt = output();
-  campuses = [
-    {
-      name: "Sede Lima Colonial",
-      district: "Cercado de Lima",
-      address: "Av. Oscar R. Benavides 1099 (Ex Colonial)",
-      phone: "(01) 424-0010",
-      email: "informes.colonial@cbb.edu.pe",
-      levels: ["Inicial", "Primaria", "Secundaria"]
-    },
-    {
-      name: "Sede San Juan de Lurigancho",
-      district: "San Juan de Lurigancho",
-      address: "Av. Canto Grande 2550",
-      phone: "(01) 388-7500",
-      email: "informes.sjl@cbb.edu.pe",
-      levels: ["Inicial", "Primaria", "Secundaria"]
-    },
-    {
-      name: "Sede Comas",
-      district: "Comas",
-      address: "Av. Universitaria Norte 6540",
-      phone: "(01) 537-8890",
-      email: "informes.comas@cbb.edu.pe",
-      levels: ["Inicial", "Primaria", "Secundaria"]
-    }
-  ];
-  static \u0275fac = function CampusesComponent_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _CampusesComponent)();
-  };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _CampusesComponent, selectors: [["app-campuses"]], outputs: { askPrompt: "askPrompt" }, decls: 12, vars: 0, consts: [["id", "sedes", 1, "py-20", "bg-slate-50", "border-b", "border-slate-200/60"], [1, "max-w-7xl", "mx-auto", "px-4", "sm:px-6", "lg:px-8"], [1, "text-center", "max-w-3xl", "mx-auto", "mb-14"], [1, "inline-block", "px-3.5", "py-1", "rounded-full", "bg-red-50", "text-[#b00725]", "text-xs", "font-bold", "tracking-wider", "uppercase", "mb-3", "border", "border-red-100"], [1, "text-3xl", "sm:text-4xl", "font-black", "text-slate-900", "tracking-tight"], [1, "mt-3", "text-base", "text-slate-600"], [1, "grid", "grid-cols-1", "md:grid-cols-3", "gap-8"], [1, "bg-white", "rounded-2xl", "p-7", "border", "border-slate-200", "shadow-sm", "hover:shadow-xl", "transition-all", "duration-200", "flex", "flex-col", "justify-between"], [1, "flex", "items-center", "justify-between", "mb-4"], [1, "text-2xl"], [1, "text-xs", "font-semibold", "px-2.5", "py-1", "rounded-full", "bg-slate-100", "text-slate-700"], [1, "text-xl", "font-bold", "text-slate-900", "mb-2"], [1, "text-sm", "text-slate-600", "mb-4", "flex", "items-start", "gap-2"], [1, "text-slate-400", "mt-0.5"], [1, "space-y-2", "text-xs", "text-slate-600", "border-t", "border-slate-100", "pt-4"], [1, "flex", "items-center", "gap-2"], [1, "text-slate-400"], [1, "font-medium"], [1, "mt-5"], [1, "block", "text-xs", "font-semibold", "text-slate-500", "uppercase", "tracking-wider", "mb-2"], [1, "flex", "flex-wrap", "gap-1.5"], [1, "px-2.5", "py-1", "rounded-md", "text-xs", "font-semibold", "bg-red-50", "text-[#b00725]", "border", "border-red-100"], [1, "mt-6", "pt-4", "border-t", "border-slate-100"], ["type", "button", 1, "w-full", "py-2", "px-3", "rounded-xl", "bg-slate-50", "hover:bg-red-50", "text-slate-700", "hover:text-[#b00725]", "text-xs", "font-bold", "transition-colors", "border", "border-slate-200", "hover:border-red-200", "cursor-pointer", "text-center", 3, "click"]], template: function CampusesComponent_Template(rf, ctx) {
-    if (rf & 1) {
-      \u0275\u0275domElementStart(0, "section", 0)(1, "div", 1)(2, "div", 2)(3, "span", 3);
-      \u0275\u0275text(4, " Nuestras Sedes ");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(5, "h2", 4);
-      \u0275\u0275text(6, " Infraestructura moderna para el aprendizaje ");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(7, "p", 5);
-      \u0275\u0275text(8, " Contamos con sedes dise\xF1adas especialmente para brindar seguridad, comodidad y espacios de ciencia, deporte y arte. ");
-      \u0275\u0275domElementEnd()();
-      \u0275\u0275domElementStart(9, "div", 6);
-      \u0275\u0275repeaterCreate(10, CampusesComponent_For_11_Template, 34, 5, "div", 7, _forTrack02);
-      \u0275\u0275domElementEnd()()();
-    }
-    if (rf & 2) {
-      \u0275\u0275advance(10);
-      \u0275\u0275repeater(ctx.campuses);
-    }
-  }, encapsulation: 2, changeDetection: 0 });
-};
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(CampusesComponent, [{
-    type: Component,
-    args: [{
-      selector: "app-campuses",
-      changeDetection: ChangeDetectionStrategy.OnPush,
-      template: `
-    <section id="sedes" class="py-20 bg-slate-50 border-b border-slate-200/60">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="text-center max-w-3xl mx-auto mb-14">
-          <span class="inline-block px-3.5 py-1 rounded-full bg-red-50 text-[#b00725] text-xs font-bold tracking-wider uppercase mb-3 border border-red-100">
-            Nuestras Sedes
-          </span>
-          <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
-            Infraestructura moderna para el aprendizaje
-          </h2>
-          <p class="mt-3 text-base text-slate-600">
-            Contamos con sedes dise\xF1adas especialmente para brindar seguridad, comodidad y espacios de ciencia, deporte y arte.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          @for (campus of campuses; track campus.name) {
-            <div class="bg-white rounded-2xl p-7 border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-200 flex flex-col justify-between">
-              <div>
-                <div class="flex items-center justify-between mb-4">
-                  <span class="text-2xl">\u{1F3EB}</span>
-                  <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-slate-100 text-slate-700">
-                    {{ campus.district }}
-                  </span>
-                </div>
-
-                <h3 class="text-xl font-bold text-slate-900 mb-2">
-                  {{ campus.name }}
-                </h3>
-
-                <p class="text-sm text-slate-600 mb-4 flex items-start gap-2">
-                  <span class="text-slate-400 mt-0.5">\u{1F4CD}</span>
-                  <span>{{ campus.address }}</span>
-                </p>
-
-                <div class="space-y-2 text-xs text-slate-600 border-t border-slate-100 pt-4">
-                  <div class="flex items-center gap-2">
-                    <span class="text-slate-400">\u{1F4DE}</span>
-                    <span class="font-medium">{{ campus.phone }}</span>
-                  </div>
-                  <div class="flex items-center gap-2">
-                    <span class="text-slate-400">\u2709\uFE0F</span>
-                    <span>{{ campus.email }}</span>
-                  </div>
-                </div>
-
-                <div class="mt-5">
-                  <span class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">
-                    Niveles impartidos:
-                  </span>
-                  <div class="flex flex-wrap gap-1.5">
-                    @for (level of campus.levels; track level) {
-                      <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-red-50 text-[#b00725] border border-red-100">
-                        {{ level }}
-                      </span>
-                    }
-                  </div>
-                </div>
-              </div>
-
-              <div class="mt-6 pt-4 border-t border-slate-100">
-                <button
-                  type="button"
-                  (click)="askPrompt.emit('\xBFCu\xE1les son los horarios y servicios de la ' + campus.name + '?')"
-                  class="w-full py-2 px-3 rounded-xl bg-slate-50 hover:bg-red-50 text-slate-700 hover:text-[#b00725] text-xs font-bold transition-colors border border-slate-200 hover:border-red-200 cursor-pointer text-center">
-                  Consultar sobre esta sede
-                </button>
-              </div>
-            </div>
-          }
-        </div>
-
-      </div>
-    </section>
-  `
-    }]
-  }], null, { askPrompt: [{ type: Output, args: ["askPrompt"] }] });
-})();
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(CampusesComponent, { className: "CampusesComponent", filePath: "src/app/features/landing/components/campuses/campuses.component.ts", lineNumber: 84 });
-})();
-
-// src/app/features/landing/components/footer/footer.component.ts
-var FooterComponent = class _FooterComponent {
-  openChat = output();
-  static \u0275fac = function FooterComponent_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _FooterComponent)();
-  };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _FooterComponent, selectors: [["app-footer"]], outputs: { openChat: "openChat" }, decls: 75, vars: 0, consts: [["id", "contacto", 1, "bg-slate-900", "text-slate-300", "pt-16", "pb-12", "border-t", "border-slate-800"], [1, "max-w-7xl", "mx-auto", "px-4", "sm:px-6", "lg:px-8"], [1, "grid", "grid-cols-1", "md:grid-cols-2", "lg:grid-cols-4", "gap-10", "pb-12", "border-b", "border-slate-800"], [1, "space-y-4"], [1, "flex", "items-center", "gap-3"], [1, "w-10", "h-10", "rounded-xl", "bg-[#b00725]", "flex", "items-center", "justify-center", "text-white", "font-bold", "text-lg", "shadow-md"], [1, "font-black", "text-white", "text-lg", "tracking-tight"], [1, "text-xs", "text-slate-400", "leading-relaxed"], [1, "pt-2"], ["type", "button", 1, "inline-flex", "items-center", "gap-2", "px-3.5", "py-2", "rounded-lg", "bg-red-900/40", "text-red-200", "border", "border-red-800", "text-xs", "font-semibold", "hover:bg-red-900/70", "transition-colors", "cursor-pointer", 3, "click"], [1, "text-sm", "font-bold", "text-white", "uppercase", "tracking-wider", "mb-4"], [1, "space-y-2.5", "text-xs", "text-slate-400"], ["href", "#servicios", 1, "hover:text-white", "transition-colors"], [1, "flex", "items-center", "gap-2"], [1, "space-y-3", "text-xs", "text-slate-400"], [1, "p-3", "rounded-lg", "bg-slate-800/80", "border", "border-slate-700/80"], [1, "block", "text-slate-200", "font-semibold", "mb-1"], [1, "text-[11px]", "text-slate-400"], [1, "pt-8", "flex", "flex-col", "sm:flex-row", "items-center", "justify-between", "text-xs", "text-slate-500", "gap-4"], [1, "flex", "items-center", "gap-1"]], template: function FooterComponent_Template(rf, ctx) {
-    if (rf & 1) {
-      \u0275\u0275domElementStart(0, "footer", 0)(1, "div", 1)(2, "div", 2)(3, "div", 3)(4, "div", 4)(5, "div", 5);
-      \u0275\u0275text(6, " CBB ");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(7, "span", 6);
-      \u0275\u0275text(8, "Colegio Bertolt Brecht");
-      \u0275\u0275domElementEnd()();
-      \u0275\u0275domElementStart(9, "p", 7);
-      \u0275\u0275text(10, " M\xE1s de 25 a\xF1os dedicados a la formaci\xF3n integral basada en la ciencia, la tecnolog\xEDa, la cultura y los valores c\xEDvicos. ");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(11, "div", 8)(12, "button", 9);
-      \u0275\u0275domListener("click", function FooterComponent_Template_button_click_12_listener() {
-        return ctx.openChat.emit();
-      });
-      \u0275\u0275domElementStart(13, "span");
-      \u0275\u0275text(14, "\u{1F4AC} Abrir Asistente Virtual CBB");
-      \u0275\u0275domElementEnd()()()();
-      \u0275\u0275domElementStart(15, "div")(16, "h4", 10);
-      \u0275\u0275text(17, "Servicios Escolares");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(18, "ul", 11)(19, "li")(20, "a", 12);
-      \u0275\u0275text(21, "Secretar\xEDa y Constancias");
-      \u0275\u0275domElementEnd()();
-      \u0275\u0275domElementStart(22, "li")(23, "a", 12);
-      \u0275\u0275text(24, "Tesorer\xEDa y Pensiones");
-      \u0275\u0275domElementEnd()();
-      \u0275\u0275domElementStart(25, "li")(26, "a", 12);
-      \u0275\u0275text(27, "Talleres Extracurriculares");
-      \u0275\u0275domElementEnd()();
-      \u0275\u0275domElementStart(28, "li")(29, "a", 12);
-      \u0275\u0275text(30, "Psicopedagog\xEDa y Tutor\xEDa");
-      \u0275\u0275domElementEnd()();
-      \u0275\u0275domElementStart(31, "li")(32, "a", 12);
-      \u0275\u0275text(33, "Admisi\xF3n y Matr\xEDcula 2026");
-      \u0275\u0275domElementEnd()()()();
-      \u0275\u0275domElementStart(34, "div")(35, "h4", 10);
-      \u0275\u0275text(36, "Canales de Atenci\xF3n");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(37, "ul", 11)(38, "li", 13)(39, "span");
-      \u0275\u0275text(40, "\u{1F4DE}");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(41, "span");
-      \u0275\u0275text(42, "Central Telef\xF3nica: (01) 424-0010");
-      \u0275\u0275domElementEnd()();
-      \u0275\u0275domElementStart(43, "li", 13)(44, "span");
-      \u0275\u0275text(45, "\u2709\uFE0F");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(46, "span");
-      \u0275\u0275text(47, "informes@cbb.edu.pe");
-      \u0275\u0275domElementEnd()();
-      \u0275\u0275domElementStart(48, "li", 13)(49, "span");
-      \u0275\u0275text(50, "\u23F0");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(51, "span");
-      \u0275\u0275text(52, "Lunes a Viernes: 8:00 am - 5:00 pm");
-      \u0275\u0275domElementEnd()();
-      \u0275\u0275domElementStart(53, "li", 13)(54, "span");
-      \u0275\u0275text(55, "\u23F0");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(56, "span");
-      \u0275\u0275text(57, "S\xE1bados: 8:30 am - 1:00 pm");
-      \u0275\u0275domElementEnd()()()();
-      \u0275\u0275domElementStart(58, "div")(59, "h4", 10);
-      \u0275\u0275text(60, "Transparencia");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(61, "div", 14)(62, "p");
-      \u0275\u0275text(63, "Instituci\xF3n educativa autorizada por el Ministerio de Educaci\xF3n (MINEDU).");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(64, "div", 15)(65, "span", 16);
-      \u0275\u0275text(66, "\u{1F4D6} Libro de Reclamaciones");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(67, "span", 17);
-      \u0275\u0275text(68, "Conforme a lo dispuesto por el C\xF3digo de Protecci\xF3n y Defensa del Consumidor.");
-      \u0275\u0275domElementEnd()()()()();
-      \u0275\u0275domElementStart(69, "div", 18)(70, "p");
-      \u0275\u0275text(71, "\xA9 2026 Colegio Bertolt Brecht. Todos los derechos reservados.");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(72, "p", 19)(73, "span");
-      \u0275\u0275text(74, "Colegio Bertolt Brecht \u2022 Canal de Atenci\xF3n Virtual");
-      \u0275\u0275domElementEnd()()()()();
-    }
-  }, encapsulation: 2, changeDetection: 0 });
-};
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(FooterComponent, [{
-    type: Component,
-    args: [{
-      selector: "app-footer",
-      changeDetection: ChangeDetectionStrategy.OnPush,
-      template: `
-    <footer id="contacto" class="bg-slate-900 text-slate-300 pt-16 pb-12 border-t border-slate-800">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-slate-800">
-          
-          <!-- Columna 1: Marca & Lema -->
-          <div class="space-y-4">
-            <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-xl bg-[#b00725] flex items-center justify-center text-white font-bold text-lg shadow-md">
-                CBB
-              </div>
-              <span class="font-black text-white text-lg tracking-tight">Colegio Bertolt Brecht</span>
-            </div>
-            <p class="text-xs text-slate-400 leading-relaxed">
-              M\xE1s de 25 a\xF1os dedicados a la formaci\xF3n integral basada en la ciencia, la tecnolog\xEDa, la cultura y los valores c\xEDvicos.
-            </p>
-            <div class="pt-2">
-              <button
-                type="button"
-                (click)="openChat.emit()"
-                class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-red-900/40 text-red-200 border border-red-800 text-xs font-semibold hover:bg-red-900/70 transition-colors cursor-pointer">
-                <span>\u{1F4AC} Abrir Asistente Virtual CBB</span>
-              </button>
-            </div>
-          </div>
-
-          <!-- Columna 2: Enlaces R\xE1pidos -->
-          <div>
-            <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Servicios Escolares</h4>
-            <ul class="space-y-2.5 text-xs text-slate-400">
-              <li><a href="#servicios" class="hover:text-white transition-colors">Secretar\xEDa y Constancias</a></li>
-              <li><a href="#servicios" class="hover:text-white transition-colors">Tesorer\xEDa y Pensiones</a></li>
-              <li><a href="#servicios" class="hover:text-white transition-colors">Talleres Extracurriculares</a></li>
-              <li><a href="#servicios" class="hover:text-white transition-colors">Psicopedagog\xEDa y Tutor\xEDa</a></li>
-              <li><a href="#servicios" class="hover:text-white transition-colors">Admisi\xF3n y Matr\xEDcula 2026</a></li>
-            </ul>
-          </div>
-
-          <!-- Columna 3: Canales de Atenci\xF3n -->
-          <div>
-            <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Canales de Atenci\xF3n</h4>
-            <ul class="space-y-2.5 text-xs text-slate-400">
-              <li class="flex items-center gap-2">
-                <span>\u{1F4DE}</span>
-                <span>Central Telef\xF3nica: (01) 424-0010</span>
-              </li>
-              <li class="flex items-center gap-2">
-                <span>\u2709\uFE0F</span>
-                <span>informes&#64;cbb.edu.pe</span>
-              </li>
-              <li class="flex items-center gap-2">
-                <span>\u23F0</span>
-                <span>Lunes a Viernes: 8:00 am - 5:00 pm</span>
-              </li>
-              <li class="flex items-center gap-2">
-                <span>\u23F0</span>
-                <span>S\xE1bados: 8:30 am - 1:00 pm</span>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Columna 4: Transparencia & Libro de Reclamaciones -->
-          <div>
-            <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Transparencia</h4>
-            <div class="space-y-3 text-xs text-slate-400">
-              <p>Instituci\xF3n educativa autorizada por el Ministerio de Educaci\xF3n (MINEDU).</p>
-              <div class="p-3 rounded-lg bg-slate-800/80 border border-slate-700/80">
-                <span class="block text-slate-200 font-semibold mb-1">\u{1F4D6} Libro de Reclamaciones</span>
-                <span class="text-[11px] text-slate-400">Conforme a lo dispuesto por el C\xF3digo de Protecci\xF3n y Defensa del Consumidor.</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Copyright -->
-        <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
-          <p>\xA9 2026 Colegio Bertolt Brecht. Todos los derechos reservados.</p>
-          <p class="flex items-center gap-1">
-            <span>Colegio Bertolt Brecht \u2022 Canal de Atenci\xF3n Virtual</span>
-          </p>
-        </div>
-
-      </div>
-    </footer>
-  `
-    }]
-  }], null, { openChat: [{ type: Output, args: ["openChat"] }] });
-})();
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(FooterComponent, { className: "FooterComponent", filePath: "src/app/features/landing/components/footer/footer.component.ts", lineNumber: 94 });
-})();
+} from "./chunk-OMSE2WG5.js";
 
 // src/app/core/services/session.service.ts
 var SessionService = class _SessionService {
@@ -1075,169 +130,59 @@ var AssistantService = class _AssistantService {
   }], null, null);
 })();
 
-// src/app/features/assistant/components/chat-bubble/chat-bubble.component.ts
-function ChatBubbleComponent_Conditional_1_Template(rf, ctx) {
+// src/app/features/assistant/components/chat-header/chat-header.component.ts
+function ChatHeaderComponent_Conditional_18_Template(rf, ctx) {
   if (rf & 1) {
     const _r1 = \u0275\u0275getCurrentView();
-    \u0275\u0275domElementStart(0, "button", 5);
-    \u0275\u0275domListener("click", function ChatBubbleComponent_Conditional_1_Template_button_click_0_listener() {
+    \u0275\u0275domElementStart(0, "button", 16);
+    \u0275\u0275domListener("click", function ChatHeaderComponent_Conditional_18_Template_button_click_0_listener() {
       \u0275\u0275restoreView(_r1);
       const ctx_r1 = \u0275\u0275nextContext();
-      return \u0275\u0275resetView(ctx_r1.toggle.emit());
+      return \u0275\u0275resetView(ctx_r1.resetConversation.emit());
     });
-    \u0275\u0275domElement(1, "span", 6);
-    \u0275\u0275domElementStart(2, "span");
-    \u0275\u0275text(3, "\xBFTienes dudas? \xA1Preg\xFAntame aqu\xED!");
-    \u0275\u0275domElementEnd()();
-  }
-}
-function ChatBubbleComponent_Conditional_3_Template(rf, ctx) {
-  if (rf & 1) {
     \u0275\u0275namespaceSVG();
-    \u0275\u0275domElementStart(0, "svg", 3);
-    \u0275\u0275domElement(1, "path", 7);
-    \u0275\u0275domElementEnd();
-  }
-}
-function ChatBubbleComponent_Conditional_4_Template(rf, ctx) {
-  if (rf & 1) {
-    \u0275\u0275domElementStart(0, "div", 4);
-    \u0275\u0275namespaceSVG();
-    \u0275\u0275domElementStart(1, "svg", 8);
-    \u0275\u0275domElement(2, "path", 9);
+    \u0275\u0275domElementStart(1, "svg", 17);
+    \u0275\u0275domElement(2, "path", 18);
     \u0275\u0275domElementEnd();
     \u0275\u0275namespaceHTML();
-    \u0275\u0275domElementStart(3, "span", 10);
-    \u0275\u0275domElement(4, "span", 11)(5, "span", 12);
+    \u0275\u0275domElementStart(3, "span");
+    \u0275\u0275text(4, "Nueva consulta");
     \u0275\u0275domElementEnd()();
   }
 }
-var ChatBubbleComponent = class _ChatBubbleComponent {
-  isOpen = input(false, ...ngDevMode ? [{ debugName: "isOpen" }] : (
+var ChatHeaderComponent = class _ChatHeaderComponent {
+  hasMessages = input(false, ...ngDevMode ? [{ debugName: "hasMessages" }] : (
     /* istanbul ignore next */
     []
   ));
-  toggle = output();
-  static \u0275fac = function ChatBubbleComponent_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _ChatBubbleComponent)();
-  };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ChatBubbleComponent, selectors: [["app-chat-bubble"]], inputs: { isOpen: [1, "isOpen"] }, outputs: { toggle: "toggle" }, decls: 5, vars: 3, consts: [[1, "fixed", "bottom-6", "right-6", "z-50", "flex", "items-center", "gap-3"], ["type", "button", 1, "hidden", "sm:flex", "items-center", "gap-2", "px-3.5", "py-2", "rounded-2xl", "bg-white", "text-slate-800", "text-xs", "font-bold", "shadow-xl", "border", "border-slate-200/90", "hover:border-red-300", "hover:text-[#b00725]", "transition-all", "transform", "hover:-translate-x-1", "cursor-pointer"], ["type", "button", 1, "w-16", "h-16", "rounded-full", "bg-gradient-to-tr", "from-[#99001f]", "to-[#b00725]", "text-white", "flex", "items-center", "justify-center", "shadow-2xl", "shadow-red-900/40", "hover:scale-105", "active:scale-95", "transition-all", "duration-200", "cursor-pointer", "border-2", "border-white", "focus:outline-hidden", "focus:ring-4", "focus:ring-red-400/30", 3, "click"], ["fill", "none", "stroke", "currentColor", "viewBox", "0 0 24 24", 1, "w-7", "h-7"], [1, "relative"], ["type", "button", 1, "hidden", "sm:flex", "items-center", "gap-2", "px-3.5", "py-2", "rounded-2xl", "bg-white", "text-slate-800", "text-xs", "font-bold", "shadow-xl", "border", "border-slate-200/90", "hover:border-red-300", "hover:text-[#b00725]", "transition-all", "transform", "hover:-translate-x-1", "cursor-pointer", 3, "click"], [1, "w-2", "h-2", "rounded-full", "bg-emerald-500", "animate-pulse"], ["stroke-linecap", "round", "stroke-linejoin", "round", "stroke-width", "2.5", "d", "M6 18L18 6M6 6l12 12"], ["fill", "none", "stroke", "currentColor", "viewBox", "0 0 24 24", 1, "w-8", "h-8"], ["stroke-linecap", "round", "stroke-linejoin", "round", "stroke-width", "2", "d", "M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"], [1, "absolute", "-top-1", "-right-1", "flex", "h-3", "w-3"], [1, "animate-ping", "absolute", "inline-flex", "h-full", "w-full", "rounded-full", "bg-emerald-400", "opacity-75"], [1, "relative", "inline-flex", "rounded-full", "h-3", "w-3", "bg-emerald-500", "border-2", "border-white"]], template: function ChatBubbleComponent_Template(rf, ctx) {
-    if (rf & 1) {
-      \u0275\u0275domElementStart(0, "div", 0);
-      \u0275\u0275conditionalCreate(1, ChatBubbleComponent_Conditional_1_Template, 4, 0, "button", 1);
-      \u0275\u0275domElementStart(2, "button", 2);
-      \u0275\u0275domListener("click", function ChatBubbleComponent_Template_button_click_2_listener() {
-        return ctx.toggle.emit();
-      });
-      \u0275\u0275conditionalCreate(3, ChatBubbleComponent_Conditional_3_Template, 2, 0, ":svg:svg", 3)(4, ChatBubbleComponent_Conditional_4_Template, 6, 0, "div", 4);
-      \u0275\u0275domElementEnd()();
-    }
-    if (rf & 2) {
-      \u0275\u0275advance();
-      \u0275\u0275conditional(!ctx.isOpen() ? 1 : -1);
-      \u0275\u0275advance();
-      \u0275\u0275attribute("aria-label", ctx.isOpen() ? "Cerrar chat" : "Abrir Asistente Virtual CBB");
-      \u0275\u0275advance();
-      \u0275\u0275conditional(ctx.isOpen() ? 3 : 4);
-    }
-  }, encapsulation: 2, changeDetection: 0 });
-};
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ChatBubbleComponent, [{
-    type: Component,
-    args: [{
-      selector: "app-chat-bubble",
-      changeDetection: ChangeDetectionStrategy.OnPush,
-      template: `
-    <div class="fixed bottom-6 right-6 z-50 flex items-center gap-3">
-      
-      <!-- Tooltip amigable (visible si el chat est\xE1 cerrado) -->
-      @if (!isOpen()) {
-        <button
-          type="button"
-          (click)="toggle.emit()"
-          class="hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-2xl bg-white text-slate-800 text-xs font-bold shadow-xl border border-slate-200/90 hover:border-red-300 hover:text-[#b00725] transition-all transform hover:-translate-x-1 cursor-pointer">
-          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-          <span>\xBFTienes dudas? \xA1Preg\xFAntame aqu\xED!</span>
-        </button>
-      }
-
-      <!-- Bot\xF3n Flotante Principal -->
-      <button
-        type="button"
-        (click)="toggle.emit()"
-        [attr.aria-label]="isOpen() ? 'Cerrar chat' : 'Abrir Asistente Virtual CBB'"
-        class="w-16 h-16 rounded-full bg-gradient-to-tr from-[#99001f] to-[#b00725] text-white flex items-center justify-center shadow-2xl shadow-red-900/40 hover:scale-105 active:scale-95 transition-all duration-200 cursor-pointer border-2 border-white focus:outline-hidden focus:ring-4 focus:ring-red-400/30">
-        
-        @if (isOpen()) {
-          <!-- \xCDcono de Cerrar (X) -->
-          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        } @else {
-          <!-- \xCDcono de Chatbot / Mensaje -->
-          <div class="relative">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-            </svg>
-            <span class="absolute -top-1 -right-1 flex h-3 w-3">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500 border-2 border-white"></span>
-            </span>
-          </div>
-        }
-
-      </button>
-
-    </div>
-  `
-    }]
-  }], null, { isOpen: [{ type: Input, args: [{ isSignal: true, alias: "isOpen", required: false }] }], toggle: [{ type: Output, args: ["toggle"] }] });
-})();
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ChatBubbleComponent, { className: "ChatBubbleComponent", filePath: "src/app/features/assistant/components/chat-bubble/chat-bubble.component.ts", lineNumber: 50 });
-})();
-
-// src/app/features/assistant/components/chat-header/chat-header.component.ts
-var ChatHeaderComponent = class _ChatHeaderComponent {
-  close = output();
   resetConversation = output();
   static \u0275fac = function ChatHeaderComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _ChatHeaderComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ChatHeaderComponent, selectors: [["app-chat-header"]], outputs: { close: "close", resetConversation: "resetConversation" }, decls: 21, vars: 0, consts: [[1, "px-5", "py-4", "bg-gradient-to-r", "from-[#99001f]", "to-[#b00725]", "text-white", "flex", "items-center", "justify-between", "shadow-md"], [1, "flex", "items-center", "gap-3"], [1, "w-10", "h-10", "rounded-full", "bg-white/15", "border", "border-white/20", "flex", "items-center", "justify-center", "text-xl", "shadow-inner"], [1, "flex", "items-center", "gap-2"], [1, "font-bold", "text-sm", "leading-tight", "text-white"], [1, "px-2", "py-0.5", "rounded-full", "text-[10px]", "font-bold", "bg-white/20", "text-white", "uppercase", "tracking-wider"], [1, "flex", "items-center", "gap-1.5", "mt-0.5"], [1, "w-2", "h-2", "rounded-full", "bg-emerald-400", "animate-pulse"], [1, "text-xs", "text-white/80", "font-medium"], [1, "flex", "items-center", "gap-1"], ["type", "button", "title", "Nueva conversaci\xF3n", 1, "p-2", "rounded-lg", "text-white/80", "hover:text-white", "hover:bg-white/10", "transition-colors", "cursor-pointer", 3, "click"], ["fill", "none", "stroke", "currentColor", "viewBox", "0 0 24 24", 1, "w-4", "h-4"], ["stroke-linecap", "round", "stroke-linejoin", "round", "stroke-width", "2", "d", "M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"], ["type", "button", "title", "Minimizar chat", 1, "p-2", "rounded-lg", "text-white/80", "hover:text-white", "hover:bg-white/10", "transition-colors", "cursor-pointer", 3, "click"], ["fill", "none", "stroke", "currentColor", "viewBox", "0 0 24 24", 1, "w-5", "h-5"], ["stroke-linecap", "round", "stroke-linejoin", "round", "stroke-width", "2.5", "d", "M6 18L18 6M6 6l12 12"]], template: function ChatHeaderComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ChatHeaderComponent, selectors: [["app-chat-header"]], inputs: { hasMessages: [1, "hasMessages"] }, outputs: { resetConversation: "resetConversation" }, decls: 19, vars: 1, consts: [[1, "shrink-0", "bg-[#0050A1]", "text-white", "border-b-4", "border-[#BE002E]", "shadow-md", "z-20"], [1, "max-w-6xl", "mx-auto", "px-4", "sm:px-6", "h-16", "sm:h-18", "flex", "items-center", "justify-between", "gap-3"], [1, "flex", "items-center", "gap-3.5", "min-w-0"], [1, "w-10", "h-10", "sm:w-11", "sm:h-11", "rounded-xl", "bg-white", "p-1.5", "flex", "items-center", "justify-center", "shadow-md", "shrink-0"], ["src", "cropped-Favicon-3-1-32x32.png", "alt", "Logo Colegio Bertolt Brecht", 1, "w-full", "h-full", "object-contain"], [1, "min-w-0"], [1, "flex", "items-center", "gap-2.5"], [1, "font-extrabold", "text-white", "text-base", "sm:text-lg", "leading-tight", "tracking-tight", "truncate"], [1, "hidden", "md:inline-flex", "items-center", "px-2.5", "py-0.5", "rounded-full", "text-[10px]", "font-extrabold", "bg-[#BE002E]", "text-white", "uppercase", "tracking-wider", "shadow-2xs"], [1, "flex", "items-center", "gap-1.5", "mt-0.5"], [1, "relative", "flex", "h-2", "w-2"], [1, "animate-ping", "absolute", "inline-flex", "h-full", "w-full", "rounded-full", "bg-emerald-300", "opacity-75"], [1, "relative", "inline-flex", "rounded-full", "h-2", "w-2", "bg-emerald-400"], [1, "text-xs", "text-blue-100", "font-medium", "truncate"], [1, "flex", "items-center", "gap-2", "shrink-0"], ["type", "button", "title", "Iniciar una nueva consulta", 1, "inline-flex", "items-center", "gap-1.5", "px-3.5", "sm:px-4", "py-2", "rounded-xl", "bg-[#BE002E]", "hover:bg-[#9e0026]", "text-white", "text-xs", "font-bold", "shadow-sm", "transition-all", "transform", "active:scale-95", "cursor-pointer"], ["type", "button", "title", "Iniciar una nueva consulta", 1, "inline-flex", "items-center", "gap-1.5", "px-3.5", "sm:px-4", "py-2", "rounded-xl", "bg-[#BE002E]", "hover:bg-[#9e0026]", "text-white", "text-xs", "font-bold", "shadow-sm", "transition-all", "transform", "active:scale-95", "cursor-pointer", 3, "click"], ["fill", "none", "stroke", "currentColor", "viewBox", "0 0 24 24", 1, "w-4", "h-4"], ["stroke-linecap", "round", "stroke-linejoin", "round", "stroke-width", "2.5", "d", "M12 4v16m8-8H4"]], template: function ChatHeaderComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275domElementStart(0, "div", 0)(1, "div", 1)(2, "div", 2);
-      \u0275\u0275text(3, " \u{1F916} ");
+      \u0275\u0275domElementStart(0, "header", 0)(1, "div", 1)(2, "div", 2)(3, "div", 3);
+      \u0275\u0275domElement(4, "img", 4);
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(4, "div")(5, "div", 3)(6, "h3", 4);
-      \u0275\u0275text(7, "Asistente Virtual CBB");
+      \u0275\u0275domElementStart(5, "div", 5)(6, "div", 6)(7, "h1", 7);
+      \u0275\u0275text(8, " Colegio Bertolt Brecht ");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(8, "span", 5);
-      \u0275\u0275text(9, "Atenci\xF3n 24/7");
+      \u0275\u0275domElementStart(9, "span", 8);
+      \u0275\u0275text(10, " Asistente Oficial ");
       \u0275\u0275domElementEnd()();
-      \u0275\u0275domElementStart(10, "div", 6);
-      \u0275\u0275domElement(11, "span", 7);
-      \u0275\u0275domElementStart(12, "span", 8);
-      \u0275\u0275text(13, "En l\xEDnea \u2022 Respuestas oficiales");
+      \u0275\u0275domElementStart(11, "div", 9)(12, "span", 10);
+      \u0275\u0275domElement(13, "span", 11)(14, "span", 12);
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(15, "span", 13);
+      \u0275\u0275text(16, " Atenci\xF3n en l\xEDnea 24/7 \u2022 Orientaci\xF3n al ciudadano ");
       \u0275\u0275domElementEnd()()()();
-      \u0275\u0275domElementStart(14, "div", 9)(15, "button", 10);
-      \u0275\u0275domListener("click", function ChatHeaderComponent_Template_button_click_15_listener() {
-        return ctx.resetConversation.emit();
-      });
-      \u0275\u0275namespaceSVG();
-      \u0275\u0275domElementStart(16, "svg", 11);
-      \u0275\u0275domElement(17, "path", 12);
-      \u0275\u0275domElementEnd()();
-      \u0275\u0275namespaceHTML();
-      \u0275\u0275domElementStart(18, "button", 13);
-      \u0275\u0275domListener("click", function ChatHeaderComponent_Template_button_click_18_listener() {
-        return ctx.close.emit();
-      });
-      \u0275\u0275namespaceSVG();
-      \u0275\u0275domElementStart(19, "svg", 14);
-      \u0275\u0275domElement(20, "path", 15);
-      \u0275\u0275domElementEnd()()()();
+      \u0275\u0275domElementStart(17, "div", 14);
+      \u0275\u0275conditionalCreate(18, ChatHeaderComponent_Conditional_18_Template, 5, 0, "button", 15);
+      \u0275\u0275domElementEnd()()();
+    }
+    if (rf & 2) {
+      \u0275\u0275advance(18);
+      \u0275\u0275conditional(ctx.hasMessages() ? 18 : -1);
     }
   }, encapsulation: 2, changeDetection: 0 });
 };
@@ -1248,59 +193,63 @@ var ChatHeaderComponent = class _ChatHeaderComponent {
       selector: "app-chat-header",
       changeDetection: ChangeDetectionStrategy.OnPush,
       template: `
-    <div class="px-5 py-4 bg-gradient-to-r from-[#99001f] to-[#b00725] text-white flex items-center justify-between shadow-md">
-      
-      <!-- Identidad del Asistente -->
-      <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-full bg-white/15 border border-white/20 flex items-center justify-center text-xl shadow-inner">
-          \u{1F916}
-        </div>
-        <div>
-          <div class="flex items-center gap-2">
-            <h3 class="font-bold text-sm leading-tight text-white">Asistente Virtual CBB</h3>
-            <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-white/20 text-white uppercase tracking-wider">Atenci\xF3n 24/7</span>
-          </div>
-          <div class="flex items-center gap-1.5 mt-0.5">
-            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span class="text-xs text-white/80 font-medium">En l\xEDnea \u2022 Respuestas oficiales</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Controles de cabecera -->
-      <div class="flex items-center gap-1">
+    <header class="shrink-0 bg-[#0050A1] text-white border-b-4 border-[#BE002E] shadow-md z-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 sm:h-18 flex items-center justify-between gap-3">
         
-        <!-- Bot\xF3n Reiniciar conversaci\xF3n -->
-        <button
-          type="button"
-          (click)="resetConversation.emit()"
-          title="Nueva conversaci\xF3n"
-          class="p-2 rounded-lg text-white/80 hover:text-white hover:bg-white/10 transition-colors cursor-pointer">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-          </svg>
-        </button>
+        <!-- Identidad Institucional CBB -->
+        <div class="flex items-center gap-3.5 min-w-0">
+          <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-white p-1.5 flex items-center justify-center shadow-md shrink-0">
+            <img 
+              src="cropped-Favicon-3-1-32x32.png" 
+              alt="Logo Colegio Bertolt Brecht" 
+              class="w-full h-full object-contain"
+            />
+          </div>
+          <div class="min-w-0">
+            <div class="flex items-center gap-2.5">
+              <h1 class="font-extrabold text-white text-base sm:text-lg leading-tight tracking-tight truncate">
+                Colegio Bertolt Brecht
+              </h1>
+              <span class="hidden md:inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-extrabold bg-[#BE002E] text-white uppercase tracking-wider shadow-2xs">
+                Asistente Oficial
+              </span>
+            </div>
+            <div class="flex items-center gap-1.5 mt-0.5">
+              <span class="relative flex h-2 w-2">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-300 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
+              </span>
+              <span class="text-xs text-blue-100 font-medium truncate">
+                Atenci\xF3n en l\xEDnea 24/7 \u2022 Orientaci\xF3n al ciudadano
+              </span>
+            </div>
+          </div>
+        </div>
 
-        <!-- Bot\xF3n Cerrar/Minimizar -->
-        <button
-          type="button"
-          (click)="close.emit()"
-          title="Minimizar chat"
-          class="p-2 rounded-lg text-white/80 hover:text-white hover:bg-white/10 transition-colors cursor-pointer">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
+        <!-- Acciones de Cabecera -->
+        <div class="flex items-center gap-2 shrink-0">
+          @if (hasMessages()) {
+            <button
+              type="button"
+              (click)="resetConversation.emit()"
+              title="Iniciar una nueva consulta"
+              class="inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2 rounded-xl bg-[#BE002E] hover:bg-[#9e0026] text-white text-xs font-bold shadow-sm transition-all transform active:scale-95 cursor-pointer">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4" />
+              </svg>
+              <span>Nueva consulta</span>
+            </button>
+          }
+        </div>
 
       </div>
-
-    </div>
+    </header>
   `
     }]
-  }], null, { close: [{ type: Output, args: ["close"] }], resetConversation: [{ type: Output, args: ["resetConversation"] }] });
+  }], null, { hasMessages: [{ type: Input, args: [{ isSignal: true, alias: "hasMessages", required: false }] }], resetConversation: [{ type: Output, args: ["resetConversation"] }] });
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ChatHeaderComponent, { className: "ChatHeaderComponent", filePath: "src/app/features/assistant/components/chat-header/chat-header.component.ts", lineNumber: 56 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ChatHeaderComponent, { className: "ChatHeaderComponent", filePath: "src/app/features/assistant/components/chat-header/chat-header.component.ts", lineNumber: 60 });
 })();
 
 // node_modules/marked/lib/marked.esm.js
@@ -4659,31 +3608,72 @@ function ChatMessageItemComponent_Conditional_1_Template(rf, ctx) {
     \u0275\u0275advance(3);
     \u0275\u0275textInterpolate(ctx_r0.message().text);
     \u0275\u0275advance(2);
-    \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind2(6, 2, ctx_r0.message().timestamp, "shortTime"), " ");
+    \u0275\u0275textInterpolate1(" T\xFA \u2022 ", \u0275\u0275pipeBind2(6, 2, ctx_r0.message().timestamp, "shortTime"), " ");
+  }
+}
+function ChatMessageItemComponent_Conditional_2_Conditional_11_Conditional_1_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275domElementStart(0, "span", 15);
+    \u0275\u0275text(1, "\u2713 Copiado");
+    \u0275\u0275domElementEnd();
+  }
+}
+function ChatMessageItemComponent_Conditional_2_Conditional_11_Conditional_2_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275namespaceSVG();
+    \u0275\u0275domElementStart(0, "svg", 16);
+    \u0275\u0275domElement(1, "path", 17);
+    \u0275\u0275domElementEnd();
+    \u0275\u0275namespaceHTML();
+    \u0275\u0275domElementStart(2, "span");
+    \u0275\u0275text(3, "Copiar");
+    \u0275\u0275domElementEnd();
+  }
+}
+function ChatMessageItemComponent_Conditional_2_Conditional_11_Template(rf, ctx) {
+  if (rf & 1) {
+    const _r2 = \u0275\u0275getCurrentView();
+    \u0275\u0275domElementStart(0, "button", 14);
+    \u0275\u0275domListener("click", function ChatMessageItemComponent_Conditional_2_Conditional_11_Template_button_click_0_listener() {
+      \u0275\u0275restoreView(_r2);
+      const ctx_r0 = \u0275\u0275nextContext(2);
+      return \u0275\u0275resetView(ctx_r0.copyToClipboard());
+    });
+    \u0275\u0275conditionalCreate(1, ChatMessageItemComponent_Conditional_2_Conditional_11_Conditional_1_Template, 2, 0, "span", 15)(2, ChatMessageItemComponent_Conditional_2_Conditional_11_Conditional_2_Template, 4, 0);
+    \u0275\u0275domElementEnd();
+  }
+  if (rf & 2) {
+    const ctx_r0 = \u0275\u0275nextContext(2);
+    \u0275\u0275advance();
+    \u0275\u0275conditional(ctx_r0.copied() ? 1 : 2);
   }
 }
 function ChatMessageItemComponent_Conditional_2_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275domElementStart(0, "div", 2)(1, "div", 6);
-    \u0275\u0275text(2, " \u{1F916} ");
+    \u0275\u0275domElement(2, "img", 7);
     \u0275\u0275domElementEnd();
-    \u0275\u0275domElementStart(3, "div", 7)(4, "div", 8);
-    \u0275\u0275domElement(5, "div", 9);
+    \u0275\u0275domElementStart(3, "div", 8)(4, "div", 9);
+    \u0275\u0275domElement(5, "div", 10);
     \u0275\u0275pipe(6, "markdown");
     \u0275\u0275domElementEnd();
-    \u0275\u0275domElementStart(7, "div", 10);
-    \u0275\u0275text(8);
-    \u0275\u0275pipe(9, "date");
+    \u0275\u0275domElementStart(7, "div", 11)(8, "span", 12);
+    \u0275\u0275text(9);
+    \u0275\u0275pipe(10, "date");
+    \u0275\u0275domElementEnd();
+    \u0275\u0275conditionalCreate(11, ChatMessageItemComponent_Conditional_2_Conditional_11_Template, 3, 1, "button", 13);
     \u0275\u0275domElementEnd()()();
   }
   if (rf & 2) {
     const ctx_r0 = \u0275\u0275nextContext();
     \u0275\u0275advance(4);
-    \u0275\u0275classProp("border-red-300", ctx_r0.message().isError)("bg-red-50/50", ctx_r0.message().isError);
+    \u0275\u0275classProp("border-red-300", ctx_r0.message().isError)("bg-red-50/60", ctx_r0.message().isError);
     \u0275\u0275advance();
-    \u0275\u0275domProperty("innerHTML", \u0275\u0275pipeBind1(6, 6, ctx_r0.message().text), \u0275\u0275sanitizeHtml);
-    \u0275\u0275advance(3);
-    \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind2(9, 8, ctx_r0.message().timestamp, "shortTime"), " ");
+    \u0275\u0275domProperty("innerHTML", \u0275\u0275pipeBind1(6, 7, ctx_r0.message().text), \u0275\u0275sanitizeHtml);
+    \u0275\u0275advance(4);
+    \u0275\u0275textInterpolate1(" Asistente CBB \u2022 ", \u0275\u0275pipeBind2(10, 9, ctx_r0.message().timestamp, "shortTime"), " ");
+    \u0275\u0275advance(2);
+    \u0275\u0275conditional(!ctx_r0.message().isError ? 11 : -1);
   }
 }
 var ChatMessageItemComponent = class _ChatMessageItemComponent {
@@ -4691,14 +3681,24 @@ var ChatMessageItemComponent = class _ChatMessageItemComponent {
     /* istanbul ignore next */
     []
   ));
+  copied = signal(false, ...ngDevMode ? [{ debugName: "copied" }] : (
+    /* istanbul ignore next */
+    []
+  ));
+  copyToClipboard() {
+    navigator.clipboard.writeText(this.message().text).then(() => {
+      this.copied.set(true);
+      setTimeout(() => this.copied.set(false), 2e3);
+    });
+  }
   static \u0275fac = function ChatMessageItemComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _ChatMessageItemComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ChatMessageItemComponent, selectors: [["app-chat-message-item"]], inputs: { message: [1, "message"] }, decls: 3, vars: 6, consts: [[1, "flex", "w-full", "mb-4"], [1, "max-w-[85%]", "sm:max-w-[75%]", "space-y-1"], [1, "flex", "items-start", "gap-2.5", "max-w-[90%]", "sm:max-w-[85%]"], [1, "px-4", "py-3", "rounded-2xl", "rounded-tr-xs", "bg-[#b00725]", "text-white", "text-sm", "leading-relaxed", "shadow-sm"], [1, "whitespace-pre-wrap"], [1, "text-[10px]", "text-slate-400", "text-right", "pr-1"], [1, "w-8", "h-8", "rounded-full", "bg-red-50", "border", "border-red-200", "flex", "items-center", "justify-center", "text-sm", "shrink-0", "shadow-2xs", "mt-0.5"], [1, "space-y-1.5", "flex-1", "min-w-0"], [1, "px-4", "py-3", "rounded-2xl", "rounded-tl-xs", "bg-white", "border", "border-slate-200", "text-slate-800", "text-sm", "leading-relaxed", "shadow-xs", "break-words"], [1, "chat-markdown", "break-words", 3, "innerHTML"], [1, "text-[10px]", "text-slate-400", "pl-1"]], template: function ChatMessageItemComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ChatMessageItemComponent, selectors: [["app-chat-message-item"]], inputs: { message: [1, "message"] }, decls: 3, vars: 6, consts: [[1, "flex", "w-full", "mb-6", "animate-in", "fade-in", "slide-in-from-bottom-2", "duration-200"], [1, "max-w-[85%]", "sm:max-w-[75%]", "space-y-1.5"], [1, "flex", "items-start", "gap-3", "sm:gap-4", "w-full", "max-w-[95%]", "sm:max-w-[90%]"], [1, "px-5", "py-3.5", "rounded-2xl", "rounded-tr-xs", "bg-[#0050A1]", "text-white", "text-sm", "sm:text-[15px]", "leading-relaxed", "shadow-sm"], [1, "whitespace-pre-wrap"], [1, "text-[11px]", "text-slate-400", "text-right", "pr-1", "font-medium"], [1, "w-9", "h-9", "rounded-xl", "bg-white", "border", "border-slate-200", "p-1.5", "flex", "items-center", "justify-center", "shrink-0", "shadow-xs", "mt-0.5"], ["src", "cropped-Favicon-3-1-32x32.png", "alt", "CBB", 1, "w-full", "h-full", "object-contain"], [1, "space-y-1.5", "flex-1", "min-w-0"], [1, "px-5", "py-4", "rounded-2xl", "rounded-tl-xs", "bg-white", "border", "border-slate-200", "border-l-4", "border-l-[#BE002E]", "text-slate-800", "text-sm", "sm:text-[15px]", "leading-relaxed", "shadow-xs", "break-words"], [1, "chat-markdown", "break-words", 3, "innerHTML"], [1, "flex", "items-center", "justify-between", "px-1"], [1, "text-[11px]", "text-slate-400", "font-medium"], ["type", "button", 1, "inline-flex", "items-center", "gap-1", "text-[11px]", "text-slate-400", "hover:text-[#0050A1]", "transition-colors", "cursor-pointer", "py-0.5", "px-1.5", "rounded-md", "hover:bg-slate-100"], ["type", "button", 1, "inline-flex", "items-center", "gap-1", "text-[11px]", "text-slate-400", "hover:text-[#0050A1]", "transition-colors", "cursor-pointer", "py-0.5", "px-1.5", "rounded-md", "hover:bg-slate-100", 3, "click"], [1, "text-emerald-600", "font-semibold"], ["fill", "none", "stroke", "currentColor", "viewBox", "0 0 24 24", 1, "w-3.5", "h-3.5"], ["stroke-linecap", "round", "stroke-linejoin", "round", "stroke-width", "2", "d", "M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"]], template: function ChatMessageItemComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275domElementStart(0, "div", 0);
       \u0275\u0275conditionalCreate(1, ChatMessageItemComponent_Conditional_1_Template, 7, 5, "div", 1);
-      \u0275\u0275conditionalCreate(2, ChatMessageItemComponent_Conditional_2_Template, 10, 11, "div", 2);
+      \u0275\u0275conditionalCreate(2, ChatMessageItemComponent_Conditional_2_Template, 12, 12, "div", 2);
       \u0275\u0275domElementEnd();
     }
     if (rf & 2) {
@@ -4719,34 +3719,36 @@ var ChatMessageItemComponent = class _ChatMessageItemComponent {
       imports: [DatePipe, MarkdownPipe],
       template: `
     <div 
-      class="flex w-full mb-4"
+      class="flex w-full mb-6 animate-in fade-in slide-in-from-bottom-2 duration-200"
       [class.justify-end]="message().sender === 'user'"
       [class.justify-start]="message().sender === 'assistant'">
       
-      <!-- Mensaje del Usuario -->
+      <!-- Mensaje del Usuario (Secci\xF3n Azul Institucional #0050A1) -->
       @if (message().sender === 'user') {
-        <div class="max-w-[85%] sm:max-w-[75%] space-y-1">
-          <div class="px-4 py-3 rounded-2xl rounded-tr-xs bg-[#b00725] text-white text-sm leading-relaxed shadow-sm">
+        <div class="max-w-[85%] sm:max-w-[75%] space-y-1.5">
+          <div class="px-5 py-3.5 rounded-2xl rounded-tr-xs bg-[#0050A1] text-white text-sm sm:text-[15px] leading-relaxed shadow-sm">
             <p class="whitespace-pre-wrap">{{ message().text }}</p>
           </div>
-          <div class="text-[10px] text-slate-400 text-right pr-1">
-            {{ message().timestamp | date:'shortTime' }}
+          <div class="text-[11px] text-slate-400 text-right pr-1 font-medium">
+            T\xFA \u2022 {{ message().timestamp | date:'shortTime' }}
           </div>
         </div>
       }
 
-      <!-- Mensaje del Asistente -->
+      <!-- Mensaje del Asistente (Contenido Blanco con acentos #BE002E y #0050A1) -->
       @if (message().sender === 'assistant') {
-        <div class="flex items-start gap-2.5 max-w-[90%] sm:max-w-[85%]">
-          <div class="w-8 h-8 rounded-full bg-red-50 border border-red-200 flex items-center justify-center text-sm shrink-0 shadow-2xs mt-0.5">
-            \u{1F916}
+        <div class="flex items-start gap-3 sm:gap-4 w-full max-w-[95%] sm:max-w-[90%]">
+          
+          <!-- Avatar con \xCDcono Oficial CBB -->
+          <div class="w-9 h-9 rounded-xl bg-white border border-slate-200 p-1.5 flex items-center justify-center shrink-0 shadow-xs mt-0.5">
+            <img src="cropped-Favicon-3-1-32x32.png" alt="CBB" class="w-full h-full object-contain" />
           </div>
+
           <div class="space-y-1.5 flex-1 min-w-0">
-            
             <div 
-              class="px-4 py-3 rounded-2xl rounded-tl-xs bg-white border border-slate-200 text-slate-800 text-sm leading-relaxed shadow-xs break-words"
+              class="px-5 py-4 rounded-2xl rounded-tl-xs bg-white border border-slate-200 border-l-4 border-l-[#BE002E] text-slate-800 text-sm sm:text-[15px] leading-relaxed shadow-xs break-words"
               [class.border-red-300]="message().isError"
-              [class.bg-red-50/50]="message().isError">
+              [class.bg-red-50/60]="message().isError">
               
               <!-- Contenido con Markdown Limpio -->
               <div 
@@ -4756,8 +3758,27 @@ var ChatMessageItemComponent = class _ChatMessageItemComponent {
 
             </div>
 
-            <div class="text-[10px] text-slate-400 pl-1">
-              {{ message().timestamp | date:'shortTime' }}
+            <!-- Barra inferior del mensaje (Hora + Copiar) -->
+            <div class="flex items-center justify-between px-1">
+              <span class="text-[11px] text-slate-400 font-medium">
+                Asistente CBB \u2022 {{ message().timestamp | date:'shortTime' }}
+              </span>
+
+              @if (!message().isError) {
+                <button
+                  type="button"
+                  (click)="copyToClipboard()"
+                  class="inline-flex items-center gap-1 text-[11px] text-slate-400 hover:text-[#0050A1] transition-colors cursor-pointer py-0.5 px-1.5 rounded-md hover:bg-slate-100">
+                  @if (copied()) {
+                    <span class="text-emerald-600 font-semibold">\u2713 Copiado</span>
+                  } @else {
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                    </svg>
+                    <span>Copiar</span>
+                  }
+                </button>
+              }
             </div>
 
           </div>
@@ -4770,29 +3791,124 @@ var ChatMessageItemComponent = class _ChatMessageItemComponent {
   }], null, { message: [{ type: Input, args: [{ isSignal: true, alias: "message", required: true }] }] });
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ChatMessageItemComponent, { className: "ChatMessageItemComponent", filePath: "src/app/features/assistant/components/chat-message-item/chat-message-item.component.ts", lineNumber: 60 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ChatMessageItemComponent, { className: "ChatMessageItemComponent", filePath: "src/app/features/assistant/components/chat-message-item/chat-message-item.component.ts", lineNumber: 81 });
 })();
 
 // src/app/features/assistant/components/chat-messages/chat-messages.component.ts
 var _c0 = ["scrollContainer"];
-var _forTrack03 = ($index, $item) => $item.id;
-function ChatMessagesComponent_For_3_Template(rf, ctx) {
+var _forTrack0 = ($index, $item) => $item.title;
+var _forTrack1 = ($index, $item) => $item.id;
+function ChatMessagesComponent_Conditional_3_For_12_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275element(0, "app-chat-message-item", 2);
+    const _r1 = \u0275\u0275getCurrentView();
+    \u0275\u0275elementStart(0, "button", 12);
+    \u0275\u0275listener("click", function ChatMessagesComponent_Conditional_3_For_12_Template_button_click_0_listener() {
+      const card_r2 = \u0275\u0275restoreView(_r1).$implicit;
+      const ctx_r2 = \u0275\u0275nextContext(2);
+      return \u0275\u0275resetView(ctx_r2.selectPrompt.emit(card_r2.prompt));
+    });
+    \u0275\u0275element(1, "div", 13);
+    \u0275\u0275elementStart(2, "div", 14)(3, "div", 15)(4, "span", 16);
+    \u0275\u0275text(5);
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(6, "span", 17);
+    \u0275\u0275text(7);
+    \u0275\u0275elementEnd()();
+    \u0275\u0275elementStart(8, "h3", 18);
+    \u0275\u0275text(9);
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(10, "p", 19);
+    \u0275\u0275text(11);
+    \u0275\u0275elementEnd()();
+    \u0275\u0275elementStart(12, "div", 20)(13, "span");
+    \u0275\u0275text(14, "Consultar ahora");
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(15, "span");
+    \u0275\u0275text(16, "\u2192");
+    \u0275\u0275elementEnd()()();
   }
   if (rf & 2) {
-    const msg_r1 = ctx.$implicit;
-    \u0275\u0275property("message", msg_r1);
+    const card_r2 = ctx.$implicit;
+    \u0275\u0275classProp("hover:border-[#BE002E]", card_r2.accent === "red")("hover:border-[#0050A1]", card_r2.accent === "blue");
+    \u0275\u0275advance();
+    \u0275\u0275classProp("bg-[#BE002E]", card_r2.accent === "red")("bg-[#0050A1]", card_r2.accent === "blue");
+    \u0275\u0275advance(3);
+    \u0275\u0275classProp("bg-[#BE002E]/10", card_r2.accent === "red")("bg-[#0050A1]/10", card_r2.accent === "blue");
+    \u0275\u0275advance();
+    \u0275\u0275textInterpolate1(" ", card_r2.icon, " ");
+    \u0275\u0275advance();
+    \u0275\u0275classProp("bg-[#BE002E]/10", card_r2.accent === "red")("text-[#BE002E]", card_r2.accent === "red")("bg-[#0050A1]/10", card_r2.accent === "blue")("text-[#0050A1]", card_r2.accent === "blue");
+    \u0275\u0275advance();
+    \u0275\u0275textInterpolate1(" ", card_r2.badge, " ");
+    \u0275\u0275advance();
+    \u0275\u0275classProp("group-hover:text-[#BE002E]", card_r2.accent === "red")("group-hover:text-[#0050A1]", card_r2.accent === "blue");
+    \u0275\u0275advance();
+    \u0275\u0275textInterpolate1(" ", card_r2.title, " ");
+    \u0275\u0275advance(2);
+    \u0275\u0275textInterpolate1(" ", card_r2.description, " ");
+    \u0275\u0275advance();
+    \u0275\u0275classProp("text-[#BE002E]", card_r2.accent === "red")("text-[#0050A1]", card_r2.accent === "blue");
+  }
+}
+function ChatMessagesComponent_Conditional_3_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "div", 3)(1, "div", 5);
+    \u0275\u0275element(2, "img", 6);
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(3, "div", 7)(4, "span");
+    \u0275\u0275text(5, "Asistente Virtual Oficial \u2022 Colegio Bertolt Brecht");
+    \u0275\u0275elementEnd()();
+    \u0275\u0275elementStart(6, "h2", 8);
+    \u0275\u0275text(7, " \xBFEn qu\xE9 podemos orientarte hoy? ");
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(8, "p", 9);
+    \u0275\u0275text(9, " Resuelve tus dudas al instante sobre matr\xEDculas, pensiones, tr\xE1mites de secretar\xEDa, talleres y sedes con informaci\xF3n oficial vigente. ");
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(10, "div", 10);
+    \u0275\u0275repeaterCreate(11, ChatMessagesComponent_Conditional_3_For_12_Template, 17, 32, "button", 11, _forTrack0);
+    \u0275\u0275elementEnd()();
+  }
+  if (rf & 2) {
+    const ctx_r2 = \u0275\u0275nextContext();
+    \u0275\u0275advance(11);
+    \u0275\u0275repeater(ctx_r2.welcomeCards);
+  }
+}
+function ChatMessagesComponent_Conditional_4_For_2_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275element(0, "app-chat-message-item", 21);
+  }
+  if (rf & 2) {
+    const msg_r4 = ctx.$implicit;
+    \u0275\u0275property("message", msg_r4);
+  }
+}
+function ChatMessagesComponent_Conditional_4_Conditional_3_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "div", 22)(1, "div", 23);
+    \u0275\u0275element(2, "img", 24);
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(3, "div", 25)(4, "div", 26);
+    \u0275\u0275element(5, "span", 27)(6, "span", 28)(7, "span", 29);
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(8, "span", 30);
+    \u0275\u0275text(9, "Consultando documentos oficiales...");
+    \u0275\u0275elementEnd()()();
   }
 }
 function ChatMessagesComponent_Conditional_4_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 3)(1, "div", 4);
-    \u0275\u0275text(2, " \u{1F916} ");
+    \u0275\u0275elementStart(0, "div", 4);
+    \u0275\u0275repeaterCreate(1, ChatMessagesComponent_Conditional_4_For_2_Template, 1, 1, "app-chat-message-item", 21, _forTrack1);
+    \u0275\u0275conditionalCreate(3, ChatMessagesComponent_Conditional_4_Conditional_3_Template, 10, 0, "div", 22);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(3, "div", 5)(4, "div", 6);
-    \u0275\u0275element(5, "span", 7)(6, "span", 8)(7, "span", 9);
-    \u0275\u0275elementEnd()()();
+  }
+  if (rf & 2) {
+    const ctx_r2 = \u0275\u0275nextContext();
+    \u0275\u0275advance();
+    \u0275\u0275repeater(ctx_r2.messages());
+    \u0275\u0275advance(2);
+    \u0275\u0275conditional(ctx_r2.isLoading() ? 3 : -1);
   }
 }
 var ChatMessagesComponent = class _ChatMessagesComponent {
@@ -4804,10 +3920,61 @@ var ChatMessagesComponent = class _ChatMessagesComponent {
     /* istanbul ignore next */
     []
   ));
+  selectPrompt = output();
   scrollContainer = viewChild("scrollContainer", ...ngDevMode ? [{ debugName: "scrollContainer" }] : (
     /* istanbul ignore next */
     []
   ));
+  welcomeCards = [
+    {
+      icon: "\u{1F393}",
+      title: "Matr\xEDcula 2026",
+      description: "Requisitos, cronograma, edades y proceso para estudiantes nuevos o traslados.",
+      prompt: "\xBFCu\xE1les son los requisitos y pasos para el proceso de matr\xEDcula 2026?",
+      badge: "Admisi\xF3n",
+      accent: "red"
+    },
+    {
+      icon: "\u{1F4B3}",
+      title: "Pensiones y Pagos",
+      description: "Cronograma de vencimientos, bancos autorizados y medios de pago digitales.",
+      prompt: "\xBFCu\xE1les son los canales autorizados y fechas de pago de pensiones?",
+      badge: "Tesorer\xEDa",
+      accent: "blue"
+    },
+    {
+      icon: "\u{1F4C4}",
+      title: "Certificados y Tr\xE1mites",
+      description: "Solicitud de constancias de estudios, certificados oficiales y FUT.",
+      prompt: "\xBFC\xF3mo solicito una constancia de estudios o certificado oficial?",
+      badge: "Secretar\xEDa",
+      accent: "red"
+    },
+    {
+      icon: "\u{1F3A8}",
+      title: "Talleres y Deportes",
+      description: "Disciplinas art\xEDsticas, deportivas y horarios de actividades extracurriculares.",
+      prompt: "\xBFQu\xE9 talleres extracurriculares y deportes ofrece el colegio?",
+      badge: "Formativo",
+      accent: "blue"
+    },
+    {
+      icon: "\u{1F4CD}",
+      title: "Sedes y Horarios",
+      description: "Direcciones, tel\xE9fonos de secretar\xEDa y horarios de atenci\xF3n presencial.",
+      prompt: "\xBFCu\xE1les son las sedes del colegio y sus horarios de atenci\xF3n?",
+      badge: "Sedes",
+      accent: "red"
+    },
+    {
+      icon: "\u{1F4BB}",
+      title: "Plataformas Escolares",
+      description: "Orientaci\xF3n sobre el uso de Intranet, aula virtual y canales de soporte.",
+      prompt: "\xBFC\xF3mo accedo a las plataformas virtuales e intranet del colegio?",
+      badge: "Digital",
+      accent: "blue"
+    }
+  ];
   constructor() {
     effect(() => {
       this.messages();
@@ -4818,7 +3985,7 @@ var ChatMessagesComponent = class _ChatMessagesComponent {
   scrollToBottom() {
     setTimeout(() => {
       const container = this.scrollContainer()?.nativeElement;
-      if (container) {
+      if (container && this.messages().length > 0) {
         container.scrollTo({
           top: container.scrollHeight,
           behavior: "smooth"
@@ -4836,18 +4003,15 @@ var ChatMessagesComponent = class _ChatMessagesComponent {
     if (rf & 2) {
       \u0275\u0275queryAdvance();
     }
-  }, hostAttrs: [1, "flex-1", "min-h-0", "flex", "flex-col", "overflow-hidden"], inputs: { messages: [1, "messages"], isLoading: [1, "isLoading"] }, decls: 5, vars: 1, consts: [["scrollContainer", ""], [1, "flex-1", "min-h-0", "chat-scroll", "p-4", "space-y-3", "bg-slate-50/50"], [3, "message"], [1, "flex", "items-start", "gap-2.5", "max-w-[80%]", "mb-4"], [1, "w-8", "h-8", "rounded-full", "bg-red-50", "border", "border-red-200", "flex", "items-center", "justify-center", "text-sm", "shrink-0", "shadow-2xs"], [1, "px-4", "py-3", "rounded-2xl", "rounded-tl-xs", "bg-white", "border", "border-slate-200", "shadow-2xs"], [1, "flex", "items-center", "gap-1.5", "h-5"], [1, "w-2", "h-2", "rounded-full", "bg-[#b00725]", "animate-bounce", "[animation-delay:-0.3s]"], [1, "w-2", "h-2", "rounded-full", "bg-[#b00725]", "animate-bounce", "[animation-delay:-0.15s]"], [1, "w-2", "h-2", "rounded-full", "bg-[#b00725]", "animate-bounce"]], template: function ChatMessagesComponent_Template(rf, ctx) {
+  }, hostAttrs: [1, "flex-1", "min-h-0", "flex", "flex-col", "overflow-hidden", "bg-white"], inputs: { messages: [1, "messages"], isLoading: [1, "isLoading"] }, outputs: { selectPrompt: "selectPrompt" }, decls: 5, vars: 1, consts: [["scrollContainer", ""], [1, "flex-1", "min-h-0", "overflow-y-auto", "chat-scroll", "px-4", "sm:px-6", "py-6", "sm:py-8", "bg-white"], [1, "max-w-3xl", "mx-auto", "w-full", "h-full", "flex", "flex-col"], [1, "my-auto", "py-4", "sm:py-8", "flex", "flex-col", "items-center", "text-center", "animate-in", "fade-in", "duration-300"], [1, "flex-1", "space-y-2", "pb-4"], [1, "w-18", "h-18", "sm:w-22", "sm:h-22", "rounded-3xl", "bg-white", "p-3", "flex", "items-center", "justify-center", "shadow-lg", "border-2", "border-[#0050A1]/15", "ring-4", "ring-[#BE002E]/10", "mb-5"], ["src", "cropped-Favicon-3-1-32x32.png", "alt", "Colegio Bertolt Brecht", 1, "w-full", "h-full", "object-contain"], [1, "inline-flex", "items-center", "gap-2", "px-3.5", "py-1", "rounded-full", "bg-[#BE002E]/10", "border", "border-[#BE002E]/25", "text-[#BE002E]", "text-xs", "font-extrabold", "uppercase", "tracking-wide", "mb-3"], [1, "text-2xl", "sm:text-3xl", "md:text-4xl", "font-black", "text-[#0050A1]", "tracking-tight", "mb-3"], [1, "text-slate-600", "text-sm", "sm:text-base", "max-w-xl", "mb-8", "leading-relaxed"], [1, "grid", "grid-cols-1", "sm:grid-cols-2", "lg:grid-cols-3", "gap-3.5", "w-full", "text-left"], ["type", "button", 1, "group", "relative", "p-4", "rounded-2xl", "bg-white", "border", "border-slate-200", "hover:shadow-md", "transition-all", "flex", "flex-col", "justify-between", "gap-2", "cursor-pointer", "text-left", "overflow-hidden", 3, "hover:border-[#BE002E]", "hover:border-[#0050A1]"], ["type", "button", 1, "group", "relative", "p-4", "rounded-2xl", "bg-white", "border", "border-slate-200", "hover:shadow-md", "transition-all", "flex", "flex-col", "justify-between", "gap-2", "cursor-pointer", "text-left", "overflow-hidden", 3, "click"], [1, "absolute", "top-0", "left-0", "right-0", "h-1", "transition-all"], [1, "pt-1"], [1, "flex", "items-center", "justify-between", "mb-2.5"], [1, "w-9", "h-9", "rounded-xl", "flex", "items-center", "justify-center", "text-lg", "transition-colors"], [1, "text-[10px]", "font-extrabold", "uppercase", "tracking-wider", "px-2.5", "py-0.5", "rounded-full", "transition-colors"], [1, "font-bold", "text-slate-900", "text-sm", "transition-colors"], [1, "text-xs", "text-slate-500", "mt-1", "line-clamp-2", "leading-relaxed"], [1, "flex", "items-center", "gap-1", "text-[11px]", "font-bold", "opacity-0", "group-hover:opacity-100", "transition-opacity", "pt-1"], [3, "message"], [1, "flex", "items-start", "gap-3", "sm:gap-4", "max-w-[85%]", "mb-4", "animate-in", "fade-in", "duration-150"], [1, "w-9", "h-9", "rounded-xl", "bg-white", "border", "border-slate-200", "p-1.5", "flex", "items-center", "justify-center", "shrink-0", "shadow-xs"], ["src", "cropped-Favicon-3-1-32x32.png", "alt", "CBB", 1, "w-full", "h-full", "object-contain"], [1, "px-5", "py-4", "rounded-2xl", "rounded-tl-xs", "bg-white", "border", "border-slate-200", "shadow-2xs", "flex", "items-center", "gap-2.5"], [1, "flex", "items-center", "gap-1.5"], [1, "w-2", "h-2", "rounded-full", "bg-[#BE002E]", "animate-bounce", "[animation-delay:-0.3s]"], [1, "w-2", "h-2", "rounded-full", "bg-[#0050A1]", "animate-bounce", "[animation-delay:-0.15s]"], [1, "w-2", "h-2", "rounded-full", "bg-[#BE002E]", "animate-bounce"], [1, "text-xs", "text-[#0050A1]", "font-semibold"]], template: function ChatMessagesComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "div", 1, 0);
-      \u0275\u0275repeaterCreate(2, ChatMessagesComponent_For_3_Template, 1, 1, "app-chat-message-item", 2, _forTrack03);
-      \u0275\u0275conditionalCreate(4, ChatMessagesComponent_Conditional_4_Template, 8, 0, "div", 3);
-      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(0, "div", 1, 0)(2, "div", 2);
+      \u0275\u0275conditionalCreate(3, ChatMessagesComponent_Conditional_3_Template, 13, 0, "div", 3)(4, ChatMessagesComponent_Conditional_4_Template, 4, 1, "div", 4);
+      \u0275\u0275elementEnd()();
     }
     if (rf & 2) {
-      \u0275\u0275advance(2);
-      \u0275\u0275repeater(ctx.messages());
-      \u0275\u0275advance(2);
-      \u0275\u0275conditional(ctx.isLoading() ? 4 : -1);
+      \u0275\u0275advance(3);
+      \u0275\u0275conditional(ctx.messages().length === 0 ? 3 : 4);
     }
   }, dependencies: [ChatMessageItemComponent], encapsulation: 2, changeDetection: 0 });
 };
@@ -4859,44 +4023,136 @@ var ChatMessagesComponent = class _ChatMessagesComponent {
       changeDetection: ChangeDetectionStrategy.OnPush,
       imports: [ChatMessageItemComponent],
       host: {
-        class: "flex-1 min-h-0 flex flex-col overflow-hidden"
+        class: "flex-1 min-h-0 flex flex-col overflow-hidden bg-white"
       },
       template: `
     <div 
       #scrollContainer
-      class="flex-1 min-h-0 chat-scroll p-4 space-y-3 bg-slate-50/50">
+      class="flex-1 min-h-0 overflow-y-auto chat-scroll px-4 sm:px-6 py-6 sm:py-8 bg-white">
       
-      @for (msg of messages(); track msg.id) {
-        <app-chat-message-item [message]="msg" />
-      }
+      <div class="max-w-3xl mx-auto w-full h-full flex flex-col">
 
-      <!-- Indicador de "Escribiendo..." / Typing dots -->
-      @if (isLoading()) {
-        <div class="flex items-start gap-2.5 max-w-[80%] mb-4">
-          <div class="w-8 h-8 rounded-full bg-red-50 border border-red-200 flex items-center justify-center text-sm shrink-0 shadow-2xs">
-            \u{1F916}
-          </div>
-          <div class="px-4 py-3 rounded-2xl rounded-tl-xs bg-white border border-slate-200 shadow-2xs">
-            <div class="flex items-center gap-1.5 h-5">
-              <span class="w-2 h-2 rounded-full bg-[#b00725] animate-bounce [animation-delay:-0.3s]"></span>
-              <span class="w-2 h-2 rounded-full bg-[#b00725] animate-bounce [animation-delay:-0.15s]"></span>
-              <span class="w-2 h-2 rounded-full bg-[#b00725] animate-bounce"></span>
+        <!-- ESTADO INICIAL: Pantalla de Bienvenida Institucional -->
+        @if (messages().length === 0) {
+          <div class="my-auto py-4 sm:py-8 flex flex-col items-center text-center animate-in fade-in duration-300">
+            
+            <!-- \xCDcono Oficial del Colegio -->
+            <div class="w-18 h-18 sm:w-22 sm:h-22 rounded-3xl bg-white p-3 flex items-center justify-center shadow-lg border-2 border-[#0050A1]/15 ring-4 ring-[#BE002E]/10 mb-5">
+              <img 
+                src="cropped-Favicon-3-1-32x32.png" 
+                alt="Colegio Bertolt Brecht" 
+                class="w-full h-full object-contain"
+              />
             </div>
+
+            <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#BE002E]/10 border border-[#BE002E]/25 text-[#BE002E] text-xs font-extrabold uppercase tracking-wide mb-3">
+              <span>Asistente Virtual Oficial \u2022 Colegio Bertolt Brecht</span>
+            </div>
+
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-[#0050A1] tracking-tight mb-3">
+              \xBFEn qu\xE9 podemos orientarte hoy?
+            </h2>
+
+            <p class="text-slate-600 text-sm sm:text-base max-w-xl mb-8 leading-relaxed">
+              Resuelve tus dudas al instante sobre matr\xEDculas, pensiones, tr\xE1mites de secretar\xEDa, talleres y sedes con informaci\xF3n oficial vigente.
+            </p>
+
+            <!-- Grid de Tarjetas de Consulta R\xE1pida (Alternando secciones #BE002E y #0050A1 sobre fondo blanco) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 w-full text-left">
+              @for (card of welcomeCards; track card.title) {
+                <button
+                  type="button"
+                  (click)="selectPrompt.emit(card.prompt)"
+                  class="group relative p-4 rounded-2xl bg-white border border-slate-200 hover:shadow-md transition-all flex flex-col justify-between gap-2 cursor-pointer text-left overflow-hidden"
+                  [class.hover:border-[#BE002E]]="card.accent === 'red'"
+                  [class.hover:border-[#0050A1]]="card.accent === 'blue'">
+                  
+                  <!-- Franja superior de color institucional -->
+                  <div 
+                    class="absolute top-0 left-0 right-0 h-1 transition-all"
+                    [class.bg-[#BE002E]]="card.accent === 'red'"
+                    [class.bg-[#0050A1]]="card.accent === 'blue'">
+                  </div>
+
+                  <div class="pt-1">
+                    <div class="flex items-center justify-between mb-2.5">
+                      <span 
+                        class="w-9 h-9 rounded-xl flex items-center justify-center text-lg transition-colors"
+                        [class.bg-[#BE002E]/10]="card.accent === 'red'"
+                        [class.bg-[#0050A1]/10]="card.accent === 'blue'">
+                        {{ card.icon }}
+                      </span>
+                      <span 
+                        class="text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-0.5 rounded-full transition-colors"
+                        [class.bg-[#BE002E]/10]="card.accent === 'red'"
+                        [class.text-[#BE002E]]="card.accent === 'red'"
+                        [class.bg-[#0050A1]/10]="card.accent === 'blue'"
+                        [class.text-[#0050A1]]="card.accent === 'blue'">
+                        {{ card.badge }}
+                      </span>
+                    </div>
+                    <h3 
+                      class="font-bold text-slate-900 text-sm transition-colors"
+                      [class.group-hover:text-[#BE002E]]="card.accent === 'red'"
+                      [class.group-hover:text-[#0050A1]]="card.accent === 'blue'">
+                      {{ card.title }}
+                    </h3>
+                    <p class="text-xs text-slate-500 mt-1 line-clamp-2 leading-relaxed">
+                      {{ card.description }}
+                    </p>
+                  </div>
+
+                  <div 
+                    class="flex items-center gap-1 text-[11px] font-bold opacity-0 group-hover:opacity-100 transition-opacity pt-1"
+                    [class.text-[#BE002E]]="card.accent === 'red'"
+                    [class.text-[#0050A1]]="card.accent === 'blue'">
+                    <span>Consultar ahora</span>
+                    <span>\u2192</span>
+                  </div>
+                </button>
+              }
+            </div>
+
           </div>
-        </div>
-      }
+        } @else {
+          <!-- HILO DE CONVERSACI\xD3N ACTIVA -->
+          <div class="flex-1 space-y-2 pb-4">
+            @for (msg of messages(); track msg.id) {
+              <app-chat-message-item [message]="msg" />
+            }
+
+            <!-- Indicador de "Escribiendo..." / Typing dots -->
+            @if (isLoading()) {
+              <div class="flex items-start gap-3 sm:gap-4 max-w-[85%] mb-4 animate-in fade-in duration-150">
+                <div class="w-9 h-9 rounded-xl bg-white border border-slate-200 p-1.5 flex items-center justify-center shrink-0 shadow-xs">
+                  <img src="cropped-Favicon-3-1-32x32.png" alt="CBB" class="w-full h-full object-contain" />
+                </div>
+                <div class="px-5 py-4 rounded-2xl rounded-tl-xs bg-white border border-slate-200 shadow-2xs flex items-center gap-2.5">
+                  <div class="flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-[#BE002E] animate-bounce [animation-delay:-0.3s]"></span>
+                    <span class="w-2 h-2 rounded-full bg-[#0050A1] animate-bounce [animation-delay:-0.15s]"></span>
+                    <span class="w-2 h-2 rounded-full bg-[#BE002E] animate-bounce"></span>
+                  </div>
+                  <span class="text-xs text-[#0050A1] font-semibold">Consultando documentos oficiales...</span>
+                </div>
+              </div>
+            }
+          </div>
+        }
+
+      </div>
 
     </div>
   `
     }]
-  }], () => [], { messages: [{ type: Input, args: [{ isSignal: true, alias: "messages", required: true }] }], isLoading: [{ type: Input, args: [{ isSignal: true, alias: "isLoading", required: false }] }], scrollContainer: [{ type: ViewChild, args: ["scrollContainer", { isSignal: true }] }] });
+  }], () => [], { messages: [{ type: Input, args: [{ isSignal: true, alias: "messages", required: true }] }], isLoading: [{ type: Input, args: [{ isSignal: true, alias: "isLoading", required: false }] }], selectPrompt: [{ type: Output, args: ["selectPrompt"] }], scrollContainer: [{ type: ViewChild, args: ["scrollContainer", { isSignal: true }] }] });
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ChatMessagesComponent, { className: "ChatMessagesComponent", filePath: "src/app/features/assistant/components/chat-messages/chat-messages.component.ts", lineNumber: 40 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ChatMessagesComponent, { className: "ChatMessagesComponent", filePath: "src/app/features/assistant/components/chat-messages/chat-messages.component.ts", lineNumber: 141 });
 })();
 
 // src/app/features/assistant/components/chat-suggestions/chat-suggestions.component.ts
-var _forTrack04 = ($index, $item) => $item.prompt;
+var _forTrack02 = ($index, $item) => $item.prompt;
 function ChatSuggestionsComponent_For_5_Template(rf, ctx) {
   if (rf & 1) {
     const _r1 = \u0275\u0275getCurrentView();
@@ -4925,6 +4181,12 @@ var ChatSuggestionsComponent = class _ChatSuggestionsComponent {
   selectSuggestion = output();
   suggestions = [
     {
+      icon: "\u{1F393}",
+      label: "Matr\xEDcula 2026",
+      prompt: "\xBFCu\xE1les son los requisitos para la matr\xEDcula 2026?",
+      category: "matricula"
+    },
+    {
       icon: "\u{1F4B3}",
       label: "Pago de pensiones",
       prompt: "\xBFCu\xE1les son los canales y fechas de pago de pensiones?",
@@ -4938,33 +4200,26 @@ var ChatSuggestionsComponent = class _ChatSuggestionsComponent {
     },
     {
       icon: "\u{1F3A8}",
-      label: "Talleres extracurriculares",
+      label: "Talleres y deportes",
       prompt: "\xBFQu\xE9 talleres extracurriculares y deportes ofrecen?",
       category: "talleres"
     },
     {
-      icon: "\u23F0",
+      icon: "\u{1F4CD}",
       label: "Horarios y sedes",
       prompt: "\xBFCu\xE1les son los horarios de atenci\xF3n y d\xF3nde quedan las sedes?",
       category: "horarios"
-    },
-    {
-      icon: "\u{1F393}",
-      label: "Matr\xEDcula 2026",
-      prompt: "\xBFCu\xE1les son los requisitos para la matr\xEDcula 2026?",
-      category: "matricula"
     }
   ];
   static \u0275fac = function ChatSuggestionsComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _ChatSuggestionsComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ChatSuggestionsComponent, selectors: [["app-chat-suggestions"]], outputs: { selectSuggestion: "selectSuggestion" }, decls: 6, vars: 0, consts: [[1, "p-3", "bg-slate-50", "border-t", "border-slate-200/70"], [1, "text-[11px]", "font-bold", "text-slate-500", "uppercase", "tracking-wider", "mb-2", "px-1"], [1, "flex", "items-center", "gap-1.5", "overflow-x-auto", "pb-1", "scrollbar-thin"], ["type", "button", 1, "shrink-0", "inline-flex", "items-center", "gap-1", "px-2.5", "py-1.5", "rounded-full", "bg-white", "hover:bg-red-50", "text-slate-700", "hover:text-[#b00725]", "text-xs", "font-medium", "border", "border-slate-200", "hover:border-red-200", "transition-colors", "shadow-2xs", "cursor-pointer"], ["type", "button", 1, "shrink-0", "inline-flex", "items-center", "gap-1", "px-2.5", "py-1.5", "rounded-full", "bg-white", "hover:bg-red-50", "text-slate-700", "hover:text-[#b00725]", "text-xs", "font-medium", "border", "border-slate-200", "hover:border-red-200", "transition-colors", "shadow-2xs", "cursor-pointer", 3, "click"]], template: function ChatSuggestionsComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ChatSuggestionsComponent, selectors: [["app-chat-suggestions"]], outputs: { selectSuggestion: "selectSuggestion" }, decls: 6, vars: 0, consts: [[1, "w-full", "px-4", "sm:px-6", "pt-2", "pb-1", "bg-white"], [1, "max-w-3xl", "mx-auto", "flex", "items-center", "gap-2", "overflow-x-auto", "pb-1", "scrollbar-thin"], [1, "text-[11px]", "font-extrabold", "text-[#0050A1]", "uppercase", "tracking-wider", "shrink-0"], ["type", "button", 1, "shrink-0", "inline-flex", "items-center", "gap-1.5", "px-3", "py-1.5", "rounded-full", "bg-white", "hover:bg-[#BE002E]/10", "text-slate-700", "hover:text-[#BE002E]", "text-xs", "font-semibold", "border", "border-slate-200", "hover:border-[#BE002E]/40", "transition-all", "shadow-2xs", "cursor-pointer"], ["type", "button", 1, "shrink-0", "inline-flex", "items-center", "gap-1.5", "px-3", "py-1.5", "rounded-full", "bg-white", "hover:bg-[#BE002E]/10", "text-slate-700", "hover:text-[#BE002E]", "text-xs", "font-semibold", "border", "border-slate-200", "hover:border-[#BE002E]/40", "transition-all", "shadow-2xs", "cursor-pointer", 3, "click"]], template: function ChatSuggestionsComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275domElementStart(0, "div", 0)(1, "div", 1);
-      \u0275\u0275text(2, " Consultas frecuentes sugeridas: ");
+      \u0275\u0275domElementStart(0, "div", 0)(1, "div", 1)(2, "span", 2);
+      \u0275\u0275text(3, " Consultas r\xE1pidas: ");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(3, "div", 2);
-      \u0275\u0275repeaterCreate(4, ChatSuggestionsComponent_For_5_Template, 5, 2, "button", 3, _forTrack04);
+      \u0275\u0275repeaterCreate(4, ChatSuggestionsComponent_For_5_Template, 5, 2, "button", 3, _forTrack02);
       \u0275\u0275domElementEnd()();
     }
     if (rf & 2) {
@@ -4980,16 +4235,16 @@ var ChatSuggestionsComponent = class _ChatSuggestionsComponent {
       selector: "app-chat-suggestions",
       changeDetection: ChangeDetectionStrategy.OnPush,
       template: `
-    <div class="p-3 bg-slate-50 border-t border-slate-200/70">
-      <div class="text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-2 px-1">
-        Consultas frecuentes sugeridas:
-      </div>
-      <div class="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-thin">
+    <div class="w-full px-4 sm:px-6 pt-2 pb-1 bg-white">
+      <div class="max-w-3xl mx-auto flex items-center gap-2 overflow-x-auto pb-1 scrollbar-thin">
+        <span class="text-[11px] font-extrabold text-[#0050A1] uppercase tracking-wider shrink-0">
+          Consultas r\xE1pidas:
+        </span>
         @for (item of suggestions; track item.prompt) {
           <button
             type="button"
             (click)="selectSuggestion.emit(item.prompt)"
-            class="shrink-0 inline-flex items-center gap-1 px-2.5 py-1.5 rounded-full bg-white hover:bg-red-50 text-slate-700 hover:text-[#b00725] text-xs font-medium border border-slate-200 hover:border-red-200 transition-colors shadow-2xs cursor-pointer">
+            class="shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white hover:bg-[#BE002E]/10 text-slate-700 hover:text-[#BE002E] text-xs font-semibold border border-slate-200 hover:border-[#BE002E]/40 transition-all shadow-2xs cursor-pointer">
             <span>{{ item.icon }}</span>
             <span>{{ item.label }}</span>
           </button>
@@ -5005,19 +4260,26 @@ var ChatSuggestionsComponent = class _ChatSuggestionsComponent {
 })();
 
 // src/app/features/assistant/components/chat-input/chat-input.component.ts
-function ChatInputComponent_Conditional_6_Template(rf, ctx) {
-  if (rf & 1) {
-    \u0275\u0275namespaceSVG();
-    \u0275\u0275domElementStart(0, "svg", 5);
-    \u0275\u0275domElement(1, "circle", 7)(2, "path", 8);
-    \u0275\u0275domElementEnd();
-  }
-}
 function ChatInputComponent_Conditional_7_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275namespaceSVG();
-    \u0275\u0275domElementStart(0, "svg", 6);
-    \u0275\u0275domElement(1, "path", 9);
+    \u0275\u0275domElementStart(0, "svg", 9);
+    \u0275\u0275domElement(1, "circle", 10)(2, "path", 11);
+    \u0275\u0275domElementEnd();
+    \u0275\u0275namespaceHTML();
+    \u0275\u0275domElementStart(3, "span", 12);
+    \u0275\u0275text(4, "Enviando");
+    \u0275\u0275domElementEnd();
+  }
+}
+function ChatInputComponent_Conditional_8_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275domElementStart(0, "span", 12);
+    \u0275\u0275text(1, "Enviar");
+    \u0275\u0275domElementEnd();
+    \u0275\u0275namespaceSVG();
+    \u0275\u0275domElementStart(2, "svg", 13);
+    \u0275\u0275domElement(3, "path", 14);
     \u0275\u0275domElementEnd();
   }
 }
@@ -5058,32 +4320,39 @@ var ChatInputComponent = class _ChatInputComponent {
   static \u0275fac = function ChatInputComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _ChatInputComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ChatInputComponent, selectors: [["app-chat-input"]], inputs: { disabled: [1, "disabled"] }, outputs: { send: "send" }, decls: 8, vars: 5, consts: [[1, "p-3", "bg-white", "border-t", "border-slate-200"], [1, "flex", "items-end", "gap-2", 3, "submit"], [1, "relative", "flex-1"], ["placeholder", "Escribe tu consulta aqu\xED...", "rows", "1", 1, "w-full", "resize-none", "rounded-2xl", "bg-slate-100", "hover:bg-slate-100/80", "focus:bg-white", "text-slate-800", "placeholder-slate-400", "text-sm", "px-4", "py-3", "border", "border-transparent", "focus:border-red-300", "focus:outline-hidden", "focus:ring-2", "focus:ring-red-100", "transition-all", "max-h-32", "min-h-[46px]", "disabled:opacity-60", "disabled:cursor-not-allowed", 3, "input", "keydown", "value", "disabled"], ["type", "submit", 1, "h-[46px]", "w-[46px]", "rounded-2xl", "bg-[#b00725]", "hover:bg-[#92061e]", "text-white", "flex", "items-center", "justify-center", "shrink-0", "shadow-md", "shadow-red-900/20", "disabled:opacity-40", "disabled:cursor-not-allowed", "transition-all", "transform", "active:scale-95", "cursor-pointer", 3, "disabled"], ["fill", "none", "viewBox", "0 0 24 24", 1, "animate-spin", "h-5", "w-5", "text-white"], ["fill", "none", "stroke", "currentColor", "viewBox", "0 0 24 24", 1, "w-5", "h-5", "translate-x-0.5"], ["cx", "12", "cy", "12", "r", "10", "stroke", "currentColor", "stroke-width", "4", 1, "opacity-25"], ["fill", "currentColor", "d", "M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z", 1, "opacity-75"], ["stroke-linecap", "round", "stroke-linejoin", "round", "stroke-width", "2", "d", "M12 19l9 2-9-18-9 18 9-2zm0 0v-8"]], template: function ChatInputComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ChatInputComponent, selectors: [["app-chat-input"]], inputs: { disabled: [1, "disabled"] }, outputs: { send: "send" }, decls: 15, vars: 5, consts: [[1, "w-full", "px-4", "sm:px-6", "pb-4", "pt-2", "bg-white", "border-t", "border-slate-100"], [1, "max-w-3xl", "mx-auto"], [1, "flex", "items-end", "gap-2", "p-2", "rounded-2xl", "bg-white", "border-2", "border-slate-200", "shadow-md", "shadow-slate-900/5", "focus-within:border-[#0050A1]", "focus-within:ring-3", "focus-within:ring-[#0050A1]/15", "transition-all", 3, "submit"], [1, "relative", "flex-1"], ["placeholder", "Escribe tu consulta sobre matr\xEDculas, pensiones, tr\xE1mites o sedes...", "rows", "1", 1, "w-full", "resize-none", "bg-transparent", "text-slate-800", "placeholder-slate-400", "text-sm", "sm:text-[15px]", "px-3", "py-2.5", "focus:outline-hidden", "max-h-36", "min-h-[44px]", "disabled:opacity-60", "disabled:cursor-not-allowed", 3, "input", "keydown", "value", "disabled"], ["type", "submit", 1, "h-11", "px-4", "sm:px-5", "rounded-xl", "bg-[#BE002E]", "hover:bg-[#9e0026]", "text-white", "font-bold", "text-sm", "flex", "items-center", "justify-center", "gap-2", "shrink-0", "shadow-sm", "shadow-[#BE002E]/25", "disabled:opacity-40", "disabled:cursor-not-allowed", "transition-all", "transform", "active:scale-95", "cursor-pointer", 3, "disabled"], [1, "text-center", "mt-2.5", "px-2"], [1, "text-[11px]", "text-slate-400"], [1, "font-semibold", "text-[#0050A1]"], ["fill", "none", "viewBox", "0 0 24 24", 1, "animate-spin", "h-4", "w-4", "text-white"], ["cx", "12", "cy", "12", "r", "10", "stroke", "currentColor", "stroke-width", "4", 1, "opacity-25"], ["fill", "currentColor", "d", "M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z", 1, "opacity-75"], [1, "hidden", "sm:inline"], ["fill", "none", "stroke", "currentColor", "viewBox", "0 0 24 24", 1, "w-4", "h-4", "translate-x-0.5"], ["stroke-linecap", "round", "stroke-linejoin", "round", "stroke-width", "2.5", "d", "M12 19l9 2-9-18-9 18 9-2zm0 0v-8"]], template: function ChatInputComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275domElementStart(0, "div", 0)(1, "form", 1);
-      \u0275\u0275domListener("submit", function ChatInputComponent_Template_form_submit_1_listener($event) {
+      \u0275\u0275domElementStart(0, "div", 0)(1, "div", 1)(2, "form", 2);
+      \u0275\u0275domListener("submit", function ChatInputComponent_Template_form_submit_2_listener($event) {
         return ctx.onSubmit($event);
       });
-      \u0275\u0275domElementStart(2, "div", 2)(3, "textarea", 3);
-      \u0275\u0275domListener("input", function ChatInputComponent_Template_textarea_input_3_listener($event) {
+      \u0275\u0275domElementStart(3, "div", 3)(4, "textarea", 4);
+      \u0275\u0275domListener("input", function ChatInputComponent_Template_textarea_input_4_listener($event) {
         return ctx.onInput($event);
-      })("keydown", function ChatInputComponent_Template_textarea_keydown_3_listener($event) {
+      })("keydown", function ChatInputComponent_Template_textarea_keydown_4_listener($event) {
         return ctx.onKeydown($event);
       });
-      \u0275\u0275text(4, "          ");
+      \u0275\u0275text(5, "            ");
       \u0275\u0275domElementEnd()();
-      \u0275\u0275domElementStart(5, "button", 4);
-      \u0275\u0275conditionalCreate(6, ChatInputComponent_Conditional_6_Template, 3, 0, ":svg:svg", 5)(7, ChatInputComponent_Conditional_7_Template, 2, 0, ":svg:svg", 6);
-      \u0275\u0275domElementEnd()()();
+      \u0275\u0275domElementStart(6, "button", 5);
+      \u0275\u0275conditionalCreate(7, ChatInputComponent_Conditional_7_Template, 5, 0)(8, ChatInputComponent_Conditional_8_Template, 4, 0);
+      \u0275\u0275domElementEnd()();
+      \u0275\u0275domElementStart(9, "div", 6)(10, "p", 7);
+      \u0275\u0275text(11, " Orientaci\xF3n oficial basada en reglamentos vigentes del ");
+      \u0275\u0275domElementStart(12, "span", 8);
+      \u0275\u0275text(13, "Colegio Bertolt Brecht");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275text(14, " \u2022 Protecci\xF3n de datos personales (Ley N.\xB0 29733) \u2022 Central: (01) 315-7000 ");
+      \u0275\u0275domElementEnd()()()();
     }
     if (rf & 2) {
-      \u0275\u0275advance(3);
+      \u0275\u0275advance(4);
       \u0275\u0275domProperty("value", ctx.promptText())("disabled", ctx.disabled());
       \u0275\u0275advance(2);
       \u0275\u0275domProperty("disabled", !ctx.canSend());
       \u0275\u0275attribute("aria-label", "Enviar mensaje");
       \u0275\u0275advance();
-      \u0275\u0275conditional(ctx.disabled() ? 6 : 7);
+      \u0275\u0275conditional(ctx.disabled() ? 7 : 8);
     }
   }, encapsulation: 2, changeDetection: 0 });
 };
@@ -5094,124 +4363,92 @@ var ChatInputComponent = class _ChatInputComponent {
       selector: "app-chat-input",
       changeDetection: ChangeDetectionStrategy.OnPush,
       template: `
-    <div class="p-3 bg-white border-t border-slate-200">
-      <form (submit)="onSubmit($event)" class="flex items-end gap-2">
+    <div class="w-full px-4 sm:px-6 pb-4 pt-2 bg-white border-t border-slate-100">
+      <div class="max-w-3xl mx-auto">
         
-        <div class="relative flex-1">
-          <textarea
-            [value]="promptText()"
-            (input)="onInput($event)"
-            (keydown)="onKeydown($event)"
-            [disabled]="disabled()"
-            placeholder="Escribe tu consulta aqu\xED..."
-            rows="1"
-            class="w-full resize-none rounded-2xl bg-slate-100 hover:bg-slate-100/80 focus:bg-white text-slate-800 placeholder-slate-400 text-sm px-4 py-3 border border-transparent focus:border-red-300 focus:outline-hidden focus:ring-2 focus:ring-red-100 transition-all max-h-32 min-h-[46px] disabled:opacity-60 disabled:cursor-not-allowed">
-          </textarea>
+        <form 
+          (submit)="onSubmit($event)" 
+          class="flex items-end gap-2 p-2 rounded-2xl bg-white border-2 border-slate-200 shadow-md shadow-slate-900/5 focus-within:border-[#0050A1] focus-within:ring-3 focus-within:ring-[#0050A1]/15 transition-all">
+          
+          <div class="relative flex-1">
+            <textarea
+              [value]="promptText()"
+              (input)="onInput($event)"
+              (keydown)="onKeydown($event)"
+              [disabled]="disabled()"
+              placeholder="Escribe tu consulta sobre matr\xEDculas, pensiones, tr\xE1mites o sedes..."
+              rows="1"
+              class="w-full resize-none bg-transparent text-slate-800 placeholder-slate-400 text-sm sm:text-[15px] px-3 py-2.5 focus:outline-hidden max-h-36 min-h-[44px] disabled:opacity-60 disabled:cursor-not-allowed">
+            </textarea>
+          </div>
+
+          <button
+            type="submit"
+            [disabled]="!canSend()"
+            [attr.aria-label]="'Enviar mensaje'"
+            class="h-11 px-4 sm:px-5 rounded-xl bg-[#BE002E] hover:bg-[#9e0026] text-white font-bold text-sm flex items-center justify-center gap-2 shrink-0 shadow-sm shadow-[#BE002E]/25 disabled:opacity-40 disabled:cursor-not-allowed transition-all transform active:scale-95 cursor-pointer">
+            
+            @if (disabled()) {
+              <svg class="animate-spin h-4 w-4 text-white" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+              </svg>
+              <span class="hidden sm:inline">Enviando</span>
+            } @else {
+              <span class="hidden sm:inline">Enviar</span>
+              <svg class="w-4 h-4 translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+              </svg>
+            }
+
+          </button>
+
+        </form>
+
+        <!-- Nota institucional y protecci\xF3n de datos -->
+        <div class="text-center mt-2.5 px-2">
+          <p class="text-[11px] text-slate-400">
+            Orientaci\xF3n oficial basada en reglamentos vigentes del <span class="font-semibold text-[#0050A1]">Colegio Bertolt Brecht</span> \u2022 Protecci\xF3n de datos personales (Ley N.\xB0 29733) \u2022 Central: (01) 315-7000
+          </p>
         </div>
 
-        <button
-          type="submit"
-          [disabled]="!canSend()"
-          [attr.aria-label]="'Enviar mensaje'"
-          class="h-[46px] w-[46px] rounded-2xl bg-[#b00725] hover:bg-[#92061e] text-white flex items-center justify-center shrink-0 shadow-md shadow-red-900/20 disabled:opacity-40 disabled:cursor-not-allowed transition-all transform active:scale-95 cursor-pointer">
-          
-          @if (disabled()) {
-            <!-- Spinner -->
-            <svg class="animate-spin h-5 w-5 text-white" fill="none" viewBox="0 0 24 24">
-              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-            </svg>
-          } @else {
-            <!-- \xCDcono Enviar -->
-            <svg class="w-5 h-5 translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-            </svg>
-          }
-
-        </button>
-
-      </form>
+      </div>
     </div>
   `
     }]
   }], null, { disabled: [{ type: Input, args: [{ isSignal: true, alias: "disabled", required: false }] }], send: [{ type: Output, args: ["send"] }] });
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ChatInputComponent, { className: "ChatInputComponent", filePath: "src/app/features/assistant/components/chat-input/chat-input.component.ts", lineNumber: 47 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ChatInputComponent, { className: "ChatInputComponent", filePath: "src/app/features/assistant/components/chat-input/chat-input.component.ts", lineNumber: 60 });
 })();
 
 // src/app/features/assistant/assistant.component.ts
-function AssistantComponent_Conditional_1_Template(rf, ctx) {
+function AssistantComponent_Conditional_3_Template(rf, ctx) {
   if (rf & 1) {
     const _r1 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "div", 1)(1, "app-chat-header", 2);
-    \u0275\u0275listener("close", function AssistantComponent_Conditional_1_Template_app_chat_header_close_1_listener() {
-      \u0275\u0275restoreView(_r1);
-      const ctx_r1 = \u0275\u0275nextContext();
-      return \u0275\u0275resetView(ctx_r1.closeChat());
-    })("resetConversation", function AssistantComponent_Conditional_1_Template_app_chat_header_resetConversation_1_listener() {
-      \u0275\u0275restoreView(_r1);
-      const ctx_r1 = \u0275\u0275nextContext();
-      return \u0275\u0275resetView(ctx_r1.resetConversation());
-    });
-    \u0275\u0275elementEnd();
-    \u0275\u0275element(2, "app-chat-messages", 3);
-    \u0275\u0275elementStart(3, "app-chat-suggestions", 4);
-    \u0275\u0275listener("selectSuggestion", function AssistantComponent_Conditional_1_Template_app_chat_suggestions_selectSuggestion_3_listener($event) {
+    \u0275\u0275elementStart(0, "app-chat-suggestions", 5);
+    \u0275\u0275listener("selectSuggestion", function AssistantComponent_Conditional_3_Template_app_chat_suggestions_selectSuggestion_0_listener($event) {
       \u0275\u0275restoreView(_r1);
       const ctx_r1 = \u0275\u0275nextContext();
       return \u0275\u0275resetView(ctx_r1.sendMessage($event));
     });
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(4, "app-chat-input", 5);
-    \u0275\u0275listener("send", function AssistantComponent_Conditional_1_Template_app_chat_input_send_4_listener($event) {
-      \u0275\u0275restoreView(_r1);
-      const ctx_r1 = \u0275\u0275nextContext();
-      return \u0275\u0275resetView(ctx_r1.sendMessage($event));
-    });
-    \u0275\u0275elementEnd()();
-  }
-  if (rf & 2) {
-    const ctx_r1 = \u0275\u0275nextContext();
-    \u0275\u0275advance(2);
-    \u0275\u0275property("messages", ctx_r1.messages())("isLoading", ctx_r1.isLoading());
-    \u0275\u0275advance(2);
-    \u0275\u0275property("disabled", ctx_r1.isLoading());
   }
 }
 var AssistantComponent = class _AssistantComponent {
   assistantService = inject(AssistantService);
-  isOpen = signal(false, ...ngDevMode ? [{ debugName: "isOpen" }] : (
-    /* istanbul ignore next */
-    []
-  ));
   isLoading = signal(false, ...ngDevMode ? [{ debugName: "isLoading" }] : (
     /* istanbul ignore next */
     []
   ));
-  initialGreeting = {
-    id: "welcome_1",
-    sender: "assistant",
-    text: "\xA1Hola! Te doy la bienvenida al **Asistente Virtual del Colegio Bertolt Brecht**.\n\nPuedo orientarte con cualquier duda sobre **secretar\xEDa y tr\xE1mites**, **pagos de pensiones**, **talleres y deportes**, **plataformas escolares** o el proceso de **matr\xEDcula 2026**.\n\n\xBFEn qu\xE9 te puedo ayudar hoy?",
-    timestamp: /* @__PURE__ */ new Date()
-  };
-  messages = signal([this.initialGreeting], ...ngDevMode ? [{ debugName: "messages" }] : (
+  messages = signal([], ...ngDevMode ? [{ debugName: "messages" }] : (
     /* istanbul ignore next */
     []
   ));
-  toggleChat() {
-    this.isOpen.update((v) => !v);
-  }
-  openChat() {
-    this.isOpen.set(true);
-  }
-  closeChat() {
-    this.isOpen.set(false);
-  }
-  openWithPrompt(prompt) {
-    this.openChat();
-    this.sendMessage(prompt);
-  }
+  hasMessages = computed(() => this.messages().length > 0, ...ngDevMode ? [{ debugName: "hasMessages" }] : (
+    /* istanbul ignore next */
+    []
+  ));
   sendMessage(text2) {
     if (!text2.trim() || this.isLoading())
       return;
@@ -5250,34 +4487,41 @@ var AssistantComponent = class _AssistantComponent {
   }
   resetConversation() {
     this.assistantService.resetConversation();
-    this.messages.set([
-      {
-        id: "welcome_" + Date.now(),
-        sender: "assistant",
-        text: "He iniciado una nueva conversaci\xF3n. \xBFEn qu\xE9 otro tema o servicio del colegio puedo colaborarte?",
-        timestamp: /* @__PURE__ */ new Date()
-      }
-    ]);
+    this.messages.set([]);
   }
   static \u0275fac = function AssistantComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _AssistantComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AssistantComponent, selectors: [["app-assistant"]], decls: 2, vars: 2, consts: [[3, "toggle", "isOpen"], [1, "fixed", "bottom-24", "right-4", "sm:right-6", "z-50", "w-[calc(100vw-2rem)]", "sm:w-[420px]", "h-[580px]", "max-h-[calc(100vh-8rem)]", "bg-white", "rounded-3xl", "shadow-2xl", "border", "border-slate-200/90", "flex", "flex-col", "overflow-hidden", "animate-in", "fade-in", "slide-in-from-bottom-4", "duration-200"], [1, "shrink-0", 3, "close", "resetConversation"], [1, "flex-1", "min-h-0", "flex", "flex-col", "overflow-hidden", 3, "messages", "isLoading"], [1, "shrink-0", 3, "selectSuggestion"], [1, "shrink-0", 3, "send", "disabled"]], template: function AssistantComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AssistantComponent, selectors: [["app-assistant"]], decls: 5, vars: 5, consts: [[1, "w-full", "h-dvh", "flex", "flex-col", "bg-white", "overflow-hidden"], [1, "shrink-0", 3, "resetConversation", "hasMessages"], [1, "flex-1", "min-h-0", "flex", "flex-col", "overflow-hidden", 3, "selectPrompt", "messages", "isLoading"], [1, "shrink-0"], [1, "shrink-0", 3, "send", "disabled"], [1, "shrink-0", 3, "selectSuggestion"]], template: function AssistantComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "app-chat-bubble", 0);
-      \u0275\u0275listener("toggle", function AssistantComponent_Template_app_chat_bubble_toggle_0_listener() {
-        return ctx.toggleChat();
+      \u0275\u0275elementStart(0, "div", 0)(1, "app-chat-header", 1);
+      \u0275\u0275listener("resetConversation", function AssistantComponent_Template_app_chat_header_resetConversation_1_listener() {
+        return ctx.resetConversation();
       });
       \u0275\u0275elementEnd();
-      \u0275\u0275conditionalCreate(1, AssistantComponent_Conditional_1_Template, 5, 3, "div", 1);
+      \u0275\u0275elementStart(2, "app-chat-messages", 2);
+      \u0275\u0275listener("selectPrompt", function AssistantComponent_Template_app_chat_messages_selectPrompt_2_listener($event) {
+        return ctx.sendMessage($event);
+      });
+      \u0275\u0275elementEnd();
+      \u0275\u0275conditionalCreate(3, AssistantComponent_Conditional_3_Template, 1, 0, "app-chat-suggestions", 3);
+      \u0275\u0275elementStart(4, "app-chat-input", 4);
+      \u0275\u0275listener("send", function AssistantComponent_Template_app_chat_input_send_4_listener($event) {
+        return ctx.sendMessage($event);
+      });
+      \u0275\u0275elementEnd()();
     }
     if (rf & 2) {
-      \u0275\u0275property("isOpen", ctx.isOpen());
       \u0275\u0275advance();
-      \u0275\u0275conditional(ctx.isOpen() ? 1 : -1);
+      \u0275\u0275property("hasMessages", ctx.hasMessages());
+      \u0275\u0275advance();
+      \u0275\u0275property("messages", ctx.messages())("isLoading", ctx.isLoading());
+      \u0275\u0275advance();
+      \u0275\u0275conditional(ctx.hasMessages() ? 3 : -1);
+      \u0275\u0275advance();
+      \u0275\u0275property("disabled", ctx.isLoading());
     }
   }, dependencies: [
-    ChatBubbleComponent,
     ChatHeaderComponent,
     ChatMessagesComponent,
     ChatSuggestionsComponent,
@@ -5291,164 +4535,52 @@ var AssistantComponent = class _AssistantComponent {
       selector: "app-assistant",
       changeDetection: ChangeDetectionStrategy.OnPush,
       imports: [
-        ChatBubbleComponent,
         ChatHeaderComponent,
         ChatMessagesComponent,
         ChatSuggestionsComponent,
         ChatInputComponent
       ],
       template: `
-    <!-- Bot\xF3n Flotante -->
-    <app-chat-bubble 
-      [isOpen]="isOpen()" 
-      (toggle)="toggleChat()" 
-    />
+    <div class="w-full h-dvh flex flex-col bg-white overflow-hidden">
+      
+      <!-- Cabecera Superior Institucional (#0050A1 + #BE002E) -->
+      <app-chat-header 
+        class="shrink-0"
+        [hasMessages]="hasMessages()"
+        (resetConversation)="resetConversation()" 
+      />
 
-    <!-- Ventana del Asistente Virtual -->
-    @if (isOpen()) {
-      <div 
-        class="fixed bottom-24 right-4 sm:right-6 z-50 w-[calc(100vw-2rem)] sm:w-[420px] h-[580px] max-h-[calc(100vh-8rem)] bg-white rounded-3xl shadow-2xl border border-slate-200/90 flex flex-col overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-200">
-        
-        <!-- Cabecera -->
-        <app-chat-header 
-          class="shrink-0"
-          (close)="closeChat()" 
-          (resetConversation)="resetConversation()" 
-        />
+      <!-- \xC1rea Principal sobre Blanco (Pantalla de Bienvenida + Hilo de Conversaci\xF3n) -->
+      <app-chat-messages 
+        class="flex-1 min-h-0 flex flex-col overflow-hidden"
+        [messages]="messages()" 
+        [isLoading]="isLoading()"
+        (selectPrompt)="sendMessage($event)"
+      />
 
-        <!-- \xC1rea de Mensajes con Scroll -->
-        <app-chat-messages 
-          class="flex-1 min-h-0 flex flex-col overflow-hidden"
-          [messages]="messages()" 
-          [isLoading]="isLoading()" 
-        />
-
-        <!-- Sugerencias R\xE1pidas -->
+      <!-- Chips de Sugerencias R\xE1pidas (visibles durante la conversaci\xF3n) -->
+      @if (hasMessages()) {
         <app-chat-suggestions 
           class="shrink-0"
           (selectSuggestion)="sendMessage($event)" 
         />
+      }
 
-        <!-- Input de Env\xEDo -->
-        <app-chat-input 
-          class="shrink-0"
-          [disabled]="isLoading()" 
-          (send)="sendMessage($event)" 
-        />
+      <!-- Barra de Entrada Inferior -->
+      <app-chat-input 
+        class="shrink-0"
+        [disabled]="isLoading()" 
+        (send)="sendMessage($event)" 
+      />
 
-      </div>
-    }
+    </div>
   `
     }]
   }], null, null);
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(AssistantComponent, { className: "AssistantComponent", filePath: "src/app/features/assistant/assistant.component.ts", lineNumber: 63 });
-})();
-
-// src/app/features/landing/landing.component.ts
-var _c02 = ["assistant"];
-var LandingComponent = class _LandingComponent {
-  assistant = viewChild("assistant", ...ngDevMode ? [{ debugName: "assistant" }] : (
-    /* istanbul ignore next */
-    []
-  ));
-  onOpenChat() {
-    this.assistant()?.openChat();
-  }
-  handleAskPrompt(prompt) {
-    this.assistant()?.openWithPrompt(prompt);
-  }
-  static \u0275fac = function LandingComponent_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _LandingComponent)();
-  };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _LandingComponent, selectors: [["app-landing"]], viewQuery: function LandingComponent_Query(rf, ctx) {
-    if (rf & 1) {
-      \u0275\u0275viewQuerySignal(ctx.assistant, _c02, 5);
-    }
-    if (rf & 2) {
-      \u0275\u0275queryAdvance();
-    }
-  }, decls: 9, vars: 0, consts: [["assistant", ""], [1, "min-h-screen", "flex", "flex-col", "bg-white"], [3, "openChat"], [1, "flex-1"], [3, "openChat", "askPrompt"], [3, "askPrompt"]], template: function LandingComponent_Template(rf, ctx) {
-    if (rf & 1) {
-      \u0275\u0275elementStart(0, "div", 1)(1, "app-navbar", 2);
-      \u0275\u0275listener("openChat", function LandingComponent_Template_app_navbar_openChat_1_listener() {
-        return ctx.onOpenChat();
-      });
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(2, "main", 3)(3, "app-hero", 4);
-      \u0275\u0275listener("openChat", function LandingComponent_Template_app_hero_openChat_3_listener() {
-        return ctx.onOpenChat();
-      })("askPrompt", function LandingComponent_Template_app_hero_askPrompt_3_listener($event) {
-        return ctx.handleAskPrompt($event);
-      });
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(4, "app-services-grid", 5);
-      \u0275\u0275listener("askPrompt", function LandingComponent_Template_app_services_grid_askPrompt_4_listener($event) {
-        return ctx.handleAskPrompt($event);
-      });
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(5, "app-campuses", 5);
-      \u0275\u0275listener("askPrompt", function LandingComponent_Template_app_campuses_askPrompt_5_listener($event) {
-        return ctx.handleAskPrompt($event);
-      });
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(6, "app-footer", 2);
-      \u0275\u0275listener("openChat", function LandingComponent_Template_app_footer_openChat_6_listener() {
-        return ctx.onOpenChat();
-      });
-      \u0275\u0275elementEnd();
-      \u0275\u0275element(7, "app-assistant", null, 0);
-      \u0275\u0275elementEnd();
-    }
-  }, dependencies: [
-    NavbarComponent,
-    HeroComponent,
-    ServicesGridComponent,
-    CampusesComponent,
-    FooterComponent,
-    AssistantComponent
-  ], encapsulation: 2, changeDetection: 0 });
-};
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(LandingComponent, [{
-    type: Component,
-    args: [{
-      selector: "app-landing",
-      changeDetection: ChangeDetectionStrategy.OnPush,
-      imports: [
-        NavbarComponent,
-        HeroComponent,
-        ServicesGridComponent,
-        CampusesComponent,
-        FooterComponent,
-        AssistantComponent
-      ],
-      template: `
-    <div class="min-h-screen flex flex-col bg-white">
-      <app-navbar (openChat)="onOpenChat()" />
-      <main class="flex-1">
-        <app-hero 
-          (openChat)="onOpenChat()" 
-          (askPrompt)="handleAskPrompt($event)" 
-        />
-        <app-services-grid 
-          (askPrompt)="handleAskPrompt($event)" 
-        />
-        <app-campuses 
-          (askPrompt)="handleAskPrompt($event)" 
-        />
-      </main>
-      <app-footer (openChat)="onOpenChat()" />
-      <app-assistant #assistant />
-    </div>
-  `
-    }]
-  }], null, { assistant: [{ type: ViewChild, args: ["assistant", { isSignal: true }] }] });
-})();
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(LandingComponent, { className: "LandingComponent", filePath: "src/app/features/landing/landing.component.ts", lineNumber: 40 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(AssistantComponent, { className: "AssistantComponent", filePath: "src/app/features/assistant/assistant.component.ts", lineNumber: 54 });
 })();
 export {
-  LandingComponent
+  AssistantComponent
 };
