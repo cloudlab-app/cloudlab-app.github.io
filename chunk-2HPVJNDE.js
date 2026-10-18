@@ -174,7 +174,7 @@ var ChatHeaderComponent = class _ChatHeaderComponent {
       \u0275\u0275domElement(13, "span", 11)(14, "span", 12);
       \u0275\u0275domElementEnd();
       \u0275\u0275domElementStart(15, "span", 13);
-      \u0275\u0275text(16, " Atenci\xF3n en l\xEDnea 24/7 \u2022 Orientaci\xF3n al ciudadano ");
+      \u0275\u0275text(16, " Atenci\xF3n en l\xEDnea 24/7 \u2022 Centro de Orientaci\xF3n y Consultas CBB ");
       \u0275\u0275domElementEnd()()()();
       \u0275\u0275domElementStart(17, "div", 14);
       \u0275\u0275conditionalCreate(18, ChatHeaderComponent_Conditional_18_Template, 5, 0, "button", 15);
@@ -220,7 +220,7 @@ var ChatHeaderComponent = class _ChatHeaderComponent {
                 <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
               </span>
               <span class="text-xs text-blue-100 font-medium truncate">
-                Atenci\xF3n en l\xEDnea 24/7 \u2022 Orientaci\xF3n al ciudadano
+                Atenci\xF3n en l\xEDnea 24/7 \u2022 Centro de Orientaci\xF3n y Consultas CBB
               </span>
             </div>
           </div>
@@ -3893,7 +3893,7 @@ function ChatMessagesComponent_Conditional_4_Conditional_3_Template(rf, ctx) {
     \u0275\u0275element(5, "span", 27)(6, "span", 28)(7, "span", 29);
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(8, "span", 30);
-    \u0275\u0275text(9, "Consultando documentos oficiales...");
+    \u0275\u0275text(9, "Consultando...");
     \u0275\u0275elementEnd()()();
   }
 }
@@ -4134,7 +4134,7 @@ var ChatMessagesComponent = class _ChatMessagesComponent {
                     <span class="w-2 h-2 rounded-full bg-[#0050A1] animate-bounce [animation-delay:-0.15s]"></span>
                     <span class="w-2 h-2 rounded-full bg-[#BE002E] animate-bounce"></span>
                   </div>
-                  <span class="text-xs text-[#0050A1] font-semibold">Consultando documentos oficiales...</span>
+                  <span class="text-xs text-[#0050A1] font-semibold">Consultando...</span>
                 </div>
               </div>
             }
@@ -4343,7 +4343,7 @@ var ChatInputComponent = class _ChatInputComponent {
       \u0275\u0275domElementStart(12, "span", 8);
       \u0275\u0275text(13, "Colegio Bertolt Brecht");
       \u0275\u0275domElementEnd();
-      \u0275\u0275text(14, " \u2022 Protecci\xF3n de datos personales (Ley N.\xB0 29733) \u2022 Central: (01) 315-7000 ");
+      \u0275\u0275text(14, " \u2022 Protecci\xF3n de datos personales (Ley N.\xB0 29733) ");
       \u0275\u0275domElementEnd()()()();
     }
     if (rf & 2) {
@@ -4409,7 +4409,7 @@ var ChatInputComponent = class _ChatInputComponent {
         <!-- Nota institucional y protecci\xF3n de datos -->
         <div class="text-center mt-2.5 px-2">
           <p class="text-[11px] text-slate-400">
-            Orientaci\xF3n oficial basada en reglamentos vigentes del <span class="font-semibold text-[#0050A1]">Colegio Bertolt Brecht</span> \u2022 Protecci\xF3n de datos personales (Ley N.\xB0 29733) \u2022 Central: (01) 315-7000
+            Orientaci\xF3n oficial basada en reglamentos vigentes del <span class="font-semibold text-[#0050A1]">Colegio Bertolt Brecht</span> \u2022 Protecci\xF3n de datos personales (Ley N.\xB0 29733)
           </p>
         </div>
 

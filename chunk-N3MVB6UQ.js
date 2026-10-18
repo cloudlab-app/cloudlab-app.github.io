@@ -261,7 +261,7 @@ function DocumentTableComponent_For_12_Template(rf, ctx) {
 function DocumentTableComponent_Conditional_25_Template(rf, ctx) {
   if (rf & 1) {
     const _r2 = \u0275\u0275getCurrentView();
-    \u0275\u0275domElementStart(0, "button", 14);
+    \u0275\u0275domElementStart(0, "button", 15);
     \u0275\u0275domListener("click", function DocumentTableComponent_Conditional_25_Template_button_click_0_listener() {
       \u0275\u0275restoreView(_r2);
       const ctx_r2 = \u0275\u0275nextContext();
@@ -273,12 +273,12 @@ function DocumentTableComponent_Conditional_25_Template(rf, ctx) {
 }
 function DocumentTableComponent_Conditional_26_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275domElementStart(0, "div", 12);
-    \u0275\u0275domElement(1, "div", 15);
-    \u0275\u0275domElementStart(2, "div", 16);
+    \u0275\u0275domElementStart(0, "div", 13);
+    \u0275\u0275domElement(1, "div", 16);
+    \u0275\u0275domElementStart(2, "div", 17);
     \u0275\u0275text(3, "Consultando base de datos vectorial...");
     \u0275\u0275domElementEnd();
-    \u0275\u0275domElementStart(4, "p", 17);
+    \u0275\u0275domElementStart(4, "p", 18);
     \u0275\u0275text(5, "Sincronizando registros de PostgreSQL + pgvector");
     \u0275\u0275domElementEnd()();
   }
@@ -286,13 +286,13 @@ function DocumentTableComponent_Conditional_26_Template(rf, ctx) {
 function DocumentTableComponent_Conditional_27_Conditional_3_Template(rf, ctx) {
   if (rf & 1) {
     const _r4 = \u0275\u0275getCurrentView();
-    \u0275\u0275domElementStart(0, "h3", 19);
+    \u0275\u0275domElementStart(0, "h3", 20);
     \u0275\u0275text(1, "A\xFAn no hay documentos indexados");
     \u0275\u0275domElementEnd();
-    \u0275\u0275domElementStart(2, "p", 20);
+    \u0275\u0275domElementStart(2, "p", 21);
     \u0275\u0275text(3, " Comienza subiendo reglamentos en PDF o Word para que el Asistente Virtual pueda responder consultas oficiales. ");
     \u0275\u0275domElementEnd();
-    \u0275\u0275domElementStart(4, "button", 21);
+    \u0275\u0275domElementStart(4, "button", 22);
     \u0275\u0275domListener("click", function DocumentTableComponent_Conditional_27_Conditional_3_Template_button_click_4_listener() {
       \u0275\u0275restoreView(_r4);
       const ctx_r2 = \u0275\u0275nextContext(2);
@@ -305,13 +305,13 @@ function DocumentTableComponent_Conditional_27_Conditional_3_Template(rf, ctx) {
 function DocumentTableComponent_Conditional_27_Conditional_4_Template(rf, ctx) {
   if (rf & 1) {
     const _r5 = \u0275\u0275getCurrentView();
-    \u0275\u0275domElementStart(0, "h3", 19);
+    \u0275\u0275domElementStart(0, "h3", 20);
     \u0275\u0275text(1, "Sin coincidencias para tu b\xFAsqueda");
     \u0275\u0275domElementEnd();
-    \u0275\u0275domElementStart(2, "p", 20);
+    \u0275\u0275domElementStart(2, "p", 21);
     \u0275\u0275text(3);
     \u0275\u0275domElementEnd();
-    \u0275\u0275domElementStart(4, "button", 22);
+    \u0275\u0275domElementStart(4, "button", 23);
     \u0275\u0275domListener("click", function DocumentTableComponent_Conditional_27_Conditional_4_Template_button_click_4_listener() {
       \u0275\u0275restoreView(_r5);
       const ctx_r2 = \u0275\u0275nextContext(2);
@@ -328,7 +328,7 @@ function DocumentTableComponent_Conditional_27_Conditional_4_Template(rf, ctx) {
 }
 function DocumentTableComponent_Conditional_27_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275domElementStart(0, "div", 13)(1, "div", 18);
+    \u0275\u0275domElementStart(0, "div", 14)(1, "div", 19);
     \u0275\u0275text(2, " \u{1F4C2} ");
     \u0275\u0275domElementEnd();
     \u0275\u0275conditionalCreate(3, DocumentTableComponent_Conditional_27_Conditional_3_Template, 6, 0)(4, DocumentTableComponent_Conditional_27_Conditional_4_Template, 6, 1);
@@ -342,7 +342,7 @@ function DocumentTableComponent_Conditional_27_Template(rf, ctx) {
 }
 function DocumentTableComponent_Conditional_28_For_18_Conditional_27_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275domElement(0, "span", 45);
+    \u0275\u0275domElement(0, "span", 46);
     \u0275\u0275domElementStart(1, "span");
     \u0275\u0275text(2, "Eliminando...");
     \u0275\u0275domElementEnd();
@@ -361,32 +361,32 @@ function DocumentTableComponent_Conditional_28_For_18_Conditional_28_Template(rf
 function DocumentTableComponent_Conditional_28_For_18_Template(rf, ctx) {
   if (rf & 1) {
     const _r6 = \u0275\u0275getCurrentView();
-    \u0275\u0275domElementStart(0, "tr", 30)(1, "td", 35)(2, "span", 36);
+    \u0275\u0275domElementStart(0, "tr", 31)(1, "td", 36)(2, "span", 37);
     \u0275\u0275text(3);
     \u0275\u0275domElementEnd()();
-    \u0275\u0275domElementStart(4, "td", 26)(5, "div", 37)(6, "span", 38);
+    \u0275\u0275domElementStart(4, "td", 27)(5, "div", 38)(6, "span", 39);
     \u0275\u0275text(7, "\u{1F4D8}");
     \u0275\u0275domElementEnd();
-    \u0275\u0275domElementStart(8, "div")(9, "div", 39);
+    \u0275\u0275domElementStart(8, "div")(9, "div", 40);
     \u0275\u0275text(10);
     \u0275\u0275domElementEnd();
-    \u0275\u0275domElementStart(11, "div", 40);
+    \u0275\u0275domElementStart(11, "div", 41);
     \u0275\u0275text(12, "Vectorizado con gemini-embedding-001");
     \u0275\u0275domElementEnd()()()();
-    \u0275\u0275domElementStart(13, "td", 26)(14, "span", 41);
+    \u0275\u0275domElementStart(13, "td", 27)(14, "span", 42);
     \u0275\u0275text(15);
     \u0275\u0275domElementEnd()();
-    \u0275\u0275domElementStart(16, "td", 27)(17, "span", 42)(18, "span");
+    \u0275\u0275domElementStart(16, "td", 28)(17, "span", 43)(18, "span");
     \u0275\u0275text(19, "\u{1F9E9}");
     \u0275\u0275domElementEnd();
     \u0275\u0275domElementStart(20, "span");
     \u0275\u0275text(21);
     \u0275\u0275domElementEnd()()();
-    \u0275\u0275domElementStart(22, "td", 43);
+    \u0275\u0275domElementStart(22, "td", 44);
     \u0275\u0275text(23);
     \u0275\u0275pipe(24, "date");
     \u0275\u0275domElementEnd();
-    \u0275\u0275domElementStart(25, "td", 28)(26, "button", 44);
+    \u0275\u0275domElementStart(25, "td", 29)(26, "button", 45);
     \u0275\u0275domListener("click", function DocumentTableComponent_Conditional_28_For_18_Template_button_click_26_listener() {
       const doc_r7 = \u0275\u0275restoreView(_r6).$implicit;
       const ctx_r2 = \u0275\u0275nextContext(2);
@@ -417,7 +417,7 @@ function DocumentTableComponent_Conditional_28_For_18_Template(rf, ctx) {
 function DocumentTableComponent_Conditional_28_Conditional_31_For_4_Template(rf, ctx) {
   if (rf & 1) {
     const _r9 = \u0275\u0275getCurrentView();
-    \u0275\u0275domElementStart(0, "button", 48);
+    \u0275\u0275domElementStart(0, "button", 49);
     \u0275\u0275domListener("click", function DocumentTableComponent_Conditional_28_Conditional_31_For_4_Template_button_click_0_listener() {
       const page_r10 = \u0275\u0275restoreView(_r9).$implicit;
       const ctx_r2 = \u0275\u0275nextContext(3);
@@ -437,7 +437,7 @@ function DocumentTableComponent_Conditional_28_Conditional_31_For_4_Template(rf,
 function DocumentTableComponent_Conditional_28_Conditional_31_Template(rf, ctx) {
   if (rf & 1) {
     const _r8 = \u0275\u0275getCurrentView();
-    \u0275\u0275domElementStart(0, "div", 34)(1, "button", 46);
+    \u0275\u0275domElementStart(0, "div", 35)(1, "button", 47);
     \u0275\u0275domListener("click", function DocumentTableComponent_Conditional_28_Conditional_31_Template_button_click_1_listener() {
       \u0275\u0275restoreView(_r8);
       const ctx_r2 = \u0275\u0275nextContext(2);
@@ -445,8 +445,8 @@ function DocumentTableComponent_Conditional_28_Conditional_31_Template(rf, ctx) 
     });
     \u0275\u0275text(2, " \u2190 Anterior ");
     \u0275\u0275domElementEnd();
-    \u0275\u0275repeaterCreate(3, DocumentTableComponent_Conditional_28_Conditional_31_For_4_Template, 2, 11, "button", 47, \u0275\u0275repeaterTrackByIdentity);
-    \u0275\u0275domElementStart(5, "button", 46);
+    \u0275\u0275repeaterCreate(3, DocumentTableComponent_Conditional_28_Conditional_31_For_4_Template, 2, 11, "button", 48, \u0275\u0275repeaterTrackByIdentity);
+    \u0275\u0275domElementStart(5, "button", 47);
     \u0275\u0275domListener("click", function DocumentTableComponent_Conditional_28_Conditional_31_Template_button_click_5_listener() {
       \u0275\u0275restoreView(_r8);
       const ctx_r2 = \u0275\u0275nextContext(2);
@@ -467,43 +467,43 @@ function DocumentTableComponent_Conditional_28_Conditional_31_Template(rf, ctx) 
 }
 function DocumentTableComponent_Conditional_28_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275domElementStart(0, "div", 23)(1, "table", 24)(2, "thead")(3, "tr", 25)(4, "th", 26);
+    \u0275\u0275domElementStart(0, "div", 24)(1, "table", 25)(2, "thead")(3, "tr", 26)(4, "th", 27);
     \u0275\u0275text(5, "ID Documento");
     \u0275\u0275domElementEnd();
-    \u0275\u0275domElementStart(6, "th", 26);
+    \u0275\u0275domElementStart(6, "th", 27);
     \u0275\u0275text(7, "Fuente Oficial / T\xEDtulo");
     \u0275\u0275domElementEnd();
-    \u0275\u0275domElementStart(8, "th", 26);
+    \u0275\u0275domElementStart(8, "th", 27);
     \u0275\u0275text(9, "\xC1rea Origen");
     \u0275\u0275domElementEnd();
-    \u0275\u0275domElementStart(10, "th", 27);
+    \u0275\u0275domElementStart(10, "th", 28);
     \u0275\u0275text(11, "Fragmentos (Chunks)");
     \u0275\u0275domElementEnd();
-    \u0275\u0275domElementStart(12, "th", 26);
+    \u0275\u0275domElementStart(12, "th", 27);
     \u0275\u0275text(13, "Fecha Indexaci\xF3n");
     \u0275\u0275domElementEnd();
-    \u0275\u0275domElementStart(14, "th", 28);
+    \u0275\u0275domElementStart(14, "th", 29);
     \u0275\u0275text(15, "Acciones");
     \u0275\u0275domElementEnd()()();
-    \u0275\u0275domElementStart(16, "tbody", 29);
-    \u0275\u0275repeaterCreate(17, DocumentTableComponent_Conditional_28_For_18_Template, 29, 10, "tr", 30, _forTrack0);
+    \u0275\u0275domElementStart(16, "tbody", 30);
+    \u0275\u0275repeaterCreate(17, DocumentTableComponent_Conditional_28_For_18_Template, 29, 10, "tr", 31, _forTrack0);
     \u0275\u0275domElementEnd()()();
-    \u0275\u0275domElementStart(19, "div", 31)(20, "div", 32);
+    \u0275\u0275domElementStart(19, "div", 32)(20, "div", 33);
     \u0275\u0275text(21, " Mostrando ");
-    \u0275\u0275domElementStart(22, "span", 33);
+    \u0275\u0275domElementStart(22, "span", 34);
     \u0275\u0275text(23);
     \u0275\u0275domElementEnd();
     \u0275\u0275text(24, " a ");
-    \u0275\u0275domElementStart(25, "span", 33);
+    \u0275\u0275domElementStart(25, "span", 34);
     \u0275\u0275text(26);
     \u0275\u0275domElementEnd();
     \u0275\u0275text(27, " de ");
-    \u0275\u0275domElementStart(28, "span", 33);
+    \u0275\u0275domElementStart(28, "span", 34);
     \u0275\u0275text(29);
     \u0275\u0275domElementEnd();
     \u0275\u0275text(30, " registros ");
     \u0275\u0275domElementEnd();
-    \u0275\u0275conditionalCreate(31, DocumentTableComponent_Conditional_28_Conditional_31_Template, 7, 2, "div", 34);
+    \u0275\u0275conditionalCreate(31, DocumentTableComponent_Conditional_28_Conditional_31_Template, 7, 2, "div", 35);
     \u0275\u0275domElementEnd();
   }
   if (rf & 2) {
@@ -544,7 +544,7 @@ var DocumentTableComponent = class _DocumentTableComponent {
     /* istanbul ignore next */
     []
   ));
-  pageSize = signal(10, ...ngDevMode ? [{ debugName: "pageSize" }] : (
+  pageSize = signal(5, ...ngDevMode ? [{ debugName: "pageSize" }] : (
     /* istanbul ignore next */
     []
   ));
@@ -649,7 +649,7 @@ var DocumentTableComponent = class _DocumentTableComponent {
   static \u0275fac = function DocumentTableComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _DocumentTableComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _DocumentTableComponent, selectors: [["app-document-table"]], inputs: { documentos: [1, "documentos"], isLoading: [1, "isLoading"], deletingId: [1, "deletingId"] }, outputs: { requestDelete: "requestDelete", openUpload: "openUpload" }, decls: 29, vars: 9, consts: [[1, "bg-white", "rounded-2xl", "border", "border-slate-200", "shadow-2xs", "overflow-hidden"], [1, "p-4", "sm:p-5", "border-b", "border-slate-200", "bg-slate-50/50", "flex", "flex-col", "md:flex-row", "md:items-center", "justify-between", "gap-3"], [1, "relative", "flex-1", "max-w-md"], [1, "absolute", "inset-y-0", "left-3", "flex", "items-center", "text-slate-400", "text-sm"], ["type", "text", "placeholder", "Buscar por ID, nombre de fuente o \xE1rea...", 1, "w-full", "pl-9", "pr-4", "py-2", "rounded-xl", "border", "border-slate-200", "bg-white", "text-sm", "text-slate-800", "placeholder-slate-400", "focus:outline-hidden", "focus:border-[#b00725]", "focus:ring-2", "focus:ring-red-100", "transition-all", 3, "input", "value"], [1, "flex", "flex-wrap", "items-center", "gap-2.5"], [1, "flex", "items-center", "gap-2"], [1, "text-xs", "font-semibold", "text-slate-500"], [1, "px-3", "py-2", "rounded-xl", "border", "border-slate-200", "bg-white", "text-xs", "font-semibold", "text-slate-700", "focus:outline-hidden", "focus:border-[#b00725]", "cursor-pointer", 3, "change", "value"], [3, "value"], [1, "px-2.5", "py-2", "rounded-xl", "border", "border-slate-200", "bg-white", "text-xs", "font-semibold", "text-slate-700", "focus:outline-hidden", "focus:border-[#b00725]", "cursor-pointer", 3, "change", "value"], ["type", "button", 1, "px-3", "py-2", "rounded-xl", "text-xs", "font-semibold", "text-[#b00725]", "hover:bg-red-50", "transition-colors", "cursor-pointer"], [1, "p-12", "flex", "flex-col", "items-center", "justify-center", "text-center", "space-y-3"], [1, "p-12", "flex", "flex-col", "items-center", "justify-center", "text-center"], ["type", "button", 1, "px-3", "py-2", "rounded-xl", "text-xs", "font-semibold", "text-[#b00725]", "hover:bg-red-50", "transition-colors", "cursor-pointer", 3, "click"], [1, "w-10", "h-10", "border-4", "border-red-200", "border-t-[#b00725]", "rounded-full", "animate-spin"], [1, "text-sm", "font-semibold", "text-slate-700"], [1, "text-xs", "text-slate-400"], [1, "w-14", "h-14", "rounded-2xl", "bg-slate-100", "flex", "items-center", "justify-center", "text-2xl", "mb-3"], [1, "text-base", "font-bold", "text-slate-800"], [1, "text-xs", "text-slate-500", "max-w-sm", "mt-1", "mb-4"], ["type", "button", 1, "px-4", "py-2", "rounded-xl", "bg-[#b00725]", "text-white", "text-xs", "font-semibold", "hover:bg-[#92061e]", "transition-colors", "cursor-pointer", 3, "click"], ["type", "button", 1, "px-4", "py-2", "rounded-xl", "border", "border-slate-200", "text-slate-700", "text-xs", "font-semibold", "hover:bg-slate-50", "transition-colors", "cursor-pointer", 3, "click"], [1, "overflow-x-auto"], [1, "w-full", "text-left", "border-collapse"], [1, "bg-slate-50/80", "border-b", "border-slate-200", "text-[11px]", "font-bold", "text-slate-500", "uppercase", "tracking-wider"], [1, "py-3.5", "px-4"], [1, "py-3.5", "px-4", "text-center"], [1, "py-3.5", "px-4", "text-right"], [1, "divide-y", "divide-slate-200/70", "text-sm"], [1, "doc-row", "hover:bg-slate-50/90", "transition-colors"], [1, "p-4", "border-t", "border-slate-200", "bg-slate-50/50", "flex", "flex-col", "sm:flex-row", "items-center", "justify-between", "gap-3"], [1, "text-xs", "text-slate-500"], [1, "font-bold", "text-slate-800"], [1, "flex", "items-center", "gap-1.5"], [1, "py-3.5", "px-4", "font-mono", "text-xs", "font-semibold", "text-slate-700"], [1, "px-2", "py-1", "rounded-md", "bg-slate-100", "border", "border-slate-200"], [1, "flex", "items-center", "gap-2.5"], [1, "text-base"], [1, "font-semibold", "text-slate-900"], [1, "text-[11px]", "text-slate-400"], [1, "inline-flex", "items-center", "px-2.5", "py-0.5", "rounded-full", "text-xs", "font-semibold", "bg-red-50", "text-[#b00725]", "border", "border-red-200/70"], [1, "inline-flex", "items-center", "gap-1", "px-2.5", "py-1", "rounded-lg", "bg-blue-50", "text-blue-700", "font-bold", "text-xs", "border", "border-blue-200/60"], [1, "py-3.5", "px-4", "text-xs", "text-slate-500"], ["type", "button", 1, "inline-flex", "items-center", "gap-1.5", "px-3", "py-1.5", "rounded-xl", "text-xs", "font-semibold", "text-red-600", "hover:text-white", "hover:bg-red-600", "border", "border-red-200", "hover:border-red-600", "transition-all", "cursor-pointer", "disabled:opacity-50", 3, "click", "disabled"], [1, "w-3.5", "h-3.5", "border-2", "border-current", "border-t-transparent", "rounded-full", "animate-spin"], ["type", "button", 1, "px-3", "py-1.5", "rounded-lg", "border", "border-slate-200", "bg-white", "hover:bg-slate-100", "text-xs", "font-semibold", "text-slate-700", "disabled:opacity-40", "disabled:cursor-not-allowed", "cursor-pointer", 3, "click", "disabled"], ["type", "button", 1, "w-8", "h-8", "rounded-lg", "border", "border-slate-200", "text-xs", "font-bold", "transition-colors", "cursor-pointer", 3, "bg-[#b00725]", "text-white", "border-[#b00725]", "bg-white", "text-slate-700"], ["type", "button", 1, "w-8", "h-8", "rounded-lg", "border", "border-slate-200", "text-xs", "font-bold", "transition-colors", "cursor-pointer", 3, "click"]], template: function DocumentTableComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _DocumentTableComponent, selectors: [["app-document-table"]], inputs: { documentos: [1, "documentos"], isLoading: [1, "isLoading"], deletingId: [1, "deletingId"] }, outputs: { requestDelete: "requestDelete", openUpload: "openUpload" }, decls: 29, vars: 13, consts: [[1, "bg-white", "rounded-2xl", "border", "border-slate-200", "shadow-2xs", "overflow-hidden"], [1, "p-4", "sm:p-5", "border-b", "border-slate-200", "bg-slate-50/50", "flex", "flex-col", "md:flex-row", "md:items-center", "justify-between", "gap-3"], [1, "relative", "flex-1", "max-w-md"], [1, "absolute", "inset-y-0", "left-3", "flex", "items-center", "text-slate-400", "text-sm"], ["type", "text", "placeholder", "Buscar por ID, nombre de fuente o \xE1rea...", 1, "w-full", "pl-9", "pr-4", "py-2", "rounded-xl", "border", "border-slate-200", "bg-white", "text-sm", "text-slate-800", "placeholder-slate-400", "focus:outline-hidden", "focus:border-[#b00725]", "focus:ring-2", "focus:ring-red-100", "transition-all", 3, "input", "value"], [1, "flex", "flex-wrap", "items-center", "gap-2.5"], [1, "flex", "items-center", "gap-2"], [1, "text-xs", "font-semibold", "text-slate-500"], [1, "px-3", "py-2", "rounded-xl", "border", "border-slate-200", "bg-white", "text-xs", "font-semibold", "text-slate-700", "focus:outline-hidden", "focus:border-[#b00725]", "cursor-pointer", 3, "change", "value"], [3, "value"], [1, "px-2.5", "py-2", "rounded-xl", "border", "border-slate-200", "bg-white", "text-xs", "font-semibold", "text-slate-700", "focus:outline-hidden", "focus:border-[#b00725]", "cursor-pointer", 3, "change", "value"], [3, "value", "selected"], ["type", "button", 1, "px-3", "py-2", "rounded-xl", "text-xs", "font-semibold", "text-[#b00725]", "hover:bg-red-50", "transition-colors", "cursor-pointer"], [1, "p-12", "flex", "flex-col", "items-center", "justify-center", "text-center", "space-y-3"], [1, "p-12", "flex", "flex-col", "items-center", "justify-center", "text-center"], ["type", "button", 1, "px-3", "py-2", "rounded-xl", "text-xs", "font-semibold", "text-[#b00725]", "hover:bg-red-50", "transition-colors", "cursor-pointer", 3, "click"], [1, "w-10", "h-10", "border-4", "border-red-200", "border-t-[#b00725]", "rounded-full", "animate-spin"], [1, "text-sm", "font-semibold", "text-slate-700"], [1, "text-xs", "text-slate-400"], [1, "w-14", "h-14", "rounded-2xl", "bg-slate-100", "flex", "items-center", "justify-center", "text-2xl", "mb-3"], [1, "text-base", "font-bold", "text-slate-800"], [1, "text-xs", "text-slate-500", "max-w-sm", "mt-1", "mb-4"], ["type", "button", 1, "px-4", "py-2", "rounded-xl", "bg-[#b00725]", "text-white", "text-xs", "font-semibold", "hover:bg-[#92061e]", "transition-colors", "cursor-pointer", 3, "click"], ["type", "button", 1, "px-4", "py-2", "rounded-xl", "border", "border-slate-200", "text-slate-700", "text-xs", "font-semibold", "hover:bg-slate-50", "transition-colors", "cursor-pointer", 3, "click"], [1, "overflow-x-auto"], [1, "w-full", "text-left", "border-collapse"], [1, "bg-slate-50/80", "border-b", "border-slate-200", "text-[11px]", "font-bold", "text-slate-500", "uppercase", "tracking-wider"], [1, "py-3.5", "px-4"], [1, "py-3.5", "px-4", "text-center"], [1, "py-3.5", "px-4", "text-right"], [1, "divide-y", "divide-slate-200/70", "text-sm"], [1, "doc-row", "hover:bg-slate-50/90", "transition-colors"], [1, "p-4", "border-t", "border-slate-200", "bg-slate-50/50", "flex", "flex-col", "sm:flex-row", "items-center", "justify-between", "gap-3"], [1, "text-xs", "text-slate-500"], [1, "font-bold", "text-slate-800"], [1, "flex", "items-center", "gap-1.5"], [1, "py-3.5", "px-4", "font-mono", "text-xs", "font-semibold", "text-slate-700"], [1, "px-2", "py-1", "rounded-md", "bg-slate-100", "border", "border-slate-200"], [1, "flex", "items-center", "gap-2.5"], [1, "text-base"], [1, "font-semibold", "text-slate-900"], [1, "text-[11px]", "text-slate-400"], [1, "inline-flex", "items-center", "px-2.5", "py-0.5", "rounded-full", "text-xs", "font-semibold", "bg-red-50", "text-[#b00725]", "border", "border-red-200/70"], [1, "inline-flex", "items-center", "gap-1", "px-2.5", "py-1", "rounded-lg", "bg-blue-50", "text-blue-700", "font-bold", "text-xs", "border", "border-blue-200/60"], [1, "py-3.5", "px-4", "text-xs", "text-slate-500"], ["type", "button", 1, "inline-flex", "items-center", "gap-1.5", "px-3", "py-1.5", "rounded-xl", "text-xs", "font-semibold", "text-red-600", "hover:text-white", "hover:bg-red-600", "border", "border-red-200", "hover:border-red-600", "transition-all", "cursor-pointer", "disabled:opacity-50", 3, "click", "disabled"], [1, "w-3.5", "h-3.5", "border-2", "border-current", "border-t-transparent", "rounded-full", "animate-spin"], ["type", "button", 1, "px-3", "py-1.5", "rounded-lg", "border", "border-slate-200", "bg-white", "hover:bg-slate-100", "text-xs", "font-semibold", "text-slate-700", "disabled:opacity-40", "disabled:cursor-not-allowed", "cursor-pointer", 3, "click", "disabled"], ["type", "button", 1, "w-8", "h-8", "rounded-lg", "border", "border-slate-200", "text-xs", "font-bold", "transition-colors", "cursor-pointer", 3, "bg-[#b00725]", "text-white", "border-[#b00725]", "bg-white", "text-slate-700"], ["type", "button", 1, "w-8", "h-8", "rounded-lg", "border", "border-slate-200", "text-xs", "font-bold", "transition-colors", "cursor-pointer", 3, "click"]], template: function DocumentTableComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275domElementStart(0, "div", 0)(1, "div", 1)(2, "div", 2)(3, "span", 3);
       \u0275\u0275text(4, "\u{1F50D}");
@@ -675,21 +675,21 @@ var DocumentTableComponent = class _DocumentTableComponent {
       \u0275\u0275domListener("change", function DocumentTableComponent_Template_select_change_16_listener($event) {
         return ctx.onPageSizeChange($event);
       });
-      \u0275\u0275domElementStart(17, "option", 9);
+      \u0275\u0275domElementStart(17, "option", 11);
       \u0275\u0275text(18, "5 filas");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(19, "option", 9);
+      \u0275\u0275domElementStart(19, "option", 11);
       \u0275\u0275text(20, "10 filas");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(21, "option", 9);
+      \u0275\u0275domElementStart(21, "option", 11);
       \u0275\u0275text(22, "20 filas");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(23, "option", 9);
+      \u0275\u0275domElementStart(23, "option", 11);
       \u0275\u0275text(24, "50 filas");
       \u0275\u0275domElementEnd()()();
-      \u0275\u0275conditionalCreate(25, DocumentTableComponent_Conditional_25_Template, 2, 0, "button", 11);
+      \u0275\u0275conditionalCreate(25, DocumentTableComponent_Conditional_25_Template, 2, 0, "button", 12);
       \u0275\u0275domElementEnd()();
-      \u0275\u0275conditionalCreate(26, DocumentTableComponent_Conditional_26_Template, 6, 0, "div", 12)(27, DocumentTableComponent_Conditional_27_Template, 5, 1, "div", 13)(28, DocumentTableComponent_Conditional_28_Template, 32, 4);
+      \u0275\u0275conditionalCreate(26, DocumentTableComponent_Conditional_26_Template, 6, 0, "div", 13)(27, DocumentTableComponent_Conditional_27_Template, 5, 1, "div", 14)(28, DocumentTableComponent_Conditional_28_Template, 32, 4);
       \u0275\u0275domElementEnd();
     }
     if (rf & 2) {
@@ -702,13 +702,13 @@ var DocumentTableComponent = class _DocumentTableComponent {
       \u0275\u0275advance(5);
       \u0275\u0275domProperty("value", ctx.pageSize());
       \u0275\u0275advance();
-      \u0275\u0275domProperty("value", 5);
+      \u0275\u0275domProperty("value", 5)("selected", ctx.pageSize() === 5);
       \u0275\u0275advance(2);
-      \u0275\u0275domProperty("value", 10);
+      \u0275\u0275domProperty("value", 10)("selected", ctx.pageSize() === 10);
       \u0275\u0275advance(2);
-      \u0275\u0275domProperty("value", 20);
+      \u0275\u0275domProperty("value", 20)("selected", ctx.pageSize() === 20);
       \u0275\u0275advance(2);
-      \u0275\u0275domProperty("value", 50);
+      \u0275\u0275domProperty("value", 50)("selected", ctx.pageSize() === 50);
       \u0275\u0275advance(2);
       \u0275\u0275conditional(ctx.searchQuery() || ctx.selectedArea() !== "TODOS" ? 25 : -1);
       \u0275\u0275advance();
@@ -756,10 +756,10 @@ var DocumentTableComponent = class _DocumentTableComponent {
           [value]="pageSize()"
           (change)="onPageSizeChange($event)"
           class="px-2.5 py-2 rounded-xl border border-slate-200 bg-white text-xs font-semibold text-slate-700 focus:outline-hidden focus:border-[#b00725] cursor-pointer">
-          <option [value]="5">5 filas</option>
-          <option [value]="10">10 filas</option>
-          <option [value]="20">20 filas</option>
-          <option [value]="50">50 filas</option>
+          <option [value]="5" [selected]="pageSize() === 5">5 filas</option>
+          <option [value]="10" [selected]="pageSize() === 10">10 filas</option>
+          <option [value]="20" [selected]="pageSize() === 20">20 filas</option>
+          <option [value]="50" [selected]="pageSize() === 50">50 filas</option>
         </select>
       </div>
 
@@ -976,7 +976,7 @@ function DocumentUploadModalComponent_Conditional_0_Conditional_14_Template(rf, 
     \u0275\u0275text(7, "haz clic para explorar");
     \u0275\u0275domElementEnd()();
     \u0275\u0275domElementStart(8, "p", 33);
-    \u0275\u0275text(9, " Soporta PDF, Word (.docx), PowerPoint (.pptx), TXT, MD o CSV (M\xE1x. 25 MB) ");
+    \u0275\u0275text(9, " Soporta PDF, Word (.docx), PowerPoint (.pptx), TXT, MD o CSV (M\xE1x. 10 MB) ");
     \u0275\u0275domElementEnd()();
   }
   if (rf & 2) {
@@ -1306,9 +1306,9 @@ var DocumentUploadModalComponent = class _DocumentUploadModalComponent {
       this.validationError.set("Formato no permitido. Sube archivos .pdf, .docx, .pptx, .txt, .md o .csv");
       return;
     }
-    const maxBytes = 25 * 1024 * 1024;
+    const maxBytes = 10 * 1024 * 1024;
     if (file.size > maxBytes) {
-      this.validationError.set("El archivo supera el l\xEDmite m\xE1ximo permitido de 25 MB.");
+      this.validationError.set("El archivo supera el l\xEDmite m\xE1ximo permitido de 10 MB.");
       return;
     }
     this.selectedFile.set(file);
@@ -1454,7 +1454,7 @@ var DocumentUploadModalComponent = class _DocumentUploadModalComponent {
               Arrastra tu archivo aqu\xED o <span class="text-[#b00725] underline">haz clic para explorar</span>
             </div>
             <p class="text-xs text-slate-400 mt-1">
-              Soporta PDF, Word (.docx), PowerPoint (.pptx), TXT, MD o CSV (M\xE1x. 25 MB)
+              Soporta PDF, Word (.docx), PowerPoint (.pptx), TXT, MD o CSV (M\xE1x. 10 MB)
             </p>
           </div>
         } @else {
