@@ -2,7 +2,7 @@ import {
   BackofficeService,
   Router,
   RouterLink
-} from "./chunk-K2FKSCDE.js";
+} from "./chunk-QIZT5XSB.js";
 import {
   ChangeDetectionStrategy,
   Component,
@@ -20,6 +20,7 @@ import {
   viewChild,
   ɵsetClassDebugInfo,
   ɵɵadvance,
+  ɵɵclassMap,
   ɵɵclassProp,
   ɵɵconditional,
   ɵɵconditionalCreate,
@@ -50,7 +51,7 @@ import {
   ɵɵtextInterpolate1,
   ɵɵtextInterpolate2,
   ɵɵviewQuerySignal
-} from "./chunk-OMSE2WG5.js";
+} from "./chunk-YAFNTJHC.js";
 
 // src/app/features/backoffice/components/admin-navbar/admin-navbar.component.ts
 function AdminNavbarComponent_Conditional_19_Template(rf, ctx) {
@@ -1722,54 +1723,717 @@ var ConfirmDeleteModalComponent = class _ConfirmDeleteModalComponent {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ConfirmDeleteModalComponent, { className: "ConfirmDeleteModalComponent", filePath: "src/app/features/backoffice/components/confirm-delete-modal/confirm-delete-modal.component.ts", lineNumber: 10 });
 })();
 
+// src/app/features/backoffice/components/feedback-panel/feedback-panel.component.ts
+var _forTrack02 = ($index, $item) => $item.id_feedback;
+function FeedbackPanelComponent_Conditional_60_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275domElementStart(0, "div", 22);
+    \u0275\u0275text(1, " Cargando evaluaciones y comentarios... ");
+    \u0275\u0275domElementEnd();
+  }
+}
+function FeedbackPanelComponent_Conditional_61_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275domElementStart(0, "div", 23)(1, "div", 24);
+    \u0275\u0275text(2, "\u{1F4AC}");
+    \u0275\u0275domElementEnd();
+    \u0275\u0275domElementStart(3, "p", 25);
+    \u0275\u0275text(4, "No hay comentarios registrados en esta categor\xEDa");
+    \u0275\u0275domElementEnd();
+    \u0275\u0275domElementStart(5, "p", 5);
+    \u0275\u0275text(6, " Cuando los usuarios cierren su conversaci\xF3n y env\xEDen su opini\xF3n, aparecer\xE1 aqu\xED. ");
+    \u0275\u0275domElementEnd()();
+  }
+}
+function FeedbackPanelComponent_Conditional_62_For_14_Conditional_2_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275domElementStart(0, "span", 34)(1, "span");
+    \u0275\u0275text(2, "\u{1F60D}");
+    \u0275\u0275domElementEnd();
+    \u0275\u0275domElementStart(3, "span");
+    \u0275\u0275text(4, "S\xED, totalmente");
+    \u0275\u0275domElementEnd()();
+  }
+}
+function FeedbackPanelComponent_Conditional_62_For_14_Conditional_3_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275domElementStart(0, "span", 35)(1, "span");
+    \u0275\u0275text(2, "\u{1F610}");
+    \u0275\u0275domElementEnd();
+    \u0275\u0275domElementStart(3, "span");
+    \u0275\u0275text(4, "Parcialmente");
+    \u0275\u0275domElementEnd()();
+  }
+}
+function FeedbackPanelComponent_Conditional_62_For_14_Conditional_4_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275domElementStart(0, "span", 36)(1, "span");
+    \u0275\u0275text(2, "\u{1F61E}");
+    \u0275\u0275domElementEnd();
+    \u0275\u0275domElementStart(3, "span");
+    \u0275\u0275text(4, "No resolvi\xF3");
+    \u0275\u0275domElementEnd()();
+  }
+}
+function FeedbackPanelComponent_Conditional_62_For_14_Conditional_6_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275domElementStart(0, "p", 38);
+    \u0275\u0275text(1);
+    \u0275\u0275domElementEnd();
+  }
+  if (rf & 2) {
+    const item_r1 = \u0275\u0275nextContext().$implicit;
+    \u0275\u0275advance();
+    \u0275\u0275textInterpolate1(' "', item_r1.ultima_pregunta, '" ');
+  }
+}
+function FeedbackPanelComponent_Conditional_62_For_14_Conditional_7_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275domElementStart(0, "span", 39);
+    \u0275\u0275text(1, "Sin pregunta registrada");
+    \u0275\u0275domElementEnd();
+  }
+}
+function FeedbackPanelComponent_Conditional_62_For_14_Conditional_9_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275domElementStart(0, "p", 41);
+    \u0275\u0275text(1);
+    \u0275\u0275domElementEnd();
+  }
+  if (rf & 2) {
+    const item_r1 = \u0275\u0275nextContext().$implicit;
+    \u0275\u0275advance();
+    \u0275\u0275textInterpolate(item_r1.comentario);
+  }
+}
+function FeedbackPanelComponent_Conditional_62_For_14_Conditional_10_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275domElementStart(0, "span", 39);
+    \u0275\u0275text(1, "El usuario no dej\xF3 comentario escrito");
+    \u0275\u0275domElementEnd();
+  }
+}
+function FeedbackPanelComponent_Conditional_62_For_14_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275domElementStart(0, "tr", 31)(1, "td", 33);
+    \u0275\u0275conditionalCreate(2, FeedbackPanelComponent_Conditional_62_For_14_Conditional_2_Template, 5, 0, "span", 34)(3, FeedbackPanelComponent_Conditional_62_For_14_Conditional_3_Template, 5, 0, "span", 35)(4, FeedbackPanelComponent_Conditional_62_For_14_Conditional_4_Template, 5, 0, "span", 36);
+    \u0275\u0275domElementEnd();
+    \u0275\u0275domElementStart(5, "td", 37);
+    \u0275\u0275conditionalCreate(6, FeedbackPanelComponent_Conditional_62_For_14_Conditional_6_Template, 2, 1, "p", 38)(7, FeedbackPanelComponent_Conditional_62_For_14_Conditional_7_Template, 2, 0, "span", 39);
+    \u0275\u0275domElementEnd();
+    \u0275\u0275domElementStart(8, "td", 40);
+    \u0275\u0275conditionalCreate(9, FeedbackPanelComponent_Conditional_62_For_14_Conditional_9_Template, 2, 1, "p", 41)(10, FeedbackPanelComponent_Conditional_62_For_14_Conditional_10_Template, 2, 0, "span", 39);
+    \u0275\u0275domElementEnd();
+    \u0275\u0275domElementStart(11, "td", 42);
+    \u0275\u0275text(12);
+    \u0275\u0275pipe(13, "date");
+    \u0275\u0275domElementEnd()();
+  }
+  if (rf & 2) {
+    const item_r1 = ctx.$implicit;
+    \u0275\u0275advance(2);
+    \u0275\u0275conditional(item_r1.resuelto === "SI" ? 2 : item_r1.resuelto === "PARCIAL" ? 3 : 4);
+    \u0275\u0275advance(4);
+    \u0275\u0275conditional(item_r1.ultima_pregunta ? 6 : 7);
+    \u0275\u0275advance(3);
+    \u0275\u0275conditional(item_r1.comentario ? 9 : 10);
+    \u0275\u0275advance(3);
+    \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind2(13, 4, item_r1.creado_en, "dd/MM/yyyy HH:mm"), " ");
+  }
+}
+function FeedbackPanelComponent_Conditional_62_Conditional_15_Template(rf, ctx) {
+  if (rf & 1) {
+    const _r2 = \u0275\u0275getCurrentView();
+    \u0275\u0275domElementStart(0, "div", 32)(1, "span");
+    \u0275\u0275text(2);
+    \u0275\u0275domElementEnd();
+    \u0275\u0275domElementStart(3, "div", 43)(4, "button", 44);
+    \u0275\u0275domListener("click", function FeedbackPanelComponent_Conditional_62_Conditional_15_Template_button_click_4_listener() {
+      \u0275\u0275restoreView(_r2);
+      const ctx_r2 = \u0275\u0275nextContext(2);
+      return \u0275\u0275resetView(ctx_r2.prevPage());
+    });
+    \u0275\u0275text(5, " Anterior ");
+    \u0275\u0275domElementEnd();
+    \u0275\u0275domElementStart(6, "button", 44);
+    \u0275\u0275domListener("click", function FeedbackPanelComponent_Conditional_62_Conditional_15_Template_button_click_6_listener() {
+      \u0275\u0275restoreView(_r2);
+      const ctx_r2 = \u0275\u0275nextContext(2);
+      return \u0275\u0275resetView(ctx_r2.nextPage());
+    });
+    \u0275\u0275text(7, " Siguiente ");
+    \u0275\u0275domElementEnd()()();
+  }
+  if (rf & 2) {
+    const ctx_r2 = \u0275\u0275nextContext(2);
+    \u0275\u0275advance(2);
+    \u0275\u0275textInterpolate2("P\xE1gina ", ctx_r2.currentPage(), " de ", ctx_r2.totalPages());
+    \u0275\u0275advance(2);
+    \u0275\u0275domProperty("disabled", ctx_r2.currentPage() === 1);
+    \u0275\u0275advance(2);
+    \u0275\u0275domProperty("disabled", ctx_r2.currentPage() === ctx_r2.totalPages());
+  }
+}
+function FeedbackPanelComponent_Conditional_62_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275domElementStart(0, "div", 26)(1, "table", 27)(2, "thead")(3, "tr", 28)(4, "th", 29);
+    \u0275\u0275text(5, "Satisfacci\xF3n");
+    \u0275\u0275domElementEnd();
+    \u0275\u0275domElementStart(6, "th", 29);
+    \u0275\u0275text(7, "\xDAltima Consulta del Usuario (Contexto)");
+    \u0275\u0275domElementEnd();
+    \u0275\u0275domElementStart(8, "th", 29);
+    \u0275\u0275text(9, "Comentario / Observaci\xF3n");
+    \u0275\u0275domElementEnd();
+    \u0275\u0275domElementStart(10, "th", 29);
+    \u0275\u0275text(11, "Fecha");
+    \u0275\u0275domElementEnd()()();
+    \u0275\u0275domElementStart(12, "tbody", 30);
+    \u0275\u0275repeaterCreate(13, FeedbackPanelComponent_Conditional_62_For_14_Template, 14, 7, "tr", 31, _forTrack02);
+    \u0275\u0275domElementEnd()()();
+    \u0275\u0275conditionalCreate(15, FeedbackPanelComponent_Conditional_62_Conditional_15_Template, 8, 4, "div", 32);
+  }
+  if (rf & 2) {
+    const ctx_r2 = \u0275\u0275nextContext();
+    \u0275\u0275advance(13);
+    \u0275\u0275repeater(ctx_r2.paginatedItems());
+    \u0275\u0275advance(2);
+    \u0275\u0275conditional(ctx_r2.totalPages() > 1 ? 15 : -1);
+  }
+}
+var FeedbackPanelComponent = class _FeedbackPanelComponent {
+  items = input([], ...ngDevMode ? [{ debugName: "items" }] : (
+    /* istanbul ignore next */
+    []
+  ));
+  totalFeedback = input(0, ...ngDevMode ? [{ debugName: "totalFeedback" }] : (
+    /* istanbul ignore next */
+    []
+  ));
+  totalSi = input(0, ...ngDevMode ? [{ debugName: "totalSi" }] : (
+    /* istanbul ignore next */
+    []
+  ));
+  totalParcial = input(0, ...ngDevMode ? [{ debugName: "totalParcial" }] : (
+    /* istanbul ignore next */
+    []
+  ));
+  totalNo = input(0, ...ngDevMode ? [{ debugName: "totalNo" }] : (
+    /* istanbul ignore next */
+    []
+  ));
+  porcentajeSatisfaccion = input(0, ...ngDevMode ? [{ debugName: "porcentajeSatisfaccion" }] : (
+    /* istanbul ignore next */
+    []
+  ));
+  isLoading = input(false, ...ngDevMode ? [{ debugName: "isLoading" }] : (
+    /* istanbul ignore next */
+    []
+  ));
+  refresh = output();
+  selectedFilter = signal("TODOS", ...ngDevMode ? [{ debugName: "selectedFilter" }] : (
+    /* istanbul ignore next */
+    []
+  ));
+  currentPage = signal(1, ...ngDevMode ? [{ debugName: "currentPage" }] : (
+    /* istanbul ignore next */
+    []
+  ));
+  pageSize = 10;
+  filteredItems = computed(() => {
+    const f = this.selectedFilter();
+    const all = this.items();
+    if (f === "TODOS")
+      return all;
+    return all.filter((item) => item.resuelto === f);
+  }, ...ngDevMode ? [{ debugName: "filteredItems" }] : (
+    /* istanbul ignore next */
+    []
+  ));
+  totalPages = computed(() => Math.max(1, Math.ceil(this.filteredItems().length / this.pageSize)), ...ngDevMode ? [{ debugName: "totalPages" }] : (
+    /* istanbul ignore next */
+    []
+  ));
+  paginatedItems = computed(() => {
+    const start = (this.currentPage() - 1) * this.pageSize;
+    return this.filteredItems().slice(start, start + this.pageSize);
+  }, ...ngDevMode ? [{ debugName: "paginatedItems" }] : (
+    /* istanbul ignore next */
+    []
+  ));
+  setFilter(filter) {
+    this.selectedFilter.set(filter);
+    this.currentPage.set(1);
+  }
+  prevPage() {
+    if (this.currentPage() > 1) {
+      this.currentPage.update((p) => p - 1);
+    }
+  }
+  nextPage() {
+    if (this.currentPage() < this.totalPages()) {
+      this.currentPage.update((p) => p + 1);
+    }
+  }
+  static \u0275fac = function FeedbackPanelComponent_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _FeedbackPanelComponent)();
+  };
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _FeedbackPanelComponent, selectors: [["app-feedback-panel"]], inputs: { items: [1, "items"], totalFeedback: [1, "totalFeedback"], totalSi: [1, "totalSi"], totalParcial: [1, "totalParcial"], totalNo: [1, "totalNo"], porcentajeSatisfaccion: [1, "porcentajeSatisfaccion"], isLoading: [1, "isLoading"] }, outputs: { refresh: "refresh" }, decls: 63, vars: 19, consts: [[1, "space-y-6"], [1, "grid", "grid-cols-1", "sm:grid-cols-2", "lg:grid-cols-4", "gap-4"], [1, "bg-white", "rounded-2xl", "p-5", "border", "border-slate-200/90", "shadow-2xs", "flex", "items-center", "justify-between"], [1, "text-xs", "font-bold", "uppercase", "tracking-wider", "text-slate-400"], [1, "text-3xl", "font-black", "text-[#0050A1]", "mt-1"], [1, "text-xs", "text-slate-500", "mt-1"], [1, "w-12", "h-12", "rounded-2xl", "bg-[#0050A1]/10", "text-[#0050A1]", "flex", "items-center", "justify-center", "text-2xl"], [1, "text-xs", "font-bold", "uppercase", "tracking-wider", "text-emerald-600"], [1, "text-3xl", "font-black", "text-slate-900", "mt-1"], [1, "w-12", "h-12", "rounded-2xl", "bg-emerald-50", "text-emerald-600", "flex", "items-center", "justify-center", "text-2xl"], [1, "text-xs", "font-bold", "uppercase", "tracking-wider", "text-amber-600"], [1, "w-12", "h-12", "rounded-2xl", "bg-amber-50", "text-amber-600", "flex", "items-center", "justify-center", "text-2xl"], [1, "text-xs", "font-bold", "uppercase", "tracking-wider", "text-[#BE002E]"], [1, "text-3xl", "font-black", "text-[#BE002E]", "mt-1"], [1, "w-12", "h-12", "rounded-2xl", "bg-red-50", "text-[#BE002E]", "flex", "items-center", "justify-center", "text-2xl"], [1, "bg-white", "rounded-3xl", "border", "border-slate-200/90", "shadow-xs", "overflow-hidden"], [1, "p-5", "sm:p-6", "border-b", "border-slate-200", "flex", "flex-col", "lg:flex-row", "lg:items-center", "lg:justify-between", "gap-4"], [1, "text-lg", "font-extrabold", "text-slate-900"], [1, "text-xs", "text-slate-500", "mt-0.5"], [1, "flex", "flex-wrap", "items-center", "gap-2"], ["type", "button", 3, "click"], ["type", "button", "title", "Actualizar comentarios", 1, "p-2", "rounded-xl", "border", "border-slate-200", "bg-slate-50", "hover:bg-slate-100", "text-slate-600", "text-xs", "font-bold", "transition-colors", "cursor-pointer", 3, "click", "disabled"], [1, "p-12", "text-center", "text-slate-500", "text-sm"], [1, "p-12", "text-center"], [1, "text-3xl", "mb-2"], [1, "text-sm", "font-bold", "text-slate-800"], [1, "overflow-x-auto"], [1, "w-full", "text-left", "border-collapse"], [1, "bg-slate-50/80", "border-b", "border-slate-200", "text-[11px]", "font-extrabold", "uppercase", "tracking-wider", "text-slate-500"], [1, "py-3.5", "px-5"], [1, "divide-y", "divide-slate-200/70", "text-sm"], [1, "hover:bg-slate-50/70", "transition-colors"], [1, "px-6", "py-4", "bg-slate-50", "border-t", "border-slate-200", "flex", "items-center", "justify-between", "text-xs", "text-slate-600"], [1, "py-4", "px-5", "whitespace-nowrap", "align-top"], [1, "inline-flex", "items-center", "gap-1.5", "px-2.5", "py-1", "rounded-full", "text-xs", "font-bold", "bg-emerald-50", "text-emerald-700", "border", "border-emerald-200"], [1, "inline-flex", "items-center", "gap-1.5", "px-2.5", "py-1", "rounded-full", "text-xs", "font-bold", "bg-amber-50", "text-amber-700", "border", "border-amber-200"], [1, "inline-flex", "items-center", "gap-1.5", "px-2.5", "py-1", "rounded-full", "text-xs", "font-bold", "bg-red-50", "text-[#BE002E]", "border", "border-red-200"], [1, "py-4", "px-5", "max-w-xs", "align-top"], [1, "text-xs", "font-semibold", "text-[#0050A1]", "bg-blue-50/60", "border", "border-blue-100", "rounded-xl", "px-3", "py-2", "leading-relaxed"], [1, "text-xs", "text-slate-400", "italic"], [1, "py-4", "px-5", "max-w-md", "align-top"], [1, "text-xs", "sm:text-sm", "text-slate-800", "leading-relaxed", "whitespace-pre-wrap"], [1, "py-4", "px-5", "whitespace-nowrap", "text-xs", "text-slate-500", "align-top"], [1, "flex", "items-center", "gap-2"], ["type", "button", 1, "px-3", "py-1.5", "rounded-lg", "border", "border-slate-200", "bg-white", "hover:bg-slate-100", "disabled:opacity-40", "cursor-pointer", 3, "click", "disabled"]], template: function FeedbackPanelComponent_Template(rf, ctx) {
+    if (rf & 1) {
+      \u0275\u0275domElementStart(0, "div", 0)(1, "div", 1)(2, "div", 2)(3, "div")(4, "p", 3);
+      \u0275\u0275text(5, "\xCDndice de Satisfacci\xF3n");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(6, "p", 4);
+      \u0275\u0275text(7);
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(8, "p", 5);
+      \u0275\u0275text(9);
+      \u0275\u0275domElementEnd()();
+      \u0275\u0275domElementStart(10, "div", 6);
+      \u0275\u0275text(11, " \u{1F4CA} ");
+      \u0275\u0275domElementEnd()();
+      \u0275\u0275domElementStart(12, "div", 2)(13, "div")(14, "p", 7);
+      \u0275\u0275text(15, "Resueltas (S\xED)");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(16, "p", 8);
+      \u0275\u0275text(17);
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(18, "p", 5);
+      \u0275\u0275text(19, "Atenci\xF3n satisfactoria");
+      \u0275\u0275domElementEnd()();
+      \u0275\u0275domElementStart(20, "div", 9);
+      \u0275\u0275text(21, " \u{1F60D} ");
+      \u0275\u0275domElementEnd()();
+      \u0275\u0275domElementStart(22, "div", 2)(23, "div")(24, "p", 10);
+      \u0275\u0275text(25, "Parcialmente");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(26, "p", 8);
+      \u0275\u0275text(27);
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(28, "p", 5);
+      \u0275\u0275text(29, "Informaci\xF3n incompleta");
+      \u0275\u0275domElementEnd()();
+      \u0275\u0275domElementStart(30, "div", 11);
+      \u0275\u0275text(31, " \u{1F610} ");
+      \u0275\u0275domElementEnd()();
+      \u0275\u0275domElementStart(32, "div", 2)(33, "div")(34, "p", 12);
+      \u0275\u0275text(35, "No Resueltas");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(36, "p", 13);
+      \u0275\u0275text(37);
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(38, "p", 5);
+      \u0275\u0275text(39, "Requieren nuevos documentos");
+      \u0275\u0275domElementEnd()();
+      \u0275\u0275domElementStart(40, "div", 14);
+      \u0275\u0275text(41, " \u{1F61E} ");
+      \u0275\u0275domElementEnd()()();
+      \u0275\u0275domElementStart(42, "div", 15)(43, "div", 16)(44, "div")(45, "h2", 17);
+      \u0275\u0275text(46, " Comentarios y Feedback de Usuarios ");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(47, "p", 18);
+      \u0275\u0275text(48, " Identifica qu\xE9 consultas no pudieron resolverse para alimentar la ingesta con nuevos documentos. ");
+      \u0275\u0275domElementEnd()();
+      \u0275\u0275domElementStart(49, "div", 19)(50, "button", 20);
+      \u0275\u0275domListener("click", function FeedbackPanelComponent_Template_button_click_50_listener() {
+        return ctx.setFilter("TODOS");
+      });
+      \u0275\u0275text(51);
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(52, "button", 20);
+      \u0275\u0275domListener("click", function FeedbackPanelComponent_Template_button_click_52_listener() {
+        return ctx.setFilter("NO");
+      });
+      \u0275\u0275text(53);
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(54, "button", 20);
+      \u0275\u0275domListener("click", function FeedbackPanelComponent_Template_button_click_54_listener() {
+        return ctx.setFilter("PARCIAL");
+      });
+      \u0275\u0275text(55);
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(56, "button", 20);
+      \u0275\u0275domListener("click", function FeedbackPanelComponent_Template_button_click_56_listener() {
+        return ctx.setFilter("SI");
+      });
+      \u0275\u0275text(57);
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(58, "button", 21);
+      \u0275\u0275domListener("click", function FeedbackPanelComponent_Template_button_click_58_listener() {
+        return ctx.refresh.emit();
+      });
+      \u0275\u0275text(59, " \u{1F504} ");
+      \u0275\u0275domElementEnd()()();
+      \u0275\u0275conditionalCreate(60, FeedbackPanelComponent_Conditional_60_Template, 2, 0, "div", 22)(61, FeedbackPanelComponent_Conditional_61_Template, 7, 0, "div", 23)(62, FeedbackPanelComponent_Conditional_62_Template, 16, 1);
+      \u0275\u0275domElementEnd()();
+    }
+    if (rf & 2) {
+      \u0275\u0275advance(7);
+      \u0275\u0275textInterpolate1("", ctx.porcentajeSatisfaccion(), "%");
+      \u0275\u0275advance(2);
+      \u0275\u0275textInterpolate1("Sobre ", ctx.totalFeedback(), " evaluaciones");
+      \u0275\u0275advance(8);
+      \u0275\u0275textInterpolate(ctx.totalSi());
+      \u0275\u0275advance(10);
+      \u0275\u0275textInterpolate(ctx.totalParcial());
+      \u0275\u0275advance(10);
+      \u0275\u0275textInterpolate(ctx.totalNo());
+      \u0275\u0275advance(13);
+      \u0275\u0275classMap(ctx.selectedFilter() === "TODOS" ? "px-3 py-1.5 rounded-xl text-xs font-bold border transition-all cursor-pointer bg-[#0050A1] text-white border-[#0050A1]" : "px-3 py-1.5 rounded-xl text-xs font-bold border transition-all cursor-pointer bg-white text-slate-600 border-slate-200");
+      \u0275\u0275advance();
+      \u0275\u0275textInterpolate1(" Todos (", ctx.items().length, ") ");
+      \u0275\u0275advance();
+      \u0275\u0275classMap(ctx.selectedFilter() === "NO" ? "px-3 py-1.5 rounded-xl text-xs font-bold border transition-all cursor-pointer bg-[#BE002E] text-white border-[#BE002E]" : "px-3 py-1.5 rounded-xl text-xs font-bold border transition-all cursor-pointer bg-white text-slate-600 border-slate-200");
+      \u0275\u0275advance();
+      \u0275\u0275textInterpolate1(" \u{1F61E} No resueltos (", ctx.totalNo(), ") ");
+      \u0275\u0275advance();
+      \u0275\u0275classMap(ctx.selectedFilter() === "PARCIAL" ? "px-3 py-1.5 rounded-xl text-xs font-bold border transition-all cursor-pointer bg-amber-500 text-white border-amber-500" : "px-3 py-1.5 rounded-xl text-xs font-bold border transition-all cursor-pointer bg-white text-slate-600 border-slate-200");
+      \u0275\u0275advance();
+      \u0275\u0275textInterpolate1(" \u{1F610} Parciales (", ctx.totalParcial(), ") ");
+      \u0275\u0275advance();
+      \u0275\u0275classMap(ctx.selectedFilter() === "SI" ? "px-3 py-1.5 rounded-xl text-xs font-bold border transition-all cursor-pointer bg-emerald-600 text-white border-emerald-600" : "px-3 py-1.5 rounded-xl text-xs font-bold border transition-all cursor-pointer bg-white text-slate-600 border-slate-200");
+      \u0275\u0275advance();
+      \u0275\u0275textInterpolate1(" \u{1F60D} Resueltos (", ctx.totalSi(), ") ");
+      \u0275\u0275advance();
+      \u0275\u0275domProperty("disabled", ctx.isLoading());
+      \u0275\u0275advance(2);
+      \u0275\u0275conditional(ctx.isLoading() ? 60 : ctx.filteredItems().length === 0 ? 61 : 62);
+    }
+  }, dependencies: [DatePipe], styles: ["\n[_nghost-%COMP%] {\n  display: block;\n}"], changeDetection: 0 });
+};
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(FeedbackPanelComponent, [{
+    type: Component,
+    args: [{ selector: "app-feedback-panel", changeDetection: ChangeDetectionStrategy.OnPush, imports: [DatePipe], template: `<div class="space-y-6">
+
+  <!-- KPIs de Satisfacci\xF3n Ciudadana -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+    
+    <!-- KPI 1: \xCDndice de Satisfacci\xF3n -->
+    <div class="bg-white rounded-2xl p-5 border border-slate-200/90 shadow-2xs flex items-center justify-between">
+      <div>
+        <p class="text-xs font-bold uppercase tracking-wider text-slate-400">\xCDndice de Satisfacci\xF3n</p>
+        <p class="text-3xl font-black text-[#0050A1] mt-1">{{ porcentajeSatisfaccion() }}%</p>
+        <p class="text-xs text-slate-500 mt-1">Sobre {{ totalFeedback() }} evaluaciones</p>
+      </div>
+      <div class="w-12 h-12 rounded-2xl bg-[#0050A1]/10 text-[#0050A1] flex items-center justify-center text-2xl">
+        \u{1F4CA}
+      </div>
+    </div>
+
+    <!-- KPI 2: S\xED, totalmente -->
+    <div class="bg-white rounded-2xl p-5 border border-slate-200/90 shadow-2xs flex items-center justify-between">
+      <div>
+        <p class="text-xs font-bold uppercase tracking-wider text-emerald-600">Resueltas (S\xED)</p>
+        <p class="text-3xl font-black text-slate-900 mt-1">{{ totalSi() }}</p>
+        <p class="text-xs text-slate-500 mt-1">Atenci\xF3n satisfactoria</p>
+      </div>
+      <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-2xl">
+        \u{1F60D}
+      </div>
+    </div>
+
+    <!-- KPI 3: Parcialmente -->
+    <div class="bg-white rounded-2xl p-5 border border-slate-200/90 shadow-2xs flex items-center justify-between">
+      <div>
+        <p class="text-xs font-bold uppercase tracking-wider text-amber-600">Parcialmente</p>
+        <p class="text-3xl font-black text-slate-900 mt-1">{{ totalParcial() }}</p>
+        <p class="text-xs text-slate-500 mt-1">Informaci\xF3n incompleta</p>
+      </div>
+      <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center text-2xl">
+        \u{1F610}
+      </div>
+    </div>
+
+    <!-- KPI 4: No resueltas (Brechas de documentos) -->
+    <div class="bg-white rounded-2xl p-5 border border-slate-200/90 shadow-2xs flex items-center justify-between">
+      <div>
+        <p class="text-xs font-bold uppercase tracking-wider text-[#BE002E]">No Resueltas</p>
+        <p class="text-3xl font-black text-[#BE002E] mt-1">{{ totalNo() }}</p>
+        <p class="text-xs text-slate-500 mt-1">Requieren nuevos documentos</p>
+      </div>
+      <div class="w-12 h-12 rounded-2xl bg-red-50 text-[#BE002E] flex items-center justify-center text-2xl">
+        \u{1F61E}
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Contenedor de Tabla y Filtros -->
+  <div class="bg-white rounded-3xl border border-slate-200/90 shadow-xs overflow-hidden">
+    
+    <!-- Cabecera de Tabla y Controles -->
+    <div class="p-5 sm:p-6 border-b border-slate-200 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+      <div>
+        <h2 class="text-lg font-extrabold text-slate-900">
+          Comentarios y Feedback de Usuarios
+        </h2>
+        <p class="text-xs text-slate-500 mt-0.5">
+          Identifica qu\xE9 consultas no pudieron resolverse para alimentar la ingesta con nuevos documentos.
+        </p>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-2">
+        <!-- Filtros por Nivel de Resoluci\xF3n -->
+        <button
+          type="button"
+          (click)="setFilter('TODOS')"
+          [class]="selectedFilter() === 'TODOS'
+            ? 'px-3 py-1.5 rounded-xl text-xs font-bold border transition-all cursor-pointer bg-[#0050A1] text-white border-[#0050A1]'
+            : 'px-3 py-1.5 rounded-xl text-xs font-bold border transition-all cursor-pointer bg-white text-slate-600 border-slate-200'">
+          Todos ({{ items().length }})
+        </button>
+
+        <button
+          type="button"
+          (click)="setFilter('NO')"
+          [class]="selectedFilter() === 'NO'
+            ? 'px-3 py-1.5 rounded-xl text-xs font-bold border transition-all cursor-pointer bg-[#BE002E] text-white border-[#BE002E]'
+            : 'px-3 py-1.5 rounded-xl text-xs font-bold border transition-all cursor-pointer bg-white text-slate-600 border-slate-200'">
+          \u{1F61E} No resueltos ({{ totalNo() }})
+        </button>
+
+        <button
+          type="button"
+          (click)="setFilter('PARCIAL')"
+          [class]="selectedFilter() === 'PARCIAL'
+            ? 'px-3 py-1.5 rounded-xl text-xs font-bold border transition-all cursor-pointer bg-amber-500 text-white border-amber-500'
+            : 'px-3 py-1.5 rounded-xl text-xs font-bold border transition-all cursor-pointer bg-white text-slate-600 border-slate-200'">
+          \u{1F610} Parciales ({{ totalParcial() }})
+        </button>
+
+        <button
+          type="button"
+          (click)="setFilter('SI')"
+          [class]="selectedFilter() === 'SI'
+            ? 'px-3 py-1.5 rounded-xl text-xs font-bold border transition-all cursor-pointer bg-emerald-600 text-white border-emerald-600'
+            : 'px-3 py-1.5 rounded-xl text-xs font-bold border transition-all cursor-pointer bg-white text-slate-600 border-slate-200'">
+          \u{1F60D} Resueltos ({{ totalSi() }})
+        </button>
+
+        <button
+          type="button"
+          (click)="refresh.emit()"
+          [disabled]="isLoading()"
+          title="Actualizar comentarios"
+          class="p-2 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-600 text-xs font-bold transition-colors cursor-pointer">
+          \u{1F504}
+        </button>
+      </div>
+    </div>
+
+    <!-- Estado Cargando -->
+    @if (isLoading()) {
+      <div class="p-12 text-center text-slate-500 text-sm">
+        Cargando evaluaciones y comentarios...
+      </div>
+    } @else if (filteredItems().length === 0) {
+      <!-- Estado Vac\xEDo -->
+      <div class="p-12 text-center">
+        <div class="text-3xl mb-2">\u{1F4AC}</div>
+        <p class="text-sm font-bold text-slate-800">No hay comentarios registrados en esta categor\xEDa</p>
+        <p class="text-xs text-slate-500 mt-1">
+          Cuando los usuarios cierren su conversaci\xF3n y env\xEDen su opini\xF3n, aparecer\xE1 aqu\xED.
+        </p>
+      </div>
+    } @else {
+      <!-- Tabla de Feedback -->
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-slate-50/80 border-b border-slate-200 text-[11px] font-extrabold uppercase tracking-wider text-slate-500">
+              <th class="py-3.5 px-5">Satisfacci\xF3n</th>
+              <th class="py-3.5 px-5">\xDAltima Consulta del Usuario (Contexto)</th>
+              <th class="py-3.5 px-5">Comentario / Observaci\xF3n</th>
+              <th class="py-3.5 px-5">Fecha</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200/70 text-sm">
+            @for (item of paginatedItems(); track item.id_feedback) {
+              <tr class="hover:bg-slate-50/70 transition-colors">
+                
+                <!-- Columna 1: Nivel de Resoluci\xF3n -->
+                <td class="py-4 px-5 whitespace-nowrap align-top">
+                  @if (item.resuelto === 'SI') {
+                    <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                      <span>\u{1F60D}</span>
+                      <span>S\xED, totalmente</span>
+                    </span>
+                  } @else if (item.resuelto === 'PARCIAL') {
+                    <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-amber-50 text-amber-700 border border-amber-200">
+                      <span>\u{1F610}</span>
+                      <span>Parcialmente</span>
+                    </span>
+                  } @else {
+                    <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-red-50 text-[#BE002E] border border-red-200">
+                      <span>\u{1F61E}</span>
+                      <span>No resolvi\xF3</span>
+                    </span>
+                  }
+                </td>
+
+                <!-- Columna 2: \xDAltima pregunta realizada -->
+                <td class="py-4 px-5 max-w-xs align-top">
+                  @if (item.ultima_pregunta) {
+                    <p class="text-xs font-semibold text-[#0050A1] bg-blue-50/60 border border-blue-100 rounded-xl px-3 py-2 leading-relaxed">
+                      "{{ item.ultima_pregunta }}"
+                    </p>
+                  } @else {
+                    <span class="text-xs text-slate-400 italic">Sin pregunta registrada</span>
+                  }
+                </td>
+
+                <!-- Columna 3: Comentario del usuario -->
+                <td class="py-4 px-5 max-w-md align-top">
+                  @if (item.comentario) {
+                    <p class="text-xs sm:text-sm text-slate-800 leading-relaxed whitespace-pre-wrap">{{ item.comentario }}</p>
+                  } @else {
+                    <span class="text-xs text-slate-400 italic">El usuario no dej\xF3 comentario escrito</span>
+                  }
+                </td>
+
+                <!-- Columna 4: Fecha -->
+                <td class="py-4 px-5 whitespace-nowrap text-xs text-slate-500 align-top">
+                  {{ item.creado_en | date:'dd/MM/yyyy HH:mm' }}
+                </td>
+
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Paginaci\xF3n si supera 10 registros -->
+      @if (totalPages() > 1) {
+        <div class="px-6 py-4 bg-slate-50 border-t border-slate-200 flex items-center justify-between text-xs text-slate-600">
+          <span>P\xE1gina {{ currentPage() }} de {{ totalPages() }}</span>
+          <div class="flex items-center gap-2">
+            <button
+              type="button"
+              (click)="prevPage()"
+              [disabled]="currentPage() === 1"
+              class="px-3 py-1.5 rounded-lg border border-slate-200 bg-white hover:bg-slate-100 disabled:opacity-40 cursor-pointer">
+              Anterior
+            </button>
+            <button
+              type="button"
+              (click)="nextPage()"
+              [disabled]="currentPage() === totalPages()"
+              class="px-3 py-1.5 rounded-lg border border-slate-200 bg-white hover:bg-slate-100 disabled:opacity-40 cursor-pointer">
+              Siguiente
+            </button>
+          </div>
+        </div>
+      }
+    }
+
+  </div>
+
+</div>
+`, styles: ["/* src/app/features/backoffice/components/feedback-panel/feedback-panel.component.css */\n:host {\n  display: block;\n}\n"] }]
+  }], null, { items: [{ type: Input, args: [{ isSignal: true, alias: "items", required: false }] }], totalFeedback: [{ type: Input, args: [{ isSignal: true, alias: "totalFeedback", required: false }] }], totalSi: [{ type: Input, args: [{ isSignal: true, alias: "totalSi", required: false }] }], totalParcial: [{ type: Input, args: [{ isSignal: true, alias: "totalParcial", required: false }] }], totalNo: [{ type: Input, args: [{ isSignal: true, alias: "totalNo", required: false }] }], porcentajeSatisfaccion: [{ type: Input, args: [{ isSignal: true, alias: "porcentajeSatisfaccion", required: false }] }], isLoading: [{ type: Input, args: [{ isSignal: true, alias: "isLoading", required: false }] }], refresh: [{ type: Output, args: ["refresh"] }] });
+})();
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(FeedbackPanelComponent, { className: "FeedbackPanelComponent", filePath: "src/app/features/backoffice/components/feedback-panel/feedback-panel.component.ts", lineNumber: 12 });
+})();
+
 // src/app/features/backoffice/pages/admin-dashboard/admin-dashboard.component.ts
 var _c0 = ["uploadModal"];
-var _forTrack02 = ($index, $item) => $item.id;
-function AdminDashboardComponent_For_10_Conditional_3_Template(rf, ctx) {
+var _forTrack03 = ($index, $item) => $item.id;
+function AdminDashboardComponent_Conditional_19_Template(rf, ctx) {
+  if (rf & 1) {
+    const _r1 = \u0275\u0275getCurrentView();
+    \u0275\u0275elementStart(0, "app-admin-stats", 12);
+    \u0275\u0275listener("openUpload", function AdminDashboardComponent_Conditional_19_Template_app_admin_stats_openUpload_0_listener() {
+      \u0275\u0275restoreView(_r1);
+      const ctx_r1 = \u0275\u0275nextContext();
+      return \u0275\u0275resetView(ctx_r1.openUploadModal());
+    })("refresh", function AdminDashboardComponent_Conditional_19_Template_app_admin_stats_refresh_0_listener() {
+      \u0275\u0275restoreView(_r1);
+      const ctx_r1 = \u0275\u0275nextContext();
+      return \u0275\u0275resetView(ctx_r1.cargarDocumentos());
+    });
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(1, "app-document-table", 13);
+    \u0275\u0275listener("requestDelete", function AdminDashboardComponent_Conditional_19_Template_app_document_table_requestDelete_1_listener($event) {
+      \u0275\u0275restoreView(_r1);
+      const ctx_r1 = \u0275\u0275nextContext();
+      return \u0275\u0275resetView(ctx_r1.onRequestDelete($event));
+    })("openUpload", function AdminDashboardComponent_Conditional_19_Template_app_document_table_openUpload_1_listener() {
+      \u0275\u0275restoreView(_r1);
+      const ctx_r1 = \u0275\u0275nextContext();
+      return \u0275\u0275resetView(ctx_r1.openUploadModal());
+    });
+    \u0275\u0275elementEnd();
+  }
+  if (rf & 2) {
+    const ctx_r1 = \u0275\u0275nextContext();
+    \u0275\u0275property("totalDocumentos", ctx_r1.totalDocumentos())("totalFragmentos", ctx_r1.totalFragmentos())("isLoading", ctx_r1.isLoadingList());
+    \u0275\u0275advance();
+    \u0275\u0275property("documentos", ctx_r1.documentos())("isLoading", ctx_r1.isLoadingList())("deletingId", ctx_r1.deletingId());
+  }
+}
+function AdminDashboardComponent_Conditional_20_Template(rf, ctx) {
+  if (rf & 1) {
+    const _r3 = \u0275\u0275getCurrentView();
+    \u0275\u0275elementStart(0, "app-feedback-panel", 14);
+    \u0275\u0275listener("refresh", function AdminDashboardComponent_Conditional_20_Template_app_feedback_panel_refresh_0_listener() {
+      \u0275\u0275restoreView(_r3);
+      const ctx_r1 = \u0275\u0275nextContext();
+      return \u0275\u0275resetView(ctx_r1.cargarFeedback());
+    });
+    \u0275\u0275elementEnd();
+  }
+  if (rf & 2) {
+    const ctx_r1 = \u0275\u0275nextContext();
+    \u0275\u0275property("items", ctx_r1.feedbackItems())("totalFeedback", ctx_r1.totalFeedback())("totalSi", ctx_r1.totalSi())("totalParcial", ctx_r1.totalParcial())("totalNo", ctx_r1.totalNo())("porcentajeSatisfaccion", ctx_r1.porcentajeSatisfaccion())("isLoading", ctx_r1.isLoadingFeedback());
+  }
+}
+function AdminDashboardComponent_For_26_Conditional_3_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275text(0, " \u2705 ");
   }
 }
-function AdminDashboardComponent_For_10_Conditional_4_Template(rf, ctx) {
+function AdminDashboardComponent_For_26_Conditional_4_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275text(0, " \u274C ");
   }
 }
-function AdminDashboardComponent_For_10_Conditional_5_Template(rf, ctx) {
+function AdminDashboardComponent_For_26_Conditional_5_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275text(0, " \u2139\uFE0F ");
   }
 }
-function AdminDashboardComponent_For_10_Template(rf, ctx) {
+function AdminDashboardComponent_For_26_Template(rf, ctx) {
   if (rf & 1) {
-    const _r1 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "div", 10)(1, "div", 11)(2, "span", 12);
-    \u0275\u0275conditionalCreate(3, AdminDashboardComponent_For_10_Conditional_3_Template, 1, 0)(4, AdminDashboardComponent_For_10_Conditional_4_Template, 1, 0)(5, AdminDashboardComponent_For_10_Conditional_5_Template, 1, 0);
+    const _r4 = \u0275\u0275getCurrentView();
+    \u0275\u0275elementStart(0, "div")(1, "div", 15)(2, "span", 16);
+    \u0275\u0275conditionalCreate(3, AdminDashboardComponent_For_26_Conditional_3_Template, 1, 0)(4, AdminDashboardComponent_For_26_Conditional_4_Template, 1, 0)(5, AdminDashboardComponent_For_26_Conditional_5_Template, 1, 0);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(6, "div")(7, "div", 13);
+    \u0275\u0275elementStart(6, "div")(7, "div", 17);
     \u0275\u0275text(8);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(9, "div", 14);
+    \u0275\u0275elementStart(9, "div", 18);
     \u0275\u0275text(10);
     \u0275\u0275elementEnd()()();
-    \u0275\u0275elementStart(11, "button", 15);
-    \u0275\u0275listener("click", function AdminDashboardComponent_For_10_Template_button_click_11_listener() {
-      const toast_r2 = \u0275\u0275restoreView(_r1).$implicit;
-      const ctx_r2 = \u0275\u0275nextContext();
-      return \u0275\u0275resetView(ctx_r2.dismissToast(toast_r2.id));
+    \u0275\u0275elementStart(11, "button", 19);
+    \u0275\u0275listener("click", function AdminDashboardComponent_For_26_Template_button_click_11_listener() {
+      const toast_r5 = \u0275\u0275restoreView(_r4).$implicit;
+      const ctx_r1 = \u0275\u0275nextContext();
+      return \u0275\u0275resetView(ctx_r1.dismissToast(toast_r5.id));
     });
     \u0275\u0275text(12, " \u2715 ");
     \u0275\u0275elementEnd()();
   }
   if (rf & 2) {
-    const toast_r2 = ctx.$implicit;
-    \u0275\u0275classProp("border-emerald-200", toast_r2.type === "success")("border-red-200", toast_r2.type === "error")("border-blue-200", toast_r2.type === "info");
+    const toast_r5 = ctx.$implicit;
+    \u0275\u0275classMap(toast_r5.type === "success" ? "toast-item pointer-events-auto p-4 rounded-2xl shadow-xl border flex items-start justify-between gap-3 bg-white border-emerald-200" : toast_r5.type === "error" ? "toast-item pointer-events-auto p-4 rounded-2xl shadow-xl border flex items-start justify-between gap-3 bg-white border-red-200" : "toast-item pointer-events-auto p-4 rounded-2xl shadow-xl border flex items-start justify-between gap-3 bg-white border-blue-200");
     \u0275\u0275advance(3);
-    \u0275\u0275conditional(toast_r2.type === "success" ? 3 : toast_r2.type === "error" ? 4 : 5);
+    \u0275\u0275conditional(toast_r5.type === "success" ? 3 : toast_r5.type === "error" ? 4 : 5);
     \u0275\u0275advance(5);
-    \u0275\u0275textInterpolate(toast_r2.title);
+    \u0275\u0275textInterpolate(toast_r5.title);
     \u0275\u0275advance(2);
-    \u0275\u0275textInterpolate(toast_r2.message);
+    \u0275\u0275textInterpolate(toast_r5.message);
   }
 }
 var AdminDashboardComponent = class _AdminDashboardComponent {
@@ -1780,6 +2444,10 @@ var AdminDashboardComponent = class _AdminDashboardComponent {
     []
   ));
   session = this.backofficeService.currentSession;
+  activeTab = signal("documentos", ...ngDevMode ? [{ debugName: "activeTab" }] : (
+    /* istanbul ignore next */
+    []
+  ));
   documentos = signal([], ...ngDevMode ? [{ debugName: "documentos" }] : (
     /* istanbul ignore next */
     []
@@ -1792,7 +2460,35 @@ var AdminDashboardComponent = class _AdminDashboardComponent {
     /* istanbul ignore next */
     []
   ));
+  feedbackItems = signal([], ...ngDevMode ? [{ debugName: "feedbackItems" }] : (
+    /* istanbul ignore next */
+    []
+  ));
+  totalFeedback = signal(0, ...ngDevMode ? [{ debugName: "totalFeedback" }] : (
+    /* istanbul ignore next */
+    []
+  ));
+  totalSi = signal(0, ...ngDevMode ? [{ debugName: "totalSi" }] : (
+    /* istanbul ignore next */
+    []
+  ));
+  totalParcial = signal(0, ...ngDevMode ? [{ debugName: "totalParcial" }] : (
+    /* istanbul ignore next */
+    []
+  ));
+  totalNo = signal(0, ...ngDevMode ? [{ debugName: "totalNo" }] : (
+    /* istanbul ignore next */
+    []
+  ));
+  porcentajeSatisfaccion = signal(0, ...ngDevMode ? [{ debugName: "porcentajeSatisfaccion" }] : (
+    /* istanbul ignore next */
+    []
+  ));
   isLoadingList = signal(false, ...ngDevMode ? [{ debugName: "isLoadingList" }] : (
+    /* istanbul ignore next */
+    []
+  ));
+  isLoadingFeedback = signal(false, ...ngDevMode ? [{ debugName: "isLoadingFeedback" }] : (
     /* istanbul ignore next */
     []
   ));
@@ -1818,6 +2514,13 @@ var AdminDashboardComponent = class _AdminDashboardComponent {
   ));
   ngOnInit() {
     this.cargarDocumentos();
+    this.cargarFeedback();
+  }
+  setTab(tab) {
+    this.activeTab.set(tab);
+    if (tab === "feedback") {
+      this.cargarFeedback();
+    }
   }
   cargarDocumentos() {
     this.isLoadingList.set(true);
@@ -1831,6 +2534,24 @@ var AdminDashboardComponent = class _AdminDashboardComponent {
       error: (err) => {
         this.isLoadingList.set(false);
         this.showToast("error", "Error al cargar documentos", err.message);
+      }
+    });
+  }
+  cargarFeedback() {
+    this.isLoadingFeedback.set(true);
+    this.backofficeService.listarFeedback().subscribe({
+      next: (res) => {
+        this.feedbackItems.set(res.items || []);
+        this.totalFeedback.set(res.total_feedback ?? 0);
+        this.totalSi.set(res.total_si ?? 0);
+        this.totalParcial.set(res.total_parcial ?? 0);
+        this.totalNo.set(res.total_no ?? 0);
+        this.porcentajeSatisfaccion.set(res.porcentaje_satisfaccion ?? 0);
+        this.isLoadingFeedback.set(false);
+      },
+      error: (err) => {
+        this.isLoadingFeedback.set(false);
+        this.showToast("error", "Error al cargar comentarios", err.message);
       }
     });
   }
@@ -1905,55 +2626,82 @@ var AdminDashboardComponent = class _AdminDashboardComponent {
     if (rf & 2) {
       \u0275\u0275queryAdvance();
     }
-  }, decls: 11, vars: 12, consts: [["uploadModal", ""], [1, "min-h-screen", "bg-slate-50", "flex", "flex-col"], [3, "logout", "session"], [1, "flex-1", "max-w-7xl", "w-full", "mx-auto", "px-4", "sm:px-6", "lg:px-8", "py-8", "space-y-6"], [3, "openUpload", "refresh", "totalDocumentos", "totalFragmentos", "isLoading"], [3, "requestDelete", "openUpload", "documentos", "isLoading", "deletingId"], [3, "close", "upload", "isOpen", "isUploading", "defaultArea"], [3, "cancel", "confirm", "documento", "isDeleting"], [1, "fixed", "bottom-5", "right-5", "z-50", "flex", "flex-col", "gap-2.5", "max-w-sm", "w-full", "pointer-events-none"], [1, "toast-item", "pointer-events-auto", "p-4", "rounded-2xl", "shadow-xl", "border", "flex", "items-start", "justify-between", "gap-3", "bg-white", 3, "border-emerald-200", "border-red-200", "border-blue-200"], [1, "toast-item", "pointer-events-auto", "p-4", "rounded-2xl", "shadow-xl", "border", "flex", "items-start", "justify-between", "gap-3", "bg-white"], [1, "flex", "items-start", "gap-2.5"], [1, "text-lg"], [1, "text-xs", "font-bold", "text-slate-900"], [1, "text-xs", "text-slate-600", "mt-0.5", "leading-relaxed"], ["type", "button", 1, "text-xs", "text-slate-400", "hover:text-slate-700", "cursor-pointer", 3, "click"]], template: function AdminDashboardComponent_Template(rf, ctx) {
+  }, decls: 27, vars: 18, consts: [["uploadModal", ""], [1, "min-h-screen", "bg-slate-50", "flex", "flex-col"], [3, "logout", "session"], [1, "flex-1", "max-w-7xl", "w-full", "mx-auto", "px-4", "sm:px-6", "lg:px-8", "py-8", "space-y-6"], [1, "flex", "flex-wrap", "items-center", "justify-between", "gap-4", "border-b", "border-slate-200", "pb-4"], [1, "inline-flex", "p-1.5", "rounded-2xl", "bg-slate-200/70", "gap-1.5"], ["type", "button", 3, "click"], [3, "items", "totalFeedback", "totalSi", "totalParcial", "totalNo", "porcentajeSatisfaccion", "isLoading"], [3, "close", "upload", "isOpen", "isUploading", "defaultArea"], [3, "cancel", "confirm", "documento", "isDeleting"], [1, "fixed", "bottom-5", "right-5", "z-50", "flex", "flex-col", "gap-2.5", "max-w-sm", "w-full", "pointer-events-none"], [3, "class"], [3, "openUpload", "refresh", "totalDocumentos", "totalFragmentos", "isLoading"], [3, "requestDelete", "openUpload", "documentos", "isLoading", "deletingId"], [3, "refresh", "items", "totalFeedback", "totalSi", "totalParcial", "totalNo", "porcentajeSatisfaccion", "isLoading"], [1, "flex", "items-start", "gap-2.5"], [1, "text-lg"], [1, "text-xs", "font-bold", "text-slate-900"], [1, "text-xs", "text-slate-600", "mt-0.5", "leading-relaxed"], ["type", "button", 1, "text-xs", "text-slate-400", "hover:text-slate-700", "cursor-pointer", 3, "click"]], template: function AdminDashboardComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "div", 1)(1, "app-admin-navbar", 2);
       \u0275\u0275listener("logout", function AdminDashboardComponent_Template_app_admin_navbar_logout_1_listener() {
         return ctx.onLogout();
       });
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(2, "main", 3)(3, "app-admin-stats", 4);
-      \u0275\u0275listener("openUpload", function AdminDashboardComponent_Template_app_admin_stats_openUpload_3_listener() {
-        return ctx.openUploadModal();
-      })("refresh", function AdminDashboardComponent_Template_app_admin_stats_refresh_3_listener() {
-        return ctx.cargarDocumentos();
+      \u0275\u0275elementStart(2, "main", 3)(3, "div", 4)(4, "div", 5)(5, "button", 6);
+      \u0275\u0275listener("click", function AdminDashboardComponent_Template_button_click_5_listener() {
+        return ctx.setTab("documentos");
       });
+      \u0275\u0275elementStart(6, "span");
+      \u0275\u0275text(7, "\u{1F4DA}");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(4, "app-document-table", 5);
-      \u0275\u0275listener("requestDelete", function AdminDashboardComponent_Template_app_document_table_requestDelete_4_listener($event) {
-        return ctx.onRequestDelete($event);
-      })("openUpload", function AdminDashboardComponent_Template_app_document_table_openUpload_4_listener() {
-        return ctx.openUploadModal();
-      });
+      \u0275\u0275elementStart(8, "span");
+      \u0275\u0275text(9, "Base de Conocimiento");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(10, "span");
+      \u0275\u0275text(11);
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(5, "app-document-upload-modal", 6, 0);
-      \u0275\u0275listener("close", function AdminDashboardComponent_Template_app_document_upload_modal_close_5_listener() {
+      \u0275\u0275elementStart(12, "button", 6);
+      \u0275\u0275listener("click", function AdminDashboardComponent_Template_button_click_12_listener() {
+        return ctx.setTab("feedback");
+      });
+      \u0275\u0275elementStart(13, "span");
+      \u0275\u0275text(14, "\u2B50");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(15, "span");
+      \u0275\u0275text(16, "Satisfacci\xF3n y Comentarios");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(17, "span");
+      \u0275\u0275text(18);
+      \u0275\u0275elementEnd()()()();
+      \u0275\u0275conditionalCreate(19, AdminDashboardComponent_Conditional_19_Template, 2, 6);
+      \u0275\u0275conditionalCreate(20, AdminDashboardComponent_Conditional_20_Template, 1, 7, "app-feedback-panel", 7);
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(21, "app-document-upload-modal", 8, 0);
+      \u0275\u0275listener("close", function AdminDashboardComponent_Template_app_document_upload_modal_close_21_listener() {
         return ctx.closeUploadModal();
-      })("upload", function AdminDashboardComponent_Template_app_document_upload_modal_upload_5_listener($event) {
+      })("upload", function AdminDashboardComponent_Template_app_document_upload_modal_upload_21_listener($event) {
         return ctx.onUploadDocument($event);
       });
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(7, "app-confirm-delete-modal", 7);
-      \u0275\u0275listener("cancel", function AdminDashboardComponent_Template_app_confirm_delete_modal_cancel_7_listener() {
+      \u0275\u0275elementStart(23, "app-confirm-delete-modal", 9);
+      \u0275\u0275listener("cancel", function AdminDashboardComponent_Template_app_confirm_delete_modal_cancel_23_listener() {
         return ctx.onCancelDelete();
-      })("confirm", function AdminDashboardComponent_Template_app_confirm_delete_modal_confirm_7_listener($event) {
+      })("confirm", function AdminDashboardComponent_Template_app_confirm_delete_modal_confirm_23_listener($event) {
         return ctx.onConfirmDelete($event);
       });
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(8, "div", 8);
-      \u0275\u0275repeaterCreate(9, AdminDashboardComponent_For_10_Template, 13, 9, "div", 9, _forTrack02);
+      \u0275\u0275elementStart(24, "div", 10);
+      \u0275\u0275repeaterCreate(25, AdminDashboardComponent_For_26_Template, 13, 5, "div", 11, _forTrack03);
       \u0275\u0275elementEnd()();
     }
     if (rf & 2) {
-      let tmp_10_0;
+      let tmp_12_0;
       \u0275\u0275advance();
       \u0275\u0275property("session", ctx.session());
-      \u0275\u0275advance(2);
-      \u0275\u0275property("totalDocumentos", ctx.totalDocumentos())("totalFragmentos", ctx.totalFragmentos())("isLoading", ctx.isLoadingList());
+      \u0275\u0275advance(4);
+      \u0275\u0275classMap(ctx.activeTab() === "documentos" ? "inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer bg-[#0050A1] text-white shadow-sm" : "inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer text-slate-600 hover:text-slate-900");
+      \u0275\u0275advance(5);
+      \u0275\u0275classMap(ctx.activeTab() === "documentos" ? "px-2 py-0.5 rounded-full text-[11px] font-extrabold bg-white/20 text-white" : "px-2 py-0.5 rounded-full text-[11px] font-extrabold bg-slate-300/70 text-slate-700");
       \u0275\u0275advance();
-      \u0275\u0275property("documentos", ctx.documentos())("isLoading", ctx.isLoadingList())("deletingId", ctx.deletingId());
+      \u0275\u0275textInterpolate1(" ", ctx.totalDocumentos(), " ");
       \u0275\u0275advance();
-      \u0275\u0275property("isOpen", ctx.isUploadModalOpen())("isUploading", ctx.isUploading())("defaultArea", ((tmp_10_0 = ctx.session()) == null ? null : tmp_10_0.areaDefault) || "GENERAL");
+      \u0275\u0275classMap(ctx.activeTab() === "feedback" ? "inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer bg-[#0050A1] text-white shadow-sm" : "inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer text-slate-600 hover:text-slate-900");
+      \u0275\u0275advance(5);
+      \u0275\u0275classMap(ctx.activeTab() === "feedback" ? "px-2 py-0.5 rounded-full text-[11px] font-extrabold bg-white/20 text-white" : ctx.totalNo() > 0 ? "px-2 py-0.5 rounded-full text-[11px] font-extrabold bg-[#BE002E] text-white" : "px-2 py-0.5 rounded-full text-[11px] font-extrabold bg-slate-300/70 text-slate-700");
+      \u0275\u0275advance();
+      \u0275\u0275textInterpolate1(" ", ctx.totalFeedback(), " ");
+      \u0275\u0275advance();
+      \u0275\u0275conditional(ctx.activeTab() === "documentos" ? 19 : -1);
+      \u0275\u0275advance();
+      \u0275\u0275conditional(ctx.activeTab() === "feedback" ? 20 : -1);
+      \u0275\u0275advance();
+      \u0275\u0275property("isOpen", ctx.isUploadModalOpen())("isUploading", ctx.isUploading())("defaultArea", ((tmp_12_0 = ctx.session()) == null ? null : tmp_12_0.areaDefault) || "GENERAL");
       \u0275\u0275advance(2);
       \u0275\u0275property("documento", ctx.docToDelete())("isDeleting", !!ctx.deletingId());
       \u0275\u0275advance(2);
@@ -1964,7 +2712,8 @@ var AdminDashboardComponent = class _AdminDashboardComponent {
     AdminStatsComponent,
     DocumentTableComponent,
     DocumentUploadModalComponent,
-    ConfirmDeleteModalComponent
+    ConfirmDeleteModalComponent,
+    FeedbackPanelComponent
   ], styles: ["\n.toast-item[_ngcontent-%COMP%] {\n  animation: _ngcontent-%COMP%_slideInRight 0.25s cubic-bezier(0.16, 1, 0.3, 1);\n}\n@keyframes _ngcontent-%COMP%_slideInRight {\n  from {\n    opacity: 0;\n    transform: translateX(20px);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}"], changeDetection: 0 });
 };
 (() => {
@@ -1975,7 +2724,8 @@ var AdminDashboardComponent = class _AdminDashboardComponent {
       AdminStatsComponent,
       DocumentTableComponent,
       DocumentUploadModalComponent,
-      ConfirmDeleteModalComponent
+      ConfirmDeleteModalComponent,
+      FeedbackPanelComponent
     ], template: `<div class="min-h-screen bg-slate-50 flex flex-col">
   
   <!-- Barra de Navegaci\xF3n Superior -->
@@ -1987,23 +2737,81 @@ var AdminDashboardComponent = class _AdminDashboardComponent {
   <!-- Contenido Principal -->
   <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
     
-    <!-- KPIs y Acciones Principales -->
-    <app-admin-stats
-      [totalDocumentos]="totalDocumentos()"
-      [totalFragmentos]="totalFragmentos()"
-      [isLoading]="isLoadingList()"
-      (openUpload)="openUploadModal()"
-      (refresh)="cargarDocumentos()"
-    />
+    <!-- Selector de M\xF3dulos del Backoffice (Tabs) -->
+    <div class="flex flex-wrap items-center justify-between gap-4 border-b border-slate-200 pb-4">
+      <div class="inline-flex p-1.5 rounded-2xl bg-slate-200/70 gap-1.5">
+        
+        <button
+          type="button"
+          (click)="setTab('documentos')"
+          [class]="activeTab() === 'documentos'
+            ? 'inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer bg-[#0050A1] text-white shadow-sm'
+            : 'inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer text-slate-600 hover:text-slate-900'">
+          <span>\u{1F4DA}</span>
+          <span>Base de Conocimiento</span>
+          <span 
+            [class]="activeTab() === 'documentos'
+              ? 'px-2 py-0.5 rounded-full text-[11px] font-extrabold bg-white/20 text-white'
+              : 'px-2 py-0.5 rounded-full text-[11px] font-extrabold bg-slate-300/70 text-slate-700'">
+            {{ totalDocumentos() }}
+          </span>
+        </button>
 
-    <!-- Tabla de Documentos con Filtros y Paginaci\xF3n (>10 registros) -->
-    <app-document-table
-      [documentos]="documentos()"
-      [isLoading]="isLoadingList()"
-      [deletingId]="deletingId()"
-      (requestDelete)="onRequestDelete($event)"
-      (openUpload)="openUploadModal()"
-    />
+        <button
+          type="button"
+          (click)="setTab('feedback')"
+          [class]="activeTab() === 'feedback'
+            ? 'inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer bg-[#0050A1] text-white shadow-sm'
+            : 'inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer text-slate-600 hover:text-slate-900'">
+          <span>\u2B50</span>
+          <span>Satisfacci\xF3n y Comentarios</span>
+          <span 
+            [class]="activeTab() === 'feedback'
+              ? 'px-2 py-0.5 rounded-full text-[11px] font-extrabold bg-white/20 text-white'
+              : (totalNo() > 0
+                  ? 'px-2 py-0.5 rounded-full text-[11px] font-extrabold bg-[#BE002E] text-white'
+                  : 'px-2 py-0.5 rounded-full text-[11px] font-extrabold bg-slate-300/70 text-slate-700')">
+            {{ totalFeedback() }}
+          </span>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- M\xD3DULO 1: Base de Conocimiento (Documentos) -->
+    @if (activeTab() === 'documentos') {
+      <!-- KPIs y Acciones Principales -->
+      <app-admin-stats
+        [totalDocumentos]="totalDocumentos()"
+        [totalFragmentos]="totalFragmentos()"
+        [isLoading]="isLoadingList()"
+        (openUpload)="openUploadModal()"
+        (refresh)="cargarDocumentos()"
+      />
+
+      <!-- Tabla de Documentos con Filtros y Paginaci\xF3n (>10 registros) -->
+      <app-document-table
+        [documentos]="documentos()"
+        [isLoading]="isLoadingList()"
+        [deletingId]="deletingId()"
+        (requestDelete)="onRequestDelete($event)"
+        (openUpload)="openUploadModal()"
+      />
+    }
+
+    <!-- M\xD3DULO 2: Satisfacci\xF3n y Comentarios de Usuarios -->
+    @if (activeTab() === 'feedback') {
+      <app-feedback-panel
+        [items]="feedbackItems()"
+        [totalFeedback]="totalFeedback()"
+        [totalSi]="totalSi()"
+        [totalParcial]="totalParcial()"
+        [totalNo]="totalNo()"
+        [porcentajeSatisfaccion]="porcentajeSatisfaccion()"
+        [isLoading]="isLoadingFeedback()"
+        (refresh)="cargarFeedback()"
+      />
+    }
 
   </main>
 
@@ -2029,10 +2837,11 @@ var AdminDashboardComponent = class _AdminDashboardComponent {
   <div class="fixed bottom-5 right-5 z-50 flex flex-col gap-2.5 max-w-sm w-full pointer-events-none">
     @for (toast of toasts(); track toast.id) {
       <div
-        class="toast-item pointer-events-auto p-4 rounded-2xl shadow-xl border flex items-start justify-between gap-3 bg-white"
-        [class.border-emerald-200]="toast.type === 'success'"
-        [class.border-red-200]="toast.type === 'error'"
-        [class.border-blue-200]="toast.type === 'info'">
+        [class]="toast.type === 'success'
+          ? 'toast-item pointer-events-auto p-4 rounded-2xl shadow-xl border flex items-start justify-between gap-3 bg-white border-emerald-200'
+          : (toast.type === 'error'
+              ? 'toast-item pointer-events-auto p-4 rounded-2xl shadow-xl border flex items-start justify-between gap-3 bg-white border-red-200'
+              : 'toast-item pointer-events-auto p-4 rounded-2xl shadow-xl border flex items-start justify-between gap-3 bg-white border-blue-200')">
         
         <div class="flex items-start gap-2.5">
           <span class="text-lg">
@@ -2061,7 +2870,7 @@ var AdminDashboardComponent = class _AdminDashboardComponent {
   }], null, { uploadModal: [{ type: ViewChild, args: ["uploadModal", { isSignal: true }] }] });
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(AdminDashboardComponent, { className: "AdminDashboardComponent", filePath: "src/app/features/backoffice/pages/admin-dashboard/admin-dashboard.component.ts", lineNumber: 24 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(AdminDashboardComponent, { className: "AdminDashboardComponent", filePath: "src/app/features/backoffice/pages/admin-dashboard/admin-dashboard.component.ts", lineNumber: 26 });
 })();
 export {
   AdminDashboardComponent

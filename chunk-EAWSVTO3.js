@@ -26,7 +26,7 @@ import {
   ɵsetClassDebugInfo,
   ɵɵadvance,
   ɵɵattribute,
-  ɵɵclassProp,
+  ɵɵclassMap,
   ɵɵconditional,
   ɵɵconditionalCreate,
   ɵɵdefineComponent,
@@ -59,7 +59,7 @@ import {
   ɵɵtextInterpolate,
   ɵɵtextInterpolate1,
   ɵɵviewQuerySignal
-} from "./chunk-OMSE2WG5.js";
+} from "./chunk-YAFNTJHC.js";
 
 // src/app/core/services/session.service.ts
 var SessionService = class _SessionService {
@@ -113,6 +113,18 @@ var AssistantService = class _AssistantService {
       return throwError(() => new Error(error.status === 0 ? "No se pudo conectar con el servidor del asistente. Por favor, aseg\xFArate de que el backend est\xE9 activo en http://localhost:8000." : error.error?.detail || error.error?.mensaje_respuesta || "Ocurri\xF3 un error al procesar tu consulta."));
     }));
   }
+  sendFeedback(params) {
+    const payload = {
+      session_id: this.sessionService.getSessionId(),
+      resuelto: params.resuelto,
+      comentario: params.comentario?.trim() || void 0,
+      ultima_pregunta: params.ultimaPregunta?.trim() || void 0
+    };
+    return this.http.post(`${this.endpoint}/feedback`, payload).pipe(catchError((error) => {
+      console.error("Error al enviar feedback:", error);
+      return throwError(() => new Error("No se pudo registrar tu calificaci\xF3n en este momento."));
+    }));
+  }
   resetConversation() {
     this.sessionService.resetSession();
   }
@@ -138,7 +150,7 @@ function ChatHeaderComponent_Conditional_18_Template(rf, ctx) {
     \u0275\u0275domListener("click", function ChatHeaderComponent_Conditional_18_Template_button_click_0_listener() {
       \u0275\u0275restoreView(_r1);
       const ctx_r1 = \u0275\u0275nextContext();
-      return \u0275\u0275resetView(ctx_r1.resetConversation.emit());
+      return \u0275\u0275resetView(ctx_r1.closeConversation.emit());
     });
     \u0275\u0275namespaceSVG();
     \u0275\u0275domElementStart(1, "svg", 17);
@@ -146,7 +158,7 @@ function ChatHeaderComponent_Conditional_18_Template(rf, ctx) {
     \u0275\u0275domElementEnd();
     \u0275\u0275namespaceHTML();
     \u0275\u0275domElementStart(3, "span");
-    \u0275\u0275text(4, "Nueva consulta");
+    \u0275\u0275text(4, "Cerrar conversaci\xF3n");
     \u0275\u0275domElementEnd()();
   }
 }
@@ -155,11 +167,11 @@ var ChatHeaderComponent = class _ChatHeaderComponent {
     /* istanbul ignore next */
     []
   ));
-  resetConversation = output();
+  closeConversation = output();
   static \u0275fac = function ChatHeaderComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _ChatHeaderComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ChatHeaderComponent, selectors: [["app-chat-header"]], inputs: { hasMessages: [1, "hasMessages"] }, outputs: { resetConversation: "resetConversation" }, decls: 19, vars: 1, consts: [[1, "shrink-0", "bg-[#0050A1]", "text-white", "border-b-4", "border-[#BE002E]", "shadow-md", "z-20"], [1, "max-w-6xl", "mx-auto", "px-4", "sm:px-6", "h-16", "sm:h-18", "flex", "items-center", "justify-between", "gap-3"], [1, "flex", "items-center", "gap-3.5", "min-w-0"], [1, "w-10", "h-10", "sm:w-11", "sm:h-11", "rounded-xl", "bg-white", "p-1.5", "flex", "items-center", "justify-center", "shadow-md", "shrink-0"], ["src", "cropped-Favicon-3-1-32x32.png", "alt", "Logo Colegio Bertolt Brecht", 1, "w-full", "h-full", "object-contain"], [1, "min-w-0"], [1, "flex", "items-center", "gap-2.5"], [1, "font-extrabold", "text-white", "text-base", "sm:text-lg", "leading-tight", "tracking-tight", "truncate"], [1, "hidden", "md:inline-flex", "items-center", "px-2.5", "py-0.5", "rounded-full", "text-[10px]", "font-extrabold", "bg-[#BE002E]", "text-white", "uppercase", "tracking-wider", "shadow-2xs"], [1, "flex", "items-center", "gap-1.5", "mt-0.5"], [1, "relative", "flex", "h-2", "w-2"], [1, "animate-ping", "absolute", "inline-flex", "h-full", "w-full", "rounded-full", "bg-emerald-300", "opacity-75"], [1, "relative", "inline-flex", "rounded-full", "h-2", "w-2", "bg-emerald-400"], [1, "text-xs", "text-blue-100", "font-medium", "truncate"], [1, "flex", "items-center", "gap-2", "shrink-0"], ["type", "button", "title", "Iniciar una nueva consulta", 1, "inline-flex", "items-center", "gap-1.5", "px-3.5", "sm:px-4", "py-2", "rounded-xl", "bg-[#BE002E]", "hover:bg-[#9e0026]", "text-white", "text-xs", "font-bold", "shadow-sm", "transition-all", "transform", "active:scale-95", "cursor-pointer"], ["type", "button", "title", "Iniciar una nueva consulta", 1, "inline-flex", "items-center", "gap-1.5", "px-3.5", "sm:px-4", "py-2", "rounded-xl", "bg-[#BE002E]", "hover:bg-[#9e0026]", "text-white", "text-xs", "font-bold", "shadow-sm", "transition-all", "transform", "active:scale-95", "cursor-pointer", 3, "click"], ["fill", "none", "stroke", "currentColor", "viewBox", "0 0 24 24", 1, "w-4", "h-4"], ["stroke-linecap", "round", "stroke-linejoin", "round", "stroke-width", "2.5", "d", "M12 4v16m8-8H4"]], template: function ChatHeaderComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ChatHeaderComponent, selectors: [["app-chat-header"]], inputs: { hasMessages: [1, "hasMessages"] }, outputs: { closeConversation: "closeConversation" }, decls: 19, vars: 1, consts: [[1, "shrink-0", "bg-[#0050A1]", "text-white", "border-b-4", "border-[#BE002E]", "shadow-md", "z-20"], [1, "max-w-6xl", "mx-auto", "px-4", "sm:px-6", "h-16", "sm:h-18", "flex", "items-center", "justify-between", "gap-3"], [1, "flex", "items-center", "gap-3.5", "min-w-0"], [1, "w-10", "h-10", "sm:w-11", "sm:h-11", "rounded-xl", "bg-white", "p-1.5", "flex", "items-center", "justify-center", "shadow-md", "shrink-0"], ["src", "cropped-Favicon-3-1-32x32.png", "alt", "Logo Colegio Bertolt Brecht", 1, "w-full", "h-full", "object-contain"], [1, "min-w-0"], [1, "flex", "items-center", "gap-2.5"], [1, "font-extrabold", "text-white", "text-base", "sm:text-lg", "leading-tight", "tracking-tight", "truncate"], [1, "hidden", "md:inline-flex", "items-center", "px-2.5", "py-0.5", "rounded-full", "text-[10px]", "font-extrabold", "bg-[#BE002E]", "text-white", "uppercase", "tracking-wider", "shadow-2xs"], [1, "flex", "items-center", "gap-1.5", "mt-0.5"], [1, "relative", "flex", "h-2", "w-2"], [1, "animate-ping", "absolute", "inline-flex", "h-full", "w-full", "rounded-full", "bg-emerald-300", "opacity-75"], [1, "relative", "inline-flex", "rounded-full", "h-2", "w-2", "bg-emerald-400"], [1, "text-xs", "text-blue-100", "font-medium", "truncate"], [1, "flex", "items-center", "gap-2", "shrink-0"], ["type", "button", "title", "Finalizar y calificar conversaci\xF3n", 1, "inline-flex", "items-center", "gap-1.5", "px-3.5", "sm:px-4", "py-2", "rounded-xl", "bg-[#BE002E]", "hover:bg-[#9e0026]", "text-white", "text-xs", "font-bold", "shadow-sm", "transition-all", "transform", "active:scale-95", "cursor-pointer"], ["type", "button", "title", "Finalizar y calificar conversaci\xF3n", 1, "inline-flex", "items-center", "gap-1.5", "px-3.5", "sm:px-4", "py-2", "rounded-xl", "bg-[#BE002E]", "hover:bg-[#9e0026]", "text-white", "text-xs", "font-bold", "shadow-sm", "transition-all", "transform", "active:scale-95", "cursor-pointer", 3, "click"], ["fill", "none", "stroke", "currentColor", "viewBox", "0 0 24 24", 1, "w-4", "h-4"], ["stroke-linecap", "round", "stroke-linejoin", "round", "stroke-width", "2.5", "d", "M5 13l4 4L19 7"]], template: function ChatHeaderComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275domElementStart(0, "header", 0)(1, "div", 1)(2, "div", 2)(3, "div", 3);
       \u0275\u0275domElement(4, "img", 4);
@@ -174,7 +186,7 @@ var ChatHeaderComponent = class _ChatHeaderComponent {
       \u0275\u0275domElement(13, "span", 11)(14, "span", 12);
       \u0275\u0275domElementEnd();
       \u0275\u0275domElementStart(15, "span", 13);
-      \u0275\u0275text(16, " Atenci\xF3n en l\xEDnea 24/7 \u2022 Centro de Orientaci\xF3n y Consultas CBB ");
+      \u0275\u0275text(16, " Atenci\xF3n en l\xEDnea 24/7 \u2022 Orientaci\xF3n al ciudadano ");
       \u0275\u0275domElementEnd()()()();
       \u0275\u0275domElementStart(17, "div", 14);
       \u0275\u0275conditionalCreate(18, ChatHeaderComponent_Conditional_18_Template, 5, 0, "button", 15);
@@ -184,72 +196,16 @@ var ChatHeaderComponent = class _ChatHeaderComponent {
       \u0275\u0275advance(18);
       \u0275\u0275conditional(ctx.hasMessages() ? 18 : -1);
     }
-  }, encapsulation: 2, changeDetection: 0 });
+  }, styles: ["\n[_nghost-%COMP%] {\n  display: block;\n}"], changeDetection: 0 });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ChatHeaderComponent, [{
     type: Component,
-    args: [{
-      selector: "app-chat-header",
-      changeDetection: ChangeDetectionStrategy.OnPush,
-      template: `
-    <header class="shrink-0 bg-[#0050A1] text-white border-b-4 border-[#BE002E] shadow-md z-20">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 sm:h-18 flex items-center justify-between gap-3">
-        
-        <!-- Identidad Institucional CBB -->
-        <div class="flex items-center gap-3.5 min-w-0">
-          <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-white p-1.5 flex items-center justify-center shadow-md shrink-0">
-            <img 
-              src="cropped-Favicon-3-1-32x32.png" 
-              alt="Logo Colegio Bertolt Brecht" 
-              class="w-full h-full object-contain"
-            />
-          </div>
-          <div class="min-w-0">
-            <div class="flex items-center gap-2.5">
-              <h1 class="font-extrabold text-white text-base sm:text-lg leading-tight tracking-tight truncate">
-                Colegio Bertolt Brecht
-              </h1>
-              <span class="hidden md:inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-extrabold bg-[#BE002E] text-white uppercase tracking-wider shadow-2xs">
-                Asistente Oficial
-              </span>
-            </div>
-            <div class="flex items-center gap-1.5 mt-0.5">
-              <span class="relative flex h-2 w-2">
-                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-300 opacity-75"></span>
-                <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
-              </span>
-              <span class="text-xs text-blue-100 font-medium truncate">
-                Atenci\xF3n en l\xEDnea 24/7 \u2022 Centro de Orientaci\xF3n y Consultas CBB
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Acciones de Cabecera -->
-        <div class="flex items-center gap-2 shrink-0">
-          @if (hasMessages()) {
-            <button
-              type="button"
-              (click)="resetConversation.emit()"
-              title="Iniciar una nueva consulta"
-              class="inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2 rounded-xl bg-[#BE002E] hover:bg-[#9e0026] text-white text-xs font-bold shadow-sm transition-all transform active:scale-95 cursor-pointer">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4" />
-              </svg>
-              <span>Nueva consulta</span>
-            </button>
-          }
-        </div>
-
-      </div>
-    </header>
-  `
-    }]
-  }], null, { hasMessages: [{ type: Input, args: [{ isSignal: true, alias: "hasMessages", required: false }] }], resetConversation: [{ type: Output, args: ["resetConversation"] }] });
+    args: [{ selector: "app-chat-header", changeDetection: ChangeDetectionStrategy.OnPush, template: '<header class="shrink-0 bg-[#0050A1] text-white border-b-4 border-[#BE002E] shadow-md z-20">\n  <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 sm:h-18 flex items-center justify-between gap-3">\n    \n    <!-- Identidad Institucional CBB -->\n    <div class="flex items-center gap-3.5 min-w-0">\n      <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-white p-1.5 flex items-center justify-center shadow-md shrink-0">\n        <img \n          src="cropped-Favicon-3-1-32x32.png" \n          alt="Logo Colegio Bertolt Brecht" \n          class="w-full h-full object-contain"\n        />\n      </div>\n      <div class="min-w-0">\n        <div class="flex items-center gap-2.5">\n          <h1 class="font-extrabold text-white text-base sm:text-lg leading-tight tracking-tight truncate">\n            Colegio Bertolt Brecht\n          </h1>\n          <span class="hidden md:inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-extrabold bg-[#BE002E] text-white uppercase tracking-wider shadow-2xs">\n            Asistente Oficial\n          </span>\n        </div>\n        <div class="flex items-center gap-1.5 mt-0.5">\n          <span class="relative flex h-2 w-2">\n            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-300 opacity-75"></span>\n            <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>\n          </span>\n          <span class="text-xs text-blue-100 font-medium truncate">\n            Atenci\xF3n en l\xEDnea 24/7 \u2022 Orientaci\xF3n al ciudadano\n          </span>\n        </div>\n      </div>\n    </div>\n\n    <!-- Acciones de Cabecera -->\n    <div class="flex items-center gap-2 shrink-0">\n      @if (hasMessages()) {\n        <button\n          type="button"\n          (click)="closeConversation.emit()"\n          title="Finalizar y calificar conversaci\xF3n"\n          class="inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2 rounded-xl bg-[#BE002E] hover:bg-[#9e0026] text-white text-xs font-bold shadow-sm transition-all transform active:scale-95 cursor-pointer">\n          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">\n            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />\n          </svg>\n          <span>Cerrar conversaci\xF3n</span>\n        </button>\n      }\n    </div>\n\n  </div>\n</header>\n', styles: ["/* src/app/features/assistant/components/chat-header/chat-header.component.css */\n:host {\n  display: block;\n}\n"] }]
+  }], null, { hasMessages: [{ type: Input, args: [{ isSignal: true, alias: "hasMessages", required: false }] }], closeConversation: [{ type: Output, args: ["closeConversation"] }] });
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ChatHeaderComponent, { className: "ChatHeaderComponent", filePath: "src/app/features/assistant/components/chat-header/chat-header.component.ts", lineNumber: 60 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ChatHeaderComponent, { className: "ChatHeaderComponent", filePath: "src/app/features/assistant/components/chat-header/chat-header.component.ts", lineNumber: 9 });
 })();
 
 // node_modules/marked/lib/marked.esm.js
@@ -3596,10 +3552,10 @@ var MarkdownPipe = class _MarkdownPipe {
 // src/app/features/assistant/components/chat-message-item/chat-message-item.component.ts
 function ChatMessageItemComponent_Conditional_1_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275domElementStart(0, "div", 1)(1, "div", 3)(2, "p", 4);
+    \u0275\u0275domElementStart(0, "div", 0)(1, "div", 2)(2, "p", 3);
     \u0275\u0275text(3);
     \u0275\u0275domElementEnd()();
-    \u0275\u0275domElementStart(4, "div", 5);
+    \u0275\u0275domElementStart(4, "div", 4);
     \u0275\u0275text(5);
     \u0275\u0275pipe(6, "date");
     \u0275\u0275domElementEnd()();
@@ -3614,7 +3570,7 @@ function ChatMessageItemComponent_Conditional_1_Template(rf, ctx) {
 }
 function ChatMessageItemComponent_Conditional_2_Conditional_11_Conditional_1_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275domElementStart(0, "span", 15);
+    \u0275\u0275domElementStart(0, "span", 13);
     \u0275\u0275text(1, "\u2713 Copiado");
     \u0275\u0275domElementEnd();
   }
@@ -3622,8 +3578,8 @@ function ChatMessageItemComponent_Conditional_2_Conditional_11_Conditional_1_Tem
 function ChatMessageItemComponent_Conditional_2_Conditional_11_Conditional_2_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275namespaceSVG();
-    \u0275\u0275domElementStart(0, "svg", 16);
-    \u0275\u0275domElement(1, "path", 17);
+    \u0275\u0275domElementStart(0, "svg", 14);
+    \u0275\u0275domElement(1, "path", 15);
     \u0275\u0275domElementEnd();
     \u0275\u0275namespaceHTML();
     \u0275\u0275domElementStart(2, "span");
@@ -3634,13 +3590,13 @@ function ChatMessageItemComponent_Conditional_2_Conditional_11_Conditional_2_Tem
 function ChatMessageItemComponent_Conditional_2_Conditional_11_Template(rf, ctx) {
   if (rf & 1) {
     const _r2 = \u0275\u0275getCurrentView();
-    \u0275\u0275domElementStart(0, "button", 14);
+    \u0275\u0275domElementStart(0, "button", 12);
     \u0275\u0275domListener("click", function ChatMessageItemComponent_Conditional_2_Conditional_11_Template_button_click_0_listener() {
       \u0275\u0275restoreView(_r2);
       const ctx_r0 = \u0275\u0275nextContext(2);
       return \u0275\u0275resetView(ctx_r0.copyToClipboard());
     });
-    \u0275\u0275conditionalCreate(1, ChatMessageItemComponent_Conditional_2_Conditional_11_Conditional_1_Template, 2, 0, "span", 15)(2, ChatMessageItemComponent_Conditional_2_Conditional_11_Conditional_2_Template, 4, 0);
+    \u0275\u0275conditionalCreate(1, ChatMessageItemComponent_Conditional_2_Conditional_11_Conditional_1_Template, 2, 0, "span", 13)(2, ChatMessageItemComponent_Conditional_2_Conditional_11_Conditional_2_Template, 4, 0);
     \u0275\u0275domElementEnd();
   }
   if (rf & 2) {
@@ -3651,28 +3607,28 @@ function ChatMessageItemComponent_Conditional_2_Conditional_11_Template(rf, ctx)
 }
 function ChatMessageItemComponent_Conditional_2_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275domElementStart(0, "div", 2)(1, "div", 6);
-    \u0275\u0275domElement(2, "img", 7);
+    \u0275\u0275domElementStart(0, "div", 1)(1, "div", 5);
+    \u0275\u0275domElement(2, "img", 6);
     \u0275\u0275domElementEnd();
-    \u0275\u0275domElementStart(3, "div", 8)(4, "div", 9);
-    \u0275\u0275domElement(5, "div", 10);
+    \u0275\u0275domElementStart(3, "div", 7)(4, "div");
+    \u0275\u0275domElement(5, "div", 8);
     \u0275\u0275pipe(6, "markdown");
     \u0275\u0275domElementEnd();
-    \u0275\u0275domElementStart(7, "div", 11)(8, "span", 12);
+    \u0275\u0275domElementStart(7, "div", 9)(8, "span", 10);
     \u0275\u0275text(9);
     \u0275\u0275pipe(10, "date");
     \u0275\u0275domElementEnd();
-    \u0275\u0275conditionalCreate(11, ChatMessageItemComponent_Conditional_2_Conditional_11_Template, 3, 1, "button", 13);
+    \u0275\u0275conditionalCreate(11, ChatMessageItemComponent_Conditional_2_Conditional_11_Template, 3, 1, "button", 11);
     \u0275\u0275domElementEnd()()();
   }
   if (rf & 2) {
     const ctx_r0 = \u0275\u0275nextContext();
     \u0275\u0275advance(4);
-    \u0275\u0275classProp("border-red-300", ctx_r0.message().isError)("bg-red-50/60", ctx_r0.message().isError);
+    \u0275\u0275classMap(ctx_r0.message().isError ? "px-5 py-4 rounded-2xl rounded-tl-xs border border-red-300 bg-red-50/60 border-l-4 border-l-[#BE002E] text-slate-800 text-sm sm:text-[15px] leading-relaxed shadow-xs break-words" : "px-5 py-4 rounded-2xl rounded-tl-xs bg-white border border-slate-200 border-l-4 border-l-[#BE002E] text-slate-800 text-sm sm:text-[15px] leading-relaxed shadow-xs break-words");
     \u0275\u0275advance();
-    \u0275\u0275domProperty("innerHTML", \u0275\u0275pipeBind1(6, 7, ctx_r0.message().text), \u0275\u0275sanitizeHtml);
+    \u0275\u0275domProperty("innerHTML", \u0275\u0275pipeBind1(6, 5, ctx_r0.message().text), \u0275\u0275sanitizeHtml);
     \u0275\u0275advance(4);
-    \u0275\u0275textInterpolate1(" Asistente CBB \u2022 ", \u0275\u0275pipeBind2(10, 9, ctx_r0.message().timestamp, "shortTime"), " ");
+    \u0275\u0275textInterpolate1(" Asistente CBB \u2022 ", \u0275\u0275pipeBind2(10, 7, ctx_r0.message().timestamp, "shortTime"), " ");
     \u0275\u0275advance(2);
     \u0275\u0275conditional(!ctx_r0.message().isError ? 11 : -1);
   }
@@ -3695,104 +3651,98 @@ var ChatMessageItemComponent = class _ChatMessageItemComponent {
   static \u0275fac = function ChatMessageItemComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _ChatMessageItemComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ChatMessageItemComponent, selectors: [["app-chat-message-item"]], inputs: { message: [1, "message"] }, decls: 3, vars: 6, consts: [[1, "flex", "w-full", "mb-6", "animate-in", "fade-in", "slide-in-from-bottom-2", "duration-200"], [1, "max-w-[85%]", "sm:max-w-[75%]", "space-y-1.5"], [1, "flex", "items-start", "gap-3", "sm:gap-4", "w-full", "max-w-[95%]", "sm:max-w-[90%]"], [1, "px-5", "py-3.5", "rounded-2xl", "rounded-tr-xs", "bg-[#0050A1]", "text-white", "text-sm", "sm:text-[15px]", "leading-relaxed", "shadow-sm"], [1, "whitespace-pre-wrap"], [1, "text-[11px]", "text-slate-400", "text-right", "pr-1", "font-medium"], [1, "w-9", "h-9", "rounded-xl", "bg-white", "border", "border-slate-200", "p-1.5", "flex", "items-center", "justify-center", "shrink-0", "shadow-xs", "mt-0.5"], ["src", "cropped-Favicon-3-1-32x32.png", "alt", "CBB", 1, "w-full", "h-full", "object-contain"], [1, "space-y-1.5", "flex-1", "min-w-0"], [1, "px-5", "py-4", "rounded-2xl", "rounded-tl-xs", "bg-white", "border", "border-slate-200", "border-l-4", "border-l-[#BE002E]", "text-slate-800", "text-sm", "sm:text-[15px]", "leading-relaxed", "shadow-xs", "break-words"], [1, "chat-markdown", "break-words", 3, "innerHTML"], [1, "flex", "items-center", "justify-between", "px-1"], [1, "text-[11px]", "text-slate-400", "font-medium"], ["type", "button", 1, "inline-flex", "items-center", "gap-1", "text-[11px]", "text-slate-400", "hover:text-[#0050A1]", "transition-colors", "cursor-pointer", "py-0.5", "px-1.5", "rounded-md", "hover:bg-slate-100"], ["type", "button", 1, "inline-flex", "items-center", "gap-1", "text-[11px]", "text-slate-400", "hover:text-[#0050A1]", "transition-colors", "cursor-pointer", "py-0.5", "px-1.5", "rounded-md", "hover:bg-slate-100", 3, "click"], [1, "text-emerald-600", "font-semibold"], ["fill", "none", "stroke", "currentColor", "viewBox", "0 0 24 24", 1, "w-3.5", "h-3.5"], ["stroke-linecap", "round", "stroke-linejoin", "round", "stroke-width", "2", "d", "M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"]], template: function ChatMessageItemComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ChatMessageItemComponent, selectors: [["app-chat-message-item"]], inputs: { message: [1, "message"] }, decls: 3, vars: 4, consts: [[1, "max-w-[85%]", "sm:max-w-[75%]", "space-y-1.5"], [1, "flex", "items-start", "gap-3", "sm:gap-4", "w-full", "max-w-[95%]", "sm:max-w-[90%]"], [1, "px-5", "py-3.5", "rounded-2xl", "rounded-tr-xs", "bg-[#0050A1]", "text-white", "text-sm", "sm:text-[15px]", "leading-relaxed", "shadow-sm"], [1, "whitespace-pre-wrap"], [1, "text-[11px]", "text-slate-400", "text-right", "pr-1", "font-medium"], [1, "w-9", "h-9", "rounded-xl", "bg-white", "border", "border-slate-200", "p-1.5", "flex", "items-center", "justify-center", "shrink-0", "shadow-xs", "mt-0.5"], ["src", "cropped-Favicon-3-1-32x32.png", "alt", "CBB", 1, "w-full", "h-full", "object-contain"], [1, "space-y-1.5", "flex-1", "min-w-0"], [1, "chat-markdown", "break-words", 3, "innerHTML"], [1, "flex", "items-center", "justify-between", "px-1"], [1, "text-[11px]", "text-slate-400", "font-medium"], ["type", "button", 1, "inline-flex", "items-center", "gap-1", "text-[11px]", "text-slate-400", "hover:text-[#0050A1]", "transition-colors", "cursor-pointer", "py-0.5", "px-1.5", "rounded-md", "hover:bg-slate-100"], ["type", "button", 1, "inline-flex", "items-center", "gap-1", "text-[11px]", "text-slate-400", "hover:text-[#0050A1]", "transition-colors", "cursor-pointer", "py-0.5", "px-1.5", "rounded-md", "hover:bg-slate-100", 3, "click"], [1, "text-emerald-600", "font-semibold"], ["fill", "none", "stroke", "currentColor", "viewBox", "0 0 24 24", 1, "w-3.5", "h-3.5"], ["stroke-linecap", "round", "stroke-linejoin", "round", "stroke-width", "2", "d", "M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"]], template: function ChatMessageItemComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275domElementStart(0, "div", 0);
-      \u0275\u0275conditionalCreate(1, ChatMessageItemComponent_Conditional_1_Template, 7, 5, "div", 1);
-      \u0275\u0275conditionalCreate(2, ChatMessageItemComponent_Conditional_2_Template, 12, 12, "div", 2);
+      \u0275\u0275domElementStart(0, "div");
+      \u0275\u0275conditionalCreate(1, ChatMessageItemComponent_Conditional_1_Template, 7, 5, "div", 0);
+      \u0275\u0275conditionalCreate(2, ChatMessageItemComponent_Conditional_2_Template, 12, 10, "div", 1);
       \u0275\u0275domElementEnd();
     }
     if (rf & 2) {
-      \u0275\u0275classProp("justify-end", ctx.message().sender === "user")("justify-start", ctx.message().sender === "assistant");
+      \u0275\u0275classMap(ctx.message().sender === "user" ? "flex w-full mb-6 animate-in fade-in slide-in-from-bottom-2 duration-200 justify-end" : "flex w-full mb-6 animate-in fade-in slide-in-from-bottom-2 duration-200 justify-start");
       \u0275\u0275advance();
       \u0275\u0275conditional(ctx.message().sender === "user" ? 1 : -1);
       \u0275\u0275advance();
       \u0275\u0275conditional(ctx.message().sender === "assistant" ? 2 : -1);
     }
-  }, dependencies: [DatePipe, MarkdownPipe], encapsulation: 2, changeDetection: 0 });
+  }, dependencies: [DatePipe, MarkdownPipe], styles: ["\n[_nghost-%COMP%] {\n  display: block;\n}"], changeDetection: 0 });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ChatMessageItemComponent, [{
     type: Component,
-    args: [{
-      selector: "app-chat-message-item",
-      changeDetection: ChangeDetectionStrategy.OnPush,
-      imports: [DatePipe, MarkdownPipe],
-      template: `
-    <div 
-      class="flex w-full mb-6 animate-in fade-in slide-in-from-bottom-2 duration-200"
-      [class.justify-end]="message().sender === 'user'"
-      [class.justify-start]="message().sender === 'assistant'">
-      
-      <!-- Mensaje del Usuario (Secci\xF3n Azul Institucional #0050A1) -->
-      @if (message().sender === 'user') {
-        <div class="max-w-[85%] sm:max-w-[75%] space-y-1.5">
-          <div class="px-5 py-3.5 rounded-2xl rounded-tr-xs bg-[#0050A1] text-white text-sm sm:text-[15px] leading-relaxed shadow-sm">
-            <p class="whitespace-pre-wrap">{{ message().text }}</p>
-          </div>
-          <div class="text-[11px] text-slate-400 text-right pr-1 font-medium">
-            T\xFA \u2022 {{ message().timestamp | date:'shortTime' }}
-          </div>
-        </div>
-      }
-
-      <!-- Mensaje del Asistente (Contenido Blanco con acentos #BE002E y #0050A1) -->
-      @if (message().sender === 'assistant') {
-        <div class="flex items-start gap-3 sm:gap-4 w-full max-w-[95%] sm:max-w-[90%]">
-          
-          <!-- Avatar con \xCDcono Oficial CBB -->
-          <div class="w-9 h-9 rounded-xl bg-white border border-slate-200 p-1.5 flex items-center justify-center shrink-0 shadow-xs mt-0.5">
-            <img src="cropped-Favicon-3-1-32x32.png" alt="CBB" class="w-full h-full object-contain" />
-          </div>
-
-          <div class="space-y-1.5 flex-1 min-w-0">
-            <div 
-              class="px-5 py-4 rounded-2xl rounded-tl-xs bg-white border border-slate-200 border-l-4 border-l-[#BE002E] text-slate-800 text-sm sm:text-[15px] leading-relaxed shadow-xs break-words"
-              [class.border-red-300]="message().isError"
-              [class.bg-red-50/60]="message().isError">
-              
-              <!-- Contenido con Markdown Limpio -->
-              <div 
-                class="chat-markdown break-words"
-                [innerHTML]="message().text | markdown">
-              </div>
-
-            </div>
-
-            <!-- Barra inferior del mensaje (Hora + Copiar) -->
-            <div class="flex items-center justify-between px-1">
-              <span class="text-[11px] text-slate-400 font-medium">
-                Asistente CBB \u2022 {{ message().timestamp | date:'shortTime' }}
-              </span>
-
-              @if (!message().isError) {
-                <button
-                  type="button"
-                  (click)="copyToClipboard()"
-                  class="inline-flex items-center gap-1 text-[11px] text-slate-400 hover:text-[#0050A1] transition-colors cursor-pointer py-0.5 px-1.5 rounded-md hover:bg-slate-100">
-                  @if (copied()) {
-                    <span class="text-emerald-600 font-semibold">\u2713 Copiado</span>
-                  } @else {
-                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                    </svg>
-                    <span>Copiar</span>
-                  }
-                </button>
-              }
-            </div>
-
-          </div>
-        </div>
-      }
-
+    args: [{ selector: "app-chat-message-item", changeDetection: ChangeDetectionStrategy.OnPush, imports: [DatePipe, MarkdownPipe], template: `<div 
+  [class]="message().sender === 'user'
+    ? 'flex w-full mb-6 animate-in fade-in slide-in-from-bottom-2 duration-200 justify-end'
+    : 'flex w-full mb-6 animate-in fade-in slide-in-from-bottom-2 duration-200 justify-start'">
+  
+  <!-- Mensaje del Usuario (Secci\xF3n Azul Institucional #0050A1) -->
+  @if (message().sender === 'user') {
+    <div class="max-w-[85%] sm:max-w-[75%] space-y-1.5">
+      <div class="px-5 py-3.5 rounded-2xl rounded-tr-xs bg-[#0050A1] text-white text-sm sm:text-[15px] leading-relaxed shadow-sm">
+        <p class="whitespace-pre-wrap">{{ message().text }}</p>
+      </div>
+      <div class="text-[11px] text-slate-400 text-right pr-1 font-medium">
+        T\xFA \u2022 {{ message().timestamp | date:'shortTime' }}
+      </div>
     </div>
-  `
-    }]
+  }
+
+  <!-- Mensaje del Asistente (Contenido Blanco con acentos #BE002E y #0050A1) -->
+  @if (message().sender === 'assistant') {
+    <div class="flex items-start gap-3 sm:gap-4 w-full max-w-[95%] sm:max-w-[90%]">
+      
+      <!-- Avatar con \xCDcono Oficial CBB -->
+      <div class="w-9 h-9 rounded-xl bg-white border border-slate-200 p-1.5 flex items-center justify-center shrink-0 shadow-xs mt-0.5">
+        <img src="cropped-Favicon-3-1-32x32.png" alt="CBB" class="w-full h-full object-contain" />
+      </div>
+
+      <div class="space-y-1.5 flex-1 min-w-0">
+        <div 
+          [class]="message().isError
+            ? 'px-5 py-4 rounded-2xl rounded-tl-xs border border-red-300 bg-red-50/60 border-l-4 border-l-[#BE002E] text-slate-800 text-sm sm:text-[15px] leading-relaxed shadow-xs break-words'
+            : 'px-5 py-4 rounded-2xl rounded-tl-xs bg-white border border-slate-200 border-l-4 border-l-[#BE002E] text-slate-800 text-sm sm:text-[15px] leading-relaxed shadow-xs break-words'">
+          
+          <!-- Contenido con Markdown Limpio -->
+          <div 
+            class="chat-markdown break-words"
+            [innerHTML]="message().text | markdown">
+          </div>
+
+        </div>
+
+        <!-- Barra inferior del mensaje (Hora + Copiar) -->
+        <div class="flex items-center justify-between px-1">
+          <span class="text-[11px] text-slate-400 font-medium">
+            Asistente CBB \u2022 {{ message().timestamp | date:'shortTime' }}
+          </span>
+
+          @if (!message().isError) {
+            <button
+              type="button"
+              (click)="copyToClipboard()"
+              class="inline-flex items-center gap-1 text-[11px] text-slate-400 hover:text-[#0050A1] transition-colors cursor-pointer py-0.5 px-1.5 rounded-md hover:bg-slate-100">
+              @if (copied()) {
+                <span class="text-emerald-600 font-semibold">\u2713 Copiado</span>
+              } @else {
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                </svg>
+                <span>Copiar</span>
+              }
+            </button>
+          }
+        </div>
+
+      </div>
+    </div>
+  }
+
+</div>
+`, styles: ["/* src/app/features/assistant/components/chat-message-item/chat-message-item.component.css */\n:host {\n  display: block;\n}\n"] }]
   }], null, { message: [{ type: Input, args: [{ isSignal: true, alias: "message", required: true }] }] });
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ChatMessageItemComponent, { className: "ChatMessageItemComponent", filePath: "src/app/features/assistant/components/chat-message-item/chat-message-item.component.ts", lineNumber: 81 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ChatMessageItemComponent, { className: "ChatMessageItemComponent", filePath: "src/app/features/assistant/components/chat-message-item/chat-message-item.component.ts", lineNumber: 13 });
 })();
 
 // src/app/features/assistant/components/chat-messages/chat-messages.component.ts
@@ -3808,20 +3758,20 @@ function ChatMessagesComponent_Conditional_3_For_12_Template(rf, ctx) {
       const ctx_r2 = \u0275\u0275nextContext(2);
       return \u0275\u0275resetView(ctx_r2.selectPrompt.emit(card_r2.prompt));
     });
-    \u0275\u0275element(1, "div", 13);
-    \u0275\u0275elementStart(2, "div", 14)(3, "div", 15)(4, "span", 16);
+    \u0275\u0275element(1, "div");
+    \u0275\u0275elementStart(2, "div", 13)(3, "div", 14)(4, "span");
     \u0275\u0275text(5);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(6, "span", 17);
+    \u0275\u0275elementStart(6, "span");
     \u0275\u0275text(7);
     \u0275\u0275elementEnd()();
-    \u0275\u0275elementStart(8, "h3", 18);
+    \u0275\u0275elementStart(8, "h3");
     \u0275\u0275text(9);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(10, "p", 19);
+    \u0275\u0275elementStart(10, "p", 15);
     \u0275\u0275text(11);
     \u0275\u0275elementEnd()();
-    \u0275\u0275elementStart(12, "div", 20)(13, "span");
+    \u0275\u0275elementStart(12, "div")(13, "span");
     \u0275\u0275text(14, "Consultar ahora");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(15, "span");
@@ -3830,25 +3780,25 @@ function ChatMessagesComponent_Conditional_3_For_12_Template(rf, ctx) {
   }
   if (rf & 2) {
     const card_r2 = ctx.$implicit;
-    \u0275\u0275classProp("hover:border-[#BE002E]", card_r2.accent === "red")("hover:border-[#0050A1]", card_r2.accent === "blue");
+    \u0275\u0275classMap(card_r2.accent === "red" ? "group relative p-4 rounded-2xl bg-white border border-slate-200 hover:border-[#BE002E] hover:shadow-md transition-all flex flex-col justify-between gap-2 cursor-pointer text-left overflow-hidden" : "group relative p-4 rounded-2xl bg-white border border-slate-200 hover:border-[#0050A1] hover:shadow-md transition-all flex flex-col justify-between gap-2 cursor-pointer text-left overflow-hidden");
     \u0275\u0275advance();
-    \u0275\u0275classProp("bg-[#BE002E]", card_r2.accent === "red")("bg-[#0050A1]", card_r2.accent === "blue");
+    \u0275\u0275classMap(card_r2.accent === "red" ? "absolute top-0 left-0 right-0 h-1 transition-all bg-[#BE002E]" : "absolute top-0 left-0 right-0 h-1 transition-all bg-[#0050A1]");
     \u0275\u0275advance(3);
-    \u0275\u0275classProp("bg-[#BE002E]/10", card_r2.accent === "red")("bg-[#0050A1]/10", card_r2.accent === "blue");
+    \u0275\u0275classMap(card_r2.accent === "red" ? "w-9 h-9 rounded-xl flex items-center justify-center text-lg transition-colors bg-[#BE002E]/10" : "w-9 h-9 rounded-xl flex items-center justify-center text-lg transition-colors bg-[#0050A1]/10");
     \u0275\u0275advance();
     \u0275\u0275textInterpolate1(" ", card_r2.icon, " ");
     \u0275\u0275advance();
-    \u0275\u0275classProp("bg-[#BE002E]/10", card_r2.accent === "red")("text-[#BE002E]", card_r2.accent === "red")("bg-[#0050A1]/10", card_r2.accent === "blue")("text-[#0050A1]", card_r2.accent === "blue");
+    \u0275\u0275classMap(card_r2.accent === "red" ? "text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-0.5 rounded-full transition-colors bg-[#BE002E]/10 text-[#BE002E]" : "text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-0.5 rounded-full transition-colors bg-[#0050A1]/10 text-[#0050A1]");
     \u0275\u0275advance();
     \u0275\u0275textInterpolate1(" ", card_r2.badge, " ");
     \u0275\u0275advance();
-    \u0275\u0275classProp("group-hover:text-[#BE002E]", card_r2.accent === "red")("group-hover:text-[#0050A1]", card_r2.accent === "blue");
+    \u0275\u0275classMap(card_r2.accent === "red" ? "font-bold text-slate-900 text-sm transition-colors group-hover:text-[#BE002E]" : "font-bold text-slate-900 text-sm transition-colors group-hover:text-[#0050A1]");
     \u0275\u0275advance();
     \u0275\u0275textInterpolate1(" ", card_r2.title, " ");
     \u0275\u0275advance(2);
     \u0275\u0275textInterpolate1(" ", card_r2.description, " ");
     \u0275\u0275advance();
-    \u0275\u0275classProp("text-[#BE002E]", card_r2.accent === "red")("text-[#0050A1]", card_r2.accent === "blue");
+    \u0275\u0275classMap(card_r2.accent === "red" ? "flex items-center gap-1 text-[11px] font-bold opacity-0 group-hover:opacity-100 transition-opacity pt-1 text-[#BE002E]" : "flex items-center gap-1 text-[11px] font-bold opacity-0 group-hover:opacity-100 transition-opacity pt-1 text-[#0050A1]");
   }
 }
 function ChatMessagesComponent_Conditional_3_Template(rf, ctx) {
@@ -3866,7 +3816,7 @@ function ChatMessagesComponent_Conditional_3_Template(rf, ctx) {
     \u0275\u0275text(9, " Resuelve tus dudas al instante sobre matr\xEDculas, pensiones, tr\xE1mites de secretar\xEDa, talleres y sedes con informaci\xF3n oficial vigente. ");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(10, "div", 10);
-    \u0275\u0275repeaterCreate(11, ChatMessagesComponent_Conditional_3_For_12_Template, 17, 32, "button", 11, _forTrack0);
+    \u0275\u0275repeaterCreate(11, ChatMessagesComponent_Conditional_3_For_12_Template, 17, 16, "button", 11, _forTrack0);
     \u0275\u0275elementEnd()();
   }
   if (rf & 2) {
@@ -3877,7 +3827,7 @@ function ChatMessagesComponent_Conditional_3_Template(rf, ctx) {
 }
 function ChatMessagesComponent_Conditional_4_For_2_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275element(0, "app-chat-message-item", 21);
+    \u0275\u0275element(0, "app-chat-message-item", 16);
   }
   if (rf & 2) {
     const msg_r4 = ctx.$implicit;
@@ -3886,13 +3836,13 @@ function ChatMessagesComponent_Conditional_4_For_2_Template(rf, ctx) {
 }
 function ChatMessagesComponent_Conditional_4_Conditional_3_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 22)(1, "div", 23);
-    \u0275\u0275element(2, "img", 24);
+    \u0275\u0275elementStart(0, "div", 17)(1, "div", 18);
+    \u0275\u0275element(2, "img", 19);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(3, "div", 25)(4, "div", 26);
-    \u0275\u0275element(5, "span", 27)(6, "span", 28)(7, "span", 29);
+    \u0275\u0275elementStart(3, "div", 20)(4, "div", 21);
+    \u0275\u0275element(5, "span", 22)(6, "span", 23)(7, "span", 24);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(8, "span", 30);
+    \u0275\u0275elementStart(8, "span", 25);
     \u0275\u0275text(9, "Consultando...");
     \u0275\u0275elementEnd()()();
   }
@@ -3900,8 +3850,8 @@ function ChatMessagesComponent_Conditional_4_Conditional_3_Template(rf, ctx) {
 function ChatMessagesComponent_Conditional_4_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "div", 4);
-    \u0275\u0275repeaterCreate(1, ChatMessagesComponent_Conditional_4_For_2_Template, 1, 1, "app-chat-message-item", 21, _forTrack1);
-    \u0275\u0275conditionalCreate(3, ChatMessagesComponent_Conditional_4_Conditional_3_Template, 10, 0, "div", 22);
+    \u0275\u0275repeaterCreate(1, ChatMessagesComponent_Conditional_4_For_2_Template, 1, 1, "app-chat-message-item", 16, _forTrack1);
+    \u0275\u0275conditionalCreate(3, ChatMessagesComponent_Conditional_4_Conditional_3_Template, 10, 0, "div", 17);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
@@ -4004,7 +3954,7 @@ var ChatMessagesComponent = class _ChatMessagesComponent {
     if (rf & 2) {
       \u0275\u0275queryAdvance();
     }
-  }, hostAttrs: [1, "flex-1", "min-h-0", "flex", "flex-col", "overflow-hidden", "bg-white"], inputs: { messages: [1, "messages"], isLoading: [1, "isLoading"] }, outputs: { selectPrompt: "selectPrompt" }, decls: 5, vars: 1, consts: [["scrollContainer", ""], [1, "flex-1", "min-h-0", "overflow-y-auto", "chat-scroll", "px-4", "sm:px-6", "py-6", "sm:py-8", "bg-white"], [1, "max-w-3xl", "mx-auto", "w-full", "h-full", "flex", "flex-col"], [1, "my-auto", "py-4", "sm:py-8", "flex", "flex-col", "items-center", "text-center", "animate-in", "fade-in", "duration-300"], [1, "flex-1", "space-y-2", "pb-4"], [1, "w-18", "h-18", "sm:w-22", "sm:h-22", "rounded-3xl", "bg-white", "p-3", "flex", "items-center", "justify-center", "shadow-lg", "border-2", "border-[#0050A1]/15", "ring-4", "ring-[#BE002E]/10", "mb-5"], ["src", "cropped-Favicon-3-1-32x32.png", "alt", "Colegio Bertolt Brecht", 1, "w-full", "h-full", "object-contain"], [1, "inline-flex", "items-center", "gap-2", "px-3.5", "py-1", "rounded-full", "bg-[#BE002E]/10", "border", "border-[#BE002E]/25", "text-[#BE002E]", "text-xs", "font-extrabold", "uppercase", "tracking-wide", "mb-3"], [1, "text-2xl", "sm:text-3xl", "md:text-4xl", "font-black", "text-[#0050A1]", "tracking-tight", "mb-3"], [1, "text-slate-600", "text-sm", "sm:text-base", "max-w-xl", "mb-8", "leading-relaxed"], [1, "grid", "grid-cols-1", "sm:grid-cols-2", "lg:grid-cols-3", "gap-3.5", "w-full", "text-left"], ["type", "button", 1, "group", "relative", "p-4", "rounded-2xl", "bg-white", "border", "border-slate-200", "hover:shadow-md", "transition-all", "flex", "flex-col", "justify-between", "gap-2", "cursor-pointer", "text-left", "overflow-hidden", 3, "hover:border-[#BE002E]", "hover:border-[#0050A1]"], ["type", "button", 1, "group", "relative", "p-4", "rounded-2xl", "bg-white", "border", "border-slate-200", "hover:shadow-md", "transition-all", "flex", "flex-col", "justify-between", "gap-2", "cursor-pointer", "text-left", "overflow-hidden", 3, "click"], [1, "absolute", "top-0", "left-0", "right-0", "h-1", "transition-all"], [1, "pt-1"], [1, "flex", "items-center", "justify-between", "mb-2.5"], [1, "w-9", "h-9", "rounded-xl", "flex", "items-center", "justify-center", "text-lg", "transition-colors"], [1, "text-[10px]", "font-extrabold", "uppercase", "tracking-wider", "px-2.5", "py-0.5", "rounded-full", "transition-colors"], [1, "font-bold", "text-slate-900", "text-sm", "transition-colors"], [1, "text-xs", "text-slate-500", "mt-1", "line-clamp-2", "leading-relaxed"], [1, "flex", "items-center", "gap-1", "text-[11px]", "font-bold", "opacity-0", "group-hover:opacity-100", "transition-opacity", "pt-1"], [3, "message"], [1, "flex", "items-start", "gap-3", "sm:gap-4", "max-w-[85%]", "mb-4", "animate-in", "fade-in", "duration-150"], [1, "w-9", "h-9", "rounded-xl", "bg-white", "border", "border-slate-200", "p-1.5", "flex", "items-center", "justify-center", "shrink-0", "shadow-xs"], ["src", "cropped-Favicon-3-1-32x32.png", "alt", "CBB", 1, "w-full", "h-full", "object-contain"], [1, "px-5", "py-4", "rounded-2xl", "rounded-tl-xs", "bg-white", "border", "border-slate-200", "shadow-2xs", "flex", "items-center", "gap-2.5"], [1, "flex", "items-center", "gap-1.5"], [1, "w-2", "h-2", "rounded-full", "bg-[#BE002E]", "animate-bounce", "[animation-delay:-0.3s]"], [1, "w-2", "h-2", "rounded-full", "bg-[#0050A1]", "animate-bounce", "[animation-delay:-0.15s]"], [1, "w-2", "h-2", "rounded-full", "bg-[#BE002E]", "animate-bounce"], [1, "text-xs", "text-[#0050A1]", "font-semibold"]], template: function ChatMessagesComponent_Template(rf, ctx) {
+  }, inputs: { messages: [1, "messages"], isLoading: [1, "isLoading"] }, outputs: { selectPrompt: "selectPrompt" }, decls: 5, vars: 1, consts: [["scrollContainer", ""], [1, "flex-1", "min-h-0", "overflow-y-auto", "chat-scroll", "px-4", "sm:px-6", "py-6", "sm:py-8", "bg-white"], [1, "max-w-3xl", "mx-auto", "w-full", "h-full", "flex", "flex-col"], [1, "my-auto", "py-4", "sm:py-8", "flex", "flex-col", "items-center", "text-center", "animate-in", "fade-in", "duration-300"], [1, "flex-1", "space-y-2", "pb-4"], [1, "w-18", "h-18", "sm:w-22", "sm:h-22", "rounded-3xl", "bg-white", "p-3", "flex", "items-center", "justify-center", "shadow-lg", "border-2", "border-[#0050A1]/15", "ring-4", "ring-[#BE002E]/10", "mb-5"], ["src", "cropped-Favicon-3-1-32x32.png", "alt", "Colegio Bertolt Brecht", 1, "w-full", "h-full", "object-contain"], [1, "inline-flex", "items-center", "gap-2", "px-3.5", "py-1", "rounded-full", "bg-[#BE002E]/10", "border", "border-[#BE002E]/25", "text-[#BE002E]", "text-xs", "font-extrabold", "uppercase", "tracking-wide", "mb-3"], [1, "text-2xl", "sm:text-3xl", "md:text-4xl", "font-black", "text-[#0050A1]", "tracking-tight", "mb-3"], [1, "text-slate-600", "text-sm", "sm:text-base", "max-w-xl", "mb-8", "leading-relaxed"], [1, "grid", "grid-cols-1", "sm:grid-cols-2", "lg:grid-cols-3", "gap-3.5", "w-full", "text-left"], ["type", "button", 3, "class"], ["type", "button", 3, "click"], [1, "pt-1"], [1, "flex", "items-center", "justify-between", "mb-2.5"], [1, "text-xs", "text-slate-500", "mt-1", "line-clamp-2", "leading-relaxed"], [3, "message"], [1, "flex", "items-start", "gap-3", "sm:gap-4", "max-w-[85%]", "mb-4", "animate-in", "fade-in", "duration-150"], [1, "w-9", "h-9", "rounded-xl", "bg-white", "border", "border-slate-200", "p-1.5", "flex", "items-center", "justify-center", "shrink-0", "shadow-xs"], ["src", "cropped-Favicon-3-1-32x32.png", "alt", "CBB", 1, "w-full", "h-full", "object-contain"], [1, "px-5", "py-4", "rounded-2xl", "rounded-tl-xs", "bg-white", "border", "border-slate-200", "shadow-2xs", "flex", "items-center", "gap-2.5"], [1, "flex", "items-center", "gap-1.5"], [1, "w-2", "h-2", "rounded-full", "bg-[#BE002E]", "animate-bounce", "[animation-delay:-0.3s]"], [1, "w-2", "h-2", "rounded-full", "bg-[#0050A1]", "animate-bounce", "[animation-delay:-0.15s]"], [1, "w-2", "h-2", "rounded-full", "bg-[#BE002E]", "animate-bounce"], [1, "text-xs", "text-[#0050A1]", "font-semibold"]], template: function ChatMessagesComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "div", 1, 0)(2, "div", 2);
       \u0275\u0275conditionalCreate(3, ChatMessagesComponent_Conditional_3_Template, 13, 0, "div", 3)(4, ChatMessagesComponent_Conditional_4_Template, 4, 1, "div", 4);
@@ -4014,142 +3964,125 @@ var ChatMessagesComponent = class _ChatMessagesComponent {
       \u0275\u0275advance(3);
       \u0275\u0275conditional(ctx.messages().length === 0 ? 3 : 4);
     }
-  }, dependencies: [ChatMessageItemComponent], encapsulation: 2, changeDetection: 0 });
+  }, dependencies: [ChatMessageItemComponent], styles: ["\n[_nghost-%COMP%] {\n  flex: 1 1 0%;\n  min-height: 0;\n  display: flex;\n  flex-direction: column;\n  overflow: hidden;\n  background-color: #ffffff;\n}"], changeDetection: 0 });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ChatMessagesComponent, [{
     type: Component,
-    args: [{
-      selector: "app-chat-messages",
-      changeDetection: ChangeDetectionStrategy.OnPush,
-      imports: [ChatMessageItemComponent],
-      host: {
-        class: "flex-1 min-h-0 flex flex-col overflow-hidden bg-white"
-      },
-      template: `
-    <div 
-      #scrollContainer
-      class="flex-1 min-h-0 overflow-y-auto chat-scroll px-4 sm:px-6 py-6 sm:py-8 bg-white">
-      
-      <div class="max-w-3xl mx-auto w-full h-full flex flex-col">
+    args: [{ selector: "app-chat-messages", changeDetection: ChangeDetectionStrategy.OnPush, imports: [ChatMessageItemComponent], template: `<div #scrollContainer class="flex-1 min-h-0 overflow-y-auto chat-scroll px-4 sm:px-6 py-6 sm:py-8 bg-white">
 
-        <!-- ESTADO INICIAL: Pantalla de Bienvenida Institucional -->
-        @if (messages().length === 0) {
-          <div class="my-auto py-4 sm:py-8 flex flex-col items-center text-center animate-in fade-in duration-300">
-            
-            <!-- \xCDcono Oficial del Colegio -->
-            <div class="w-18 h-18 sm:w-22 sm:h-22 rounded-3xl bg-white p-3 flex items-center justify-center shadow-lg border-2 border-[#0050A1]/15 ring-4 ring-[#BE002E]/10 mb-5">
-              <img 
-                src="cropped-Favicon-3-1-32x32.png" 
-                alt="Colegio Bertolt Brecht" 
-                class="w-full h-full object-contain"
-              />
+  <div class="max-w-3xl mx-auto w-full h-full flex flex-col">
+
+    <!-- ESTADO INICIAL: Pantalla de Bienvenida Institucional -->
+    @if (messages().length === 0) {
+    <div class="my-auto py-4 sm:py-8 flex flex-col items-center text-center animate-in fade-in duration-300">
+
+      <!-- \xCDcono Oficial del Colegio -->
+      <div
+        class="w-18 h-18 sm:w-22 sm:h-22 rounded-3xl bg-white p-3 flex items-center justify-center shadow-lg border-2 border-[#0050A1]/15 ring-4 ring-[#BE002E]/10 mb-5">
+        <img src="cropped-Favicon-3-1-32x32.png" alt="Colegio Bertolt Brecht" class="w-full h-full object-contain" />
+      </div>
+
+      <div
+        class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#BE002E]/10 border border-[#BE002E]/25 text-[#BE002E] text-xs font-extrabold uppercase tracking-wide mb-3">
+        <span>Asistente Virtual Oficial \u2022 Colegio Bertolt Brecht</span>
+      </div>
+
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-[#0050A1] tracking-tight mb-3">
+        \xBFEn qu\xE9 podemos orientarte hoy?
+      </h2>
+
+      <p class="text-slate-600 text-sm sm:text-base max-w-xl mb-8 leading-relaxed">
+        Resuelve tus dudas al instante sobre matr\xEDculas, pensiones, tr\xE1mites de secretar\xEDa, talleres y sedes con
+        informaci\xF3n oficial vigente.
+      </p>
+
+      <!-- Grid de Tarjetas de Consulta R\xE1pida (Alternando secciones #BE002E y #0050A1 sobre fondo blanco) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 w-full text-left">
+        @for (card of welcomeCards; track card.title) {
+        <button type="button" (click)="selectPrompt.emit(card.prompt)"
+          [class]="card.accent === 'red'
+                ? 'group relative p-4 rounded-2xl bg-white border border-slate-200 hover:border-[#BE002E] hover:shadow-md transition-all flex flex-col justify-between gap-2 cursor-pointer text-left overflow-hidden'
+                : 'group relative p-4 rounded-2xl bg-white border border-slate-200 hover:border-[#0050A1] hover:shadow-md transition-all flex flex-col justify-between gap-2 cursor-pointer text-left overflow-hidden'">
+
+          <!-- Franja superior de color institucional -->
+          <div [class]="card.accent === 'red'
+                  ? 'absolute top-0 left-0 right-0 h-1 transition-all bg-[#BE002E]'
+                  : 'absolute top-0 left-0 right-0 h-1 transition-all bg-[#0050A1]'">
+          </div>
+
+          <div class="pt-1">
+            <div class="flex items-center justify-between mb-2.5">
+              <span
+                [class]="card.accent === 'red'
+                      ? 'w-9 h-9 rounded-xl flex items-center justify-center text-lg transition-colors bg-[#BE002E]/10'
+                      : 'w-9 h-9 rounded-xl flex items-center justify-center text-lg transition-colors bg-[#0050A1]/10'">
+                {{ card.icon }}
+              </span>
+              <span
+                [class]="card.accent === 'red'
+                      ? 'text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-0.5 rounded-full transition-colors bg-[#BE002E]/10 text-[#BE002E]'
+                      : 'text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-0.5 rounded-full transition-colors bg-[#0050A1]/10 text-[#0050A1]'">
+                {{ card.badge }}
+              </span>
             </div>
-
-            <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#BE002E]/10 border border-[#BE002E]/25 text-[#BE002E] text-xs font-extrabold uppercase tracking-wide mb-3">
-              <span>Asistente Virtual Oficial \u2022 Colegio Bertolt Brecht</span>
-            </div>
-
-            <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-[#0050A1] tracking-tight mb-3">
-              \xBFEn qu\xE9 podemos orientarte hoy?
-            </h2>
-
-            <p class="text-slate-600 text-sm sm:text-base max-w-xl mb-8 leading-relaxed">
-              Resuelve tus dudas al instante sobre matr\xEDculas, pensiones, tr\xE1mites de secretar\xEDa, talleres y sedes con informaci\xF3n oficial vigente.
+            <h3 [class]="card.accent === 'red'
+                    ? 'font-bold text-slate-900 text-sm transition-colors group-hover:text-[#BE002E]'
+                    : 'font-bold text-slate-900 text-sm transition-colors group-hover:text-[#0050A1]'">
+              {{ card.title }}
+            </h3>
+            <p class="text-xs text-slate-500 mt-1 line-clamp-2 leading-relaxed">
+              {{ card.description }}
             </p>
-
-            <!-- Grid de Tarjetas de Consulta R\xE1pida (Alternando secciones #BE002E y #0050A1 sobre fondo blanco) -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 w-full text-left">
-              @for (card of welcomeCards; track card.title) {
-                <button
-                  type="button"
-                  (click)="selectPrompt.emit(card.prompt)"
-                  class="group relative p-4 rounded-2xl bg-white border border-slate-200 hover:shadow-md transition-all flex flex-col justify-between gap-2 cursor-pointer text-left overflow-hidden"
-                  [class.hover:border-[#BE002E]]="card.accent === 'red'"
-                  [class.hover:border-[#0050A1]]="card.accent === 'blue'">
-                  
-                  <!-- Franja superior de color institucional -->
-                  <div 
-                    class="absolute top-0 left-0 right-0 h-1 transition-all"
-                    [class.bg-[#BE002E]]="card.accent === 'red'"
-                    [class.bg-[#0050A1]]="card.accent === 'blue'">
-                  </div>
-
-                  <div class="pt-1">
-                    <div class="flex items-center justify-between mb-2.5">
-                      <span 
-                        class="w-9 h-9 rounded-xl flex items-center justify-center text-lg transition-colors"
-                        [class.bg-[#BE002E]/10]="card.accent === 'red'"
-                        [class.bg-[#0050A1]/10]="card.accent === 'blue'">
-                        {{ card.icon }}
-                      </span>
-                      <span 
-                        class="text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-0.5 rounded-full transition-colors"
-                        [class.bg-[#BE002E]/10]="card.accent === 'red'"
-                        [class.text-[#BE002E]]="card.accent === 'red'"
-                        [class.bg-[#0050A1]/10]="card.accent === 'blue'"
-                        [class.text-[#0050A1]]="card.accent === 'blue'">
-                        {{ card.badge }}
-                      </span>
-                    </div>
-                    <h3 
-                      class="font-bold text-slate-900 text-sm transition-colors"
-                      [class.group-hover:text-[#BE002E]]="card.accent === 'red'"
-                      [class.group-hover:text-[#0050A1]]="card.accent === 'blue'">
-                      {{ card.title }}
-                    </h3>
-                    <p class="text-xs text-slate-500 mt-1 line-clamp-2 leading-relaxed">
-                      {{ card.description }}
-                    </p>
-                  </div>
-
-                  <div 
-                    class="flex items-center gap-1 text-[11px] font-bold opacity-0 group-hover:opacity-100 transition-opacity pt-1"
-                    [class.text-[#BE002E]]="card.accent === 'red'"
-                    [class.text-[#0050A1]]="card.accent === 'blue'">
-                    <span>Consultar ahora</span>
-                    <span>\u2192</span>
-                  </div>
-                </button>
-              }
-            </div>
-
           </div>
-        } @else {
-          <!-- HILO DE CONVERSACI\xD3N ACTIVA -->
-          <div class="flex-1 space-y-2 pb-4">
-            @for (msg of messages(); track msg.id) {
-              <app-chat-message-item [message]="msg" />
-            }
 
-            <!-- Indicador de "Escribiendo..." / Typing dots -->
-            @if (isLoading()) {
-              <div class="flex items-start gap-3 sm:gap-4 max-w-[85%] mb-4 animate-in fade-in duration-150">
-                <div class="w-9 h-9 rounded-xl bg-white border border-slate-200 p-1.5 flex items-center justify-center shrink-0 shadow-xs">
-                  <img src="cropped-Favicon-3-1-32x32.png" alt="CBB" class="w-full h-full object-contain" />
-                </div>
-                <div class="px-5 py-4 rounded-2xl rounded-tl-xs bg-white border border-slate-200 shadow-2xs flex items-center gap-2.5">
-                  <div class="flex items-center gap-1.5">
-                    <span class="w-2 h-2 rounded-full bg-[#BE002E] animate-bounce [animation-delay:-0.3s]"></span>
-                    <span class="w-2 h-2 rounded-full bg-[#0050A1] animate-bounce [animation-delay:-0.15s]"></span>
-                    <span class="w-2 h-2 rounded-full bg-[#BE002E] animate-bounce"></span>
-                  </div>
-                  <span class="text-xs text-[#0050A1] font-semibold">Consultando...</span>
-                </div>
-              </div>
-            }
+          <div
+            [class]="card.accent === 'red'
+                  ? 'flex items-center gap-1 text-[11px] font-bold opacity-0 group-hover:opacity-100 transition-opacity pt-1 text-[#BE002E]'
+                  : 'flex items-center gap-1 text-[11px] font-bold opacity-0 group-hover:opacity-100 transition-opacity pt-1 text-[#0050A1]'">
+            <span>Consultar ahora</span>
+            <span>\u2192</span>
           </div>
+        </button>
         }
-
       </div>
 
     </div>
-  `
-    }]
+    } @else {
+    <!-- HILO DE CONVERSACI\xD3N ACTIVA -->
+    <div class="flex-1 space-y-2 pb-4">
+      @for (msg of messages(); track msg.id) {
+      <app-chat-message-item [message]="msg" />
+      }
+
+      <!-- Indicador de "Escribiendo..." / Typing dots -->
+      @if (isLoading()) {
+      <div class="flex items-start gap-3 sm:gap-4 max-w-[85%] mb-4 animate-in fade-in duration-150">
+        <div
+          class="w-9 h-9 rounded-xl bg-white border border-slate-200 p-1.5 flex items-center justify-center shrink-0 shadow-xs">
+          <img src="cropped-Favicon-3-1-32x32.png" alt="CBB" class="w-full h-full object-contain" />
+        </div>
+        <div
+          class="px-5 py-4 rounded-2xl rounded-tl-xs bg-white border border-slate-200 shadow-2xs flex items-center gap-2.5">
+          <div class="flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-[#BE002E] animate-bounce [animation-delay:-0.3s]"></span>
+            <span class="w-2 h-2 rounded-full bg-[#0050A1] animate-bounce [animation-delay:-0.15s]"></span>
+            <span class="w-2 h-2 rounded-full bg-[#BE002E] animate-bounce"></span>
+          </div>
+          <span class="text-xs text-[#0050A1] font-semibold">Consultando...</span>
+        </div>
+      </div>
+      }
+    </div>
+    }
+
+  </div>
+
+</div>`, styles: ["/* src/app/features/assistant/components/chat-messages/chat-messages.component.css */\n:host {\n  flex: 1 1 0%;\n  min-height: 0;\n  display: flex;\n  flex-direction: column;\n  overflow: hidden;\n  background-color: #ffffff;\n}\n"] }]
   }], () => [], { messages: [{ type: Input, args: [{ isSignal: true, alias: "messages", required: true }] }], isLoading: [{ type: Input, args: [{ isSignal: true, alias: "isLoading", required: false }] }], selectPrompt: [{ type: Output, args: ["selectPrompt"] }], scrollContainer: [{ type: ViewChild, args: ["scrollContainer", { isSignal: true }] }] });
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ChatMessagesComponent, { className: "ChatMessagesComponent", filePath: "src/app/features/assistant/components/chat-messages/chat-messages.component.ts", lineNumber: 141 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ChatMessagesComponent, { className: "ChatMessagesComponent", filePath: "src/app/features/assistant/components/chat-messages/chat-messages.component.ts", lineNumber: 21 });
 })();
 
 // src/app/features/assistant/components/chat-suggestions/chat-suggestions.component.ts
@@ -4227,37 +4160,16 @@ var ChatSuggestionsComponent = class _ChatSuggestionsComponent {
       \u0275\u0275advance(4);
       \u0275\u0275repeater(ctx.suggestions);
     }
-  }, encapsulation: 2, changeDetection: 0 });
+  }, styles: ["\n[_nghost-%COMP%] {\n  display: block;\n}"], changeDetection: 0 });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ChatSuggestionsComponent, [{
     type: Component,
-    args: [{
-      selector: "app-chat-suggestions",
-      changeDetection: ChangeDetectionStrategy.OnPush,
-      template: `
-    <div class="w-full px-4 sm:px-6 pt-2 pb-1 bg-white">
-      <div class="max-w-3xl mx-auto flex items-center gap-2 overflow-x-auto pb-1 scrollbar-thin">
-        <span class="text-[11px] font-extrabold text-[#0050A1] uppercase tracking-wider shrink-0">
-          Consultas r\xE1pidas:
-        </span>
-        @for (item of suggestions; track item.prompt) {
-          <button
-            type="button"
-            (click)="selectSuggestion.emit(item.prompt)"
-            class="shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white hover:bg-[#BE002E]/10 text-slate-700 hover:text-[#BE002E] text-xs font-semibold border border-slate-200 hover:border-[#BE002E]/40 transition-all shadow-2xs cursor-pointer">
-            <span>{{ item.icon }}</span>
-            <span>{{ item.label }}</span>
-          </button>
-        }
-      </div>
-    </div>
-  `
-    }]
+    args: [{ selector: "app-chat-suggestions", changeDetection: ChangeDetectionStrategy.OnPush, template: '<div class="w-full px-4 sm:px-6 pt-2 pb-1 bg-white">\n  <div class="max-w-3xl mx-auto flex items-center gap-2 overflow-x-auto pb-1 scrollbar-thin">\n    <span class="text-[11px] font-extrabold text-[#0050A1] uppercase tracking-wider shrink-0">\n      Consultas r\xE1pidas:\n    </span>\n    @for (item of suggestions; track item.prompt) {\n      <button\n        type="button"\n        (click)="selectSuggestion.emit(item.prompt)"\n        class="shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white hover:bg-[#BE002E]/10 text-slate-700 hover:text-[#BE002E] text-xs font-semibold border border-slate-200 hover:border-[#BE002E]/40 transition-all shadow-2xs cursor-pointer">\n        <span>{{ item.icon }}</span>\n        <span>{{ item.label }}</span>\n      </button>\n    }\n  </div>\n</div>\n', styles: ["/* src/app/features/assistant/components/chat-suggestions/chat-suggestions.component.css */\n:host {\n  display: block;\n}\n"] }]
   }], null, { selectSuggestion: [{ type: Output, args: ["selectSuggestion"] }] });
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ChatSuggestionsComponent, { className: "ChatSuggestionsComponent", filePath: "src/app/features/assistant/components/chat-suggestions/chat-suggestions.component.ts", lineNumber: 26 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ChatSuggestionsComponent, { className: "ChatSuggestionsComponent", filePath: "src/app/features/assistant/components/chat-suggestions/chat-suggestions.component.ts", lineNumber: 10 });
 })();
 
 // src/app/features/assistant/components/chat-input/chat-input.component.ts
@@ -4333,7 +4245,7 @@ var ChatInputComponent = class _ChatInputComponent {
       })("keydown", function ChatInputComponent_Template_textarea_keydown_4_listener($event) {
         return ctx.onKeydown($event);
       });
-      \u0275\u0275text(5, "            ");
+      \u0275\u0275text(5, "        ");
       \u0275\u0275domElementEnd()();
       \u0275\u0275domElementStart(6, "button", 5);
       \u0275\u0275conditionalCreate(7, ChatInputComponent_Conditional_7_Template, 5, 0)(8, ChatInputComponent_Conditional_8_Template, 4, 0);
@@ -4343,7 +4255,7 @@ var ChatInputComponent = class _ChatInputComponent {
       \u0275\u0275domElementStart(12, "span", 8);
       \u0275\u0275text(13, "Colegio Bertolt Brecht");
       \u0275\u0275domElementEnd();
-      \u0275\u0275text(14, " \u2022 Protecci\xF3n de datos personales (Ley N.\xB0 29733) ");
+      \u0275\u0275text(14, " \u2022 Protecci\xF3n de datos personales (Ley N.\xB0 29733) \u2022 Central: (01) 315-7000 ");
       \u0275\u0275domElementEnd()()()();
     }
     if (rf & 2) {
@@ -4355,79 +4267,389 @@ var ChatInputComponent = class _ChatInputComponent {
       \u0275\u0275advance();
       \u0275\u0275conditional(ctx.disabled() ? 7 : 8);
     }
-  }, encapsulation: 2, changeDetection: 0 });
+  }, styles: ["\n[_nghost-%COMP%] {\n  display: block;\n}"], changeDetection: 0 });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ChatInputComponent, [{
     type: Component,
-    args: [{
-      selector: "app-chat-input",
-      changeDetection: ChangeDetectionStrategy.OnPush,
-      template: `
-    <div class="w-full px-4 sm:px-6 pb-4 pt-2 bg-white border-t border-slate-100">
-      <div class="max-w-3xl mx-auto">
-        
-        <form 
-          (submit)="onSubmit($event)" 
-          class="flex items-end gap-2 p-2 rounded-2xl bg-white border-2 border-slate-200 shadow-md shadow-slate-900/5 focus-within:border-[#0050A1] focus-within:ring-3 focus-within:ring-[#0050A1]/15 transition-all">
-          
-          <div class="relative flex-1">
-            <textarea
-              [value]="promptText()"
-              (input)="onInput($event)"
-              (keydown)="onKeydown($event)"
-              [disabled]="disabled()"
-              placeholder="Escribe tu consulta sobre matr\xEDculas, pensiones, tr\xE1mites o sedes..."
-              rows="1"
-              class="w-full resize-none bg-transparent text-slate-800 placeholder-slate-400 text-sm sm:text-[15px] px-3 py-2.5 focus:outline-hidden max-h-36 min-h-[44px] disabled:opacity-60 disabled:cursor-not-allowed">
-            </textarea>
-          </div>
-
-          <button
-            type="submit"
-            [disabled]="!canSend()"
-            [attr.aria-label]="'Enviar mensaje'"
-            class="h-11 px-4 sm:px-5 rounded-xl bg-[#BE002E] hover:bg-[#9e0026] text-white font-bold text-sm flex items-center justify-center gap-2 shrink-0 shadow-sm shadow-[#BE002E]/25 disabled:opacity-40 disabled:cursor-not-allowed transition-all transform active:scale-95 cursor-pointer">
-            
-            @if (disabled()) {
-              <svg class="animate-spin h-4 w-4 text-white" fill="none" viewBox="0 0 24 24">
-                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-              </svg>
-              <span class="hidden sm:inline">Enviando</span>
-            } @else {
-              <span class="hidden sm:inline">Enviar</span>
-              <svg class="w-4 h-4 translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-              </svg>
-            }
-
-          </button>
-
-        </form>
-
-        <!-- Nota institucional y protecci\xF3n de datos -->
-        <div class="text-center mt-2.5 px-2">
-          <p class="text-[11px] text-slate-400">
-            Orientaci\xF3n oficial basada en reglamentos vigentes del <span class="font-semibold text-[#0050A1]">Colegio Bertolt Brecht</span> \u2022 Protecci\xF3n de datos personales (Ley N.\xB0 29733)
-          </p>
-        </div>
-
+    args: [{ selector: "app-chat-input", changeDetection: ChangeDetectionStrategy.OnPush, template: `<div class="w-full px-4 sm:px-6 pb-4 pt-2 bg-white border-t border-slate-100">
+  <div class="max-w-3xl mx-auto">
+    
+    <form 
+      (submit)="onSubmit($event)" 
+      class="flex items-end gap-2 p-2 rounded-2xl bg-white border-2 border-slate-200 shadow-md shadow-slate-900/5 focus-within:border-[#0050A1] focus-within:ring-3 focus-within:ring-[#0050A1]/15 transition-all">
+      
+      <div class="relative flex-1">
+        <textarea
+          [value]="promptText()"
+          (input)="onInput($event)"
+          (keydown)="onKeydown($event)"
+          [disabled]="disabled()"
+          placeholder="Escribe tu consulta sobre matr\xEDculas, pensiones, tr\xE1mites o sedes..."
+          rows="1"
+          class="w-full resize-none bg-transparent text-slate-800 placeholder-slate-400 text-sm sm:text-[15px] px-3 py-2.5 focus:outline-hidden max-h-36 min-h-[44px] disabled:opacity-60 disabled:cursor-not-allowed">
+        </textarea>
       </div>
+
+      <button
+        type="submit"
+        [disabled]="!canSend()"
+        [attr.aria-label]="'Enviar mensaje'"
+        class="h-11 px-4 sm:px-5 rounded-xl bg-[#BE002E] hover:bg-[#9e0026] text-white font-bold text-sm flex items-center justify-center gap-2 shrink-0 shadow-sm shadow-[#BE002E]/25 disabled:opacity-40 disabled:cursor-not-allowed transition-all transform active:scale-95 cursor-pointer">
+        
+        @if (disabled()) {
+          <svg class="animate-spin h-4 w-4 text-white" fill="none" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+          </svg>
+          <span class="hidden sm:inline">Enviando</span>
+        } @else {
+          <span class="hidden sm:inline">Enviar</span>
+          <svg class="w-4 h-4 translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+          </svg>
+        }
+
+      </button>
+
+    </form>
+
+    <!-- Nota institucional y protecci\xF3n de datos -->
+    <div class="text-center mt-2.5 px-2">
+      <p class="text-[11px] text-slate-400">
+        Orientaci\xF3n oficial basada en reglamentos vigentes del <span class="font-semibold text-[#0050A1]">Colegio Bertolt Brecht</span> \u2022 Protecci\xF3n de datos personales (Ley N.\xB0 29733) \u2022 Central: (01) 315-7000
+      </p>
     </div>
-  `
-    }]
+
+  </div>
+</div>
+`, styles: ["/* src/app/features/assistant/components/chat-input/chat-input.component.css */\n:host {\n  display: block;\n}\n"] }]
   }], null, { disabled: [{ type: Input, args: [{ isSignal: true, alias: "disabled", required: false }] }], send: [{ type: Output, args: ["send"] }] });
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ChatInputComponent, { className: "ChatInputComponent", filePath: "src/app/features/assistant/components/chat-input/chat-input.component.ts", lineNumber: 60 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ChatInputComponent, { className: "ChatInputComponent", filePath: "src/app/features/assistant/components/chat-input/chat-input.component.ts", lineNumber: 9 });
+})();
+
+// src/app/features/assistant/components/chat-feedback-modal/chat-feedback-modal.component.ts
+function ChatFeedbackModalComponent_Conditional_0_Conditional_40_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275domElementStart(0, "span");
+    \u0275\u0275text(1, "Enviando...");
+    \u0275\u0275domElementEnd();
+  }
+}
+function ChatFeedbackModalComponent_Conditional_0_Conditional_41_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275domElementStart(0, "span");
+    \u0275\u0275text(1, "Enviar y finalizar");
+    \u0275\u0275domElementEnd();
+  }
+}
+function ChatFeedbackModalComponent_Conditional_0_Template(rf, ctx) {
+  if (rf & 1) {
+    const _r1 = \u0275\u0275getCurrentView();
+    \u0275\u0275domElementStart(0, "div", 0)(1, "div", 1);
+    \u0275\u0275domElement(2, "div", 2);
+    \u0275\u0275domElementStart(3, "button", 3);
+    \u0275\u0275domListener("click", function ChatFeedbackModalComponent_Conditional_0_Template_button_click_3_listener() {
+      \u0275\u0275restoreView(_r1);
+      const ctx_r1 = \u0275\u0275nextContext();
+      return \u0275\u0275resetView(ctx_r1.onCancel());
+    });
+    \u0275\u0275text(4, " \u2715 ");
+    \u0275\u0275domElementEnd();
+    \u0275\u0275domElementStart(5, "div", 4)(6, "div", 5)(7, "div", 6);
+    \u0275\u0275domElement(8, "img", 7);
+    \u0275\u0275domElementEnd();
+    \u0275\u0275domElementStart(9, "h3", 8);
+    \u0275\u0275text(10, " \xBFCumplimos con responder a su consulta? ");
+    \u0275\u0275domElementEnd();
+    \u0275\u0275domElementStart(11, "p", 9);
+    \u0275\u0275text(12, " Su opini\xF3n nos ayuda a mejorar la informaci\xF3n de nuestro asistente virtual. ");
+    \u0275\u0275domElementEnd()();
+    \u0275\u0275domElementStart(13, "div", 10)(14, "button", 11);
+    \u0275\u0275domListener("click", function ChatFeedbackModalComponent_Conditional_0_Template_button_click_14_listener() {
+      \u0275\u0275restoreView(_r1);
+      const ctx_r1 = \u0275\u0275nextContext();
+      return \u0275\u0275resetView(ctx_r1.selectResolucion("SI"));
+    });
+    \u0275\u0275domElementStart(15, "span", 12);
+    \u0275\u0275text(16, "\u{1F60D}");
+    \u0275\u0275domElementEnd();
+    \u0275\u0275domElementStart(17, "span", 13);
+    \u0275\u0275text(18, "S\xED, totalmente");
+    \u0275\u0275domElementEnd()();
+    \u0275\u0275domElementStart(19, "button", 11);
+    \u0275\u0275domListener("click", function ChatFeedbackModalComponent_Conditional_0_Template_button_click_19_listener() {
+      \u0275\u0275restoreView(_r1);
+      const ctx_r1 = \u0275\u0275nextContext();
+      return \u0275\u0275resetView(ctx_r1.selectResolucion("PARCIAL"));
+    });
+    \u0275\u0275domElementStart(20, "span", 12);
+    \u0275\u0275text(21, "\u{1F610}");
+    \u0275\u0275domElementEnd();
+    \u0275\u0275domElementStart(22, "span", 13);
+    \u0275\u0275text(23, "Parcialmente");
+    \u0275\u0275domElementEnd()();
+    \u0275\u0275domElementStart(24, "button", 11);
+    \u0275\u0275domListener("click", function ChatFeedbackModalComponent_Conditional_0_Template_button_click_24_listener() {
+      \u0275\u0275restoreView(_r1);
+      const ctx_r1 = \u0275\u0275nextContext();
+      return \u0275\u0275resetView(ctx_r1.selectResolucion("NO"));
+    });
+    \u0275\u0275domElementStart(25, "span", 12);
+    \u0275\u0275text(26, "\u{1F61E}");
+    \u0275\u0275domElementEnd();
+    \u0275\u0275domElementStart(27, "span", 13);
+    \u0275\u0275text(28, "No resolvi\xF3 mi duda");
+    \u0275\u0275domElementEnd()()();
+    \u0275\u0275domElementStart(29, "div", 14)(30, "label", 15);
+    \u0275\u0275text(31, " Comentarios o sugerencias ");
+    \u0275\u0275domElementStart(32, "span", 16);
+    \u0275\u0275text(33, "(opcional)");
+    \u0275\u0275domElementEnd()();
+    \u0275\u0275domElementStart(34, "textarea", 17);
+    \u0275\u0275domListener("input", function ChatFeedbackModalComponent_Conditional_0_Template_textarea_input_34_listener($event) {
+      \u0275\u0275restoreView(_r1);
+      const ctx_r1 = \u0275\u0275nextContext();
+      return \u0275\u0275resetView(ctx_r1.onCommentInput($event));
+    });
+    \u0275\u0275text(35, "          ");
+    \u0275\u0275domElementEnd()();
+    \u0275\u0275domElementStart(36, "div", 18)(37, "button", 19);
+    \u0275\u0275domListener("click", function ChatFeedbackModalComponent_Conditional_0_Template_button_click_37_listener() {
+      \u0275\u0275restoreView(_r1);
+      const ctx_r1 = \u0275\u0275nextContext();
+      return \u0275\u0275resetView(ctx_r1.onSkip());
+    });
+    \u0275\u0275text(38, " Omitir y salir ");
+    \u0275\u0275domElementEnd();
+    \u0275\u0275domElementStart(39, "button", 20);
+    \u0275\u0275domListener("click", function ChatFeedbackModalComponent_Conditional_0_Template_button_click_39_listener() {
+      \u0275\u0275restoreView(_r1);
+      const ctx_r1 = \u0275\u0275nextContext();
+      return \u0275\u0275resetView(ctx_r1.onSubmit());
+    });
+    \u0275\u0275conditionalCreate(40, ChatFeedbackModalComponent_Conditional_0_Conditional_40_Template, 2, 0, "span")(41, ChatFeedbackModalComponent_Conditional_0_Conditional_41_Template, 2, 0, "span");
+    \u0275\u0275domElementEnd()()()()();
+  }
+  if (rf & 2) {
+    const ctx_r1 = \u0275\u0275nextContext();
+    \u0275\u0275advance(3);
+    \u0275\u0275domProperty("disabled", ctx_r1.isSubmitting());
+    \u0275\u0275advance(11);
+    \u0275\u0275classMap(ctx_r1.selectedResolucion() === "SI" ? "flex flex-col items-center justify-center gap-1.5 p-3 rounded-2xl border-2 transition-all cursor-pointer text-center border-emerald-500 bg-emerald-50/70" : "flex flex-col items-center justify-center gap-1.5 p-3 rounded-2xl border-2 transition-all cursor-pointer text-center border-slate-200 hover:border-emerald-300");
+    \u0275\u0275domProperty("disabled", ctx_r1.isSubmitting());
+    \u0275\u0275advance(5);
+    \u0275\u0275classMap(ctx_r1.selectedResolucion() === "PARCIAL" ? "flex flex-col items-center justify-center gap-1.5 p-3 rounded-2xl border-2 transition-all cursor-pointer text-center border-amber-500 bg-amber-50/70" : "flex flex-col items-center justify-center gap-1.5 p-3 rounded-2xl border-2 transition-all cursor-pointer text-center border-slate-200 hover:border-amber-300");
+    \u0275\u0275domProperty("disabled", ctx_r1.isSubmitting());
+    \u0275\u0275advance(5);
+    \u0275\u0275classMap(ctx_r1.selectedResolucion() === "NO" ? "flex flex-col items-center justify-center gap-1.5 p-3 rounded-2xl border-2 transition-all cursor-pointer text-center border-[#BE002E] bg-red-50/70" : "flex flex-col items-center justify-center gap-1.5 p-3 rounded-2xl border-2 transition-all cursor-pointer text-center border-slate-200 hover:border-red-300");
+    \u0275\u0275domProperty("disabled", ctx_r1.isSubmitting());
+    \u0275\u0275advance(10);
+    \u0275\u0275domProperty("value", ctx_r1.comentario())("disabled", ctx_r1.isSubmitting());
+    \u0275\u0275advance(3);
+    \u0275\u0275domProperty("disabled", ctx_r1.isSubmitting());
+    \u0275\u0275advance(2);
+    \u0275\u0275domProperty("disabled", !ctx_r1.selectedResolucion() || ctx_r1.isSubmitting());
+    \u0275\u0275advance();
+    \u0275\u0275conditional(ctx_r1.isSubmitting() ? 40 : 41);
+  }
+}
+var ChatFeedbackModalComponent = class _ChatFeedbackModalComponent {
+  isOpen = input(false, ...ngDevMode ? [{ debugName: "isOpen" }] : (
+    /* istanbul ignore next */
+    []
+  ));
+  isSubmitting = input(false, ...ngDevMode ? [{ debugName: "isSubmitting" }] : (
+    /* istanbul ignore next */
+    []
+  ));
+  cancel = output();
+  skipAndClose = output();
+  submitFeedback = output();
+  selectedResolucion = signal(null, ...ngDevMode ? [{ debugName: "selectedResolucion" }] : (
+    /* istanbul ignore next */
+    []
+  ));
+  comentario = signal("", ...ngDevMode ? [{ debugName: "comentario" }] : (
+    /* istanbul ignore next */
+    []
+  ));
+  selectResolucion(val) {
+    this.selectedResolucion.set(val);
+  }
+  onCommentInput(event) {
+    const target = event.target;
+    this.comentario.set(target.value);
+  }
+  onCancel() {
+    this.cancel.emit();
+  }
+  onSkip() {
+    this.resetState();
+    this.skipAndClose.emit();
+  }
+  onSubmit() {
+    const resuelto = this.selectedResolucion();
+    if (!resuelto || this.isSubmitting())
+      return;
+    this.submitFeedback.emit({
+      resuelto,
+      comentario: this.comentario().trim()
+    });
+  }
+  resetState() {
+    this.selectedResolucion.set(null);
+    this.comentario.set("");
+  }
+  static \u0275fac = function ChatFeedbackModalComponent_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _ChatFeedbackModalComponent)();
+  };
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ChatFeedbackModalComponent, selectors: [["app-chat-feedback-modal"]], inputs: { isOpen: [1, "isOpen"], isSubmitting: [1, "isSubmitting"] }, outputs: { cancel: "cancel", skipAndClose: "skipAndClose", submitFeedback: "submitFeedback" }, decls: 1, vars: 1, consts: [[1, "fixed", "inset-0", "z-50", "flex", "items-center", "justify-center", "p-4", "bg-slate-900/60", "backdrop-blur-xs", "animate-in", "fade-in", "duration-150"], [1, "relative", "w-full", "max-w-md", "rounded-3xl", "bg-white", "border", "border-slate-200", "shadow-2xl", "overflow-hidden", "animate-in", "zoom-in-95", "duration-200"], [1, "h-2", "bg-gradient-to-r", "from-[#0050A1]", "via-[#0050A1]", "to-[#BE002E]"], ["type", "button", "title", "Volver a la conversaci\xF3n", 1, "absolute", "top-4", "right-4", "w-8", "h-8", "rounded-full", "bg-slate-100", "hover:bg-slate-200", "text-slate-500", "hover:text-slate-800", "flex", "items-center", "justify-center", "text-sm", "transition-colors", "cursor-pointer", 3, "click", "disabled"], [1, "p-6", "sm:p-7"], [1, "flex", "flex-col", "items-center", "text-center", "mb-5"], [1, "w-12", "h-12", "rounded-2xl", "bg-white", "border", "border-slate-200", "p-2", "flex", "items-center", "justify-center", "shadow-xs", "mb-3"], ["src", "cropped-Favicon-3-1-32x32.png", "alt", "CBB", 1, "w-full", "h-full", "object-contain"], [1, "text-lg", "sm:text-xl", "font-extrabold", "text-[#0050A1]", "leading-snug"], [1, "text-xs", "sm:text-sm", "text-slate-500", "mt-1"], [1, "grid", "grid-cols-3", "gap-2.5", "mb-5"], ["type", "button", 3, "click", "disabled"], [1, "text-2xl"], [1, "text-xs", "font-bold", "text-slate-800", "leading-tight"], [1, "mb-5"], [1, "block", "text-xs", "font-bold", "text-slate-700", "mb-1.5"], [1, "text-slate-400", "font-normal"], ["rows", "3", "maxlength", "1000", "placeholder", "Cu\xE9ntenos qu\xE9 informaci\xF3n adicional le hubiera gustado encontrar...", 1, "w-full", "resize-none", "rounded-2xl", "border", "border-slate-200", "focus:border-[#0050A1]", "focus:ring-2", "focus:ring-[#0050A1]/15", "p-3", "text-xs", "sm:text-sm", "text-slate-800", "placeholder-slate-400", "focus:outline-hidden", "transition-all", 3, "input", "value", "disabled"], [1, "flex", "items-center", "justify-end", "gap-2.5"], ["type", "button", 1, "px-4", "py-2.5", "rounded-xl", "border", "border-slate-200", "bg-slate-50", "hover:bg-slate-100", "text-slate-600", "text-xs", "font-bold", "transition-colors", "cursor-pointer", 3, "click", "disabled"], ["type", "button", 1, "px-5", "py-2.5", "rounded-xl", "bg-[#BE002E]", "hover:bg-[#9e0026]", "text-white", "text-xs", "sm:text-sm", "font-bold", "shadow-md", "shadow-[#BE002E]/20", "disabled:opacity-40", "disabled:cursor-not-allowed", "transition-all", "cursor-pointer", "flex", "items-center", "gap-2", 3, "click", "disabled"]], template: function ChatFeedbackModalComponent_Template(rf, ctx) {
+    if (rf & 1) {
+      \u0275\u0275conditionalCreate(0, ChatFeedbackModalComponent_Conditional_0_Template, 42, 15, "div", 0);
+    }
+    if (rf & 2) {
+      \u0275\u0275conditional(ctx.isOpen() ? 0 : -1);
+    }
+  }, styles: ["\n[_nghost-%COMP%] {\n  display: contents;\n}"], changeDetection: 0 });
+};
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ChatFeedbackModalComponent, [{
+    type: Component,
+    args: [{ selector: "app-chat-feedback-modal", changeDetection: ChangeDetectionStrategy.OnPush, template: `@if (isOpen()) {
+  <div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs animate-in fade-in duration-150">
+    
+    <div class="relative w-full max-w-md rounded-3xl bg-white border border-slate-200 shadow-2xl overflow-hidden animate-in zoom-in-95 duration-200">
+      
+      <!-- Franja institucional superior -->
+      <div class="h-2 bg-gradient-to-r from-[#0050A1] via-[#0050A1] to-[#BE002E]"></div>
+
+      <!-- Bot\xF3n cerrar (X) para cancelar y volver al chat -->
+      <button
+        type="button"
+        (click)="onCancel()"
+        [disabled]="isSubmitting()"
+        title="Volver a la conversaci\xF3n"
+        class="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-slate-800 flex items-center justify-center text-sm transition-colors cursor-pointer">
+        \u2715
+      </button>
+
+      <div class="p-6 sm:p-7">
+        
+        <!-- Encabezado del Popup -->
+        <div class="flex flex-col items-center text-center mb-5">
+          <div class="w-12 h-12 rounded-2xl bg-white border border-slate-200 p-2 flex items-center justify-center shadow-xs mb-3">
+            <img src="cropped-Favicon-3-1-32x32.png" alt="CBB" class="w-full h-full object-contain" />
+          </div>
+          <h3 class="text-lg sm:text-xl font-extrabold text-[#0050A1] leading-snug">
+            \xBFCumplimos con responder a su consulta?
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-500 mt-1">
+            Su opini\xF3n nos ayuda a mejorar la informaci\xF3n de nuestro asistente virtual.
+          </p>
+        </div>
+
+        <!-- Sem\xE1foro de 3 opciones de resoluci\xF3n -->
+        <div class="grid grid-cols-3 gap-2.5 mb-5">
+          
+          <!-- Opci\xF3n 1: SI -->
+          <button
+            type="button"
+            (click)="selectResolucion('SI')"
+            [disabled]="isSubmitting()"
+            [class]="selectedResolucion() === 'SI'
+              ? 'flex flex-col items-center justify-center gap-1.5 p-3 rounded-2xl border-2 transition-all cursor-pointer text-center border-emerald-500 bg-emerald-50/70'
+              : 'flex flex-col items-center justify-center gap-1.5 p-3 rounded-2xl border-2 transition-all cursor-pointer text-center border-slate-200 hover:border-emerald-300'">
+            <span class="text-2xl">\u{1F60D}</span>
+            <span class="text-xs font-bold text-slate-800 leading-tight">S\xED, totalmente</span>
+          </button>
+
+          <!-- Opci\xF3n 2: PARCIAL -->
+          <button
+            type="button"
+            (click)="selectResolucion('PARCIAL')"
+            [disabled]="isSubmitting()"
+            [class]="selectedResolucion() === 'PARCIAL'
+              ? 'flex flex-col items-center justify-center gap-1.5 p-3 rounded-2xl border-2 transition-all cursor-pointer text-center border-amber-500 bg-amber-50/70'
+              : 'flex flex-col items-center justify-center gap-1.5 p-3 rounded-2xl border-2 transition-all cursor-pointer text-center border-slate-200 hover:border-amber-300'">
+            <span class="text-2xl">\u{1F610}</span>
+            <span class="text-xs font-bold text-slate-800 leading-tight">Parcialmente</span>
+          </button>
+
+          <!-- Opci\xF3n 3: NO -->
+          <button
+            type="button"
+            (click)="selectResolucion('NO')"
+            [disabled]="isSubmitting()"
+            [class]="selectedResolucion() === 'NO'
+              ? 'flex flex-col items-center justify-center gap-1.5 p-3 rounded-2xl border-2 transition-all cursor-pointer text-center border-[#BE002E] bg-red-50/70'
+              : 'flex flex-col items-center justify-center gap-1.5 p-3 rounded-2xl border-2 transition-all cursor-pointer text-center border-slate-200 hover:border-red-300'">
+            <span class="text-2xl">\u{1F61E}</span>
+            <span class="text-xs font-bold text-slate-800 leading-tight">No resolvi\xF3 mi duda</span>
+          </button>
+
+        </div>
+
+        <!-- Campo de Comentarios -->
+        <div class="mb-5">
+          <label class="block text-xs font-bold text-slate-700 mb-1.5">
+            Comentarios o sugerencias <span class="text-slate-400 font-normal">(opcional)</span>
+          </label>
+          <textarea
+            [value]="comentario()"
+            (input)="onCommentInput($event)"
+            [disabled]="isSubmitting()"
+            rows="3"
+            maxlength="1000"
+            placeholder="Cu\xE9ntenos qu\xE9 informaci\xF3n adicional le hubiera gustado encontrar..."
+            class="w-full resize-none rounded-2xl border border-slate-200 focus:border-[#0050A1] focus:ring-2 focus:ring-[#0050A1]/15 p-3 text-xs sm:text-sm text-slate-800 placeholder-slate-400 focus:outline-hidden transition-all">
+          </textarea>
+        </div>
+
+        <!-- Botones de Acci\xF3n -->
+        <div class="flex items-center justify-end gap-2.5">
+          <button
+            type="button"
+            (click)="onSkip()"
+            [disabled]="isSubmitting()"
+            class="px-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-600 text-xs font-bold transition-colors cursor-pointer">
+            Omitir y salir
+          </button>
+
+          <button
+            type="button"
+            (click)="onSubmit()"
+            [disabled]="!selectedResolucion() || isSubmitting()"
+            class="px-5 py-2.5 rounded-xl bg-[#BE002E] hover:bg-[#9e0026] text-white text-xs sm:text-sm font-bold shadow-md shadow-[#BE002E]/20 disabled:opacity-40 disabled:cursor-not-allowed transition-all cursor-pointer flex items-center gap-2">
+            @if (isSubmitting()) {
+              <span>Enviando...</span>
+            } @else {
+              <span>Enviar y finalizar</span>
+            }
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+}
+`, styles: ["/* src/app/features/assistant/components/chat-feedback-modal/chat-feedback-modal.component.css */\n:host {\n  display: contents;\n}\n"] }]
+  }], null, { isOpen: [{ type: Input, args: [{ isSignal: true, alias: "isOpen", required: false }] }], isSubmitting: [{ type: Input, args: [{ isSignal: true, alias: "isSubmitting", required: false }] }], cancel: [{ type: Output, args: ["cancel"] }], skipAndClose: [{ type: Output, args: ["skipAndClose"] }], submitFeedback: [{ type: Output, args: ["submitFeedback"] }] });
+})();
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ChatFeedbackModalComponent, { className: "ChatFeedbackModalComponent", filePath: "src/app/features/assistant/components/chat-feedback-modal/chat-feedback-modal.component.ts", lineNumber: 10 });
 })();
 
 // src/app/features/assistant/assistant.component.ts
+var _c02 = ["feedbackModal"];
 function AssistantComponent_Conditional_3_Template(rf, ctx) {
   if (rf & 1) {
     const _r1 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "app-chat-suggestions", 5);
+    \u0275\u0275elementStart(0, "app-chat-suggestions", 7);
     \u0275\u0275listener("selectSuggestion", function AssistantComponent_Conditional_3_Template_app_chat_suggestions_selectSuggestion_0_listener($event) {
       \u0275\u0275restoreView(_r1);
       const ctx_r1 = \u0275\u0275nextContext();
@@ -4438,6 +4660,10 @@ function AssistantComponent_Conditional_3_Template(rf, ctx) {
 }
 var AssistantComponent = class _AssistantComponent {
   assistantService = inject(AssistantService);
+  feedbackModal = viewChild("feedbackModal", ...ngDevMode ? [{ debugName: "feedbackModal" }] : (
+    /* istanbul ignore next */
+    []
+  ));
   isLoading = signal(false, ...ngDevMode ? [{ debugName: "isLoading" }] : (
     /* istanbul ignore next */
     []
@@ -4447,6 +4673,14 @@ var AssistantComponent = class _AssistantComponent {
     []
   ));
   hasMessages = computed(() => this.messages().length > 0, ...ngDevMode ? [{ debugName: "hasMessages" }] : (
+    /* istanbul ignore next */
+    []
+  ));
+  isFeedbackModalOpen = signal(false, ...ngDevMode ? [{ debugName: "isFeedbackModalOpen" }] : (
+    /* istanbul ignore next */
+    []
+  ));
+  isSubmittingFeedback = signal(false, ...ngDevMode ? [{ debugName: "isSubmittingFeedback" }] : (
     /* istanbul ignore next */
     []
   ));
@@ -4486,29 +4720,75 @@ var AssistantComponent = class _AssistantComponent {
       }
     });
   }
-  resetConversation() {
+  openFeedbackModal() {
+    this.isFeedbackModalOpen.set(true);
+  }
+  closeFeedbackModal() {
+    if (this.isSubmittingFeedback())
+      return;
+    this.isFeedbackModalOpen.set(false);
+  }
+  onSubmitFeedback(data) {
+    this.isSubmittingFeedback.set(true);
+    const userMessages = this.messages().filter((m) => m.sender === "user");
+    const ultimaPregunta = userMessages.length > 0 ? userMessages[userMessages.length - 1].text : void 0;
+    this.assistantService.sendFeedback({
+      resuelto: data.resuelto,
+      comentario: data.comentario,
+      ultimaPregunta
+    }).subscribe({
+      next: () => {
+        this.isSubmittingFeedback.set(false);
+        this.feedbackModal()?.resetState();
+        this.finalizeSession();
+      },
+      error: () => {
+        this.isSubmittingFeedback.set(false);
+        this.feedbackModal()?.resetState();
+        this.finalizeSession();
+      }
+    });
+  }
+  finalizeSession() {
+    this.isFeedbackModalOpen.set(false);
     this.assistantService.resetConversation();
     this.messages.set([]);
   }
   static \u0275fac = function AssistantComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _AssistantComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AssistantComponent, selectors: [["app-assistant"]], decls: 5, vars: 5, consts: [[1, "w-full", "h-dvh", "flex", "flex-col", "bg-white", "overflow-hidden"], [1, "shrink-0", 3, "resetConversation", "hasMessages"], [1, "flex-1", "min-h-0", "flex", "flex-col", "overflow-hidden", 3, "selectPrompt", "messages", "isLoading"], [1, "shrink-0"], [1, "shrink-0", 3, "send", "disabled"], [1, "shrink-0", 3, "selectSuggestion"]], template: function AssistantComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AssistantComponent, selectors: [["app-assistant"]], viewQuery: function AssistantComponent_Query(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "div", 0)(1, "app-chat-header", 1);
-      \u0275\u0275listener("resetConversation", function AssistantComponent_Template_app_chat_header_resetConversation_1_listener() {
-        return ctx.resetConversation();
+      \u0275\u0275viewQuerySignal(ctx.feedbackModal, _c02, 5);
+    }
+    if (rf & 2) {
+      \u0275\u0275queryAdvance();
+    }
+  }, decls: 7, vars: 7, consts: [["feedbackModal", ""], [1, "w-full", "h-dvh", "flex", "flex-col", "bg-white", "overflow-hidden"], [1, "shrink-0", 3, "closeConversation", "hasMessages"], [1, "flex-1", "min-h-0", "flex", "flex-col", "overflow-hidden", 3, "selectPrompt", "messages", "isLoading"], [1, "shrink-0"], [1, "shrink-0", 3, "send", "disabled"], [3, "cancel", "skipAndClose", "submitFeedback", "isOpen", "isSubmitting"], [1, "shrink-0", 3, "selectSuggestion"]], template: function AssistantComponent_Template(rf, ctx) {
+    if (rf & 1) {
+      \u0275\u0275elementStart(0, "div", 1)(1, "app-chat-header", 2);
+      \u0275\u0275listener("closeConversation", function AssistantComponent_Template_app_chat_header_closeConversation_1_listener() {
+        return ctx.openFeedbackModal();
       });
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(2, "app-chat-messages", 2);
+      \u0275\u0275elementStart(2, "app-chat-messages", 3);
       \u0275\u0275listener("selectPrompt", function AssistantComponent_Template_app_chat_messages_selectPrompt_2_listener($event) {
         return ctx.sendMessage($event);
       });
       \u0275\u0275elementEnd();
-      \u0275\u0275conditionalCreate(3, AssistantComponent_Conditional_3_Template, 1, 0, "app-chat-suggestions", 3);
-      \u0275\u0275elementStart(4, "app-chat-input", 4);
+      \u0275\u0275conditionalCreate(3, AssistantComponent_Conditional_3_Template, 1, 0, "app-chat-suggestions", 4);
+      \u0275\u0275elementStart(4, "app-chat-input", 5);
       \u0275\u0275listener("send", function AssistantComponent_Template_app_chat_input_send_4_listener($event) {
         return ctx.sendMessage($event);
+      });
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(5, "app-chat-feedback-modal", 6, 0);
+      \u0275\u0275listener("cancel", function AssistantComponent_Template_app_chat_feedback_modal_cancel_5_listener() {
+        return ctx.closeFeedbackModal();
+      })("skipAndClose", function AssistantComponent_Template_app_chat_feedback_modal_skipAndClose_5_listener() {
+        return ctx.finalizeSession();
+      })("submitFeedback", function AssistantComponent_Template_app_chat_feedback_modal_submitFeedback_5_listener($event) {
+        return ctx.onSubmitFeedback($event);
       });
       \u0275\u0275elementEnd()();
     }
@@ -4521,66 +4801,31 @@ var AssistantComponent = class _AssistantComponent {
       \u0275\u0275conditional(ctx.hasMessages() ? 3 : -1);
       \u0275\u0275advance();
       \u0275\u0275property("disabled", ctx.isLoading());
+      \u0275\u0275advance();
+      \u0275\u0275property("isOpen", ctx.isFeedbackModalOpen())("isSubmitting", ctx.isSubmittingFeedback());
     }
   }, dependencies: [
     ChatHeaderComponent,
     ChatMessagesComponent,
     ChatSuggestionsComponent,
-    ChatInputComponent
-  ], encapsulation: 2, changeDetection: 0 });
+    ChatInputComponent,
+    ChatFeedbackModalComponent
+  ], styles: ["\n[_nghost-%COMP%] {\n  display: block;\n}"], changeDetection: 0 });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(AssistantComponent, [{
     type: Component,
-    args: [{
-      selector: "app-assistant",
-      changeDetection: ChangeDetectionStrategy.OnPush,
-      imports: [
-        ChatHeaderComponent,
-        ChatMessagesComponent,
-        ChatSuggestionsComponent,
-        ChatInputComponent
-      ],
-      template: `
-    <div class="w-full h-dvh flex flex-col bg-white overflow-hidden">
-      
-      <!-- Cabecera Superior Institucional (#0050A1 + #BE002E) -->
-      <app-chat-header 
-        class="shrink-0"
-        [hasMessages]="hasMessages()"
-        (resetConversation)="resetConversation()" 
-      />
-
-      <!-- \xC1rea Principal sobre Blanco (Pantalla de Bienvenida + Hilo de Conversaci\xF3n) -->
-      <app-chat-messages 
-        class="flex-1 min-h-0 flex flex-col overflow-hidden"
-        [messages]="messages()" 
-        [isLoading]="isLoading()"
-        (selectPrompt)="sendMessage($event)"
-      />
-
-      <!-- Chips de Sugerencias R\xE1pidas (visibles durante la conversaci\xF3n) -->
-      @if (hasMessages()) {
-        <app-chat-suggestions 
-          class="shrink-0"
-          (selectSuggestion)="sendMessage($event)" 
-        />
-      }
-
-      <!-- Barra de Entrada Inferior -->
-      <app-chat-input 
-        class="shrink-0"
-        [disabled]="isLoading()" 
-        (send)="sendMessage($event)" 
-      />
-
-    </div>
-  `
-    }]
-  }], null, null);
+    args: [{ selector: "app-assistant", changeDetection: ChangeDetectionStrategy.OnPush, imports: [
+      ChatHeaderComponent,
+      ChatMessagesComponent,
+      ChatSuggestionsComponent,
+      ChatInputComponent,
+      ChatFeedbackModalComponent
+    ], template: '<div class="w-full h-dvh flex flex-col bg-white overflow-hidden">\n  \n  <!-- Cabecera Superior Institucional (#0050A1 + #BE002E) -->\n  <app-chat-header \n    class="shrink-0"\n    [hasMessages]="hasMessages()"\n    (closeConversation)="openFeedbackModal()" \n  />\n\n  <!-- \xC1rea Principal sobre Blanco (Pantalla de Bienvenida + Hilo de Conversaci\xF3n) -->\n  <app-chat-messages \n    class="flex-1 min-h-0 flex flex-col overflow-hidden"\n    [messages]="messages()" \n    [isLoading]="isLoading()"\n    (selectPrompt)="sendMessage($event)"\n  />\n\n  <!-- Chips de Sugerencias R\xE1pidas (visibles durante la conversaci\xF3n) -->\n  @if (hasMessages()) {\n    <app-chat-suggestions \n      class="shrink-0"\n      (selectSuggestion)="sendMessage($event)" \n    />\n  }\n\n  <!-- Barra de Entrada Inferior -->\n  <app-chat-input \n    class="shrink-0"\n    [disabled]="isLoading()" \n    (send)="sendMessage($event)" \n  />\n\n  <!-- Popup de Satisfacci\xF3n al Cerrar Conversaci\xF3n -->\n  <app-chat-feedback-modal\n    #feedbackModal\n    [isOpen]="isFeedbackModalOpen()"\n    [isSubmitting]="isSubmittingFeedback()"\n    (cancel)="closeFeedbackModal()"\n    (skipAndClose)="finalizeSession()"\n    (submitFeedback)="onSubmitFeedback($event)"\n  />\n\n</div>\n', styles: ["/* src/app/features/assistant/assistant.component.css */\n:host {\n  display: block;\n}\n"] }]
+  }], null, { feedbackModal: [{ type: ViewChild, args: ["feedbackModal", { isSignal: true }] }] });
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(AssistantComponent, { className: "AssistantComponent", filePath: "src/app/features/assistant/assistant.component.ts", lineNumber: 54 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(AssistantComponent, { className: "AssistantComponent", filePath: "src/app/features/assistant/assistant.component.ts", lineNumber: 23 });
 })();
 export {
   AssistantComponent

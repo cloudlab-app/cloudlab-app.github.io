@@ -116,7 +116,7 @@ import {
   ɵɵloadQuery,
   ɵɵqueryRefresh,
   ɵɵsanitizeUrlOrResourceUrl
-} from "./chunk-OMSE2WG5.js";
+} from "./chunk-YAFNTJHC.js";
 
 // node_modules/@angular/router/fesm2022/_router-chunk.mjs
 var PRIMARY_OUTLET = "primary";
@@ -5906,6 +5906,14 @@ var BackofficeService = class _BackofficeService {
    */
   listarDocumentos() {
     return this.http.get(`${this.baseUrl}/rag/documentos`, {
+      headers: this.getAdminHeaders()
+    }).pipe(catchError((err) => this.handleError(err)));
+  }
+  /**
+   * Obtiene el listado de feedback de satisfacción y métricas CSAT
+   */
+  listarFeedback() {
+    return this.http.get(`${this.baseUrl}/rag/feedback`, {
       headers: this.getAdminHeaders()
     }).pipe(catchError((err) => this.handleError(err)));
   }
