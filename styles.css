@@ -1680,6 +1680,12 @@
   .selection\:bg-\[\#0050A1\]\/15::selection {
     background-color: color-mix(in oklab, #0050A1 15%, transparent);
   }
+  .selection\:bg-white ::selection {
+    background-color: var(--color-white);
+  }
+  .selection\:bg-white::selection {
+    background-color: var(--color-white);
+  }
   .selection\:text-\[\#0050A1\] ::selection {
     color: #0050A1;
   }
@@ -2004,6 +2010,13 @@
       padding-inline: calc(var(--spacing) * 8);
     }
   }
+}
+.user-bubble::selection,
+.user-bubble *::selection,
+.cbb-header::selection,
+.cbb-header *::selection {
+  background-color: #ffffff;
+  color: #0050A1;
 }
 body {
   font-family: "Poppins", sans-serif;

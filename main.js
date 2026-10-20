@@ -32,7 +32,7 @@ var adminAuthGuard = () => {
 var routes = [
   {
     path: "",
-    loadComponent: () => import("./chunk-EAWSVTO3.js").then((m) => m.AssistantComponent)
+    loadComponent: () => import("./chunk-POIMREXC.js").then((m) => m.AssistantComponent)
   },
   {
     path: "backoffice/login",
