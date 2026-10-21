@@ -32006,6 +32006,7 @@ export {
   IS_ENABLED_BLOCKING_INITIAL_NAVIGATION,
   ɵɵsanitizeHtml,
   ɵɵsanitizeUrlOrResourceUrl,
+  ɵɵresolveWindow,
   ɵɵadvance,
   performanceMarkFeature,
   afterNextRender,

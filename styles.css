@@ -470,6 +470,9 @@
   .mb-8 {
     margin-bottom: calc(var(--spacing) * 8);
   }
+  .ml-auto {
+    margin-left: auto;
+  }
   .line-clamp-2 {
     overflow: hidden;
     display: -webkit-box;
@@ -536,8 +539,8 @@
   .h-16 {
     height: calc(var(--spacing) * 16);
   }
-  .h-18 {
-    height: calc(var(--spacing) * 18);
+  .h-20 {
+    height: calc(var(--spacing) * 20);
   }
   .h-96 {
     height: calc(var(--spacing) * 96);
@@ -590,8 +593,8 @@
   .w-16 {
     width: calc(var(--spacing) * 16);
   }
-  .w-18 {
-    width: calc(var(--spacing) * 18);
+  .w-20 {
+    width: calc(var(--spacing) * 20);
   }
   .w-96 {
     width: calc(var(--spacing) * 96);
@@ -1711,11 +1714,11 @@
     .hover\:border-\[\#0050A1\]:hover {
       border-color: #0050A1;
     }
+    .hover\:border-\[\#0050A1\]\/30:hover {
+      border-color: color-mix(in oklab, #0050A1 30%, transparent);
+    }
     .hover\:border-\[\#BE002E\]:hover {
       border-color: #BE002E;
-    }
-    .hover\:border-\[\#BE002E\]\/40:hover {
-      border-color: color-mix(in oklab, #BE002E 40%, transparent);
     }
     .hover\:border-\[\#b00725\]:hover {
       border-color: #b00725;
@@ -1735,11 +1738,11 @@
     .hover\:bg-\[\#9e0026\]:hover {
       background-color: #9e0026;
     }
+    .hover\:bg-\[\#0050A1\]\/10:hover {
+      background-color: color-mix(in oklab, #0050A1 10%, transparent);
+    }
     .hover\:bg-\[\#92061e\]:hover {
       background-color: #92061e;
-    }
-    .hover\:bg-\[\#BE002E\]\/10:hover {
-      background-color: color-mix(in oklab, #BE002E 10%, transparent);
     }
     .hover\:bg-red-50:hover {
       background-color: var(--color-red-50);
@@ -1788,9 +1791,6 @@
     }
     .hover\:text-\[\#0050A1\]:hover {
       color: #0050A1;
-    }
-    .hover\:text-\[\#BE002E\]:hover {
-      color: #BE002E;
     }
     .hover\:text-\[\#b00725\]:hover {
       color: #b00725;
@@ -1885,14 +1885,14 @@
     .sm\:h-18 {
       height: calc(var(--spacing) * 18);
     }
-    .sm\:h-22 {
-      height: calc(var(--spacing) * 22);
+    .sm\:h-24 {
+      height: calc(var(--spacing) * 24);
     }
     .sm\:w-11 {
       width: calc(var(--spacing) * 11);
     }
-    .sm\:w-22 {
-      width: calc(var(--spacing) * 22);
+    .sm\:w-24 {
+      width: calc(var(--spacing) * 24);
     }
     .sm\:w-full {
       width: 100%;

@@ -3,6 +3,7 @@ import {
   Component,
   DatePipe,
   DomSanitizer,
+  HostListener,
   HttpClient,
   Injectable,
   Input,
@@ -53,13 +54,14 @@ import {
   ɵɵrepeater,
   ɵɵrepeaterCreate,
   ɵɵresetView,
+  ɵɵresolveWindow,
   ɵɵrestoreView,
   ɵɵsanitizeHtml,
   ɵɵtext,
   ɵɵtextInterpolate,
   ɵɵtextInterpolate1,
   ɵɵviewQuerySignal
-} from "./chunk-YAFNTJHC.js";
+} from "./chunk-JIODWWMR.js";
 
 // src/app/core/services/session.service.ts
 var SessionService = class _SessionService {
@@ -186,7 +188,7 @@ var ChatHeaderComponent = class _ChatHeaderComponent {
       \u0275\u0275domElement(13, "span", 11)(14, "span", 12);
       \u0275\u0275domElementEnd();
       \u0275\u0275domElementStart(15, "span", 13);
-      \u0275\u0275text(16, " Atenci\xF3n en l\xEDnea 24/7 \u2022 Orientaci\xF3n al ciudadano ");
+      \u0275\u0275text(16, " Atenci\xF3n en l\xEDnea 24/7 \u2022 Comunidad educativa CBB ");
       \u0275\u0275domElementEnd()()()();
       \u0275\u0275domElementStart(17, "div", 14);
       \u0275\u0275conditionalCreate(18, ChatHeaderComponent_Conditional_18_Template, 5, 0, "button", 15);
@@ -201,7 +203,7 @@ var ChatHeaderComponent = class _ChatHeaderComponent {
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ChatHeaderComponent, [{
     type: Component,
-    args: [{ selector: "app-chat-header", changeDetection: ChangeDetectionStrategy.OnPush, template: '<header class="cbb-header shrink-0 bg-[#0050A1] text-white selection:bg-white selection:text-[#0050A1] border-b-4 border-[#BE002E] shadow-md z-20">\n  <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 sm:h-18 flex items-center justify-between gap-3">\n    \n    <!-- Identidad Institucional CBB -->\n    <div class="flex items-center gap-3.5 min-w-0">\n      <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-white p-1.5 flex items-center justify-center shadow-md shrink-0">\n        <img \n          src="cropped-Favicon-3-1-32x32.png" \n          alt="Logo Colegio Bertolt Brecht" \n          class="w-full h-full object-contain"\n        />\n      </div>\n      <div class="min-w-0">\n        <div class="flex items-center gap-2.5">\n          <h1 class="font-extrabold text-white text-base sm:text-lg leading-tight tracking-tight truncate">\n            Colegio Bertolt Brecht\n          </h1>\n          <span class="hidden md:inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-extrabold bg-[#BE002E] text-white uppercase tracking-wider shadow-2xs">\n            Asistente Oficial\n          </span>\n        </div>\n        <div class="flex items-center gap-1.5 mt-0.5">\n          <span class="relative flex h-2 w-2">\n            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-300 opacity-75"></span>\n            <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>\n          </span>\n          <span class="text-xs text-blue-100 font-medium truncate">\n            Atenci\xF3n en l\xEDnea 24/7 \u2022 Orientaci\xF3n al ciudadano\n          </span>\n        </div>\n      </div>\n    </div>\n\n    <!-- Acciones de Cabecera -->\n    <div class="flex items-center gap-2 shrink-0">\n      @if (hasMessages()) {\n        <button\n          type="button"\n          (click)="closeConversation.emit()"\n          title="Finalizar y calificar conversaci\xF3n"\n          class="inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2 rounded-xl bg-[#BE002E] hover:bg-[#9e0026] text-white text-xs font-bold shadow-sm transition-all transform active:scale-95 cursor-pointer">\n          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">\n            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />\n          </svg>\n          <span>Cerrar conversaci\xF3n</span>\n        </button>\n      }\n    </div>\n\n  </div>\n</header>\n', styles: ["/* src/app/features/assistant/components/chat-header/chat-header.component.css */\n:host {\n  display: block;\n}\n"] }]
+    args: [{ selector: "app-chat-header", changeDetection: ChangeDetectionStrategy.OnPush, template: '<header class="cbb-header shrink-0 bg-[#0050A1] text-white selection:bg-white selection:text-[#0050A1] border-b-4 border-[#BE002E] shadow-md z-20">\n  <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 sm:h-18 flex items-center justify-between gap-3">\n    \n    <!-- Identidad Institucional CBB -->\n    <div class="flex items-center gap-3.5 min-w-0">\n      <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-white p-1.5 flex items-center justify-center shadow-md shrink-0">\n        <img \n          src="cropped-Favicon-3-1-32x32.png" \n          alt="Logo Colegio Bertolt Brecht" \n          class="w-full h-full object-contain"\n        />\n      </div>\n      <div class="min-w-0">\n        <div class="flex items-center gap-2.5">\n          <h1 class="font-extrabold text-white text-base sm:text-lg leading-tight tracking-tight truncate">\n            Colegio Bertolt Brecht\n          </h1>\n          <span class="hidden md:inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-extrabold bg-[#BE002E] text-white uppercase tracking-wider shadow-2xs">\n            Asistente Oficial\n          </span>\n        </div>\n        <div class="flex items-center gap-1.5 mt-0.5">\n          <span class="relative flex h-2 w-2">\n            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-300 opacity-75"></span>\n            <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>\n          </span>\n          <span class="text-xs text-blue-100 font-medium truncate">\n            Atenci\xF3n en l\xEDnea 24/7 \u2022 Comunidad educativa CBB\n          </span>\n        </div>\n      </div>\n    </div>\n\n    <!-- Acciones de Cabecera -->\n    <div class="flex items-center gap-2 shrink-0">\n      @if (hasMessages()) {\n        <button\n          type="button"\n          (click)="closeConversation.emit()"\n          title="Finalizar y calificar conversaci\xF3n"\n          class="inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2 rounded-xl bg-[#BE002E] hover:bg-[#9e0026] text-white text-xs font-bold shadow-sm transition-all transform active:scale-95 cursor-pointer">\n          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">\n            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />\n          </svg>\n          <span>Cerrar conversaci\xF3n</span>\n        </button>\n      }\n    </div>\n\n  </div>\n</header>\n', styles: ["/* src/app/features/assistant/components/chat-header/chat-header.component.css */\n:host {\n  display: block;\n}\n"] }]
   }], null, { hasMessages: [{ type: Input, args: [{ isSignal: true, alias: "hasMessages", required: false }] }], closeConversation: [{ type: Output, args: ["closeConversation"] }] });
 })();
 (() => {
@@ -3954,7 +3956,7 @@ var ChatMessagesComponent = class _ChatMessagesComponent {
     if (rf & 2) {
       \u0275\u0275queryAdvance();
     }
-  }, inputs: { messages: [1, "messages"], isLoading: [1, "isLoading"] }, outputs: { selectPrompt: "selectPrompt" }, decls: 5, vars: 1, consts: [["scrollContainer", ""], [1, "flex-1", "min-h-0", "overflow-y-auto", "chat-scroll", "px-4", "sm:px-6", "py-6", "sm:py-8", "bg-white"], [1, "max-w-3xl", "mx-auto", "w-full", "h-full", "flex", "flex-col"], [1, "my-auto", "py-4", "sm:py-8", "flex", "flex-col", "items-center", "text-center", "animate-in", "fade-in", "duration-300"], [1, "flex-1", "space-y-2", "pb-4"], [1, "w-18", "h-18", "sm:w-22", "sm:h-22", "rounded-3xl", "bg-white", "p-3", "flex", "items-center", "justify-center", "shadow-lg", "border-2", "border-[#0050A1]/15", "ring-4", "ring-[#BE002E]/10", "mb-5"], ["src", "cropped-Favicon-3-1-32x32.png", "alt", "Colegio Bertolt Brecht", 1, "w-full", "h-full", "object-contain"], [1, "inline-flex", "items-center", "gap-2", "px-3.5", "py-1", "rounded-full", "bg-[#BE002E]/10", "border", "border-[#BE002E]/25", "text-[#BE002E]", "text-xs", "font-extrabold", "uppercase", "tracking-wide", "mb-3"], [1, "text-2xl", "sm:text-3xl", "md:text-4xl", "font-black", "text-[#0050A1]", "tracking-tight", "mb-3"], [1, "text-slate-600", "text-sm", "sm:text-base", "max-w-xl", "mb-8", "leading-relaxed"], [1, "grid", "grid-cols-1", "sm:grid-cols-2", "lg:grid-cols-3", "gap-3.5", "w-full", "text-left"], ["type", "button", 3, "class"], ["type", "button", 3, "click"], [1, "pt-1"], [1, "flex", "items-center", "justify-between", "mb-2.5"], [1, "text-xs", "text-slate-500", "mt-1", "line-clamp-2", "leading-relaxed"], [3, "message"], [1, "flex", "items-start", "gap-3", "sm:gap-4", "max-w-[85%]", "mb-4", "animate-in", "fade-in", "duration-150"], [1, "w-9", "h-9", "rounded-xl", "bg-white", "border", "border-slate-200", "p-1.5", "flex", "items-center", "justify-center", "shrink-0", "shadow-xs"], ["src", "cropped-Favicon-3-1-32x32.png", "alt", "CBB", 1, "w-full", "h-full", "object-contain"], [1, "px-5", "py-4", "rounded-2xl", "rounded-tl-xs", "bg-white", "border", "border-slate-200", "shadow-2xs", "flex", "items-center", "gap-2.5"], [1, "flex", "items-center", "gap-1.5"], [1, "w-2", "h-2", "rounded-full", "bg-[#BE002E]", "animate-bounce", "[animation-delay:-0.3s]"], [1, "w-2", "h-2", "rounded-full", "bg-[#0050A1]", "animate-bounce", "[animation-delay:-0.15s]"], [1, "w-2", "h-2", "rounded-full", "bg-[#BE002E]", "animate-bounce"], [1, "text-xs", "text-[#0050A1]", "font-semibold"]], template: function ChatMessagesComponent_Template(rf, ctx) {
+  }, inputs: { messages: [1, "messages"], isLoading: [1, "isLoading"] }, outputs: { selectPrompt: "selectPrompt" }, decls: 5, vars: 1, consts: [["scrollContainer", ""], [1, "flex-1", "min-h-0", "overflow-y-auto", "chat-scroll", "px-4", "sm:px-6", "py-6", "sm:py-8", "bg-white"], [1, "max-w-3xl", "mx-auto", "w-full", "h-full", "flex", "flex-col"], [1, "my-auto", "py-4", "sm:py-8", "flex", "flex-col", "items-center", "text-center", "animate-in", "fade-in", "duration-300"], [1, "flex-1", "space-y-2", "pb-4"], [1, "w-20", "h-20", "sm:w-24", "sm:h-24", "rounded-3xl", "bg-white", "p-3", "flex", "items-center", "justify-center", "shadow-lg", "border-2", "border-[#0050A1]/15", "ring-4", "ring-[#BE002E]/10", "mb-5"], ["src", "cropped-Favicon-3-1-192x192.png", "alt", "Colegio Bertolt Brecht", 1, "w-full", "h-full", "object-contain"], [1, "inline-flex", "items-center", "gap-2", "px-3.5", "py-1", "rounded-full", "bg-[#BE002E]/10", "border", "border-[#BE002E]/25", "text-[#BE002E]", "text-xs", "font-extrabold", "uppercase", "tracking-wide", "mb-3"], [1, "text-2xl", "sm:text-3xl", "md:text-4xl", "font-black", "text-[#0050A1]", "tracking-tight", "mb-3"], [1, "text-slate-600", "text-sm", "sm:text-base", "max-w-xl", "mb-8", "leading-relaxed"], [1, "grid", "grid-cols-1", "sm:grid-cols-2", "lg:grid-cols-3", "gap-3.5", "w-full", "text-left"], ["type", "button", 3, "class"], ["type", "button", 3, "click"], [1, "pt-1"], [1, "flex", "items-center", "justify-between", "mb-2.5"], [1, "text-xs", "text-slate-500", "mt-1", "line-clamp-2", "leading-relaxed"], [3, "message"], [1, "flex", "items-start", "gap-3", "sm:gap-4", "max-w-[85%]", "mb-4", "animate-in", "fade-in", "duration-150"], [1, "w-9", "h-9", "rounded-xl", "bg-white", "border", "border-slate-200", "p-1.5", "flex", "items-center", "justify-center", "shrink-0", "shadow-xs"], ["src", "cropped-Favicon-3-1-32x32.png", "alt", "CBB", 1, "w-full", "h-full", "object-contain"], [1, "px-5", "py-4", "rounded-2xl", "rounded-tl-xs", "bg-white", "border", "border-slate-200", "shadow-2xs", "flex", "items-center", "gap-2.5"], [1, "flex", "items-center", "gap-1.5"], [1, "w-2", "h-2", "rounded-full", "bg-[#BE002E]", "animate-bounce", "[animation-delay:-0.3s]"], [1, "w-2", "h-2", "rounded-full", "bg-[#0050A1]", "animate-bounce", "[animation-delay:-0.15s]"], [1, "w-2", "h-2", "rounded-full", "bg-[#BE002E]", "animate-bounce"], [1, "text-xs", "text-[#0050A1]", "font-semibold"]], template: function ChatMessagesComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "div", 1, 0)(2, "div", 2);
       \u0275\u0275conditionalCreate(3, ChatMessagesComponent_Conditional_3_Template, 13, 0, "div", 3)(4, ChatMessagesComponent_Conditional_4_Template, 4, 1, "div", 4);
@@ -3979,8 +3981,8 @@ var ChatMessagesComponent = class _ChatMessagesComponent {
 
       <!-- \xCDcono Oficial del Colegio -->
       <div
-        class="w-18 h-18 sm:w-22 sm:h-22 rounded-3xl bg-white p-3 flex items-center justify-center shadow-lg border-2 border-[#0050A1]/15 ring-4 ring-[#BE002E]/10 mb-5">
-        <img src="cropped-Favicon-3-1-32x32.png" alt="Colegio Bertolt Brecht" class="w-full h-full object-contain" />
+        class="w-20 h-20 sm:w-24 sm:h-24 rounded-3xl bg-white p-3 flex items-center justify-center shadow-lg border-2 border-[#0050A1]/15 ring-4 ring-[#BE002E]/10 mb-5">
+        <img src="cropped-Favicon-3-1-192x192.png" alt="Colegio Bertolt Brecht" class="w-full h-full object-contain" />
       </div>
 
       <div
@@ -4090,7 +4092,7 @@ var _forTrack02 = ($index, $item) => $item.prompt;
 function ChatSuggestionsComponent_For_5_Template(rf, ctx) {
   if (rf & 1) {
     const _r1 = \u0275\u0275getCurrentView();
-    \u0275\u0275domElementStart(0, "button", 4);
+    \u0275\u0275domElementStart(0, "button", 7);
     \u0275\u0275domListener("click", function ChatSuggestionsComponent_For_5_Template_button_click_0_listener() {
       const item_r2 = \u0275\u0275restoreView(_r1).$implicit;
       const ctx_r2 = \u0275\u0275nextContext();
@@ -4113,6 +4115,7 @@ function ChatSuggestionsComponent_For_5_Template(rf, ctx) {
 }
 var ChatSuggestionsComponent = class _ChatSuggestionsComponent {
   selectSuggestion = output();
+  closeConversation = output();
   suggestions = [
     {
       icon: "\u{1F393}",
@@ -4148,13 +4151,24 @@ var ChatSuggestionsComponent = class _ChatSuggestionsComponent {
   static \u0275fac = function ChatSuggestionsComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _ChatSuggestionsComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ChatSuggestionsComponent, selectors: [["app-chat-suggestions"]], outputs: { selectSuggestion: "selectSuggestion" }, decls: 6, vars: 0, consts: [[1, "w-full", "px-4", "sm:px-6", "pt-2", "pb-1", "bg-white"], [1, "max-w-3xl", "mx-auto", "flex", "items-center", "gap-2", "overflow-x-auto", "pb-1", "scrollbar-thin"], [1, "text-[11px]", "font-extrabold", "text-[#0050A1]", "uppercase", "tracking-wider", "shrink-0"], ["type", "button", 1, "shrink-0", "inline-flex", "items-center", "gap-1.5", "px-3", "py-1.5", "rounded-full", "bg-white", "hover:bg-[#BE002E]/10", "text-slate-700", "hover:text-[#BE002E]", "text-xs", "font-semibold", "border", "border-slate-200", "hover:border-[#BE002E]/40", "transition-all", "shadow-2xs", "cursor-pointer"], ["type", "button", 1, "shrink-0", "inline-flex", "items-center", "gap-1.5", "px-3", "py-1.5", "rounded-full", "bg-white", "hover:bg-[#BE002E]/10", "text-slate-700", "hover:text-[#BE002E]", "text-xs", "font-semibold", "border", "border-slate-200", "hover:border-[#BE002E]/40", "transition-all", "shadow-2xs", "cursor-pointer", 3, "click"]], template: function ChatSuggestionsComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ChatSuggestionsComponent, selectors: [["app-chat-suggestions"]], outputs: { selectSuggestion: "selectSuggestion", closeConversation: "closeConversation" }, decls: 11, vars: 0, consts: [[1, "w-full", "px-4", "sm:px-6", "pt-2", "pb-1", "bg-white", "border-t", "border-slate-100"], [1, "max-w-3xl", "mx-auto", "flex", "items-center", "gap-2", "overflow-x-auto", "pb-1", "scrollbar-thin"], [1, "text-[11px]", "font-extrabold", "text-[#0050A1]", "uppercase", "tracking-wider", "shrink-0"], ["type", "button", 1, "shrink-0", "inline-flex", "items-center", "gap-1.5", "px-3", "py-1.5", "rounded-full", "bg-white", "hover:bg-[#0050A1]/10", "text-slate-700", "hover:text-[#0050A1]", "text-xs", "font-semibold", "border", "border-slate-200", "hover:border-[#0050A1]/30", "transition-all", "shadow-2xs", "cursor-pointer"], ["type", "button", "title", "Finalizar atenci\xF3n y calificar el servicio", 1, "shrink-0", "inline-flex", "items-center", "gap-1.5", "px-3.5", "py-1.5", "rounded-full", "bg-[#BE002E]", "hover:bg-[#9e0026]", "text-white", "text-xs", "font-bold", "shadow-2xs", "transition-all", "cursor-pointer", "ml-auto", 3, "click"], ["fill", "none", "stroke", "currentColor", "viewBox", "0 0 24 24", 1, "w-3.5", "h-3.5"], ["stroke-linecap", "round", "stroke-linejoin", "round", "stroke-width", "2.5", "d", "M5 13l4 4L19 7"], ["type", "button", 1, "shrink-0", "inline-flex", "items-center", "gap-1.5", "px-3", "py-1.5", "rounded-full", "bg-white", "hover:bg-[#0050A1]/10", "text-slate-700", "hover:text-[#0050A1]", "text-xs", "font-semibold", "border", "border-slate-200", "hover:border-[#0050A1]/30", "transition-all", "shadow-2xs", "cursor-pointer", 3, "click"]], template: function ChatSuggestionsComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275domElementStart(0, "div", 0)(1, "div", 1)(2, "span", 2);
-      \u0275\u0275text(3, " Consultas r\xE1pidas: ");
+      \u0275\u0275text(3, " Sugerencias: ");
       \u0275\u0275domElementEnd();
       \u0275\u0275repeaterCreate(4, ChatSuggestionsComponent_For_5_Template, 5, 2, "button", 3, _forTrack02);
-      \u0275\u0275domElementEnd()();
+      \u0275\u0275domElementStart(6, "button", 4);
+      \u0275\u0275domListener("click", function ChatSuggestionsComponent_Template_button_click_6_listener() {
+        return ctx.closeConversation.emit();
+      });
+      \u0275\u0275namespaceSVG();
+      \u0275\u0275domElementStart(7, "svg", 5);
+      \u0275\u0275domElement(8, "path", 6);
+      \u0275\u0275domElementEnd();
+      \u0275\u0275namespaceHTML();
+      \u0275\u0275domElementStart(9, "span");
+      \u0275\u0275text(10, "Terminar y calificar");
+      \u0275\u0275domElementEnd()()()();
     }
     if (rf & 2) {
       \u0275\u0275advance(4);
@@ -4165,8 +4179,8 @@ var ChatSuggestionsComponent = class _ChatSuggestionsComponent {
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ChatSuggestionsComponent, [{
     type: Component,
-    args: [{ selector: "app-chat-suggestions", changeDetection: ChangeDetectionStrategy.OnPush, template: '<div class="w-full px-4 sm:px-6 pt-2 pb-1 bg-white">\n  <div class="max-w-3xl mx-auto flex items-center gap-2 overflow-x-auto pb-1 scrollbar-thin">\n    <span class="text-[11px] font-extrabold text-[#0050A1] uppercase tracking-wider shrink-0">\n      Consultas r\xE1pidas:\n    </span>\n    @for (item of suggestions; track item.prompt) {\n      <button\n        type="button"\n        (click)="selectSuggestion.emit(item.prompt)"\n        class="shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white hover:bg-[#BE002E]/10 text-slate-700 hover:text-[#BE002E] text-xs font-semibold border border-slate-200 hover:border-[#BE002E]/40 transition-all shadow-2xs cursor-pointer">\n        <span>{{ item.icon }}</span>\n        <span>{{ item.label }}</span>\n      </button>\n    }\n  </div>\n</div>\n', styles: ["/* src/app/features/assistant/components/chat-suggestions/chat-suggestions.component.css */\n:host {\n  display: block;\n}\n"] }]
-  }], null, { selectSuggestion: [{ type: Output, args: ["selectSuggestion"] }] });
+    args: [{ selector: "app-chat-suggestions", changeDetection: ChangeDetectionStrategy.OnPush, template: '<div class="w-full px-4 sm:px-6 pt-2 pb-1 bg-white border-t border-slate-100">\n  <div class="max-w-3xl mx-auto flex items-center gap-2 overflow-x-auto pb-1 scrollbar-thin">\n    <span class="text-[11px] font-extrabold text-[#0050A1] uppercase tracking-wider shrink-0">\n      Sugerencias:\n    </span>\n    @for (item of suggestions; track item.prompt) {\n      <button\n        type="button"\n        (click)="selectSuggestion.emit(item.prompt)"\n        class="shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white hover:bg-[#0050A1]/10 text-slate-700 hover:text-[#0050A1] text-xs font-semibold border border-slate-200 hover:border-[#0050A1]/30 transition-all shadow-2xs cursor-pointer">\n        <span>{{ item.icon }}</span>\n        <span>{{ item.label }}</span>\n      </button>\n    }\n    <button\n      type="button"\n      (click)="closeConversation.emit()"\n      title="Finalizar atenci\xF3n y calificar el servicio"\n      class="shrink-0 inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#BE002E] hover:bg-[#9e0026] text-white text-xs font-bold shadow-2xs transition-all cursor-pointer ml-auto">\n      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">\n        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />\n      </svg>\n      <span>Terminar y calificar</span>\n    </button>\n  </div>\n</div>', styles: ["/* src/app/features/assistant/components/chat-suggestions/chat-suggestions.component.css */\n:host {\n  display: block;\n}\n"] }]
+  }], null, { selectSuggestion: [{ type: Output, args: ["selectSuggestion"] }], closeConversation: [{ type: Output, args: ["closeConversation"] }] });
 })();
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ChatSuggestionsComponent, { className: "ChatSuggestionsComponent", filePath: "src/app/features/assistant/components/chat-suggestions/chat-suggestions.component.ts", lineNumber: 10 });
@@ -4654,6 +4668,10 @@ function AssistantComponent_Conditional_3_Template(rf, ctx) {
       \u0275\u0275restoreView(_r1);
       const ctx_r1 = \u0275\u0275nextContext();
       return \u0275\u0275resetView(ctx_r1.sendMessage($event));
+    })("closeConversation", function AssistantComponent_Conditional_3_Template_app_chat_suggestions_closeConversation_0_listener() {
+      \u0275\u0275restoreView(_r1);
+      const ctx_r1 = \u0275\u0275nextContext();
+      return \u0275\u0275resetView(ctx_r1.openFeedbackModal());
     });
     \u0275\u0275elementEnd();
   }
@@ -4684,6 +4702,19 @@ var AssistantComponent = class _AssistantComponent {
     /* istanbul ignore next */
     []
   ));
+  ngOnInit() {
+    if (typeof window !== "undefined" && window.history) {
+      window.history.pushState({ cbbChat: true }, "");
+    }
+  }
+  ngOnDestroy() {
+  }
+  onPopState(event) {
+    if (this.hasMessages() && !this.isFeedbackModalOpen()) {
+      window.history.pushState({ cbbChat: true }, "");
+      this.openFeedbackModal();
+    }
+  }
   sendMessage(text2) {
     if (!text2.trim() || this.isLoading())
       return;
@@ -4764,7 +4795,13 @@ var AssistantComponent = class _AssistantComponent {
     if (rf & 2) {
       \u0275\u0275queryAdvance();
     }
-  }, decls: 7, vars: 7, consts: [["feedbackModal", ""], [1, "w-full", "h-dvh", "flex", "flex-col", "bg-white", "overflow-hidden"], [1, "shrink-0", 3, "closeConversation", "hasMessages"], [1, "flex-1", "min-h-0", "flex", "flex-col", "overflow-hidden", 3, "selectPrompt", "messages", "isLoading"], [1, "shrink-0"], [1, "shrink-0", 3, "send", "disabled"], [3, "cancel", "skipAndClose", "submitFeedback", "isOpen", "isSubmitting"], [1, "shrink-0", 3, "selectSuggestion"]], template: function AssistantComponent_Template(rf, ctx) {
+  }, hostBindings: function AssistantComponent_HostBindings(rf, ctx) {
+    if (rf & 1) {
+      \u0275\u0275listener("popstate", function AssistantComponent_popstate_HostBindingHandler($event) {
+        return ctx.onPopState($event);
+      }, \u0275\u0275resolveWindow);
+    }
+  }, decls: 7, vars: 7, consts: [["feedbackModal", ""], [1, "w-full", "h-dvh", "flex", "flex-col", "bg-white", "overflow-hidden"], [1, "shrink-0", 3, "closeConversation", "hasMessages"], [1, "flex-1", "min-h-0", "flex", "flex-col", "overflow-hidden", 3, "selectPrompt", "messages", "isLoading"], [1, "shrink-0"], [1, "shrink-0", 3, "send", "disabled"], [3, "cancel", "skipAndClose", "submitFeedback", "isOpen", "isSubmitting"], [1, "shrink-0", 3, "selectSuggestion", "closeConversation"]], template: function AssistantComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "div", 1)(1, "app-chat-header", 2);
       \u0275\u0275listener("closeConversation", function AssistantComponent_Template_app_chat_header_closeConversation_1_listener() {
@@ -4821,8 +4858,11 @@ var AssistantComponent = class _AssistantComponent {
       ChatSuggestionsComponent,
       ChatInputComponent,
       ChatFeedbackModalComponent
-    ], template: '<div class="w-full h-dvh flex flex-col bg-white overflow-hidden">\n  \n  <!-- Cabecera Superior Institucional (#0050A1 + #BE002E) -->\n  <app-chat-header \n    class="shrink-0"\n    [hasMessages]="hasMessages()"\n    (closeConversation)="openFeedbackModal()" \n  />\n\n  <!-- \xC1rea Principal sobre Blanco (Pantalla de Bienvenida + Hilo de Conversaci\xF3n) -->\n  <app-chat-messages \n    class="flex-1 min-h-0 flex flex-col overflow-hidden"\n    [messages]="messages()" \n    [isLoading]="isLoading()"\n    (selectPrompt)="sendMessage($event)"\n  />\n\n  <!-- Chips de Sugerencias R\xE1pidas (visibles durante la conversaci\xF3n) -->\n  @if (hasMessages()) {\n    <app-chat-suggestions \n      class="shrink-0"\n      (selectSuggestion)="sendMessage($event)" \n    />\n  }\n\n  <!-- Barra de Entrada Inferior -->\n  <app-chat-input \n    class="shrink-0"\n    [disabled]="isLoading()" \n    (send)="sendMessage($event)" \n  />\n\n  <!-- Popup de Satisfacci\xF3n al Cerrar Conversaci\xF3n -->\n  <app-chat-feedback-modal\n    #feedbackModal\n    [isOpen]="isFeedbackModalOpen()"\n    [isSubmitting]="isSubmittingFeedback()"\n    (cancel)="closeFeedbackModal()"\n    (skipAndClose)="finalizeSession()"\n    (submitFeedback)="onSubmitFeedback($event)"\n  />\n\n</div>\n', styles: ["/* src/app/features/assistant/assistant.component.css */\n:host {\n  display: block;\n}\n"] }]
-  }], null, { feedbackModal: [{ type: ViewChild, args: ["feedbackModal", { isSignal: true }] }] });
+    ], template: '<div class="w-full h-dvh flex flex-col bg-white overflow-hidden">\n  \n  <!-- Cabecera Superior Institucional (#0050A1 + #BE002E) -->\n  <app-chat-header \n    class="shrink-0"\n    [hasMessages]="hasMessages()"\n    (closeConversation)="openFeedbackModal()" \n  />\n\n  <!-- \xC1rea Principal sobre Blanco (Pantalla de Bienvenida + Hilo de Conversaci\xF3n) -->\n  <app-chat-messages \n    class="flex-1 min-h-0 flex flex-col overflow-hidden"\n    [messages]="messages()" \n    [isLoading]="isLoading()"\n    (selectPrompt)="sendMessage($event)"\n  />\n\n  <!-- Chips de Sugerencias R\xE1pidas (visibles durante la conversaci\xF3n) -->\n  @if (hasMessages()) {\n    <app-chat-suggestions \n      class="shrink-0"\n      (selectSuggestion)="sendMessage($event)"\n      (closeConversation)="openFeedbackModal()" \n    />\n  }\n\n  <!-- Barra de Entrada Inferior -->\n  <app-chat-input \n    class="shrink-0"\n    [disabled]="isLoading()" \n    (send)="sendMessage($event)" \n  />\n\n  <!-- Popup de Satisfacci\xF3n al Cerrar Conversaci\xF3n -->\n  <app-chat-feedback-modal\n    #feedbackModal\n    [isOpen]="isFeedbackModalOpen()"\n    [isSubmitting]="isSubmittingFeedback()"\n    (cancel)="closeFeedbackModal()"\n    (skipAndClose)="finalizeSession()"\n    (submitFeedback)="onSubmitFeedback($event)"\n  />\n\n</div>\n', styles: ["/* src/app/features/assistant/assistant.component.css */\n:host {\n  display: block;\n}\n"] }]
+  }], null, { feedbackModal: [{ type: ViewChild, args: ["feedbackModal", { isSignal: true }] }], onPopState: [{
+    type: HostListener,
+    args: ["window:popstate", ["$event"]]
+  }] });
 })();
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(AssistantComponent, { className: "AssistantComponent", filePath: "src/app/features/assistant/assistant.component.ts", lineNumber: 23 });
