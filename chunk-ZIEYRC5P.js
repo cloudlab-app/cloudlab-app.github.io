@@ -4644,14 +4644,81 @@ var ChatInputComponent = class _ChatInputComponent {
 })();
 
 // src/app/features/assistant/components/chat-feedback-modal/chat-feedback-modal.component.ts
-function ChatFeedbackModalComponent_Conditional_0_Conditional_40_Template(rf, ctx) {
+function ChatFeedbackModalComponent_Conditional_0_Conditional_29_For_5_Template(rf, ctx) {
+  if (rf & 1) {
+    const _r3 = \u0275\u0275getCurrentView();
+    \u0275\u0275domElementStart(0, "button", 11);
+    \u0275\u0275domListener("click", function ChatFeedbackModalComponent_Conditional_0_Conditional_29_For_5_Template_button_click_0_listener() {
+      const reason_r4 = \u0275\u0275restoreView(_r3).$implicit;
+      const ctx_r1 = \u0275\u0275nextContext(3);
+      return \u0275\u0275resetView(ctx_r1.toggleQuickReason(reason_r4));
+    });
+    \u0275\u0275domElementStart(1, "span");
+    \u0275\u0275text(2);
+    \u0275\u0275domElementEnd();
+    \u0275\u0275domElementStart(3, "span");
+    \u0275\u0275text(4);
+    \u0275\u0275domElementEnd()();
+  }
+  if (rf & 2) {
+    const reason_r4 = ctx.$implicit;
+    const ctx_r1 = \u0275\u0275nextContext(3);
+    \u0275\u0275classMap(ctx_r1.isReasonSelected(reason_r4) ? "px-2.5 py-1 rounded-lg text-[11px] font-bold bg-[#0050A1] text-white border border-[#0050A1] transition-all cursor-pointer flex items-center gap-1 shadow-2xs" : "px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-slate-100 hover:bg-[#0050A1]/10 text-slate-700 hover:text-[#0050A1] border border-slate-200 transition-all cursor-pointer flex items-center gap-1");
+    \u0275\u0275domProperty("disabled", ctx_r1.isSubmitting());
+    \u0275\u0275advance(2);
+    \u0275\u0275textInterpolate(ctx_r1.isReasonSelected(reason_r4) ? "\u2713" : "+");
+    \u0275\u0275advance(2);
+    \u0275\u0275textInterpolate(reason_r4);
+  }
+}
+function ChatFeedbackModalComponent_Conditional_0_Conditional_29_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275domElementStart(0, "div", 14)(1, "p", 23);
+    \u0275\u0275text(2, " Seleccione un motivo r\xE1pido o escriba abajo qu\xE9 dato le falt\xF3: ");
+    \u0275\u0275domElementEnd();
+    \u0275\u0275domElementStart(3, "div", 24);
+    \u0275\u0275repeaterCreate(4, ChatFeedbackModalComponent_Conditional_0_Conditional_29_For_5_Template, 5, 5, "button", 25, \u0275\u0275repeaterTrackByIdentity);
+    \u0275\u0275domElementEnd()();
+  }
+  if (rf & 2) {
+    const ctx_r1 = \u0275\u0275nextContext(2);
+    \u0275\u0275advance(4);
+    \u0275\u0275repeater(ctx_r1.quickReasons);
+  }
+}
+function ChatFeedbackModalComponent_Conditional_0_Conditional_33_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275domElementStart(0, "span");
+    \u0275\u0275text(1, "\xBFQu\xE9 informaci\xF3n adicional buscaba? ");
+    \u0275\u0275domElementStart(2, "span", 26);
+    \u0275\u0275text(3, "* (Obligatorio)");
+    \u0275\u0275domElementEnd()();
+  }
+}
+function ChatFeedbackModalComponent_Conditional_0_Conditional_34_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275domElementStart(0, "span");
+    \u0275\u0275text(1, "Comentarios o sugerencias ");
+    \u0275\u0275domElementStart(2, "span", 27);
+    \u0275\u0275text(3, "(opcional)");
+    \u0275\u0275domElementEnd()();
+  }
+}
+function ChatFeedbackModalComponent_Conditional_0_Conditional_37_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275domElementStart(0, "p", 19);
+    \u0275\u0275text(1, " * Para enviar esta calificaci\xF3n, toque uno de los motivos de arriba o escriba al menos una breve observaci\xF3n. ");
+    \u0275\u0275domElementEnd();
+  }
+}
+function ChatFeedbackModalComponent_Conditional_0_Conditional_42_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275domElementStart(0, "span");
     \u0275\u0275text(1, "Enviando...");
     \u0275\u0275domElementEnd();
   }
 }
-function ChatFeedbackModalComponent_Conditional_0_Conditional_41_Template(rf, ctx) {
+function ChatFeedbackModalComponent_Conditional_0_Conditional_43_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275domElementStart(0, "span");
     \u0275\u0275text(1, "Enviar y finalizar");
@@ -4716,34 +4783,35 @@ function ChatFeedbackModalComponent_Conditional_0_Template(rf, ctx) {
     \u0275\u0275domElementStart(27, "span", 13);
     \u0275\u0275text(28, "No resolvi\xF3 mi duda");
     \u0275\u0275domElementEnd()()();
-    \u0275\u0275domElementStart(29, "div", 14)(30, "label", 15);
-    \u0275\u0275text(31, " Comentarios o sugerencias ");
-    \u0275\u0275domElementStart(32, "span", 16);
-    \u0275\u0275text(33, "(opcional)");
+    \u0275\u0275conditionalCreate(29, ChatFeedbackModalComponent_Conditional_0_Conditional_29_Template, 6, 0, "div", 14);
+    \u0275\u0275domElementStart(30, "div", 15)(31, "div", 16)(32, "label", 17);
+    \u0275\u0275conditionalCreate(33, ChatFeedbackModalComponent_Conditional_0_Conditional_33_Template, 4, 0, "span")(34, ChatFeedbackModalComponent_Conditional_0_Conditional_34_Template, 4, 0, "span");
     \u0275\u0275domElementEnd()();
-    \u0275\u0275domElementStart(34, "textarea", 17);
-    \u0275\u0275domListener("input", function ChatFeedbackModalComponent_Conditional_0_Template_textarea_input_34_listener($event) {
+    \u0275\u0275domElementStart(35, "textarea", 18);
+    \u0275\u0275domListener("input", function ChatFeedbackModalComponent_Conditional_0_Template_textarea_input_35_listener($event) {
       \u0275\u0275restoreView(_r1);
       const ctx_r1 = \u0275\u0275nextContext();
       return \u0275\u0275resetView(ctx_r1.onCommentInput($event));
     });
-    \u0275\u0275text(35, "          ");
-    \u0275\u0275domElementEnd()();
-    \u0275\u0275domElementStart(36, "div", 18)(37, "button", 19);
-    \u0275\u0275domListener("click", function ChatFeedbackModalComponent_Conditional_0_Template_button_click_37_listener() {
+    \u0275\u0275text(36, "          ");
+    \u0275\u0275domElementEnd();
+    \u0275\u0275conditionalCreate(37, ChatFeedbackModalComponent_Conditional_0_Conditional_37_Template, 2, 0, "p", 19);
+    \u0275\u0275domElementEnd();
+    \u0275\u0275domElementStart(38, "div", 20)(39, "button", 21);
+    \u0275\u0275domListener("click", function ChatFeedbackModalComponent_Conditional_0_Template_button_click_39_listener() {
       \u0275\u0275restoreView(_r1);
       const ctx_r1 = \u0275\u0275nextContext();
       return \u0275\u0275resetView(ctx_r1.onSkip());
     });
-    \u0275\u0275text(38, " Omitir y salir ");
+    \u0275\u0275text(40, " Omitir y salir ");
     \u0275\u0275domElementEnd();
-    \u0275\u0275domElementStart(39, "button", 20);
-    \u0275\u0275domListener("click", function ChatFeedbackModalComponent_Conditional_0_Template_button_click_39_listener() {
+    \u0275\u0275domElementStart(41, "button", 22);
+    \u0275\u0275domListener("click", function ChatFeedbackModalComponent_Conditional_0_Template_button_click_41_listener() {
       \u0275\u0275restoreView(_r1);
       const ctx_r1 = \u0275\u0275nextContext();
       return \u0275\u0275resetView(ctx_r1.onSubmit());
     });
-    \u0275\u0275conditionalCreate(40, ChatFeedbackModalComponent_Conditional_0_Conditional_40_Template, 2, 0, "span")(41, ChatFeedbackModalComponent_Conditional_0_Conditional_41_Template, 2, 0, "span");
+    \u0275\u0275conditionalCreate(42, ChatFeedbackModalComponent_Conditional_0_Conditional_42_Template, 2, 0, "span")(43, ChatFeedbackModalComponent_Conditional_0_Conditional_43_Template, 2, 0, "span");
     \u0275\u0275domElementEnd()()()()();
   }
   if (rf & 2) {
@@ -4759,14 +4827,21 @@ function ChatFeedbackModalComponent_Conditional_0_Template(rf, ctx) {
     \u0275\u0275advance(5);
     \u0275\u0275classMap(ctx_r1.selectedResolucion() === "NO" ? "flex flex-col items-center justify-center gap-1.5 p-3 rounded-2xl border-2 transition-all cursor-pointer text-center border-[#BE002E] bg-red-50/70" : "flex flex-col items-center justify-center gap-1.5 p-3 rounded-2xl border-2 transition-all cursor-pointer text-center border-slate-200 hover:border-red-300");
     \u0275\u0275domProperty("disabled", ctx_r1.isSubmitting());
-    \u0275\u0275advance(10);
-    \u0275\u0275domProperty("value", ctx_r1.comentario())("disabled", ctx_r1.isSubmitting());
-    \u0275\u0275advance(3);
+    \u0275\u0275advance(5);
+    \u0275\u0275conditional(ctx_r1.isCommentRequired() ? 29 : -1);
+    \u0275\u0275advance(4);
+    \u0275\u0275conditional(ctx_r1.isCommentRequired() ? 33 : 34);
+    \u0275\u0275advance(2);
+    \u0275\u0275classMap(ctx_r1.isCommentRequired() && ctx_r1.comentario().trim().length < 5 ? "w-full resize-none rounded-2xl border-2 border-[#BE002E]/40 focus:border-[#0050A1] focus:ring-2 focus:ring-[#0050A1]/15 p-3 text-xs sm:text-sm text-slate-800 placeholder-slate-400 focus:outline-hidden transition-all bg-red-50/20" : "w-full resize-none rounded-2xl border border-slate-200 focus:border-[#0050A1] focus:ring-2 focus:ring-[#0050A1]/15 p-3 text-xs sm:text-sm text-slate-800 placeholder-slate-400 focus:outline-hidden transition-all");
+    \u0275\u0275domProperty("value", ctx_r1.comentario())("disabled", ctx_r1.isSubmitting())("placeholder", ctx_r1.isCommentRequired() ? "Por favor, ind\xEDquenos qu\xE9 consulta o dato espec\xEDfico no encontr\xF3 para agregarlo a nuestra base de conocimiento..." : "Cu\xE9ntenos qu\xE9 informaci\xF3n adicional le hubiera gustado encontrar...");
+    \u0275\u0275advance(2);
+    \u0275\u0275conditional(ctx_r1.isCommentRequired() && ctx_r1.comentario().trim().length < 5 ? 37 : -1);
+    \u0275\u0275advance(2);
     \u0275\u0275domProperty("disabled", ctx_r1.isSubmitting());
     \u0275\u0275advance(2);
-    \u0275\u0275domProperty("disabled", !ctx_r1.selectedResolucion() || ctx_r1.isSubmitting());
+    \u0275\u0275domProperty("disabled", !ctx_r1.canSubmit());
     \u0275\u0275advance();
-    \u0275\u0275conditional(ctx_r1.isSubmitting() ? 40 : 41);
+    \u0275\u0275conditional(ctx_r1.isSubmitting() ? 42 : 43);
   }
 }
 var ChatFeedbackModalComponent = class _ChatFeedbackModalComponent {
@@ -4785,16 +4860,77 @@ var ChatFeedbackModalComponent = class _ChatFeedbackModalComponent {
     /* istanbul ignore next */
     []
   ));
+  selectedReasons = signal([], ...ngDevMode ? [{ debugName: "selectedReasons" }] : (
+    /* istanbul ignore next */
+    []
+  ));
   comentario = signal("", ...ngDevMode ? [{ debugName: "comentario" }] : (
+    /* istanbul ignore next */
+    []
+  ));
+  quickReasons = [
+    "Falt\xF3 informaci\xF3n de costos o pensiones",
+    "Faltaron fechas u horarios de atenci\xF3n",
+    "Faltaron requisitos de admisi\xF3n/matr\xEDcula",
+    "Falt\xF3 informaci\xF3n espec\xEDfica de una sede",
+    "Falt\xF3 detalle sobre certificados o tr\xE1mites",
+    "La respuesta fue incompleta o poco clara"
+  ];
+  /**
+   * El comentario es obligatorio cuando el usuario marca 'PARCIAL' o 'NO'
+   */
+  isCommentRequired = computed(() => {
+    const res = this.selectedResolucion();
+    return res === "PARCIAL" || res === "NO";
+  }, ...ngDevMode ? [{ debugName: "isCommentRequired" }] : (
+    /* istanbul ignore next */
+    []
+  ));
+  /**
+   * Valida si se puede enviar el formulario:
+   * - Si es 'SI': basta con haber seleccionado 'SI'
+   * - Si es 'PARCIAL' o 'NO': exige al menos 5 caracteres en el comentario
+   */
+  canSubmit = computed(() => {
+    const res = this.selectedResolucion();
+    if (!res || this.isSubmitting())
+      return false;
+    if (res === "SI")
+      return true;
+    return this.comentario().trim().length >= 5;
+  }, ...ngDevMode ? [{ debugName: "canSubmit" }] : (
     /* istanbul ignore next */
     []
   ));
   selectResolucion(val) {
     this.selectedResolucion.set(val);
+    if (val === "SI") {
+      this.selectedReasons.set([]);
+      this.comentario.set("");
+    }
+  }
+  isReasonSelected(reason) {
+    return this.selectedReasons().includes(reason);
+  }
+  toggleQuickReason(reason) {
+    const isCurrentlySelected = this.isReasonSelected(reason);
+    const fraseConPunto = `${reason}.`;
+    if (isCurrentlySelected) {
+      this.selectedReasons.update((list) => list.filter((r) => r !== reason));
+      const nuevoTexto = this.comentario().replace(fraseConPunto, "").replace(reason, "").replace(/\s{2,}/g, " ").trim();
+      this.comentario.set(nuevoTexto ? nuevoTexto + " " : "");
+    } else {
+      this.selectedReasons.update((list) => [...list, reason]);
+      const actual = this.comentario().trim();
+      this.comentario.set(actual ? `${actual} ${fraseConPunto} ` : `${fraseConPunto} `);
+    }
   }
   onCommentInput(event) {
     const target = event.target;
-    this.comentario.set(target.value);
+    const valor = target.value;
+    this.comentario.set(valor);
+    const activos = this.quickReasons.filter((r) => valor.includes(r));
+    this.selectedReasons.set(activos);
   }
   onCancel() {
     this.cancel.emit();
@@ -4804,9 +4940,9 @@ var ChatFeedbackModalComponent = class _ChatFeedbackModalComponent {
     this.skipAndClose.emit();
   }
   onSubmit() {
-    const resuelto = this.selectedResolucion();
-    if (!resuelto || this.isSubmitting())
+    if (!this.canSubmit())
       return;
+    const resuelto = this.selectedResolucion();
     this.submitFeedback.emit({
       resuelto,
       comentario: this.comentario().trim()
@@ -4814,14 +4950,15 @@ var ChatFeedbackModalComponent = class _ChatFeedbackModalComponent {
   }
   resetState() {
     this.selectedResolucion.set(null);
+    this.selectedReasons.set([]);
     this.comentario.set("");
   }
   static \u0275fac = function ChatFeedbackModalComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _ChatFeedbackModalComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ChatFeedbackModalComponent, selectors: [["app-chat-feedback-modal"]], inputs: { isOpen: [1, "isOpen"], isSubmitting: [1, "isSubmitting"] }, outputs: { cancel: "cancel", skipAndClose: "skipAndClose", submitFeedback: "submitFeedback" }, decls: 1, vars: 1, consts: [[1, "fixed", "inset-0", "z-50", "flex", "items-center", "justify-center", "p-4", "bg-slate-900/60", "backdrop-blur-xs", "animate-in", "fade-in", "duration-150"], [1, "relative", "w-full", "max-w-md", "rounded-3xl", "bg-white", "border", "border-slate-200", "shadow-2xl", "overflow-hidden", "animate-in", "zoom-in-95", "duration-200"], [1, "h-2", "bg-gradient-to-r", "from-[#0050A1]", "via-[#0050A1]", "to-[#BE002E]"], ["type", "button", "title", "Volver a la conversaci\xF3n", 1, "absolute", "top-4", "right-4", "w-8", "h-8", "rounded-full", "bg-slate-100", "hover:bg-slate-200", "text-slate-500", "hover:text-slate-800", "flex", "items-center", "justify-center", "text-sm", "transition-colors", "cursor-pointer", 3, "click", "disabled"], [1, "p-6", "sm:p-7"], [1, "flex", "flex-col", "items-center", "text-center", "mb-5"], [1, "w-12", "h-12", "rounded-2xl", "bg-white", "border", "border-slate-200", "p-2", "flex", "items-center", "justify-center", "shadow-xs", "mb-3"], ["src", "cropped-Favicon-3-1-32x32.png", "alt", "CBB", 1, "w-full", "h-full", "object-contain"], [1, "text-lg", "sm:text-xl", "font-extrabold", "text-[#0050A1]", "leading-snug"], [1, "text-xs", "sm:text-sm", "text-slate-500", "mt-1"], [1, "grid", "grid-cols-3", "gap-2.5", "mb-5"], ["type", "button", 3, "click", "disabled"], [1, "text-2xl"], [1, "text-xs", "font-bold", "text-slate-800", "leading-tight"], [1, "mb-5"], [1, "block", "text-xs", "font-bold", "text-slate-700", "mb-1.5"], [1, "text-slate-400", "font-normal"], ["rows", "3", "maxlength", "1000", "placeholder", "Cu\xE9ntenos qu\xE9 informaci\xF3n adicional le hubiera gustado encontrar...", 1, "w-full", "resize-none", "rounded-2xl", "border", "border-slate-200", "focus:border-[#0050A1]", "focus:ring-2", "focus:ring-[#0050A1]/15", "p-3", "text-xs", "sm:text-sm", "text-slate-800", "placeholder-slate-400", "focus:outline-hidden", "transition-all", 3, "input", "value", "disabled"], [1, "flex", "items-center", "justify-end", "gap-2.5"], ["type", "button", 1, "px-4", "py-2.5", "rounded-xl", "border", "border-slate-200", "bg-slate-50", "hover:bg-slate-100", "text-slate-600", "text-xs", "font-bold", "transition-colors", "cursor-pointer", 3, "click", "disabled"], ["type", "button", 1, "px-5", "py-2.5", "rounded-xl", "bg-[#BE002E]", "hover:bg-[#9e0026]", "text-white", "text-xs", "sm:text-sm", "font-bold", "shadow-md", "shadow-[#BE002E]/20", "disabled:opacity-40", "disabled:cursor-not-allowed", "transition-all", "cursor-pointer", "flex", "items-center", "gap-2", 3, "click", "disabled"]], template: function ChatFeedbackModalComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ChatFeedbackModalComponent, selectors: [["app-chat-feedback-modal"]], inputs: { isOpen: [1, "isOpen"], isSubmitting: [1, "isSubmitting"] }, outputs: { cancel: "cancel", skipAndClose: "skipAndClose", submitFeedback: "submitFeedback" }, decls: 1, vars: 1, consts: [[1, "fixed", "inset-0", "z-50", "flex", "items-center", "justify-center", "p-4", "bg-slate-900/60", "backdrop-blur-xs", "animate-in", "fade-in", "duration-150"], [1, "relative", "w-full", "max-w-lg", "rounded-3xl", "bg-white", "border", "border-slate-200", "shadow-2xl", "overflow-hidden", "animate-in", "zoom-in-95", "duration-200"], [1, "h-2", "bg-gradient-to-r", "from-[#0050A1]", "via-[#0050A1]", "to-[#BE002E]"], ["type", "button", "title", "Volver a la conversaci\xF3n", 1, "absolute", "top-4", "right-4", "w-8", "h-8", "rounded-full", "bg-slate-100", "hover:bg-slate-200", "text-slate-500", "hover:text-slate-800", "flex", "items-center", "justify-center", "text-sm", "transition-colors", "cursor-pointer", 3, "click", "disabled"], [1, "p-6", "sm:p-7"], [1, "flex", "flex-col", "items-center", "text-center", "mb-5"], [1, "w-12", "h-12", "rounded-2xl", "bg-white", "border", "border-slate-200", "p-2", "flex", "items-center", "justify-center", "shadow-xs", "mb-3"], ["src", "cropped-Favicon-3-1-32x32.png", "alt", "CBB", 1, "w-full", "h-full", "object-contain"], [1, "text-lg", "sm:text-xl", "font-extrabold", "text-[#0050A1]", "leading-snug"], [1, "text-xs", "sm:text-sm", "text-slate-500", "mt-1"], [1, "grid", "grid-cols-3", "gap-2.5", "mb-5"], ["type", "button", 3, "click", "disabled"], [1, "text-2xl"], [1, "text-xs", "font-bold", "text-slate-800", "leading-tight"], [1, "mb-3.5", "animate-in", "fade-in", "duration-150"], [1, "mb-5"], [1, "flex", "items-center", "justify-between", "mb-1.5"], [1, "block", "text-xs", "font-bold", "text-slate-700"], ["rows", "3", "maxlength", "1000", 3, "input", "value", "disabled", "placeholder"], [1, "text-[11px]", "font-semibold", "text-[#BE002E]", "mt-1"], [1, "flex", "items-center", "justify-end", "gap-2.5"], ["type", "button", 1, "px-4", "py-2.5", "rounded-xl", "border", "border-slate-200", "bg-slate-50", "hover:bg-slate-100", "text-slate-600", "text-xs", "font-bold", "transition-colors", "cursor-pointer", 3, "click", "disabled"], ["type", "button", 1, "px-5", "py-2.5", "rounded-xl", "bg-[#BE002E]", "hover:bg-[#9e0026]", "text-white", "text-xs", "sm:text-sm", "font-bold", "shadow-md", "shadow-[#BE002E]/20", "disabled:opacity-40", "disabled:cursor-not-allowed", "transition-all", "cursor-pointer", "flex", "items-center", "gap-2", 3, "click", "disabled"], [1, "text-[11px]", "font-bold", "text-[#0050A1]", "mb-2"], [1, "flex", "flex-wrap", "gap-1.5"], ["type", "button", 3, "disabled", "class"], [1, "text-[#BE002E]", "font-extrabold"], [1, "text-slate-400", "font-normal"]], template: function ChatFeedbackModalComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275conditionalCreate(0, ChatFeedbackModalComponent_Conditional_0_Template, 42, 15, "div", 0);
+      \u0275\u0275conditionalCreate(0, ChatFeedbackModalComponent_Conditional_0_Template, 44, 21, "div", 0);
     }
     if (rf & 2) {
       \u0275\u0275conditional(ctx.isOpen() ? 0 : -1);
@@ -4834,7 +4971,7 @@ var ChatFeedbackModalComponent = class _ChatFeedbackModalComponent {
     args: [{ selector: "app-chat-feedback-modal", changeDetection: ChangeDetectionStrategy.OnPush, template: `@if (isOpen()) {
   <div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs animate-in fade-in duration-150">
     
-    <div class="relative w-full max-w-md rounded-3xl bg-white border border-slate-200 shadow-2xl overflow-hidden animate-in zoom-in-95 duration-200">
+    <div class="relative w-full max-w-lg rounded-3xl bg-white border border-slate-200 shadow-2xl overflow-hidden animate-in zoom-in-95 duration-200">
       
       <!-- Franja institucional superior -->
       <div class="h-2 bg-gradient-to-r from-[#0050A1] via-[#0050A1] to-[#BE002E]"></div>
@@ -4905,20 +5042,60 @@ var ChatFeedbackModalComponent = class _ChatFeedbackModalComponent {
 
         </div>
 
-        <!-- Campo de Comentarios -->
+        <!-- Chips de Motivos R\xE1pidos cuando elige PARCIAL o NO (Seleccionables y Deseleccionables) -->
+        @if (isCommentRequired()) {
+          <div class="mb-3.5 animate-in fade-in duration-150">
+            <p class="text-[11px] font-bold text-[#0050A1] mb-2">
+              Seleccione un motivo r\xE1pido o escriba abajo qu\xE9 dato le falt\xF3:
+            </p>
+            <div class="flex flex-wrap gap-1.5">
+              @for (reason of quickReasons; track reason) {
+                <button
+                  type="button"
+                  (click)="toggleQuickReason(reason)"
+                  [disabled]="isSubmitting()"
+                  [class]="isReasonSelected(reason)
+                    ? 'px-2.5 py-1 rounded-lg text-[11px] font-bold bg-[#0050A1] text-white border border-[#0050A1] transition-all cursor-pointer flex items-center gap-1 shadow-2xs'
+                    : 'px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-slate-100 hover:bg-[#0050A1]/10 text-slate-700 hover:text-[#0050A1] border border-slate-200 transition-all cursor-pointer flex items-center gap-1'">
+                  <span>{{ isReasonSelected(reason) ? '\u2713' : '+' }}</span>
+                  <span>{{ reason }}</span>
+                </button>
+              }
+            </div>
+          </div>
+        }
+
+        <!-- Campo de Comentarios (Obligatorio en PARCIAL / NO, Opcional en SI) -->
         <div class="mb-5">
-          <label class="block text-xs font-bold text-slate-700 mb-1.5">
-            Comentarios o sugerencias <span class="text-slate-400 font-normal">(opcional)</span>
-          </label>
+          <div class="flex items-center justify-between mb-1.5">
+            <label class="block text-xs font-bold text-slate-700">
+              @if (isCommentRequired()) {
+                <span>\xBFQu\xE9 informaci\xF3n adicional buscaba? <span class="text-[#BE002E] font-extrabold">* (Obligatorio)</span></span>
+              } @else {
+                <span>Comentarios o sugerencias <span class="text-slate-400 font-normal">(opcional)</span></span>
+              }
+            </label>
+          </div>
+
           <textarea
             [value]="comentario()"
             (input)="onCommentInput($event)"
             [disabled]="isSubmitting()"
             rows="3"
             maxlength="1000"
-            placeholder="Cu\xE9ntenos qu\xE9 informaci\xF3n adicional le hubiera gustado encontrar..."
-            class="w-full resize-none rounded-2xl border border-slate-200 focus:border-[#0050A1] focus:ring-2 focus:ring-[#0050A1]/15 p-3 text-xs sm:text-sm text-slate-800 placeholder-slate-400 focus:outline-hidden transition-all">
+            [placeholder]="isCommentRequired()
+              ? 'Por favor, ind\xEDquenos qu\xE9 consulta o dato espec\xEDfico no encontr\xF3 para agregarlo a nuestra base de conocimiento...'
+              : 'Cu\xE9ntenos qu\xE9 informaci\xF3n adicional le hubiera gustado encontrar...'"
+            [class]="isCommentRequired() && comentario().trim().length < 5
+              ? 'w-full resize-none rounded-2xl border-2 border-[#BE002E]/40 focus:border-[#0050A1] focus:ring-2 focus:ring-[#0050A1]/15 p-3 text-xs sm:text-sm text-slate-800 placeholder-slate-400 focus:outline-hidden transition-all bg-red-50/20'
+              : 'w-full resize-none rounded-2xl border border-slate-200 focus:border-[#0050A1] focus:ring-2 focus:ring-[#0050A1]/15 p-3 text-xs sm:text-sm text-slate-800 placeholder-slate-400 focus:outline-hidden transition-all'">
           </textarea>
+
+          @if (isCommentRequired() && comentario().trim().length < 5) {
+            <p class="text-[11px] font-semibold text-[#BE002E] mt-1">
+              * Para enviar esta calificaci\xF3n, toque uno de los motivos de arriba o escriba al menos una breve observaci\xF3n.
+            </p>
+          }
         </div>
 
         <!-- Botones de Acci\xF3n -->
@@ -4934,7 +5111,7 @@ var ChatFeedbackModalComponent = class _ChatFeedbackModalComponent {
           <button
             type="button"
             (click)="onSubmit()"
-            [disabled]="!selectedResolucion() || isSubmitting()"
+            [disabled]="!canSubmit()"
             class="px-5 py-2.5 rounded-xl bg-[#BE002E] hover:bg-[#9e0026] text-white text-xs sm:text-sm font-bold shadow-md shadow-[#BE002E]/20 disabled:opacity-40 disabled:cursor-not-allowed transition-all cursor-pointer flex items-center gap-2">
             @if (isSubmitting()) {
               <span>Enviando...</span>

@@ -444,6 +444,9 @@
   .mb-3 {
     margin-bottom: calc(var(--spacing) * 3);
   }
+  .mb-3\.5 {
+    margin-bottom: calc(var(--spacing) * 3.5);
+  }
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
   }
@@ -872,6 +875,9 @@
   .border-\[\#BE002E\]\/30 {
     border-color: color-mix(in oklab, #BE002E 30%, transparent);
   }
+  .border-\[\#BE002E\]\/40 {
+    border-color: color-mix(in oklab, #BE002E 40%, transparent);
+  }
   .border-amber-200 {
     border-color: var(--color-amber-200);
   }
@@ -1040,6 +1046,14 @@
   }
   .bg-red-50 {
     background-color: var(--color-red-50);
+  }
+  .bg-red-50\/20 {
+    background-color: color-mix(in srgb, oklch(97.1% 0.013 17.38) 20%, transparent);
+  }
+  @supports (color: color-mix(in lab, red, red)) {
+    .bg-red-50\/20 {
+      background-color: color-mix(in oklab, var(--color-red-50) 20%, transparent);
+    }
   }
   .bg-red-50\/60 {
     background-color: color-mix(in srgb, oklch(97.1% 0.013 17.38) 60%, transparent);
