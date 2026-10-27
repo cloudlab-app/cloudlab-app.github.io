@@ -2,7 +2,7 @@ import {
   BackofficeService,
   Router,
   RouterLink
-} from "./chunk-KV3RYXL3.js";
+} from "./chunk-RVBCZNP3.js";
 import {
   ChangeDetectionStrategy,
   Component,
@@ -21,7 +21,6 @@ import {
   ɵsetClassDebugInfo,
   ɵɵadvance,
   ɵɵclassMap,
-  ɵɵclassProp,
   ɵɵconditional,
   ɵɵconditionalCreate,
   ɵɵdefineComponent,
@@ -51,35 +50,34 @@ import {
   ɵɵtextInterpolate1,
   ɵɵtextInterpolate2,
   ɵɵviewQuerySignal
-} from "./chunk-JIODWWMR.js";
+} from "./chunk-GTRT2NL7.js";
 
 // src/app/features/backoffice/components/admin-navbar/admin-navbar.component.ts
 function AdminNavbarComponent_Conditional_19_Template(rf, ctx) {
   if (rf & 1) {
     const _r1 = \u0275\u0275getCurrentView();
-    \u0275\u0275element(0, "div", 11);
-    \u0275\u0275elementStart(1, "div", 12)(2, "div", 13);
-    \u0275\u0275text(3);
+    \u0275\u0275elementStart(0, "div", 13)(1, "div", 14);
+    \u0275\u0275text(2);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(4, "div", 14)(5, "div", 15);
-    \u0275\u0275text(6);
+    \u0275\u0275elementStart(3, "div", 15)(4, "div", 16);
+    \u0275\u0275text(5);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(7, "div", 16);
-    \u0275\u0275text(8);
+    \u0275\u0275elementStart(6, "div", 17);
+    \u0275\u0275text(7);
     \u0275\u0275elementEnd()()();
-    \u0275\u0275elementStart(9, "button", 17);
-    \u0275\u0275listener("click", function AdminNavbarComponent_Conditional_19_Template_button_click_9_listener() {
+    \u0275\u0275elementStart(8, "button", 18);
+    \u0275\u0275listener("click", function AdminNavbarComponent_Conditional_19_Template_button_click_8_listener() {
       \u0275\u0275restoreView(_r1);
       const ctx_r1 = \u0275\u0275nextContext();
       return \u0275\u0275resetView(ctx_r1.logout.emit());
     });
-    \u0275\u0275elementStart(10, "span");
-    \u0275\u0275text(11, "Salir");
+    \u0275\u0275elementStart(9, "span");
+    \u0275\u0275text(10, "Salir");
     \u0275\u0275elementEnd()();
   }
   if (rf & 2) {
     const user_r3 = ctx;
-    \u0275\u0275advance(3);
+    \u0275\u0275advance(2);
     \u0275\u0275textInterpolate1(" ", user_r3.username.slice(0, 2).toUpperCase(), " ");
     \u0275\u0275advance(3);
     \u0275\u0275textInterpolate(user_r3.username);
@@ -96,27 +94,27 @@ var AdminNavbarComponent = class _AdminNavbarComponent {
   static \u0275fac = function AdminNavbarComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _AdminNavbarComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AdminNavbarComponent, selectors: [["app-admin-navbar"]], inputs: { session: [1, "session"] }, outputs: { logout: "logout" }, decls: 20, vars: 1, consts: [[1, "admin-navbar", "bg-white", "border-b", "border-slate-200", "sticky", "top-0", "z-30", "shadow-2xs"], [1, "max-w-7xl", "mx-auto", "px-4", "sm:px-6", "lg:px-8", "h-16", "flex", "items-center", "justify-between", "gap-4"], [1, "flex", "items-center", "gap-3"], [1, "w-10", "h-10", "rounded-xl", "bg-[#b00725]", "text-white", "flex", "items-center", "justify-center", "font-bold", "text-lg", "shadow-sm"], [1, "flex", "items-center", "gap-2"], [1, "text-base", "font-bold", "text-slate-900", "tracking-tight"], [1, "px-2", "py-0.5", "text-[10px]", "font-bold", "uppercase", "tracking-wider", "bg-red-50", "text-[#b00725]", "border", "border-red-200", "rounded-full"], [1, "text-xs", "text-slate-500", "hidden", "sm:block"], [1, "flex", "items-center", "gap-3", "sm:gap-4"], ["routerLink", "/", 1, "text-xs", "font-medium", "text-slate-600", "hover:text-[#b00725]", "px-3", "py-1.5", "rounded-lg", "hover:bg-slate-100", "transition-colors", "flex", "items-center", "gap-1.5"], [1, "hidden", "md:inline"], [1, "h-6", "w-px", "bg-slate-200", "hidden", "sm:block"], [1, "flex", "items-center", "gap-2.5"], [1, "w-8", "h-8", "rounded-full", "bg-slate-100", "border", "border-slate-300", "flex", "items-center", "justify-center", "text-xs", "font-bold", "text-slate-700"], [1, "hidden", "sm:block", "text-left"], [1, "text-xs", "font-semibold", "text-slate-800", "leading-none"], [1, "text-[10px]", "text-slate-500", "mt-0.5"], ["type", "button", 1, "px-3", "py-1.5", "rounded-xl", "text-xs", "font-semibold", "text-red-700", "bg-red-50", "hover:bg-red-100", "border", "border-red-200", "transition-colors", "cursor-pointer", "flex", "items-center", "gap-1", 3, "click"]], template: function AdminNavbarComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AdminNavbarComponent, selectors: [["app-admin-navbar"]], inputs: { session: [1, "session"] }, outputs: { logout: "logout" }, decls: 20, vars: 1, consts: [[1, "cbb-header", "shrink-0", "bg-[#0050A1]", "text-white", "selection:bg-white", "selection:text-[#0050A1]", "border-b-4", "border-[#BE002E]", "shadow-md", "sticky", "top-0", "z-30"], [1, "w-full", "px-4", "sm:px-6", "lg:px-10", "h-16", "sm:h-18", "flex", "items-center", "justify-between", "gap-4"], [1, "flex", "items-center", "gap-3.5", "min-w-0"], [1, "w-10", "h-10", "sm:w-11", "sm:h-11", "rounded-xl", "bg-white", "p-1.5", "flex", "items-center", "justify-center", "shadow-md", "shrink-0"], ["src", "cropped-Favicon-3-1-32x32.png", "alt", "Logo Colegio Bertolt Brecht", 1, "w-full", "h-full", "object-contain"], [1, "min-w-0"], [1, "flex", "items-center", "gap-2.5"], [1, "text-base", "sm:text-lg", "font-extrabold", "text-white", "tracking-tight", "truncate"], [1, "hidden", "md:inline-flex", "items-center", "px-2.5", "py-0.5", "text-[10px]", "font-extrabold", "uppercase", "tracking-wider", "bg-[#BE002E]", "text-white", "rounded-full", "shadow-2xs"], [1, "text-xs", "text-blue-100", "hidden", "sm:block", "truncate"], [1, "flex", "items-center", "gap-3", "sm:gap-4", "shrink-0"], ["routerLink", "/", 1, "text-xs", "font-bold", "text-white", "bg-white/15", "hover:bg-white/25", "px-3.5", "py-2", "rounded-xl", "transition-colors", "flex", "items-center", "gap-1.5"], [1, "hidden", "md:inline"], [1, "hidden", "sm:flex", "items-center", "gap-2.5", "pl-3", "border-l", "border-white/20"], [1, "w-8", "h-8", "rounded-full", "bg-white", "text-[#0050A1]", "flex", "items-center", "justify-center", "text-xs", "font-extrabold", "shadow-xs"], [1, "hidden", "md:block", "text-left"], [1, "text-xs", "font-bold", "text-white", "leading-none"], [1, "text-[10px]", "text-blue-100", "mt-0.5"], ["type", "button", 1, "px-3.5", "py-2", "rounded-xl", "text-xs", "font-bold", "text-white", "bg-[#BE002E]", "hover:bg-[#9e0026]", "shadow-sm", "transition-colors", "cursor-pointer", "flex", "items-center", "gap-1", 3, "click"]], template: function AdminNavbarComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "header", 0)(1, "div", 1)(2, "div", 2)(3, "div", 3);
-      \u0275\u0275text(4, " CBB ");
+      \u0275\u0275element(4, "img", 4);
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(5, "div")(6, "div", 4)(7, "h1", 5);
-      \u0275\u0275text(8, "Backoffice RAG");
+      \u0275\u0275elementStart(5, "div", 5)(6, "div", 6)(7, "h1", 7);
+      \u0275\u0275text(8, " Backoffice RAG \u2014 Colegio Bertolt Brecht ");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(9, "span", 6);
-      \u0275\u0275text(10, " Admin ");
+      \u0275\u0275elementStart(9, "span", 8);
+      \u0275\u0275text(10, " Panel Oficial ");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(11, "p", 7);
-      \u0275\u0275text(12, "Gesti\xF3n de Base de Conocimiento \u2014 Colegio Bertolt Brecht");
+      \u0275\u0275elementStart(11, "p", 9);
+      \u0275\u0275text(12, " Gesti\xF3n de Base de Conocimiento y Satisfacci\xF3n del Usuario ");
       \u0275\u0275elementEnd()()();
-      \u0275\u0275elementStart(13, "div", 8)(14, "a", 9)(15, "span");
+      \u0275\u0275elementStart(13, "div", 10)(14, "a", 11)(15, "span");
       \u0275\u0275text(16, "\u{1F310}");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(17, "span", 10);
-      \u0275\u0275text(18, "Ver Portal P\xFAblico");
+      \u0275\u0275elementStart(17, "span", 12);
+      \u0275\u0275text(18, "Ver Asistente P\xFAblico");
       \u0275\u0275elementEnd()();
-      \u0275\u0275conditionalCreate(19, AdminNavbarComponent_Conditional_19_Template, 12, 4);
+      \u0275\u0275conditionalCreate(19, AdminNavbarComponent_Conditional_19_Template, 11, 4);
       \u0275\u0275elementEnd()()();
     }
     if (rf & 2) {
@@ -129,7 +127,7 @@ var AdminNavbarComponent = class _AdminNavbarComponent {
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(AdminNavbarComponent, [{
     type: Component,
-    args: [{ selector: "app-admin-navbar", changeDetection: ChangeDetectionStrategy.OnPush, imports: [RouterLink], template: '<header class="admin-navbar bg-white border-b border-slate-200 sticky top-0 z-30 shadow-2xs">\n  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">\n    \n    <!-- Identidad Institucional -->\n    <div class="flex items-center gap-3">\n      <div class="w-10 h-10 rounded-xl bg-[#b00725] text-white flex items-center justify-center font-bold text-lg shadow-sm">\n        CBB\n      </div>\n      <div>\n        <div class="flex items-center gap-2">\n          <h1 class="text-base font-bold text-slate-900 tracking-tight">Backoffice RAG</h1>\n          <span class="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider bg-red-50 text-[#b00725] border border-red-200 rounded-full">\n            Admin\n          </span>\n        </div>\n        <p class="text-xs text-slate-500 hidden sm:block">Gesti\xF3n de Base de Conocimiento \u2014 Colegio Bertolt Brecht</p>\n      </div>\n    </div>\n\n    <!-- Usuario Activo y Acciones -->\n    <div class="flex items-center gap-3 sm:gap-4">\n      <a \n        routerLink="/" \n        class="text-xs font-medium text-slate-600 hover:text-[#b00725] px-3 py-1.5 rounded-lg hover:bg-slate-100 transition-colors flex items-center gap-1.5">\n        <span>\u{1F310}</span>\n        <span class="hidden md:inline">Ver Portal P\xFAblico</span>\n      </a>\n\n      @if (session(); as user) {\n        <div class="h-6 w-px bg-slate-200 hidden sm:block"></div>\n        \n        <div class="flex items-center gap-2.5">\n          <div class="w-8 h-8 rounded-full bg-slate-100 border border-slate-300 flex items-center justify-center text-xs font-bold text-slate-700">\n            {{ user.username.slice(0, 2).toUpperCase() }}\n          </div>\n          <div class="hidden sm:block text-left">\n            <div class="text-xs font-semibold text-slate-800 leading-none">{{ user.username }}</div>\n            <div class="text-[10px] text-slate-500 mt-0.5">{{ user.role }} \u2022 \xC1rea: {{ user.areaDefault }}</div>\n          </div>\n        </div>\n\n        <button\n          type="button"\n          (click)="logout.emit()"\n          class="px-3 py-1.5 rounded-xl text-xs font-semibold text-red-700 bg-red-50 hover:bg-red-100 border border-red-200 transition-colors cursor-pointer flex items-center gap-1">\n          <span>Salir</span>\n        </button>\n      }\n    </div>\n\n  </div>\n</header>\n', styles: ["/* src/app/features/backoffice/components/admin-navbar/admin-navbar.component.css */\n.admin-navbar {\n  -webkit-backdrop-filter: blur(8px);\n  backdrop-filter: blur(8px);\n}\n"] }]
+    args: [{ selector: "app-admin-navbar", changeDetection: ChangeDetectionStrategy.OnPush, imports: [RouterLink], template: '<header class="cbb-header shrink-0 bg-[#0050A1] text-white selection:bg-white selection:text-[#0050A1] border-b-4 border-[#BE002E] shadow-md sticky top-0 z-30">\n  <div class="w-full px-4 sm:px-6 lg:px-10 h-16 sm:h-18 flex items-center justify-between gap-4">\n    \n    <!-- Izquierda: \xCDcono Oficial CBB + Identidad del Backoffice -->\n    <div class="flex items-center gap-3.5 min-w-0">\n      <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-white p-1.5 flex items-center justify-center shadow-md shrink-0">\n        <img \n          src="cropped-Favicon-3-1-32x32.png" \n          alt="Logo Colegio Bertolt Brecht" \n          class="w-full h-full object-contain"\n        />\n      </div>\n\n      <div class="min-w-0">\n        <div class="flex items-center gap-2.5">\n          <h1 class="text-base sm:text-lg font-extrabold text-white tracking-tight truncate">\n            Backoffice RAG \u2014 Colegio Bertolt Brecht\n          </h1>\n          <span class="hidden md:inline-flex items-center px-2.5 py-0.5 text-[10px] font-extrabold uppercase tracking-wider bg-[#BE002E] text-white rounded-full shadow-2xs">\n            Panel Oficial\n          </span>\n        </div>\n        <p class="text-xs text-blue-100 hidden sm:block truncate">\n          Gesti\xF3n de Base de Conocimiento y Satisfacci\xF3n del Usuario\n        </p>\n      </div>\n    </div>\n\n    <!-- Derecha: Accesos R\xE1pidos y Operador Activo -->\n    <div class="flex items-center gap-3 sm:gap-4 shrink-0">\n      <a \n        routerLink="/" \n        class="text-xs font-bold text-white bg-white/15 hover:bg-white/25 px-3.5 py-2 rounded-xl transition-colors flex items-center gap-1.5">\n        <span>\u{1F310}</span>\n        <span class="hidden md:inline">Ver Asistente P\xFAblico</span>\n      </a>\n\n      @if (session(); as user) {\n        <div class="hidden sm:flex items-center gap-2.5 pl-3 border-l border-white/20">\n          <div class="w-8 h-8 rounded-full bg-white text-[#0050A1] flex items-center justify-center text-xs font-extrabold shadow-xs">\n            {{ user.username.slice(0, 2).toUpperCase() }}\n          </div>\n          <div class="hidden md:block text-left">\n            <div class="text-xs font-bold text-white leading-none">{{ user.username }}</div>\n            <div class="text-[10px] text-blue-100 mt-0.5">{{ user.role }} \u2022 \xC1rea: {{ user.areaDefault }}</div>\n          </div>\n        </div>\n\n        <button\n          type="button"\n          (click)="logout.emit()"\n          class="px-3.5 py-2 rounded-xl text-xs font-bold text-white bg-[#BE002E] hover:bg-[#9e0026] shadow-sm transition-colors cursor-pointer flex items-center gap-1">\n          <span>Salir</span>\n        </button>\n      }\n    </div>\n\n  </div>\n</header>\n', styles: ["/* src/app/features/backoffice/components/admin-navbar/admin-navbar.component.css */\n.admin-navbar {\n  -webkit-backdrop-filter: blur(8px);\n  backdrop-filter: blur(8px);\n}\n"] }]
   }], null, { session: [{ type: Input, args: [{ isSignal: true, alias: "session", required: true }] }], logout: [{ type: Output, args: ["logout"] }] });
 })();
 (() => {
@@ -155,13 +153,13 @@ var AdminStatsComponent = class _AdminStatsComponent {
   static \u0275fac = function AdminStatsComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _AdminStatsComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AdminStatsComponent, selectors: [["app-admin-stats"]], inputs: { totalDocumentos: [1, "totalDocumentos"], totalFragmentos: [1, "totalFragmentos"], isLoading: [1, "isLoading"] }, outputs: { openUpload: "openUpload", refresh: "refresh" }, decls: 51, vars: 5, consts: [[1, "space-y-6"], [1, "flex", "flex-col", "sm:flex-row", "sm:items-center", "sm:justify-between", "gap-4", "bg-white", "p-6", "rounded-2xl", "border", "border-slate-200", "shadow-2xs"], [1, "text-xl", "font-bold", "text-slate-900"], [1, "text-sm", "text-slate-500", "mt-1"], [1, "flex", "items-center", "gap-3", "shrink-0"], ["type", "button", 1, "px-4", "py-2.5", "rounded-xl", "border", "border-slate-200", "bg-white", "hover:bg-slate-50", "text-slate-700", "text-sm", "font-medium", "transition-all", "flex", "items-center", "gap-2", "cursor-pointer", "disabled:opacity-50", 3, "click", "disabled"], ["type", "button", 1, "px-5", "py-2.5", "rounded-xl", "bg-[#b00725]", "hover:bg-[#92061e]", "text-white", "text-sm", "font-semibold", "shadow-md", "shadow-red-900/15", "transition-all", "flex", "items-center", "gap-2", "cursor-pointer", "active:scale-95", 3, "click"], [1, "grid", "grid-cols-1", "sm:grid-cols-3", "gap-4"], [1, "stat-card", "bg-white", "p-5", "rounded-2xl", "border", "border-slate-200", "shadow-2xs", "flex", "items-center", "gap-4"], [1, "w-12", "h-12", "rounded-2xl", "bg-red-50", "border", "border-red-100", "text-[#b00725]", "flex", "items-center", "justify-center", "text-2xl", "shrink-0"], [1, "text-xs", "font-semibold", "text-slate-500", "uppercase", "tracking-wider"], [1, "text-2xl", "font-extrabold", "text-slate-900", "mt-0.5"], [1, "text-[11px]", "text-slate-400"], [1, "w-12", "h-12", "rounded-2xl", "bg-blue-50", "border", "border-blue-100", "text-blue-600", "flex", "items-center", "justify-center", "text-2xl", "shrink-0"], [1, "w-12", "h-12", "rounded-2xl", "bg-emerald-50", "border", "border-emerald-100", "text-emerald-600", "flex", "items-center", "justify-center", "text-2xl", "shrink-0"], [1, "text-base", "font-bold", "text-slate-900", "mt-1", "flex", "items-center", "gap-1.5"], [1, "w-2", "h-2", "rounded-full", "bg-emerald-500", "animate-pulse"]], template: function AdminStatsComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AdminStatsComponent, selectors: [["app-admin-stats"]], inputs: { totalDocumentos: [1, "totalDocumentos"], totalFragmentos: [1, "totalFragmentos"], isLoading: [1, "isLoading"] }, outputs: { openUpload: "openUpload", refresh: "refresh" }, decls: 51, vars: 5, consts: [[1, "space-y-6"], [1, "flex", "flex-col", "sm:flex-row", "sm:items-center", "sm:justify-between", "gap-4", "bg-white", "p-6", "rounded-2xl", "border", "border-slate-200", "border-l-4", "border-l-[#0050A1]", "shadow-2xs"], [1, "text-xl", "font-extrabold", "text-[#0050A1]"], [1, "text-xs", "sm:text-sm", "text-slate-500", "mt-1"], [1, "flex", "items-center", "gap-3", "shrink-0"], ["type", "button", 1, "px-4", "py-2.5", "rounded-xl", "border", "border-slate-200", "bg-white", "hover:bg-slate-50", "text-[#0050A1]", "text-xs", "sm:text-sm", "font-bold", "transition-all", "flex", "items-center", "gap-2", "cursor-pointer", "disabled:opacity-50", 3, "click", "disabled"], ["type", "button", 1, "px-5", "py-2.5", "rounded-xl", "bg-[#BE002E]", "hover:bg-[#9e0026]", "text-white", "text-xs", "sm:text-sm", "font-bold", "shadow-md", "shadow-[#BE002E]/20", "transition-all", "flex", "items-center", "gap-2", "cursor-pointer", "active:scale-95", 3, "click"], [1, "grid", "grid-cols-1", "sm:grid-cols-3", "gap-4"], [1, "stat-card", "bg-white", "p-5", "rounded-2xl", "border", "border-slate-200", "border-t-4", "border-t-[#BE002E]", "shadow-2xs", "flex", "items-center", "gap-4"], [1, "w-12", "h-12", "rounded-2xl", "bg-[#BE002E]/10", "text-[#BE002E]", "flex", "items-center", "justify-center", "text-2xl", "shrink-0"], [1, "text-xs", "font-bold", "text-slate-500", "uppercase", "tracking-wider"], [1, "text-2xl", "font-black", "text-slate-900", "mt-0.5"], [1, "text-[11px]", "text-slate-400"], [1, "stat-card", "bg-white", "p-5", "rounded-2xl", "border", "border-slate-200", "border-t-4", "border-t-[#0050A1]", "shadow-2xs", "flex", "items-center", "justify-center", "sm:justify-start", "gap-4"], [1, "w-12", "h-12", "rounded-2xl", "bg-[#0050A1]/10", "text-[#0050A1]", "flex", "items-center", "justify-center", "text-2xl", "shrink-0"], [1, "text-2xl", "font-black", "text-[#0050A1]", "mt-0.5"], [1, "stat-card", "bg-white", "p-5", "rounded-2xl", "border", "border-slate-200", "border-t-4", "border-t-[#0050A1]", "shadow-2xs", "flex", "items-center", "gap-4"], [1, "w-12", "h-12", "rounded-2xl", "bg-emerald-50", "border", "border-emerald-100", "text-emerald-600", "flex", "items-center", "justify-center", "text-2xl", "shrink-0"], [1, "text-base", "font-extrabold", "text-slate-900", "mt-1", "flex", "items-center", "gap-1.5"], [1, "w-2", "h-2", "rounded-full", "bg-emerald-500", "animate-pulse"]], template: function AdminStatsComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275domElementStart(0, "div", 0)(1, "div", 1)(2, "div")(3, "h2", 2);
       \u0275\u0275text(4, "Panel de Documentos Oficiales");
       \u0275\u0275domElementEnd();
       \u0275\u0275domElementStart(5, "p", 3);
-      \u0275\u0275text(6, " Administra los reglamentos, gu\xEDas y normativas que alimentan al Asistente Virtual del colegio. ");
+      \u0275\u0275text(6, " Administra los reglamentos, gu\xEDas y normativas que alimentan al Asistente Virtual del Colegio Bertolt Brecht. ");
       \u0275\u0275domElementEnd()();
       \u0275\u0275domElementStart(7, "div", 4)(8, "button", 5);
       \u0275\u0275domListener("click", function AdminStatsComponent_Template_button_click_8_listener() {
@@ -195,28 +193,28 @@ var AdminStatsComponent = class _AdminStatsComponent {
       \u0275\u0275domElementStart(27, "div", 12);
       \u0275\u0275text(28, "Archivos indexados en BD");
       \u0275\u0275domElementEnd()()();
-      \u0275\u0275domElementStart(29, "div", 8)(30, "div", 13);
+      \u0275\u0275domElementStart(29, "div", 13)(30, "div", 14);
       \u0275\u0275text(31, " \u{1F9E9} ");
       \u0275\u0275domElementEnd();
       \u0275\u0275domElementStart(32, "div")(33, "div", 10);
       \u0275\u0275text(34, "Fragmentos Vectoriales");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(35, "div", 11);
+      \u0275\u0275domElementStart(35, "div", 15);
       \u0275\u0275text(36);
       \u0275\u0275domElementEnd();
       \u0275\u0275domElementStart(37, "div", 12);
-      \u0275\u0275text(38, "Chunks con Sentence Window (768 dim)");
+      \u0275\u0275text(38, "Chunks sem\xE1nticos (768 dim)");
       \u0275\u0275domElementEnd()()();
-      \u0275\u0275domElementStart(39, "div", 8)(40, "div", 14);
+      \u0275\u0275domElementStart(39, "div", 16)(40, "div", 17);
       \u0275\u0275text(41, " \u26A1 ");
       \u0275\u0275domElementEnd();
       \u0275\u0275domElementStart(42, "div")(43, "div", 10);
       \u0275\u0275text(44, "Motor IA Conectado");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(45, "div", 15);
-      \u0275\u0275domElement(46, "span", 16);
+      \u0275\u0275domElementStart(45, "div", 18);
+      \u0275\u0275domElement(46, "span", 19);
       \u0275\u0275domElementStart(47, "span");
-      \u0275\u0275text(48, "Gemini 3.8 Flash");
+      \u0275\u0275text(48, "Gemini 3.5 Flash Lite");
       \u0275\u0275domElementEnd()();
       \u0275\u0275domElementStart(49, "div", 12);
       \u0275\u0275text(50, "PostgreSQL pgvector + HNSW");
@@ -226,7 +224,7 @@ var AdminStatsComponent = class _AdminStatsComponent {
       \u0275\u0275advance(8);
       \u0275\u0275domProperty("disabled", ctx.isLoading());
       \u0275\u0275advance();
-      \u0275\u0275classProp("animate-spin", ctx.isLoading());
+      \u0275\u0275classMap(ctx.isLoading() ? "animate-spin" : "");
       \u0275\u0275advance(17);
       \u0275\u0275textInterpolate(ctx.totalDocumentos());
       \u0275\u0275advance(10);
@@ -237,7 +235,81 @@ var AdminStatsComponent = class _AdminStatsComponent {
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(AdminStatsComponent, [{
     type: Component,
-    args: [{ selector: "app-admin-stats", changeDetection: ChangeDetectionStrategy.OnPush, template: '<div class="space-y-6">\n  <!-- Cabecera de Bienvenida y Acci\xF3n Principal -->\n  <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white p-6 rounded-2xl border border-slate-200 shadow-2xs">\n    <div>\n      <h2 class="text-xl font-bold text-slate-900">Panel de Documentos Oficiales</h2>\n      <p class="text-sm text-slate-500 mt-1">\n        Administra los reglamentos, gu\xEDas y normativas que alimentan al Asistente Virtual del colegio.\n      </p>\n    </div>\n\n    <div class="flex items-center gap-3 shrink-0">\n      <button\n        type="button"\n        (click)="refresh.emit()"\n        [disabled]="isLoading()"\n        class="px-4 py-2.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-sm font-medium transition-all flex items-center gap-2 cursor-pointer disabled:opacity-50">\n        <span [class.animate-spin]="isLoading()">\u{1F504}</span>\n        <span>Actualizar</span>\n      </button>\n\n      <button\n        type="button"\n        (click)="openUpload.emit()"\n        class="px-5 py-2.5 rounded-xl bg-[#b00725] hover:bg-[#92061e] text-white text-sm font-semibold shadow-md shadow-red-900/15 transition-all flex items-center gap-2 cursor-pointer active:scale-95">\n        <span>\u2795</span>\n        <span>Ingestar Documento</span>\n      </button>\n    </div>\n  </div>\n\n  <!-- Tarjetas de Indicadores (KPIs) -->\n  <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">\n    \n    <!-- KPI 1: Total Documentos -->\n    <div class="stat-card bg-white p-5 rounded-2xl border border-slate-200 shadow-2xs flex items-center gap-4">\n      <div class="w-12 h-12 rounded-2xl bg-red-50 border border-red-100 text-[#b00725] flex items-center justify-center text-2xl shrink-0">\n        \u{1F4C4}\n      </div>\n      <div>\n        <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Documentos Activos</div>\n        <div class="text-2xl font-extrabold text-slate-900 mt-0.5">{{ totalDocumentos() }}</div>\n        <div class="text-[11px] text-slate-400">Archivos indexados en BD</div>\n      </div>\n    </div>\n\n    <!-- KPI 2: Total Fragmentos Vectoriales -->\n    <div class="stat-card bg-white p-5 rounded-2xl border border-slate-200 shadow-2xs flex items-center gap-4">\n      <div class="w-12 h-12 rounded-2xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center text-2xl shrink-0">\n        \u{1F9E9}\n      </div>\n      <div>\n        <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Fragmentos Vectoriales</div>\n        <div class="text-2xl font-extrabold text-slate-900 mt-0.5">{{ totalFragmentos() }}</div>\n        <div class="text-[11px] text-slate-400">Chunks con Sentence Window (768 dim)</div>\n      </div>\n    </div>\n\n    <!-- KPI 3: Estado del Motor RAG -->\n    <div class="stat-card bg-white p-5 rounded-2xl border border-slate-200 shadow-2xs flex items-center gap-4">\n      <div class="w-12 h-12 rounded-2xl bg-emerald-50 border border-emerald-100 text-emerald-600 flex items-center justify-center text-2xl shrink-0">\n        \u26A1\n      </div>\n      <div>\n        <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Motor IA Conectado</div>\n        <div class="text-base font-bold text-slate-900 mt-1 flex items-center gap-1.5">\n          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>\n          <span>Gemini 3.8 Flash</span>\n        </div>\n        <div class="text-[11px] text-slate-400">PostgreSQL pgvector + HNSW</div>\n      </div>\n    </div>\n\n  </div>\n</div>\n', styles: ["/* src/app/features/backoffice/components/admin-stats/admin-stats.component.css */\n.stat-card {\n  transition: transform 0.2s ease, box-shadow 0.2s ease;\n}\n.stat-card:hover {\n  transform: translateY(-2px);\n  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);\n}\n"] }]
+    args: [{ selector: "app-admin-stats", changeDetection: ChangeDetectionStrategy.OnPush, template: `<div class="space-y-6">
+  <!-- Cabecera de Bienvenida y Acci\xF3n Principal -->
+  <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white p-6 rounded-2xl border border-slate-200 border-l-4 border-l-[#0050A1] shadow-2xs">
+    <div>
+      <h2 class="text-xl font-extrabold text-[#0050A1]">Panel de Documentos Oficiales</h2>
+      <p class="text-xs sm:text-sm text-slate-500 mt-1">
+        Administra los reglamentos, gu\xEDas y normativas que alimentan al Asistente Virtual del Colegio Bertolt Brecht.
+      </p>
+    </div>
+
+    <div class="flex items-center gap-3 shrink-0">
+      <button
+        type="button"
+        (click)="refresh.emit()"
+        [disabled]="isLoading()"
+        class="px-4 py-2.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-[#0050A1] text-xs sm:text-sm font-bold transition-all flex items-center gap-2 cursor-pointer disabled:opacity-50">
+        <span [class]="isLoading() ? 'animate-spin' : ''">\u{1F504}</span>
+        <span>Actualizar</span>
+      </button>
+
+      <button
+        type="button"
+        (click)="openUpload.emit()"
+        class="px-5 py-2.5 rounded-xl bg-[#BE002E] hover:bg-[#9e0026] text-white text-xs sm:text-sm font-bold shadow-md shadow-[#BE002E]/20 transition-all flex items-center gap-2 cursor-pointer active:scale-95">
+        <span>\u2795</span>
+        <span>Ingestar Documento</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Tarjetas de Indicadores (KPIs) -->
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+    
+    <!-- KPI 1: Total Documentos -->
+    <div class="stat-card bg-white p-5 rounded-2xl border border-slate-200 border-t-4 border-t-[#BE002E] shadow-2xs flex items-center gap-4">
+      <div class="w-12 h-12 rounded-2xl bg-[#BE002E]/10 text-[#BE002E] flex items-center justify-center text-2xl shrink-0">
+        \u{1F4C4}
+      </div>
+      <div>
+        <div class="text-xs font-bold text-slate-500 uppercase tracking-wider">Documentos Activos</div>
+        <div class="text-2xl font-black text-slate-900 mt-0.5">{{ totalDocumentos() }}</div>
+        <div class="text-[11px] text-slate-400">Archivos indexados en BD</div>
+      </div>
+    </div>
+
+    <!-- KPI 2: Total Fragmentos Vectoriales -->
+    <div class="stat-card bg-white p-5 rounded-2xl border border-slate-200 border-t-4 border-t-[#0050A1] shadow-2xs flex items-center justify-center sm:justify-start gap-4">
+      <div class="w-12 h-12 rounded-2xl bg-[#0050A1]/10 text-[#0050A1] flex items-center justify-center text-2xl shrink-0">
+        \u{1F9E9}
+      </div>
+      <div>
+        <div class="text-xs font-bold text-slate-500 uppercase tracking-wider">Fragmentos Vectoriales</div>
+        <div class="text-2xl font-black text-[#0050A1] mt-0.5">{{ totalFragmentos() }}</div>
+        <div class="text-[11px] text-slate-400">Chunks sem\xE1nticos (768 dim)</div>
+      </div>
+    </div>
+
+    <!-- KPI 3: Estado del Motor RAG -->
+    <div class="stat-card bg-white p-5 rounded-2xl border border-slate-200 border-t-4 border-t-[#0050A1] shadow-2xs flex items-center gap-4">
+      <div class="w-12 h-12 rounded-2xl bg-emerald-50 border border-emerald-100 text-emerald-600 flex items-center justify-center text-2xl shrink-0">
+        \u26A1
+      </div>
+      <div>
+        <div class="text-xs font-bold text-slate-500 uppercase tracking-wider">Motor IA Conectado</div>
+        <div class="text-base font-extrabold text-slate-900 mt-1 flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span>Gemini 3.5 Flash Lite</span>
+        </div>
+        <div class="text-[11px] text-slate-400">PostgreSQL pgvector + HNSW</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+`, styles: ["/* src/app/features/backoffice/components/admin-stats/admin-stats.component.css */\n.stat-card {\n  transition: transform 0.2s ease, box-shadow 0.2s ease;\n}\n.stat-card:hover {\n  transform: translateY(-2px);\n  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);\n}\n"] }]
   }], null, { totalDocumentos: [{ type: Input, args: [{ isSignal: true, alias: "totalDocumentos", required: false }] }], totalFragmentos: [{ type: Input, args: [{ isSignal: true, alias: "totalFragmentos", required: false }] }], isLoading: [{ type: Input, args: [{ isSignal: true, alias: "isLoading", required: false }] }], openUpload: [{ type: Output, args: ["openUpload"] }], refresh: [{ type: Output, args: ["refresh"] }] });
 })();
 (() => {
@@ -291,7 +363,7 @@ function DocumentTableComponent_Conditional_27_Conditional_3_Template(rf, ctx) {
     \u0275\u0275text(1, "A\xFAn no hay documentos indexados");
     \u0275\u0275domElementEnd();
     \u0275\u0275domElementStart(2, "p", 21);
-    \u0275\u0275text(3, " Comienza subiendo reglamentos en PDF o Word para que el Asistente Virtual pueda responder consultas oficiales. ");
+    \u0275\u0275text(3, " Comienza subiendo reglamentos en PDF, Word o Markdown para que el Asistente Virtual pueda responder consultas oficiales. ");
     \u0275\u0275domElementEnd();
     \u0275\u0275domElementStart(4, "button", 22);
     \u0275\u0275domListener("click", function DocumentTableComponent_Conditional_27_Conditional_3_Template_button_click_4_listener() {
@@ -430,7 +502,7 @@ function DocumentTableComponent_Conditional_28_Conditional_31_For_4_Template(rf,
   if (rf & 2) {
     const page_r10 = ctx.$implicit;
     const ctx_r2 = \u0275\u0275nextContext(3);
-    \u0275\u0275classProp("bg-[#b00725]", ctx_r2.currentPage() === page_r10)("text-white", ctx_r2.currentPage() === page_r10)("border-[#b00725]", ctx_r2.currentPage() === page_r10)("bg-white", ctx_r2.currentPage() !== page_r10)("text-slate-700", ctx_r2.currentPage() !== page_r10);
+    \u0275\u0275classMap(ctx_r2.currentPage() === page_r10 ? "w-8 h-8 rounded-lg border text-xs font-extrabold transition-colors cursor-pointer bg-[#0050A1] text-white border-[#0050A1]" : "w-8 h-8 rounded-lg border border-slate-200 text-xs font-bold transition-colors cursor-pointer bg-white text-slate-700 hover:bg-slate-100");
     \u0275\u0275advance();
     \u0275\u0275textInterpolate1(" ", page_r10, " ");
   }
@@ -446,7 +518,7 @@ function DocumentTableComponent_Conditional_28_Conditional_31_Template(rf, ctx) 
     });
     \u0275\u0275text(2, " \u2190 Anterior ");
     \u0275\u0275domElementEnd();
-    \u0275\u0275repeaterCreate(3, DocumentTableComponent_Conditional_28_Conditional_31_For_4_Template, 2, 11, "button", 48, \u0275\u0275repeaterTrackByIdentity);
+    \u0275\u0275repeaterCreate(3, DocumentTableComponent_Conditional_28_Conditional_31_For_4_Template, 2, 3, "button", 48, \u0275\u0275repeaterTrackByIdentity);
     \u0275\u0275domElementStart(5, "button", 47);
     \u0275\u0275domListener("click", function DocumentTableComponent_Conditional_28_Conditional_31_Template_button_click_5_listener() {
       \u0275\u0275restoreView(_r8);
@@ -650,7 +722,7 @@ var DocumentTableComponent = class _DocumentTableComponent {
   static \u0275fac = function DocumentTableComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _DocumentTableComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _DocumentTableComponent, selectors: [["app-document-table"]], inputs: { documentos: [1, "documentos"], isLoading: [1, "isLoading"], deletingId: [1, "deletingId"] }, outputs: { requestDelete: "requestDelete", openUpload: "openUpload" }, decls: 29, vars: 13, consts: [[1, "bg-white", "rounded-2xl", "border", "border-slate-200", "shadow-2xs", "overflow-hidden"], [1, "p-4", "sm:p-5", "border-b", "border-slate-200", "bg-slate-50/50", "flex", "flex-col", "md:flex-row", "md:items-center", "justify-between", "gap-3"], [1, "relative", "flex-1", "max-w-md"], [1, "absolute", "inset-y-0", "left-3", "flex", "items-center", "text-slate-400", "text-sm"], ["type", "text", "placeholder", "Buscar por ID, nombre de fuente o \xE1rea...", 1, "w-full", "pl-9", "pr-4", "py-2", "rounded-xl", "border", "border-slate-200", "bg-white", "text-sm", "text-slate-800", "placeholder-slate-400", "focus:outline-hidden", "focus:border-[#b00725]", "focus:ring-2", "focus:ring-red-100", "transition-all", 3, "input", "value"], [1, "flex", "flex-wrap", "items-center", "gap-2.5"], [1, "flex", "items-center", "gap-2"], [1, "text-xs", "font-semibold", "text-slate-500"], [1, "px-3", "py-2", "rounded-xl", "border", "border-slate-200", "bg-white", "text-xs", "font-semibold", "text-slate-700", "focus:outline-hidden", "focus:border-[#b00725]", "cursor-pointer", 3, "change", "value"], [3, "value"], [1, "px-2.5", "py-2", "rounded-xl", "border", "border-slate-200", "bg-white", "text-xs", "font-semibold", "text-slate-700", "focus:outline-hidden", "focus:border-[#b00725]", "cursor-pointer", 3, "change", "value"], [3, "value", "selected"], ["type", "button", 1, "px-3", "py-2", "rounded-xl", "text-xs", "font-semibold", "text-[#b00725]", "hover:bg-red-50", "transition-colors", "cursor-pointer"], [1, "p-12", "flex", "flex-col", "items-center", "justify-center", "text-center", "space-y-3"], [1, "p-12", "flex", "flex-col", "items-center", "justify-center", "text-center"], ["type", "button", 1, "px-3", "py-2", "rounded-xl", "text-xs", "font-semibold", "text-[#b00725]", "hover:bg-red-50", "transition-colors", "cursor-pointer", 3, "click"], [1, "w-10", "h-10", "border-4", "border-red-200", "border-t-[#b00725]", "rounded-full", "animate-spin"], [1, "text-sm", "font-semibold", "text-slate-700"], [1, "text-xs", "text-slate-400"], [1, "w-14", "h-14", "rounded-2xl", "bg-slate-100", "flex", "items-center", "justify-center", "text-2xl", "mb-3"], [1, "text-base", "font-bold", "text-slate-800"], [1, "text-xs", "text-slate-500", "max-w-sm", "mt-1", "mb-4"], ["type", "button", 1, "px-4", "py-2", "rounded-xl", "bg-[#b00725]", "text-white", "text-xs", "font-semibold", "hover:bg-[#92061e]", "transition-colors", "cursor-pointer", 3, "click"], ["type", "button", 1, "px-4", "py-2", "rounded-xl", "border", "border-slate-200", "text-slate-700", "text-xs", "font-semibold", "hover:bg-slate-50", "transition-colors", "cursor-pointer", 3, "click"], [1, "overflow-x-auto"], [1, "w-full", "text-left", "border-collapse"], [1, "bg-slate-50/80", "border-b", "border-slate-200", "text-[11px]", "font-bold", "text-slate-500", "uppercase", "tracking-wider"], [1, "py-3.5", "px-4"], [1, "py-3.5", "px-4", "text-center"], [1, "py-3.5", "px-4", "text-right"], [1, "divide-y", "divide-slate-200/70", "text-sm"], [1, "doc-row", "hover:bg-slate-50/90", "transition-colors"], [1, "p-4", "border-t", "border-slate-200", "bg-slate-50/50", "flex", "flex-col", "sm:flex-row", "items-center", "justify-between", "gap-3"], [1, "text-xs", "text-slate-500"], [1, "font-bold", "text-slate-800"], [1, "flex", "items-center", "gap-1.5"], [1, "py-3.5", "px-4", "font-mono", "text-xs", "font-semibold", "text-slate-700"], [1, "px-2", "py-1", "rounded-md", "bg-slate-100", "border", "border-slate-200"], [1, "flex", "items-center", "gap-2.5"], [1, "text-base"], [1, "font-semibold", "text-slate-900"], [1, "text-[11px]", "text-slate-400"], [1, "inline-flex", "items-center", "px-2.5", "py-0.5", "rounded-full", "text-xs", "font-semibold", "bg-red-50", "text-[#b00725]", "border", "border-red-200/70"], [1, "inline-flex", "items-center", "gap-1", "px-2.5", "py-1", "rounded-lg", "bg-blue-50", "text-blue-700", "font-bold", "text-xs", "border", "border-blue-200/60"], [1, "py-3.5", "px-4", "text-xs", "text-slate-500"], ["type", "button", 1, "inline-flex", "items-center", "gap-1.5", "px-3", "py-1.5", "rounded-xl", "text-xs", "font-semibold", "text-red-600", "hover:text-white", "hover:bg-red-600", "border", "border-red-200", "hover:border-red-600", "transition-all", "cursor-pointer", "disabled:opacity-50", 3, "click", "disabled"], [1, "w-3.5", "h-3.5", "border-2", "border-current", "border-t-transparent", "rounded-full", "animate-spin"], ["type", "button", 1, "px-3", "py-1.5", "rounded-lg", "border", "border-slate-200", "bg-white", "hover:bg-slate-100", "text-xs", "font-semibold", "text-slate-700", "disabled:opacity-40", "disabled:cursor-not-allowed", "cursor-pointer", 3, "click", "disabled"], ["type", "button", 1, "w-8", "h-8", "rounded-lg", "border", "border-slate-200", "text-xs", "font-bold", "transition-colors", "cursor-pointer", 3, "bg-[#b00725]", "text-white", "border-[#b00725]", "bg-white", "text-slate-700"], ["type", "button", 1, "w-8", "h-8", "rounded-lg", "border", "border-slate-200", "text-xs", "font-bold", "transition-colors", "cursor-pointer", 3, "click"]], template: function DocumentTableComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _DocumentTableComponent, selectors: [["app-document-table"]], inputs: { documentos: [1, "documentos"], isLoading: [1, "isLoading"], deletingId: [1, "deletingId"] }, outputs: { requestDelete: "requestDelete", openUpload: "openUpload" }, decls: 29, vars: 13, consts: [[1, "bg-white", "rounded-2xl", "border", "border-slate-200", "shadow-2xs", "overflow-hidden"], [1, "p-4", "sm:p-5", "border-b", "border-slate-200", "bg-slate-50/50", "flex", "flex-col", "md:flex-row", "md:items-center", "justify-between", "gap-3"], [1, "relative", "flex-1", "max-w-md"], [1, "absolute", "inset-y-0", "left-3", "flex", "items-center", "text-slate-400", "text-sm"], ["type", "text", "placeholder", "Buscar por ID, nombre de fuente o \xE1rea...", 1, "w-full", "pl-9", "pr-4", "py-2", "rounded-xl", "border", "border-slate-200", "bg-white", "text-sm", "text-slate-800", "placeholder-slate-400", "focus:outline-hidden", "focus:border-[#0050A1]", "focus:ring-2", "focus:ring-[#0050A1]/15", "transition-all", 3, "input", "value"], [1, "flex", "flex-wrap", "items-center", "gap-2.5"], [1, "flex", "items-center", "gap-2"], [1, "text-xs", "font-bold", "text-slate-600"], [1, "px-3", "py-2", "rounded-xl", "border", "border-slate-200", "bg-white", "text-xs", "font-bold", "text-slate-700", "focus:outline-hidden", "focus:border-[#0050A1]", "cursor-pointer", 3, "change", "value"], [3, "value"], [1, "px-2.5", "py-2", "rounded-xl", "border", "border-slate-200", "bg-white", "text-xs", "font-bold", "text-slate-700", "focus:outline-hidden", "focus:border-[#0050A1]", "cursor-pointer", 3, "change", "value"], [3, "value", "selected"], ["type", "button", 1, "px-3", "py-2", "rounded-xl", "text-xs", "font-bold", "text-[#BE002E]", "hover:bg-red-50", "transition-colors", "cursor-pointer"], [1, "p-12", "flex", "flex-col", "items-center", "justify-center", "text-center", "space-y-3"], [1, "p-12", "flex", "flex-col", "items-center", "justify-center", "text-center"], ["type", "button", 1, "px-3", "py-2", "rounded-xl", "text-xs", "font-bold", "text-[#BE002E]", "hover:bg-red-50", "transition-colors", "cursor-pointer", 3, "click"], [1, "w-10", "h-10", "border-4", "border-blue-100", "border-t-[#0050A1]", "rounded-full", "animate-spin"], [1, "text-sm", "font-bold", "text-[#0050A1]"], [1, "text-xs", "text-slate-400"], [1, "w-14", "h-14", "rounded-2xl", "bg-[#0050A1]/10", "flex", "items-center", "justify-center", "text-2xl", "mb-3"], [1, "text-base", "font-extrabold", "text-slate-800"], [1, "text-xs", "text-slate-500", "max-w-sm", "mt-1", "mb-4"], ["type", "button", 1, "px-4", "py-2", "rounded-xl", "bg-[#BE002E]", "text-white", "text-xs", "font-bold", "hover:bg-[#9e0026]", "transition-colors", "cursor-pointer", 3, "click"], ["type", "button", 1, "px-4", "py-2", "rounded-xl", "border", "border-slate-200", "text-[#0050A1]", "text-xs", "font-bold", "hover:bg-slate-50", "transition-colors", "cursor-pointer", 3, "click"], [1, "overflow-x-auto"], [1, "w-full", "text-left", "border-collapse"], [1, "bg-slate-50/80", "border-b", "border-slate-200", "text-[11px]", "font-extrabold", "text-[#0050A1]", "uppercase", "tracking-wider"], [1, "py-3.5", "px-4"], [1, "py-3.5", "px-4", "text-center"], [1, "py-3.5", "px-4", "text-right"], [1, "divide-y", "divide-slate-200/70", "text-sm"], [1, "doc-row", "hover:bg-slate-50/90", "transition-colors"], [1, "p-4", "border-t", "border-slate-200", "bg-slate-50/50", "flex", "flex-col", "sm:flex-row", "items-center", "justify-between", "gap-3"], [1, "text-xs", "text-slate-500"], [1, "font-bold", "text-slate-800"], [1, "flex", "items-center", "gap-1.5"], [1, "py-3.5", "px-4", "font-mono", "text-xs", "font-semibold", "text-slate-700"], [1, "px-2", "py-1", "rounded-md", "bg-slate-100", "border", "border-slate-200"], [1, "flex", "items-center", "gap-2.5"], [1, "text-base"], [1, "font-bold", "text-slate-900"], [1, "text-[11px]", "text-slate-400"], [1, "inline-flex", "items-center", "px-2.5", "py-0.5", "rounded-full", "text-xs", "font-bold", "bg-[#BE002E]/10", "text-[#BE002E]", "border", "border-[#BE002E]/25"], [1, "inline-flex", "items-center", "gap-1", "px-2.5", "py-1", "rounded-lg", "bg-[#0050A1]/10", "text-[#0050A1]", "font-extrabold", "text-xs", "border", "border-[#0050A1]/20"], [1, "py-3.5", "px-4", "text-xs", "text-slate-500", "font-medium"], ["type", "button", 1, "inline-flex", "items-center", "gap-1.5", "px-3", "py-1.5", "rounded-xl", "text-xs", "font-bold", "text-[#BE002E]", "hover:text-white", "hover:bg-[#BE002E]", "border", "border-[#BE002E]/30", "hover:border-[#BE002E]", "transition-all", "cursor-pointer", "disabled:opacity-50", 3, "click", "disabled"], [1, "w-3.5", "h-3.5", "border-2", "border-current", "border-t-transparent", "rounded-full", "animate-spin"], ["type", "button", 1, "px-3", "py-1.5", "rounded-lg", "border", "border-slate-200", "bg-white", "hover:bg-slate-100", "text-xs", "font-bold", "text-slate-700", "disabled:opacity-40", "disabled:cursor-not-allowed", "cursor-pointer", 3, "click", "disabled"], ["type", "button", 3, "class"], ["type", "button", 3, "click"]], template: function DocumentTableComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275domElementStart(0, "div", 0)(1, "div", 1)(2, "div", 2)(3, "span", 3);
       \u0275\u0275text(4, "\u{1F50D}");
@@ -733,18 +805,18 @@ var DocumentTableComponent = class _DocumentTableComponent {
         [value]="searchQuery()"
         (input)="onSearchChange($event)"
         placeholder="Buscar por ID, nombre de fuente o \xE1rea..."
-        class="w-full pl-9 pr-4 py-2 rounded-xl border border-slate-200 bg-white text-sm text-slate-800 placeholder-slate-400 focus:outline-hidden focus:border-[#b00725] focus:ring-2 focus:ring-red-100 transition-all"
+        class="w-full pl-9 pr-4 py-2 rounded-xl border border-slate-200 bg-white text-sm text-slate-800 placeholder-slate-400 focus:outline-hidden focus:border-[#0050A1] focus:ring-2 focus:ring-[#0050A1]/15 transition-all"
       />
     </div>
 
     <!-- Filtros por \xC1rea y Tama\xF1o de P\xE1gina -->
     <div class="flex flex-wrap items-center gap-2.5">
       <div class="flex items-center gap-2">
-        <label class="text-xs font-semibold text-slate-500">\xC1rea:</label>
+        <label class="text-xs font-bold text-slate-600">\xC1rea:</label>
         <select
           [value]="selectedArea()"
           (change)="onAreaChange($event)"
-          class="px-3 py-2 rounded-xl border border-slate-200 bg-white text-xs font-semibold text-slate-700 focus:outline-hidden focus:border-[#b00725] cursor-pointer">
+          class="px-3 py-2 rounded-xl border border-slate-200 bg-white text-xs font-bold text-slate-700 focus:outline-hidden focus:border-[#0050A1] cursor-pointer">
           @for (area of areasDisponibles(); track area) {
             <option [value]="area">{{ area === 'TODOS' ? 'Todas las \xE1reas' : area }}</option>
           }
@@ -752,11 +824,11 @@ var DocumentTableComponent = class _DocumentTableComponent {
       </div>
 
       <div class="flex items-center gap-2">
-        <label class="text-xs font-semibold text-slate-500">Mostrar:</label>
+        <label class="text-xs font-bold text-slate-600">Mostrar:</label>
         <select
           [value]="pageSize()"
           (change)="onPageSizeChange($event)"
-          class="px-2.5 py-2 rounded-xl border border-slate-200 bg-white text-xs font-semibold text-slate-700 focus:outline-hidden focus:border-[#b00725] cursor-pointer">
+          class="px-2.5 py-2 rounded-xl border border-slate-200 bg-white text-xs font-bold text-slate-700 focus:outline-hidden focus:border-[#0050A1] cursor-pointer">
           <option [value]="5" [selected]="pageSize() === 5">5 filas</option>
           <option [value]="10" [selected]="pageSize() === 10">10 filas</option>
           <option [value]="20" [selected]="pageSize() === 20">20 filas</option>
@@ -768,7 +840,7 @@ var DocumentTableComponent = class _DocumentTableComponent {
         <button
           type="button"
           (click)="clearFilters()"
-          class="px-3 py-2 rounded-xl text-xs font-semibold text-[#b00725] hover:bg-red-50 transition-colors cursor-pointer">
+          class="px-3 py-2 rounded-xl text-xs font-bold text-[#BE002E] hover:bg-red-50 transition-colors cursor-pointer">
           Limpiar filtros
         </button>
       }
@@ -778,36 +850,36 @@ var DocumentTableComponent = class _DocumentTableComponent {
   <!-- Estado Cargando Tabla -->
   @if (isLoading()) {
     <div class="p-12 flex flex-col items-center justify-center text-center space-y-3">
-      <div class="w-10 h-10 border-4 border-red-200 border-t-[#b00725] rounded-full animate-spin"></div>
-      <div class="text-sm font-semibold text-slate-700">Consultando base de datos vectorial...</div>
+      <div class="w-10 h-10 border-4 border-blue-100 border-t-[#0050A1] rounded-full animate-spin"></div>
+      <div class="text-sm font-bold text-[#0050A1]">Consultando base de datos vectorial...</div>
       <p class="text-xs text-slate-400">Sincronizando registros de PostgreSQL + pgvector</p>
     </div>
   } @else if (filteredDocuments().length === 0) {
     <!-- Estado Vac\xEDo -->
     <div class="p-12 flex flex-col items-center justify-center text-center">
-      <div class="w-14 h-14 rounded-2xl bg-slate-100 flex items-center justify-center text-2xl mb-3">
+      <div class="w-14 h-14 rounded-2xl bg-[#0050A1]/10 flex items-center justify-center text-2xl mb-3">
         \u{1F4C2}
       </div>
       @if (documentos().length === 0) {
-        <h3 class="text-base font-bold text-slate-800">A\xFAn no hay documentos indexados</h3>
+        <h3 class="text-base font-extrabold text-slate-800">A\xFAn no hay documentos indexados</h3>
         <p class="text-xs text-slate-500 max-w-sm mt-1 mb-4">
-          Comienza subiendo reglamentos en PDF o Word para que el Asistente Virtual pueda responder consultas oficiales.
+          Comienza subiendo reglamentos en PDF, Word o Markdown para que el Asistente Virtual pueda responder consultas oficiales.
         </p>
         <button
           type="button"
           (click)="openUpload.emit()"
-          class="px-4 py-2 rounded-xl bg-[#b00725] text-white text-xs font-semibold hover:bg-[#92061e] transition-colors cursor-pointer">
+          class="px-4 py-2 rounded-xl bg-[#BE002E] text-white text-xs font-bold hover:bg-[#9e0026] transition-colors cursor-pointer">
           \u2795 Subir primer documento
         </button>
       } @else {
-        <h3 class="text-base font-bold text-slate-800">Sin coincidencias para tu b\xFAsqueda</h3>
+        <h3 class="text-base font-extrabold text-slate-800">Sin coincidencias para tu b\xFAsqueda</h3>
         <p class="text-xs text-slate-500 max-w-sm mt-1 mb-4">
           No se encontraron documentos que coincidan con "{{ searchQuery() }}" en el \xE1rea seleccionada.
         </p>
         <button
           type="button"
           (click)="clearFilters()"
-          class="px-4 py-2 rounded-xl border border-slate-200 text-slate-700 text-xs font-semibold hover:bg-slate-50 transition-colors cursor-pointer">
+          class="px-4 py-2 rounded-xl border border-slate-200 text-[#0050A1] text-xs font-bold hover:bg-slate-50 transition-colors cursor-pointer">
           Restablecer filtros
         </button>
       }
@@ -817,7 +889,7 @@ var DocumentTableComponent = class _DocumentTableComponent {
     <div class="overflow-x-auto">
       <table class="w-full text-left border-collapse">
         <thead>
-          <tr class="bg-slate-50/80 border-b border-slate-200 text-[11px] font-bold text-slate-500 uppercase tracking-wider">
+          <tr class="bg-slate-50/80 border-b border-slate-200 text-[11px] font-extrabold text-[#0050A1] uppercase tracking-wider">
             <th class="py-3.5 px-4">ID Documento</th>
             <th class="py-3.5 px-4">Fuente Oficial / T\xEDtulo</th>
             <th class="py-3.5 px-4">\xC1rea Origen</th>
@@ -842,7 +914,7 @@ var DocumentTableComponent = class _DocumentTableComponent {
                 <div class="flex items-center gap-2.5">
                   <span class="text-base">\u{1F4D8}</span>
                   <div>
-                    <div class="font-semibold text-slate-900">{{ doc.fuente }}</div>
+                    <div class="font-bold text-slate-900">{{ doc.fuente }}</div>
                     <div class="text-[11px] text-slate-400">Vectorizado con gemini-embedding-001</div>
                   </div>
                 </div>
@@ -850,21 +922,21 @@ var DocumentTableComponent = class _DocumentTableComponent {
 
               <!-- \xC1rea -->
               <td class="py-3.5 px-4">
-                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-red-50 text-[#b00725] border border-red-200/70">
+                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-[#BE002E]/10 text-[#BE002E] border border-[#BE002E]/25">
                   {{ doc.area_origen }}
                 </span>
               </td>
 
               <!-- Fragmentos -->
               <td class="py-3.5 px-4 text-center">
-                <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-blue-50 text-blue-700 font-bold text-xs border border-blue-200/60">
+                <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-[#0050A1]/10 text-[#0050A1] font-extrabold text-xs border border-[#0050A1]/20">
                   <span>\u{1F9E9}</span>
                   <span>{{ doc.fragmentos }}</span>
                 </span>
               </td>
 
               <!-- Fecha -->
-              <td class="py-3.5 px-4 text-xs text-slate-500">
+              <td class="py-3.5 px-4 text-xs text-slate-500 font-medium">
                 {{ doc.creado_en | date:'dd/MM/yyyy HH:mm' }}
               </td>
 
@@ -874,7 +946,7 @@ var DocumentTableComponent = class _DocumentTableComponent {
                   type="button"
                   (click)="requestDelete.emit(doc)"
                   [disabled]="deletingId() === doc.documento_id"
-                  class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold text-red-600 hover:text-white hover:bg-red-600 border border-red-200 hover:border-red-600 transition-all cursor-pointer disabled:opacity-50">
+                  class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold text-[#BE002E] hover:text-white hover:bg-[#BE002E] border border-[#BE002E]/30 hover:border-[#BE002E] transition-all cursor-pointer disabled:opacity-50">
                   @if (deletingId() === doc.documento_id) {
                     <span class="w-3.5 h-3.5 border-2 border-current border-t-transparent rounded-full animate-spin"></span>
                     <span>Eliminando...</span>
@@ -905,7 +977,7 @@ var DocumentTableComponent = class _DocumentTableComponent {
             type="button"
             (click)="goToPage(currentPage() - 1)"
             [disabled]="currentPage() === 1"
-            class="px-3 py-1.5 rounded-lg border border-slate-200 bg-white hover:bg-slate-100 text-xs font-semibold text-slate-700 disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer">
+            class="px-3 py-1.5 rounded-lg border border-slate-200 bg-white hover:bg-slate-100 text-xs font-bold text-slate-700 disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer">
             \u2190 Anterior
           </button>
 
@@ -913,12 +985,9 @@ var DocumentTableComponent = class _DocumentTableComponent {
             <button
               type="button"
               (click)="goToPage(page)"
-              [class.bg-[#b00725]]="currentPage() === page"
-              [class.text-white]="currentPage() === page"
-              [class.border-[#b00725]]="currentPage() === page"
-              [class.bg-white]="currentPage() !== page"
-              [class.text-slate-700]="currentPage() !== page"
-              class="w-8 h-8 rounded-lg border border-slate-200 text-xs font-bold transition-colors cursor-pointer">
+              [class]="currentPage() === page
+                ? 'w-8 h-8 rounded-lg border text-xs font-extrabold transition-colors cursor-pointer bg-[#0050A1] text-white border-[#0050A1]'
+                : 'w-8 h-8 rounded-lg border border-slate-200 text-xs font-bold transition-colors cursor-pointer bg-white text-slate-700 hover:bg-slate-100'">
               {{ page }}
             </button>
           }
@@ -927,7 +996,7 @@ var DocumentTableComponent = class _DocumentTableComponent {
             type="button"
             (click)="goToPage(currentPage() + 1)"
             [disabled]="currentPage() === totalPages()"
-            class="px-3 py-1.5 rounded-lg border border-slate-200 bg-white hover:bg-slate-100 text-xs font-semibold text-slate-700 disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer">
+            class="px-3 py-1.5 rounded-lg border border-slate-200 bg-white hover:bg-slate-100 text-xs font-bold text-slate-700 disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer">
             Siguiente \u2192
           </button>
         </div>
@@ -977,12 +1046,12 @@ function DocumentUploadModalComponent_Conditional_0_Conditional_14_Template(rf, 
     \u0275\u0275text(7, "haz clic para explorar");
     \u0275\u0275domElementEnd()();
     \u0275\u0275domElementStart(8, "p", 33);
-    \u0275\u0275text(9, " Soporta PDF, Word (.docx), PowerPoint (.pptx), TXT, MD o CSV (M\xE1x. 10 MB) ");
+    \u0275\u0275text(9, " Soporta PDF, Word (.docx), PowerPoint (.pptx), TXT, MD o CSV ");
     \u0275\u0275domElementEnd()();
   }
   if (rf & 2) {
     const ctx_r1 = \u0275\u0275nextContext(2);
-    \u0275\u0275classProp("border-[#b00725]", ctx_r1.isDragging())("bg-red-50/50", ctx_r1.isDragging());
+    \u0275\u0275classMap(ctx_r1.isDragging() ? "border-2 border-dashed border-[#0050A1] bg-[#0050A1]/5 rounded-2xl p-6 text-center transition-all cursor-pointer relative" : "border-2 border-dashed border-slate-300 hover:border-[#0050A1] rounded-2xl p-6 text-center transition-all cursor-pointer relative");
   }
 }
 function DocumentUploadModalComponent_Conditional_0_Conditional_15_Conditional_9_Template(rf, ctx) {
@@ -1044,7 +1113,7 @@ function DocumentUploadModalComponent_Conditional_0_Conditional_44_Conditional_4
 }
 function DocumentUploadModalComponent_Conditional_0_Conditional_44_Conditional_5_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275text(0, " Paso 2/3: Segmentando oraciones con SentenceWindowTextSplitter... ");
+    \u0275\u0275text(0, " Paso 2/3: Segmentando secciones y encabezados... ");
   }
 }
 function DocumentUploadModalComponent_Conditional_0_Conditional_44_Conditional_6_Template(rf, ctx) {
@@ -1062,7 +1131,7 @@ function DocumentUploadModalComponent_Conditional_0_Conditional_44_Template(rf, 
     \u0275\u0275domElementStart(7, "div", 44);
     \u0275\u0275domElement(8, "div", 45);
     \u0275\u0275domElementEnd();
-    \u0275\u0275domElementStart(9, "p", 46);
+    \u0275\u0275domElementStart(9, "p", 6);
     \u0275\u0275text(10, " Por favor espera unos segundos mientras se guarda transaccionalmente en PostgreSQL. ");
     \u0275\u0275domElementEnd()();
   }
@@ -1076,7 +1145,7 @@ function DocumentUploadModalComponent_Conditional_0_Conditional_44_Template(rf, 
 }
 function DocumentUploadModalComponent_Conditional_0_Conditional_49_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275domElement(0, "span", 47);
+    \u0275\u0275domElement(0, "span", 46);
     \u0275\u0275domElementStart(1, "span");
     \u0275\u0275text(2, "Procesando Ingesta...");
     \u0275\u0275domElementEnd();
@@ -1118,7 +1187,7 @@ function DocumentUploadModalComponent_Conditional_0_Template(rf, ctx) {
       const ctx_r1 = \u0275\u0275nextContext();
       return \u0275\u0275resetView(ctx_r1.onSubmit($event));
     });
-    \u0275\u0275conditionalCreate(14, DocumentUploadModalComponent_Conditional_0_Conditional_14_Template, 10, 4, "div", 9)(15, DocumentUploadModalComponent_Conditional_0_Conditional_15_Template, 10, 3, "div", 10);
+    \u0275\u0275conditionalCreate(14, DocumentUploadModalComponent_Conditional_0_Conditional_14_Template, 10, 2, "div", 9)(15, DocumentUploadModalComponent_Conditional_0_Conditional_15_Template, 10, 3, "div", 10);
     \u0275\u0275conditionalCreate(16, DocumentUploadModalComponent_Conditional_0_Conditional_16_Template, 5, 1, "div", 11);
     \u0275\u0275domElementStart(17, "div", 12)(18, "div")(19, "label", 13);
     \u0275\u0275text(20, "ID \xDAnico del Documento *");
@@ -1393,7 +1462,7 @@ var DocumentUploadModalComponent = class _DocumentUploadModalComponent {
   static \u0275fac = function DocumentUploadModalComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _DocumentUploadModalComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _DocumentUploadModalComponent, selectors: [["app-document-upload-modal"]], inputs: { isOpen: [1, "isOpen"], isUploading: [1, "isUploading"], defaultArea: [1, "defaultArea"] }, outputs: { close: "close", upload: "upload" }, decls: 1, vars: 1, consts: [[1, "fixed", "inset-0", "z-50", "flex", "items-center", "justify-center", "p-4", "bg-slate-900/60", "backdrop-blur-xs", "animate-in", "fade-in", "duration-150"], [1, "modal-card", "bg-white", "w-full", "max-w-lg", "rounded-3xl", "shadow-2xl", "border", "border-slate-200", "overflow-hidden"], [1, "px-6", "py-4", "bg-[#b00725]", "text-white", "flex", "items-center", "justify-between"], [1, "flex", "items-center", "gap-2.5"], [1, "text-xl"], [1, "text-base", "font-bold", "leading-tight"], [1, "text-[11px]", "text-red-100"], ["type", "button", 1, "w-8", "h-8", "rounded-full", "bg-white/15", "hover:bg-white/25", "flex", "items-center", "justify-center", "text-white", "transition-colors", "cursor-pointer", "disabled:opacity-40", 3, "click", "disabled"], [1, "p-6", "space-y-4", 3, "submit"], [1, "border-2", "border-dashed", "border-slate-300", "hover:border-[#b00725]", "rounded-2xl", "p-6", "text-center", "transition-all", "cursor-pointer", "relative", 3, "border-[#b00725]", "bg-red-50/50"], [1, "p-3.5", "rounded-2xl", "bg-slate-50", "border", "border-slate-200", "flex", "items-center", "justify-between", "gap-3"], [1, "p-3", "rounded-xl", "bg-red-50", "border", "border-red-200", "text-xs", "font-medium", "text-red-700", "flex", "items-center", "gap-2"], [1, "grid", "grid-cols-1", "sm:grid-cols-2", "gap-3.5"], [1, "block", "text-xs", "font-bold", "text-slate-700", "mb-1"], ["type", "text", "placeholder", "Ej: doc_reglamento_2026", "required", "", 1, "w-full", "px-3.5", "py-2", "rounded-xl", "border", "border-slate-200", "text-sm", "text-slate-800", "font-mono", "focus:outline-hidden", "focus:border-[#b00725]", "focus:ring-2", "focus:ring-red-100", "disabled:bg-slate-100", 3, "input", "value", "disabled"], [1, "text-[10px]", "text-slate-400"], [1, "w-full", "px-3.5", "py-2", "rounded-xl", "border", "border-slate-200", "text-sm", "text-slate-800", "bg-white", "focus:outline-hidden", "focus:border-[#b00725]", "disabled:bg-slate-100", 3, "change", "value", "disabled"], ["value", "GENERAL"], ["value", "ADMISIONES"], ["value", "SECRETARIA"], ["value", "TESORERIA"], ["value", "DIRECCION"], ["value", "PSICOLOGIA"], ["type", "text", "placeholder", "Ej: Gu\xEDa Oficial de Matr\xEDcula y Pensiones 2026", "required", "", 1, "w-full", "px-3.5", "py-2", "rounded-xl", "border", "border-slate-200", "text-sm", "text-slate-800", "focus:outline-hidden", "focus:border-[#b00725]", "focus:ring-2", "focus:ring-red-100", "disabled:bg-slate-100", 3, "input", "value", "disabled"], [1, "p-4", "rounded-2xl", "bg-slate-900", "text-white", "space-y-3"], [1, "pt-2", "flex", "items-center", "justify-end", "gap-2.5", "border-t", "border-slate-100"], ["type", "button", 1, "px-4", "py-2.5", "rounded-xl", "border", "border-slate-200", "text-xs", "font-semibold", "text-slate-600", "hover:bg-slate-50", "transition-colors", "cursor-pointer", "disabled:opacity-40", 3, "click", "disabled"], ["type", "submit", 1, "px-5", "py-2.5", "rounded-xl", "bg-[#b00725]", "hover:bg-[#92061e]", "text-white", "text-xs", "font-bold", "shadow-md", "shadow-red-900/20", "transition-all", "flex", "items-center", "gap-2", "cursor-pointer", "disabled:opacity-40", "disabled:cursor-not-allowed", 3, "disabled"], [1, "border-2", "border-dashed", "border-slate-300", "hover:border-[#b00725]", "rounded-2xl", "p-6", "text-center", "transition-all", "cursor-pointer", "relative", 3, "dragover", "dragleave", "drop"], ["type", "file", "accept", ".pdf,.docx,.pptx,.txt,.md,.csv", 1, "absolute", "inset-0", "w-full", "h-full", "opacity-0", "cursor-pointer", 3, "change"], [1, "w-12", "h-12", "rounded-2xl", "bg-red-50", "text-[#b00725]", "flex", "items-center", "justify-center", "text-2xl", "mx-auto", "mb-2.5"], [1, "text-sm", "font-bold", "text-slate-800"], [1, "text-[#b00725]", "underline"], [1, "text-xs", "text-slate-400", "mt-1"], [1, "flex", "items-center", "gap-3", "min-w-0"], [1, "w-10", "h-10", "rounded-xl", "bg-red-100", "text-[#b00725]", "flex", "items-center", "justify-center", "text-lg", "shrink-0"], [1, "min-w-0"], [1, "text-sm", "font-bold", "text-slate-800", "truncate"], [1, "text-xs", "text-slate-500"], ["type", "button", 1, "px-2.5", "py-1", "rounded-lg", "text-xs", "font-semibold", "text-red-600", "hover:bg-red-50", "transition-colors", "cursor-pointer", "shrink-0"], ["type", "button", 1, "px-2.5", "py-1", "rounded-lg", "text-xs", "font-semibold", "text-red-600", "hover:bg-red-50", "transition-colors", "cursor-pointer", "shrink-0", 3, "click"], [1, "flex", "items-center", "gap-3"], [1, "w-6", "h-6", "border-3", "border-red-400", "border-t-white", "rounded-full", "animate-spin", "shrink-0"], [1, "text-xs", "font-bold", "tracking-wide"], [1, "w-full", "h-1.5", "bg-slate-700", "rounded-full", "overflow-hidden"], [1, "h-full", "bg-[#e11d48]", "transition-all", "duration-500"], [1, "text-[11px]", "text-slate-300"], [1, "w-4", "h-4", "border-2", "border-white", "border-t-transparent", "rounded-full", "animate-spin"]], template: function DocumentUploadModalComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _DocumentUploadModalComponent, selectors: [["app-document-upload-modal"]], inputs: { isOpen: [1, "isOpen"], isUploading: [1, "isUploading"], defaultArea: [1, "defaultArea"] }, outputs: { close: "close", upload: "upload" }, decls: 1, vars: 1, consts: [[1, "fixed", "inset-0", "z-50", "flex", "items-center", "justify-center", "p-4", "bg-slate-900/60", "backdrop-blur-xs", "animate-in", "fade-in", "duration-150"], [1, "modal-card", "bg-white", "w-full", "max-w-lg", "rounded-3xl", "shadow-2xl", "border", "border-slate-200", "overflow-hidden"], [1, "px-6", "py-4", "bg-[#0050A1]", "border-b-4", "border-[#BE002E]", "text-white", "flex", "items-center", "justify-between"], [1, "flex", "items-center", "gap-2.5"], [1, "text-xl"], [1, "text-base", "font-extrabold", "leading-tight"], [1, "text-[11px]", "text-blue-100"], ["type", "button", 1, "w-8", "h-8", "rounded-full", "bg-white/15", "hover:bg-white/25", "flex", "items-center", "justify-center", "text-white", "transition-colors", "cursor-pointer", "disabled:opacity-40", 3, "click", "disabled"], [1, "p-6", "space-y-4", 3, "submit"], [3, "class"], [1, "p-3.5", "rounded-2xl", "bg-slate-50", "border", "border-slate-200", "flex", "items-center", "justify-between", "gap-3"], [1, "p-3", "rounded-xl", "bg-red-50", "border", "border-red-200", "text-xs", "font-semibold", "text-[#BE002E]", "flex", "items-center", "gap-2"], [1, "grid", "grid-cols-1", "sm:grid-cols-2", "gap-3.5"], [1, "block", "text-xs", "font-bold", "text-slate-700", "mb-1"], ["type", "text", "placeholder", "Ej: doc_reglamento_2026", "required", "", 1, "w-full", "px-3.5", "py-2", "rounded-xl", "border", "border-slate-200", "text-sm", "text-slate-800", "font-mono", "focus:outline-hidden", "focus:border-[#0050A1]", "focus:ring-2", "focus:ring-[#0050A1]/15", "disabled:bg-slate-100", 3, "input", "value", "disabled"], [1, "text-[10px]", "text-slate-400"], [1, "w-full", "px-3.5", "py-2", "rounded-xl", "border", "border-slate-200", "text-sm", "text-slate-800", "bg-white", "focus:outline-hidden", "focus:border-[#0050A1]", "disabled:bg-slate-100", 3, "change", "value", "disabled"], ["value", "GENERAL"], ["value", "ADMISIONES"], ["value", "SECRETARIA"], ["value", "TESORERIA"], ["value", "DIRECCION"], ["value", "PSICOLOGIA"], ["type", "text", "placeholder", "Ej: Gu\xEDa Oficial de Matr\xEDcula y Pensiones 2026", "required", "", 1, "w-full", "px-3.5", "py-2", "rounded-xl", "border", "border-slate-200", "text-sm", "text-slate-800", "focus:outline-hidden", "focus:border-[#0050A1]", "focus:ring-2", "focus:ring-[#0050A1]/15", "disabled:bg-slate-100", 3, "input", "value", "disabled"], [1, "p-4", "rounded-2xl", "bg-[#0050A1]", "text-white", "space-y-3"], [1, "pt-2", "flex", "items-center", "justify-end", "gap-2.5", "border-t", "border-slate-100"], ["type", "button", 1, "px-4", "py-2.5", "rounded-xl", "border", "border-slate-200", "text-xs", "font-bold", "text-slate-600", "hover:bg-slate-50", "transition-colors", "cursor-pointer", "disabled:opacity-40", 3, "click", "disabled"], ["type", "submit", 1, "px-5", "py-2.5", "rounded-xl", "bg-[#BE002E]", "hover:bg-[#9e0026]", "text-white", "text-xs", "font-bold", "shadow-md", "shadow-[#BE002E]/20", "transition-all", "flex", "items-center", "gap-2", "cursor-pointer", "disabled:opacity-40", "disabled:cursor-not-allowed", 3, "disabled"], [3, "dragover", "dragleave", "drop"], ["type", "file", "accept", ".pdf,.docx,.pptx,.txt,.md,.csv", 1, "absolute", "inset-0", "w-full", "h-full", "opacity-0", "cursor-pointer", 3, "change"], [1, "w-12", "h-12", "rounded-2xl", "bg-[#0050A1]/10", "text-[#0050A1]", "flex", "items-center", "justify-center", "text-2xl", "mx-auto", "mb-2.5"], [1, "text-sm", "font-bold", "text-slate-800"], [1, "text-[#BE002E]", "underline", "font-extrabold"], [1, "text-xs", "text-slate-400", "mt-1"], [1, "flex", "items-center", "gap-3", "min-w-0"], [1, "w-10", "h-10", "rounded-xl", "bg-[#0050A1]/10", "text-[#0050A1]", "flex", "items-center", "justify-center", "text-lg", "shrink-0"], [1, "min-w-0"], [1, "text-sm", "font-bold", "text-slate-800", "truncate"], [1, "text-xs", "text-slate-500"], ["type", "button", 1, "px-2.5", "py-1", "rounded-lg", "text-xs", "font-bold", "text-[#BE002E]", "hover:bg-red-50", "transition-colors", "cursor-pointer", "shrink-0"], ["type", "button", 1, "px-2.5", "py-1", "rounded-lg", "text-xs", "font-bold", "text-[#BE002E]", "hover:bg-red-50", "transition-colors", "cursor-pointer", "shrink-0", 3, "click"], [1, "flex", "items-center", "gap-3"], [1, "w-6", "h-6", "border-3", "border-white/30", "border-t-white", "rounded-full", "animate-spin", "shrink-0"], [1, "text-xs", "font-bold", "tracking-wide"], [1, "w-full", "h-1.5", "bg-white/20", "rounded-full", "overflow-hidden"], [1, "h-full", "bg-[#BE002E]", "transition-all", "duration-500"], [1, "w-4", "h-4", "border-2", "border-white", "border-t-transparent", "rounded-full", "animate-spin"]], template: function DocumentUploadModalComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275conditionalCreate(0, DocumentUploadModalComponent_Conditional_0_Template, 51, 13, "div", 0);
     }
@@ -1410,13 +1479,13 @@ var DocumentUploadModalComponent = class _DocumentUploadModalComponent {
     
     <div class="modal-card bg-white w-full max-w-lg rounded-3xl shadow-2xl border border-slate-200 overflow-hidden">
       
-      <!-- Cabecera del Modal -->
-      <div class="px-6 py-4 bg-[#b00725] text-white flex items-center justify-between">
+      <!-- Cabecera del Modal (#0050A1 + #BE002E) -->
+      <div class="px-6 py-4 bg-[#0050A1] border-b-4 border-[#BE002E] text-white flex items-center justify-between">
         <div class="flex items-center gap-2.5">
           <span class="text-xl">\u{1F4E4}</span>
           <div>
-            <h3 class="text-base font-bold leading-tight">Ingestar Nuevo Documento</h3>
-            <p class="text-[11px] text-red-100">Se procesar\xE1 con OCR, Sentence Window y Gemini Embeddings</p>
+            <h3 class="text-base font-extrabold leading-tight">Ingestar Nuevo Documento</h3>
+            <p class="text-[11px] text-blue-100">Se procesar\xE1 con OCR, Sentence Window y Gemini Embeddings</p>
           </div>
         </div>
         <button
@@ -1437,9 +1506,9 @@ var DocumentUploadModalComponent = class _DocumentUploadModalComponent {
             (dragover)="onDragOver($event)"
             (dragleave)="onDragLeave($event)"
             (drop)="onDrop($event)"
-            [class.border-[#b00725]]="isDragging()"
-            [class.bg-red-50/50]="isDragging()"
-            class="border-2 border-dashed border-slate-300 hover:border-[#b00725] rounded-2xl p-6 text-center transition-all cursor-pointer relative">
+            [class]="isDragging()
+              ? 'border-2 border-dashed border-[#0050A1] bg-[#0050A1]/5 rounded-2xl p-6 text-center transition-all cursor-pointer relative'
+              : 'border-2 border-dashed border-slate-300 hover:border-[#0050A1] rounded-2xl p-6 text-center transition-all cursor-pointer relative'">
             
             <input
               type="file"
@@ -1448,21 +1517,21 @@ var DocumentUploadModalComponent = class _DocumentUploadModalComponent {
               class="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
             />
             
-            <div class="w-12 h-12 rounded-2xl bg-red-50 text-[#b00725] flex items-center justify-center text-2xl mx-auto mb-2.5">
+            <div class="w-12 h-12 rounded-2xl bg-[#0050A1]/10 text-[#0050A1] flex items-center justify-center text-2xl mx-auto mb-2.5">
               \u{1F4C4}
             </div>
             <div class="text-sm font-bold text-slate-800">
-              Arrastra tu archivo aqu\xED o <span class="text-[#b00725] underline">haz clic para explorar</span>
+              Arrastra tu archivo aqu\xED o <span class="text-[#BE002E] underline font-extrabold">haz clic para explorar</span>
             </div>
             <p class="text-xs text-slate-400 mt-1">
-              Soporta PDF, Word (.docx), PowerPoint (.pptx), TXT, MD o CSV (M\xE1x. 10 MB)
+              Soporta PDF, Word (.docx), PowerPoint (.pptx), TXT, MD o CSV
             </p>
           </div>
         } @else {
           <!-- Archivo Seleccionado -->
           <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200 flex items-center justify-between gap-3">
             <div class="flex items-center gap-3 min-w-0">
-              <div class="w-10 h-10 rounded-xl bg-red-100 text-[#b00725] flex items-center justify-center text-lg shrink-0">
+              <div class="w-10 h-10 rounded-xl bg-[#0050A1]/10 text-[#0050A1] flex items-center justify-center text-lg shrink-0">
                 \u{1F4CE}
               </div>
               <div class="min-w-0">
@@ -1474,7 +1543,7 @@ var DocumentUploadModalComponent = class _DocumentUploadModalComponent {
               <button
                 type="button"
                 (click)="removeFile()"
-                class="px-2.5 py-1 rounded-lg text-xs font-semibold text-red-600 hover:bg-red-50 transition-colors cursor-pointer shrink-0">
+                class="px-2.5 py-1 rounded-lg text-xs font-bold text-[#BE002E] hover:bg-red-50 transition-colors cursor-pointer shrink-0">
                 Cambiar
               </button>
             }
@@ -1482,7 +1551,7 @@ var DocumentUploadModalComponent = class _DocumentUploadModalComponent {
         }
 
         @if (validationError()) {
-          <div class="p-3 rounded-xl bg-red-50 border border-red-200 text-xs font-medium text-red-700 flex items-center gap-2">
+          <div class="p-3 rounded-xl bg-red-50 border border-red-200 text-xs font-semibold text-[#BE002E] flex items-center gap-2">
             <span>\u26A0\uFE0F</span>
             <span>{{ validationError() }}</span>
           </div>
@@ -1499,7 +1568,7 @@ var DocumentUploadModalComponent = class _DocumentUploadModalComponent {
               [disabled]="isUploading()"
               placeholder="Ej: doc_reglamento_2026"
               required
-              class="w-full px-3.5 py-2 rounded-xl border border-slate-200 text-sm text-slate-800 font-mono focus:outline-hidden focus:border-[#b00725] focus:ring-2 focus:ring-red-100 disabled:bg-slate-100"
+              class="w-full px-3.5 py-2 rounded-xl border border-slate-200 text-sm text-slate-800 font-mono focus:outline-hidden focus:border-[#0050A1] focus:ring-2 focus:ring-[#0050A1]/15 disabled:bg-slate-100"
             />
             <span class="text-[10px] text-slate-400">Si el ID ya existe, actualizar\xE1 sus fragmentos.</span>
           </div>
@@ -1510,7 +1579,7 @@ var DocumentUploadModalComponent = class _DocumentUploadModalComponent {
               [value]="areaOrigen()"
               (change)="onAreaChange($event)"
               [disabled]="isUploading()"
-              class="w-full px-3.5 py-2 rounded-xl border border-slate-200 text-sm text-slate-800 bg-white focus:outline-hidden focus:border-[#b00725] disabled:bg-slate-100">
+              class="w-full px-3.5 py-2 rounded-xl border border-slate-200 text-sm text-slate-800 bg-white focus:outline-hidden focus:border-[#0050A1] disabled:bg-slate-100">
               <option value="GENERAL">GENERAL</option>
               <option value="ADMISIONES">ADMISIONES</option>
               <option value="SECRETARIA">SECRETAR\xCDA ACAD\xC9MICA</option>
@@ -1530,20 +1599,20 @@ var DocumentUploadModalComponent = class _DocumentUploadModalComponent {
             [disabled]="isUploading()"
             placeholder="Ej: Gu\xEDa Oficial de Matr\xEDcula y Pensiones 2026"
             required
-            class="w-full px-3.5 py-2 rounded-xl border border-slate-200 text-sm text-slate-800 focus:outline-hidden focus:border-[#b00725] focus:ring-2 focus:ring-red-100 disabled:bg-slate-100"
+            class="w-full px-3.5 py-2 rounded-xl border border-slate-200 text-sm text-slate-800 focus:outline-hidden focus:border-[#0050A1] focus:ring-2 focus:ring-[#0050A1]/15 disabled:bg-slate-100"
           />
         </div>
 
         <!-- Stepper de Progreso Inteligente mientras se procesa en Backend -->
         @if (isUploading()) {
-          <div class="p-4 rounded-2xl bg-slate-900 text-white space-y-3">
+          <div class="p-4 rounded-2xl bg-[#0050A1] text-white space-y-3">
             <div class="flex items-center gap-3">
-              <div class="w-6 h-6 border-3 border-red-400 border-t-white rounded-full animate-spin shrink-0"></div>
+              <div class="w-6 h-6 border-3 border-white/30 border-t-white rounded-full animate-spin shrink-0"></div>
               <div class="text-xs font-bold tracking-wide">
                 @if (uploadStep() === 1) {
                   Paso 1/3: Extrayendo texto y aplicando OCR si es escaneado...
                 } @else if (uploadStep() === 2) {
-                  Paso 2/3: Segmentando oraciones con SentenceWindowTextSplitter...
+                  Paso 2/3: Segmentando secciones y encabezados...
                 } @else {
                   Paso 3/3: Calculando vectores (768 dim) con gemini-embedding-001...
                 }
@@ -1551,13 +1620,13 @@ var DocumentUploadModalComponent = class _DocumentUploadModalComponent {
             </div>
 
             <!-- Barra de progreso visual -->
-            <div class="w-full h-1.5 bg-slate-700 rounded-full overflow-hidden">
+            <div class="w-full h-1.5 bg-white/20 rounded-full overflow-hidden">
               <div 
-                class="h-full bg-[#e11d48] transition-all duration-500"
+                class="h-full bg-[#BE002E] transition-all duration-500"
                 [style.width]="uploadStep() === 1 ? '35%' : uploadStep() === 2 ? '70%' : '95%'">
               </div>
             </div>
-            <p class="text-[11px] text-slate-300">
+            <p class="text-[11px] text-blue-100">
               Por favor espera unos segundos mientras se guarda transaccionalmente en PostgreSQL.
             </p>
           </div>
@@ -1569,14 +1638,14 @@ var DocumentUploadModalComponent = class _DocumentUploadModalComponent {
             type="button"
             (click)="onClose()"
             [disabled]="isUploading()"
-            class="px-4 py-2.5 rounded-xl border border-slate-200 text-xs font-semibold text-slate-600 hover:bg-slate-50 transition-colors cursor-pointer disabled:opacity-40">
+            class="px-4 py-2.5 rounded-xl border border-slate-200 text-xs font-bold text-slate-600 hover:bg-slate-50 transition-colors cursor-pointer disabled:opacity-40">
             Cancelar
           </button>
 
           <button
             type="submit"
             [disabled]="!canSubmit()"
-            class="px-5 py-2.5 rounded-xl bg-[#b00725] hover:bg-[#92061e] text-white text-xs font-bold shadow-md shadow-red-900/20 transition-all flex items-center gap-2 cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed">
+            class="px-5 py-2.5 rounded-xl bg-[#BE002E] hover:bg-[#9e0026] text-white text-xs font-bold shadow-md shadow-[#BE002E]/20 transition-all flex items-center gap-2 cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed">
             @if (isUploading()) {
               <span class="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
               <span>Procesando Ingesta...</span>
@@ -1703,7 +1772,7 @@ var ConfirmDeleteModalComponent = class _ConfirmDeleteModalComponent {
   static \u0275fac = function ConfirmDeleteModalComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _ConfirmDeleteModalComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ConfirmDeleteModalComponent, selectors: [["app-confirm-delete-modal"]], inputs: { documento: [1, "documento"], isDeleting: [1, "isDeleting"] }, outputs: { cancel: "cancel", confirm: "confirm" }, decls: 1, vars: 1, consts: [[1, "fixed", "inset-0", "z-50", "flex", "items-center", "justify-center", "p-4", "bg-slate-900/60", "backdrop-blur-xs"], [1, "delete-modal", "bg-white", "w-full", "max-w-md", "rounded-3xl", "shadow-2xl", "border", "border-slate-200", "p-6", "space-y-4"], [1, "flex", "items-start", "gap-3.5"], [1, "w-12", "h-12", "rounded-2xl", "bg-red-100", "text-red-600", "flex", "items-center", "justify-center", "text-2xl", "shrink-0"], [1, "text-base", "font-bold", "text-slate-900"], [1, "text-xs", "text-slate-500", "mt-1", "leading-relaxed"], [1, "text-slate-800"], [1, "text-red-700"], [1, "p-3", "rounded-xl", "bg-red-50/70", "border", "border-red-200/80", "text-xs", "text-red-800", "space-y-1"], [1, "font-semibold"], [1, "text-[11px]"], [1, "flex", "items-center", "justify-end", "gap-2.5", "pt-2"], ["type", "button", 1, "px-4", "py-2", "rounded-xl", "border", "border-slate-200", "text-xs", "font-semibold", "text-slate-700", "hover:bg-slate-50", "transition-colors", "cursor-pointer", "disabled:opacity-40", 3, "click", "disabled"], ["type", "button", 1, "px-4", "py-2", "rounded-xl", "bg-red-600", "hover:bg-red-700", "text-white", "text-xs", "font-bold", "shadow-sm", "transition-all", "flex", "items-center", "gap-1.5", "cursor-pointer", "disabled:opacity-50", 3, "click", "disabled"], [1, "w-3.5", "h-3.5", "border-2", "border-white", "border-t-transparent", "rounded-full", "animate-spin"]], template: function ConfirmDeleteModalComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ConfirmDeleteModalComponent, selectors: [["app-confirm-delete-modal"]], inputs: { documento: [1, "documento"], isDeleting: [1, "isDeleting"] }, outputs: { cancel: "cancel", confirm: "confirm" }, decls: 1, vars: 1, consts: [[1, "fixed", "inset-0", "z-50", "flex", "items-center", "justify-center", "p-4", "bg-slate-900/60", "backdrop-blur-xs"], [1, "delete-modal", "bg-white", "w-full", "max-w-md", "rounded-3xl", "shadow-2xl", "border", "border-slate-200", "border-t-4", "border-t-[#BE002E]", "p-6", "space-y-4"], [1, "flex", "items-start", "gap-3.5"], [1, "w-12", "h-12", "rounded-2xl", "bg-[#BE002E]/10", "text-[#BE002E]", "flex", "items-center", "justify-center", "text-2xl", "shrink-0"], [1, "text-base", "font-extrabold", "text-slate-900"], [1, "text-xs", "text-slate-500", "mt-1", "leading-relaxed"], [1, "text-slate-800"], [1, "text-[#BE002E]", "font-bold"], [1, "p-3", "rounded-xl", "bg-red-50/70", "border", "border-red-200/80", "text-xs", "text-[#BE002E]", "space-y-1"], [1, "font-bold"], [1, "text-[11px]", "text-slate-700"], [1, "flex", "items-center", "justify-end", "gap-2.5", "pt-2"], ["type", "button", 1, "px-4", "py-2", "rounded-xl", "border", "border-slate-200", "text-xs", "font-bold", "text-slate-700", "hover:bg-slate-50", "transition-colors", "cursor-pointer", "disabled:opacity-40", 3, "click", "disabled"], ["type", "button", 1, "px-4", "py-2", "rounded-xl", "bg-[#BE002E]", "hover:bg-[#9e0026]", "text-white", "text-xs", "font-bold", "shadow-sm", "transition-all", "flex", "items-center", "gap-1.5", "cursor-pointer", "disabled:opacity-50", 3, "click", "disabled"], [1, "w-3.5", "h-3.5", "border-2", "border-white", "border-t-transparent", "rounded-full", "animate-spin"]], template: function ConfirmDeleteModalComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275conditionalCreate(0, ConfirmDeleteModalComponent_Conditional_0_Template, 30, 6, "div", 0);
     }
@@ -1716,7 +1785,7 @@ var ConfirmDeleteModalComponent = class _ConfirmDeleteModalComponent {
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ConfirmDeleteModalComponent, [{
     type: Component,
-    args: [{ selector: "app-confirm-delete-modal", changeDetection: ChangeDetectionStrategy.OnPush, template: '@if (documento(); as doc) {\n  <div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs">\n    <div class="delete-modal bg-white w-full max-w-md rounded-3xl shadow-2xl border border-slate-200 p-6 space-y-4">\n      \n      <div class="flex items-start gap-3.5">\n        <div class="w-12 h-12 rounded-2xl bg-red-100 text-red-600 flex items-center justify-center text-2xl shrink-0">\n          \u26A0\uFE0F\n        </div>\n        <div>\n          <h3 class="text-base font-bold text-slate-900">\xBFEliminar documento indexado?</h3>\n          <p class="text-xs text-slate-500 mt-1 leading-relaxed">\n            Est\xE1s a punto de eliminar <strong class="text-slate-800">"{{ doc.fuente }}"</strong> (<code class="text-red-700">{{ doc.documento_id }}</code>).\n          </p>\n        </div>\n      </div>\n\n      <div class="p-3 rounded-xl bg-red-50/70 border border-red-200/80 text-xs text-red-800 space-y-1">\n        <div class="font-semibold">Impacto en la base de conocimiento:</div>\n        <p class="text-[11px]">\n          Se eliminar\xE1n permanentemente sus <strong>{{ doc.fragmentos }} fragmentos vectoriales</strong> de PostgreSQL y el Asistente Virtual dejar\xE1 de citar esta fuente.\n        </p>\n      </div>\n\n      <div class="flex items-center justify-end gap-2.5 pt-2">\n        <button\n          type="button"\n          (click)="cancel.emit()"\n          [disabled]="isDeleting()"\n          class="px-4 py-2 rounded-xl border border-slate-200 text-xs font-semibold text-slate-700 hover:bg-slate-50 transition-colors cursor-pointer disabled:opacity-40">\n          Cancelar\n        </button>\n\n        <button\n          type="button"\n          (click)="onConfirm()"\n          [disabled]="isDeleting()"\n          class="px-4 py-2 rounded-xl bg-red-600 hover:bg-red-700 text-white text-xs font-bold shadow-sm transition-all flex items-center gap-1.5 cursor-pointer disabled:opacity-50">\n          @if (isDeleting()) {\n            <span class="w-3.5 h-3.5 border-2 border-white border-t-transparent rounded-full animate-spin"></span>\n            <span>Eliminando...</span>\n          } @else {\n            <span>\u{1F5D1}\uFE0F</span>\n            <span>S\xED, eliminar definitivamente</span>\n          }\n        </button>\n      </div>\n\n    </div>\n  </div>\n}\n', styles: ["/* src/app/features/backoffice/components/confirm-delete-modal/confirm-delete-modal.component.css */\n.delete-modal {\n  animation: popIn 0.18s ease-out;\n}\n@keyframes popIn {\n  from {\n    opacity: 0;\n    transform: scale(0.95);\n  }\n  to {\n    opacity: 1;\n    transform: scale(1);\n  }\n}\n"] }]
+    args: [{ selector: "app-confirm-delete-modal", changeDetection: ChangeDetectionStrategy.OnPush, template: '@if (documento(); as doc) {\n  <div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs">\n    <div class="delete-modal bg-white w-full max-w-md rounded-3xl shadow-2xl border border-slate-200 border-t-4 border-t-[#BE002E] p-6 space-y-4">\n      \n      <div class="flex items-start gap-3.5">\n        <div class="w-12 h-12 rounded-2xl bg-[#BE002E]/10 text-[#BE002E] flex items-center justify-center text-2xl shrink-0">\n          \u26A0\uFE0F\n        </div>\n        <div>\n          <h3 class="text-base font-extrabold text-slate-900">\xBFEliminar documento indexado?</h3>\n          <p class="text-xs text-slate-500 mt-1 leading-relaxed">\n            Est\xE1s a punto de eliminar <strong class="text-slate-800">"{{ doc.fuente }}"</strong> (<code class="text-[#BE002E] font-bold">{{ doc.documento_id }}</code>).\n          </p>\n        </div>\n      </div>\n\n      <div class="p-3 rounded-xl bg-red-50/70 border border-red-200/80 text-xs text-[#BE002E] space-y-1">\n        <div class="font-bold">Impacto en la base de conocimiento:</div>\n        <p class="text-[11px] text-slate-700">\n          Se eliminar\xE1n permanentemente sus <strong>{{ doc.fragmentos }} fragmentos vectoriales</strong> de PostgreSQL y el Asistente Virtual dejar\xE1 de citar esta fuente.\n        </p>\n      </div>\n\n      <div class="flex items-center justify-end gap-2.5 pt-2">\n        <button\n          type="button"\n          (click)="cancel.emit()"\n          [disabled]="isDeleting()"\n          class="px-4 py-2 rounded-xl border border-slate-200 text-xs font-bold text-slate-700 hover:bg-slate-50 transition-colors cursor-pointer disabled:opacity-40">\n          Cancelar\n        </button>\n\n        <button\n          type="button"\n          (click)="onConfirm()"\n          [disabled]="isDeleting()"\n          class="px-4 py-2 rounded-xl bg-[#BE002E] hover:bg-[#9e0026] text-white text-xs font-bold shadow-sm transition-all flex items-center gap-1.5 cursor-pointer disabled:opacity-50">\n          @if (isDeleting()) {\n            <span class="w-3.5 h-3.5 border-2 border-white border-t-transparent rounded-full animate-spin"></span>\n            <span>Eliminando...</span>\n          } @else {\n            <span>\u{1F5D1}\uFE0F</span>\n            <span>S\xED, eliminar definitivamente</span>\n          }\n        </button>\n      </div>\n\n    </div>\n  </div>\n}\n', styles: ["/* src/app/features/backoffice/components/confirm-delete-modal/confirm-delete-modal.component.css */\n.delete-modal {\n  animation: popIn 0.18s ease-out;\n}\n@keyframes popIn {\n  from {\n    opacity: 0;\n    transform: scale(0.95);\n  }\n  to {\n    opacity: 1;\n    transform: scale(1);\n  }\n}\n"] }]
   }], null, { documento: [{ type: Input, args: [{ isSignal: true, alias: "documento", required: false }] }], isDeleting: [{ type: Input, args: [{ isSignal: true, alias: "isDeleting", required: false }] }], cancel: [{ type: Output, args: ["cancel"] }], confirm: [{ type: Output, args: ["confirm"] }] });
 })();
 (() => {
@@ -1978,7 +2047,7 @@ var FeedbackPanelComponent = class _FeedbackPanelComponent {
   static \u0275fac = function FeedbackPanelComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _FeedbackPanelComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _FeedbackPanelComponent, selectors: [["app-feedback-panel"]], inputs: { items: [1, "items"], totalFeedback: [1, "totalFeedback"], totalSi: [1, "totalSi"], totalParcial: [1, "totalParcial"], totalNo: [1, "totalNo"], porcentajeSatisfaccion: [1, "porcentajeSatisfaccion"], isLoading: [1, "isLoading"] }, outputs: { refresh: "refresh" }, decls: 63, vars: 19, consts: [[1, "space-y-6"], [1, "grid", "grid-cols-1", "sm:grid-cols-2", "lg:grid-cols-4", "gap-4"], [1, "bg-white", "rounded-2xl", "p-5", "border", "border-slate-200/90", "shadow-2xs", "flex", "items-center", "justify-between"], [1, "text-xs", "font-bold", "uppercase", "tracking-wider", "text-slate-400"], [1, "text-3xl", "font-black", "text-[#0050A1]", "mt-1"], [1, "text-xs", "text-slate-500", "mt-1"], [1, "w-12", "h-12", "rounded-2xl", "bg-[#0050A1]/10", "text-[#0050A1]", "flex", "items-center", "justify-center", "text-2xl"], [1, "text-xs", "font-bold", "uppercase", "tracking-wider", "text-emerald-600"], [1, "text-3xl", "font-black", "text-slate-900", "mt-1"], [1, "w-12", "h-12", "rounded-2xl", "bg-emerald-50", "text-emerald-600", "flex", "items-center", "justify-center", "text-2xl"], [1, "text-xs", "font-bold", "uppercase", "tracking-wider", "text-amber-600"], [1, "w-12", "h-12", "rounded-2xl", "bg-amber-50", "text-amber-600", "flex", "items-center", "justify-center", "text-2xl"], [1, "text-xs", "font-bold", "uppercase", "tracking-wider", "text-[#BE002E]"], [1, "text-3xl", "font-black", "text-[#BE002E]", "mt-1"], [1, "w-12", "h-12", "rounded-2xl", "bg-red-50", "text-[#BE002E]", "flex", "items-center", "justify-center", "text-2xl"], [1, "bg-white", "rounded-3xl", "border", "border-slate-200/90", "shadow-xs", "overflow-hidden"], [1, "p-5", "sm:p-6", "border-b", "border-slate-200", "flex", "flex-col", "lg:flex-row", "lg:items-center", "lg:justify-between", "gap-4"], [1, "text-lg", "font-extrabold", "text-slate-900"], [1, "text-xs", "text-slate-500", "mt-0.5"], [1, "flex", "flex-wrap", "items-center", "gap-2"], ["type", "button", 3, "click"], ["type", "button", "title", "Actualizar comentarios", 1, "p-2", "rounded-xl", "border", "border-slate-200", "bg-slate-50", "hover:bg-slate-100", "text-slate-600", "text-xs", "font-bold", "transition-colors", "cursor-pointer", 3, "click", "disabled"], [1, "p-12", "text-center", "text-slate-500", "text-sm"], [1, "p-12", "text-center"], [1, "text-3xl", "mb-2"], [1, "text-sm", "font-bold", "text-slate-800"], [1, "overflow-x-auto"], [1, "w-full", "text-left", "border-collapse"], [1, "bg-slate-50/80", "border-b", "border-slate-200", "text-[11px]", "font-extrabold", "uppercase", "tracking-wider", "text-slate-500"], [1, "py-3.5", "px-5"], [1, "divide-y", "divide-slate-200/70", "text-sm"], [1, "hover:bg-slate-50/70", "transition-colors"], [1, "px-6", "py-4", "bg-slate-50", "border-t", "border-slate-200", "flex", "items-center", "justify-between", "text-xs", "text-slate-600"], [1, "py-4", "px-5", "whitespace-nowrap", "align-top"], [1, "inline-flex", "items-center", "gap-1.5", "px-2.5", "py-1", "rounded-full", "text-xs", "font-bold", "bg-emerald-50", "text-emerald-700", "border", "border-emerald-200"], [1, "inline-flex", "items-center", "gap-1.5", "px-2.5", "py-1", "rounded-full", "text-xs", "font-bold", "bg-amber-50", "text-amber-700", "border", "border-amber-200"], [1, "inline-flex", "items-center", "gap-1.5", "px-2.5", "py-1", "rounded-full", "text-xs", "font-bold", "bg-red-50", "text-[#BE002E]", "border", "border-red-200"], [1, "py-4", "px-5", "max-w-xs", "align-top"], [1, "text-xs", "font-semibold", "text-[#0050A1]", "bg-blue-50/60", "border", "border-blue-100", "rounded-xl", "px-3", "py-2", "leading-relaxed"], [1, "text-xs", "text-slate-400", "italic"], [1, "py-4", "px-5", "max-w-md", "align-top"], [1, "text-xs", "sm:text-sm", "text-slate-800", "leading-relaxed", "whitespace-pre-wrap"], [1, "py-4", "px-5", "whitespace-nowrap", "text-xs", "text-slate-500", "align-top"], [1, "flex", "items-center", "gap-2"], ["type", "button", 1, "px-3", "py-1.5", "rounded-lg", "border", "border-slate-200", "bg-white", "hover:bg-slate-100", "disabled:opacity-40", "cursor-pointer", 3, "click", "disabled"]], template: function FeedbackPanelComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _FeedbackPanelComponent, selectors: [["app-feedback-panel"]], inputs: { items: [1, "items"], totalFeedback: [1, "totalFeedback"], totalSi: [1, "totalSi"], totalParcial: [1, "totalParcial"], totalNo: [1, "totalNo"], porcentajeSatisfaccion: [1, "porcentajeSatisfaccion"], isLoading: [1, "isLoading"] }, outputs: { refresh: "refresh" }, decls: 63, vars: 19, consts: [[1, "space-y-6"], [1, "grid", "grid-cols-1", "sm:grid-cols-2", "lg:grid-cols-4", "gap-4"], [1, "bg-white", "rounded-2xl", "p-5", "border", "border-slate-200/90", "shadow-2xs", "flex", "items-center", "justify-between"], [1, "text-xs", "font-bold", "uppercase", "tracking-wider", "text-slate-400"], [1, "text-3xl", "font-black", "text-[#0050A1]", "mt-1"], [1, "text-xs", "text-slate-500", "mt-1"], [1, "w-12", "h-12", "rounded-2xl", "bg-[#0050A1]/10", "text-[#0050A1]", "flex", "items-center", "justify-center", "text-2xl"], [1, "text-xs", "font-bold", "uppercase", "tracking-wider", "text-emerald-600"], [1, "text-3xl", "font-black", "text-slate-900", "mt-1"], [1, "w-12", "h-12", "rounded-2xl", "bg-emerald-50", "text-emerald-600", "flex", "items-center", "justify-center", "text-2xl"], [1, "text-xs", "font-bold", "uppercase", "tracking-wider", "text-amber-600"], [1, "w-12", "h-12", "rounded-2xl", "bg-amber-50", "text-amber-600", "flex", "items-center", "justify-center", "text-2xl"], [1, "text-xs", "font-bold", "uppercase", "tracking-wider", "text-[#BE002E]"], [1, "text-3xl", "font-black", "text-[#BE002E]", "mt-1"], [1, "w-12", "h-12", "rounded-2xl", "bg-red-50", "text-[#BE002E]", "flex", "items-center", "justify-center", "text-2xl"], [1, "bg-white", "rounded-3xl", "border", "border-slate-200/90", "shadow-xs", "overflow-hidden"], [1, "p-5", "sm:p-6", "border-b", "border-slate-200", "flex", "flex-col", "lg:flex-row", "lg:items-center", "lg:justify-between", "gap-4"], [1, "text-lg", "font-extrabold", "text-[#0050A1]"], [1, "text-xs", "text-slate-500", "mt-0.5"], [1, "flex", "flex-wrap", "items-center", "gap-2"], ["type", "button", 3, "click"], ["type", "button", "title", "Actualizar comentarios", 1, "p-2", "rounded-xl", "border", "border-slate-200", "bg-slate-50", "hover:bg-slate-100", "text-slate-600", "text-xs", "font-bold", "transition-colors", "cursor-pointer", 3, "click", "disabled"], [1, "p-12", "text-center", "text-slate-500", "text-sm"], [1, "p-12", "text-center"], [1, "text-3xl", "mb-2"], [1, "text-sm", "font-bold", "text-slate-800"], [1, "overflow-x-auto"], [1, "w-full", "text-left", "border-collapse"], [1, "bg-slate-50/80", "border-b", "border-slate-200", "text-[11px]", "font-extrabold", "uppercase", "tracking-wider", "text-[#0050A1]"], [1, "py-3.5", "px-5"], [1, "divide-y", "divide-slate-200/70", "text-sm"], [1, "hover:bg-slate-50/70", "transition-colors"], [1, "px-6", "py-4", "bg-slate-50", "border-t", "border-slate-200", "flex", "items-center", "justify-between", "text-xs", "text-slate-600"], [1, "py-4", "px-5", "whitespace-nowrap", "align-top"], [1, "inline-flex", "items-center", "gap-1.5", "px-2.5", "py-1", "rounded-full", "text-xs", "font-bold", "bg-emerald-50", "text-emerald-700", "border", "border-emerald-200"], [1, "inline-flex", "items-center", "gap-1.5", "px-2.5", "py-1", "rounded-full", "text-xs", "font-bold", "bg-amber-50", "text-amber-700", "border", "border-amber-200"], [1, "inline-flex", "items-center", "gap-1.5", "px-2.5", "py-1", "rounded-full", "text-xs", "font-bold", "bg-red-50", "text-[#BE002E]", "border", "border-red-200"], [1, "py-4", "px-5", "max-w-xs", "align-top"], [1, "text-xs", "font-semibold", "text-[#0050A1]", "bg-blue-50/60", "border", "border-blue-100", "rounded-xl", "px-3", "py-2", "leading-relaxed"], [1, "text-xs", "text-slate-400", "italic"], [1, "py-4", "px-5", "max-w-md", "align-top"], [1, "text-xs", "sm:text-sm", "text-slate-800", "leading-relaxed", "whitespace-pre-wrap"], [1, "py-4", "px-5", "whitespace-nowrap", "text-xs", "text-slate-500", "align-top"], [1, "flex", "items-center", "gap-2"], ["type", "button", 1, "px-3", "py-1.5", "rounded-lg", "border", "border-slate-200", "bg-white", "hover:bg-slate-100", "disabled:opacity-40", "cursor-pointer", 3, "click", "disabled"]], template: function FeedbackPanelComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275domElementStart(0, "div", 0)(1, "div", 1)(2, "div", 2)(3, "div")(4, "p", 3);
       \u0275\u0275text(5, "\xCDndice de Satisfacci\xF3n");
@@ -2165,7 +2234,7 @@ var FeedbackPanelComponent = class _FeedbackPanelComponent {
     <!-- Cabecera de Tabla y Controles -->
     <div class="p-5 sm:p-6 border-b border-slate-200 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
       <div>
-        <h2 class="text-lg font-extrabold text-slate-900">
+        <h2 class="text-lg font-extrabold text-[#0050A1]">
           Comentarios y Feedback de Usuarios
         </h2>
         <p class="text-xs text-slate-500 mt-0.5">
@@ -2241,7 +2310,7 @@ var FeedbackPanelComponent = class _FeedbackPanelComponent {
       <div class="overflow-x-auto">
         <table class="w-full text-left border-collapse">
           <thead>
-            <tr class="bg-slate-50/80 border-b border-slate-200 text-[11px] font-extrabold uppercase tracking-wider text-slate-500">
+            <tr class="bg-slate-50/80 border-b border-slate-200 text-[11px] font-extrabold uppercase tracking-wider text-[#0050A1]">
               <th class="py-3.5 px-5">Satisfacci\xF3n</th>
               <th class="py-3.5 px-5">\xDAltima Consulta del Usuario (Contexto)</th>
               <th class="py-3.5 px-5">Comentario / Observaci\xF3n</th>
@@ -2427,7 +2496,7 @@ function AdminDashboardComponent_For_26_Template(rf, ctx) {
   }
   if (rf & 2) {
     const toast_r5 = ctx.$implicit;
-    \u0275\u0275classMap(toast_r5.type === "success" ? "toast-item pointer-events-auto p-4 rounded-2xl shadow-xl border flex items-start justify-between gap-3 bg-white border-emerald-200" : toast_r5.type === "error" ? "toast-item pointer-events-auto p-4 rounded-2xl shadow-xl border flex items-start justify-between gap-3 bg-white border-red-200" : "toast-item pointer-events-auto p-4 rounded-2xl shadow-xl border flex items-start justify-between gap-3 bg-white border-blue-200");
+    \u0275\u0275classMap(toast_r5.type === "success" ? "toast-item pointer-events-auto p-4 rounded-2xl shadow-xl border flex items-start justify-between gap-3 bg-white border-emerald-200 border-l-4 border-l-emerald-500" : toast_r5.type === "error" ? "toast-item pointer-events-auto p-4 rounded-2xl shadow-xl border flex items-start justify-between gap-3 bg-white border-red-200 border-l-4 border-l-[#BE002E]" : "toast-item pointer-events-auto p-4 rounded-2xl shadow-xl border flex items-start justify-between gap-3 bg-white border-blue-200 border-l-4 border-l-[#0050A1]");
     \u0275\u0275advance(3);
     \u0275\u0275conditional(toast_r5.type === "success" ? 3 : toast_r5.type === "error" ? 4 : 5);
     \u0275\u0275advance(5);
@@ -2626,7 +2695,7 @@ var AdminDashboardComponent = class _AdminDashboardComponent {
     if (rf & 2) {
       \u0275\u0275queryAdvance();
     }
-  }, decls: 27, vars: 18, consts: [["uploadModal", ""], [1, "min-h-screen", "bg-slate-50", "flex", "flex-col"], [3, "logout", "session"], [1, "flex-1", "max-w-7xl", "w-full", "mx-auto", "px-4", "sm:px-6", "lg:px-8", "py-8", "space-y-6"], [1, "flex", "flex-wrap", "items-center", "justify-between", "gap-4", "border-b", "border-slate-200", "pb-4"], [1, "inline-flex", "p-1.5", "rounded-2xl", "bg-slate-200/70", "gap-1.5"], ["type", "button", 3, "click"], [3, "items", "totalFeedback", "totalSi", "totalParcial", "totalNo", "porcentajeSatisfaccion", "isLoading"], [3, "close", "upload", "isOpen", "isUploading", "defaultArea"], [3, "cancel", "confirm", "documento", "isDeleting"], [1, "fixed", "bottom-5", "right-5", "z-50", "flex", "flex-col", "gap-2.5", "max-w-sm", "w-full", "pointer-events-none"], [3, "class"], [3, "openUpload", "refresh", "totalDocumentos", "totalFragmentos", "isLoading"], [3, "requestDelete", "openUpload", "documentos", "isLoading", "deletingId"], [3, "refresh", "items", "totalFeedback", "totalSi", "totalParcial", "totalNo", "porcentajeSatisfaccion", "isLoading"], [1, "flex", "items-start", "gap-2.5"], [1, "text-lg"], [1, "text-xs", "font-bold", "text-slate-900"], [1, "text-xs", "text-slate-600", "mt-0.5", "leading-relaxed"], ["type", "button", 1, "text-xs", "text-slate-400", "hover:text-slate-700", "cursor-pointer", 3, "click"]], template: function AdminDashboardComponent_Template(rf, ctx) {
+  }, decls: 27, vars: 18, consts: [["uploadModal", ""], [1, "min-h-dvh", "bg-white", "flex", "flex-col"], [3, "logout", "session"], [1, "flex-1", "w-full", "px-4", "sm:px-6", "lg:px-10", "py-6", "space-y-6", "bg-white"], [1, "flex", "flex-wrap", "items-center", "justify-between", "gap-4", "border-b", "border-slate-200", "pb-4"], [1, "inline-flex", "p-1.5", "rounded-2xl", "bg-slate-100", "border", "border-slate-200", "gap-1.5"], ["type", "button", 3, "click"], [3, "items", "totalFeedback", "totalSi", "totalParcial", "totalNo", "porcentajeSatisfaccion", "isLoading"], [3, "close", "upload", "isOpen", "isUploading", "defaultArea"], [3, "cancel", "confirm", "documento", "isDeleting"], [1, "fixed", "bottom-5", "right-5", "z-50", "flex", "flex-col", "gap-2.5", "max-w-sm", "w-full", "pointer-events-none"], [3, "class"], [3, "openUpload", "refresh", "totalDocumentos", "totalFragmentos", "isLoading"], [3, "requestDelete", "openUpload", "documentos", "isLoading", "deletingId"], [3, "refresh", "items", "totalFeedback", "totalSi", "totalParcial", "totalNo", "porcentajeSatisfaccion", "isLoading"], [1, "flex", "items-start", "gap-2.5"], [1, "text-lg"], [1, "text-xs", "font-bold", "text-slate-900"], [1, "text-xs", "text-slate-600", "mt-0.5", "leading-relaxed"], ["type", "button", 1, "text-xs", "text-slate-400", "hover:text-slate-700", "cursor-pointer", 3, "click"]], template: function AdminDashboardComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "div", 1)(1, "app-admin-navbar", 2);
       \u0275\u0275listener("logout", function AdminDashboardComponent_Template_app_admin_navbar_logout_1_listener() {
@@ -2685,15 +2754,15 @@ var AdminDashboardComponent = class _AdminDashboardComponent {
       \u0275\u0275advance();
       \u0275\u0275property("session", ctx.session());
       \u0275\u0275advance(4);
-      \u0275\u0275classMap(ctx.activeTab() === "documentos" ? "inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer bg-[#0050A1] text-white shadow-sm" : "inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer text-slate-600 hover:text-slate-900");
+      \u0275\u0275classMap(ctx.activeTab() === "documentos" ? "inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition-all cursor-pointer bg-[#0050A1] text-white shadow-sm" : "inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer text-slate-600 hover:text-[#0050A1]");
       \u0275\u0275advance(5);
-      \u0275\u0275classMap(ctx.activeTab() === "documentos" ? "px-2 py-0.5 rounded-full text-[11px] font-extrabold bg-white/20 text-white" : "px-2 py-0.5 rounded-full text-[11px] font-extrabold bg-slate-300/70 text-slate-700");
+      \u0275\u0275classMap(ctx.activeTab() === "documentos" ? "px-2 py-0.5 rounded-full text-[11px] font-extrabold bg-white/20 text-white" : "px-2 py-0.5 rounded-full text-[11px] font-extrabold bg-slate-200 text-slate-700");
       \u0275\u0275advance();
       \u0275\u0275textInterpolate1(" ", ctx.totalDocumentos(), " ");
       \u0275\u0275advance();
-      \u0275\u0275classMap(ctx.activeTab() === "feedback" ? "inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer bg-[#0050A1] text-white shadow-sm" : "inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer text-slate-600 hover:text-slate-900");
+      \u0275\u0275classMap(ctx.activeTab() === "feedback" ? "inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition-all cursor-pointer bg-[#0050A1] text-white shadow-sm" : "inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer text-slate-600 hover:text-[#0050A1]");
       \u0275\u0275advance(5);
-      \u0275\u0275classMap(ctx.activeTab() === "feedback" ? "px-2 py-0.5 rounded-full text-[11px] font-extrabold bg-white/20 text-white" : ctx.totalNo() > 0 ? "px-2 py-0.5 rounded-full text-[11px] font-extrabold bg-[#BE002E] text-white" : "px-2 py-0.5 rounded-full text-[11px] font-extrabold bg-slate-300/70 text-slate-700");
+      \u0275\u0275classMap(ctx.activeTab() === "feedback" ? "px-2 py-0.5 rounded-full text-[11px] font-extrabold bg-white/20 text-white" : ctx.totalNo() > 0 ? "px-2 py-0.5 rounded-full text-[11px] font-extrabold bg-[#BE002E] text-white" : "px-2 py-0.5 rounded-full text-[11px] font-extrabold bg-slate-200 text-slate-700");
       \u0275\u0275advance();
       \u0275\u0275textInterpolate1(" ", ctx.totalFeedback(), " ");
       \u0275\u0275advance();
@@ -2726,33 +2795,33 @@ var AdminDashboardComponent = class _AdminDashboardComponent {
       DocumentUploadModalComponent,
       ConfirmDeleteModalComponent,
       FeedbackPanelComponent
-    ], template: `<div class="min-h-screen bg-slate-50 flex flex-col">
-  
-  <!-- Barra de Navegaci\xF3n Superior -->
-  <app-admin-navbar 
-    [session]="session()" 
-    (logout)="onLogout()" 
+    ], template: `<div class="min-h-dvh bg-white flex flex-col">
+
+  <!-- Barra de Navegaci\xF3n Superior Institucional (#0050A1 + #BE002E con el \xEDcono CBB siempre visible) -->
+  <app-admin-navbar
+    [session]="session()"
+    (logout)="onLogout()"
   />
 
-  <!-- Contenido Principal -->
-  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
-    
-    <!-- Selector de M\xF3dulos del Backoffice (Tabs) -->
+  <!-- Contenido Principal a Ancho Completo -->
+  <main class="flex-1 w-full px-4 sm:px-6 lg:px-10 py-6 space-y-6 bg-white">
+
+    <!-- Selector de M\xF3dulos de Gesti\xF3n en Pesta\xF1as (Tabs) -->
     <div class="flex flex-wrap items-center justify-between gap-4 border-b border-slate-200 pb-4">
-      <div class="inline-flex p-1.5 rounded-2xl bg-slate-200/70 gap-1.5">
-        
+      <div class="inline-flex p-1.5 rounded-2xl bg-slate-100 border border-slate-200 gap-1.5">
+
         <button
           type="button"
           (click)="setTab('documentos')"
           [class]="activeTab() === 'documentos'
-            ? 'inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer bg-[#0050A1] text-white shadow-sm'
-            : 'inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer text-slate-600 hover:text-slate-900'">
+            ? 'inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition-all cursor-pointer bg-[#0050A1] text-white shadow-sm'
+            : 'inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer text-slate-600 hover:text-[#0050A1]'">
           <span>\u{1F4DA}</span>
           <span>Base de Conocimiento</span>
-          <span 
+          <span
             [class]="activeTab() === 'documentos'
               ? 'px-2 py-0.5 rounded-full text-[11px] font-extrabold bg-white/20 text-white'
-              : 'px-2 py-0.5 rounded-full text-[11px] font-extrabold bg-slate-300/70 text-slate-700'">
+              : 'px-2 py-0.5 rounded-full text-[11px] font-extrabold bg-slate-200 text-slate-700'">
             {{ totalDocumentos() }}
           </span>
         </button>
@@ -2761,16 +2830,16 @@ var AdminDashboardComponent = class _AdminDashboardComponent {
           type="button"
           (click)="setTab('feedback')"
           [class]="activeTab() === 'feedback'
-            ? 'inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer bg-[#0050A1] text-white shadow-sm'
-            : 'inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer text-slate-600 hover:text-slate-900'">
+            ? 'inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition-all cursor-pointer bg-[#0050A1] text-white shadow-sm'
+            : 'inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer text-slate-600 hover:text-[#0050A1]'">
           <span>\u2B50</span>
           <span>Satisfacci\xF3n y Comentarios</span>
-          <span 
+          <span
             [class]="activeTab() === 'feedback'
               ? 'px-2 py-0.5 rounded-full text-[11px] font-extrabold bg-white/20 text-white'
               : (totalNo() > 0
                   ? 'px-2 py-0.5 rounded-full text-[11px] font-extrabold bg-[#BE002E] text-white'
-                  : 'px-2 py-0.5 rounded-full text-[11px] font-extrabold bg-slate-300/70 text-slate-700')">
+                  : 'px-2 py-0.5 rounded-full text-[11px] font-extrabold bg-slate-200 text-slate-700')">
             {{ totalFeedback() }}
           </span>
         </button>
@@ -2780,7 +2849,6 @@ var AdminDashboardComponent = class _AdminDashboardComponent {
 
     <!-- M\xD3DULO 1: Base de Conocimiento (Documentos) -->
     @if (activeTab() === 'documentos') {
-      <!-- KPIs y Acciones Principales -->
       <app-admin-stats
         [totalDocumentos]="totalDocumentos()"
         [totalFragmentos]="totalFragmentos()"
@@ -2789,7 +2857,6 @@ var AdminDashboardComponent = class _AdminDashboardComponent {
         (refresh)="cargarDocumentos()"
       />
 
-      <!-- Tabla de Documentos con Filtros y Paginaci\xF3n (>10 registros) -->
       <app-document-table
         [documentos]="documentos()"
         [isLoading]="isLoadingList()"
@@ -2838,11 +2905,11 @@ var AdminDashboardComponent = class _AdminDashboardComponent {
     @for (toast of toasts(); track toast.id) {
       <div
         [class]="toast.type === 'success'
-          ? 'toast-item pointer-events-auto p-4 rounded-2xl shadow-xl border flex items-start justify-between gap-3 bg-white border-emerald-200'
+          ? 'toast-item pointer-events-auto p-4 rounded-2xl shadow-xl border flex items-start justify-between gap-3 bg-white border-emerald-200 border-l-4 border-l-emerald-500'
           : (toast.type === 'error'
-              ? 'toast-item pointer-events-auto p-4 rounded-2xl shadow-xl border flex items-start justify-between gap-3 bg-white border-red-200'
-              : 'toast-item pointer-events-auto p-4 rounded-2xl shadow-xl border flex items-start justify-between gap-3 bg-white border-blue-200')">
-        
+              ? 'toast-item pointer-events-auto p-4 rounded-2xl shadow-xl border flex items-start justify-between gap-3 bg-white border-red-200 border-l-4 border-l-[#BE002E]'
+              : 'toast-item pointer-events-auto p-4 rounded-2xl shadow-xl border flex items-start justify-between gap-3 bg-white border-blue-200 border-l-4 border-l-[#0050A1]')">
+
         <div class="flex items-start gap-2.5">
           <span class="text-lg">
             @if (toast.type === 'success') { \u2705 }

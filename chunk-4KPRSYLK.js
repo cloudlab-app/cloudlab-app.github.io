@@ -53,6 +53,7 @@ import {
   ɵɵqueryAdvance,
   ɵɵrepeater,
   ɵɵrepeaterCreate,
+  ɵɵrepeaterTrackByIdentity,
   ɵɵresetView,
   ɵɵresolveWindow,
   ɵɵrestoreView,
@@ -61,7 +62,7 @@ import {
   ɵɵtextInterpolate,
   ɵɵtextInterpolate1,
   ɵɵviewQuerySignal
-} from "./chunk-JIODWWMR.js";
+} from "./chunk-GTRT2NL7.js";
 
 // src/app/core/services/session.service.ts
 var SessionService = class _SessionService {
@@ -145,22 +146,27 @@ var AssistantService = class _AssistantService {
 })();
 
 // src/app/features/assistant/components/chat-header/chat-header.component.ts
-function ChatHeaderComponent_Conditional_18_Template(rf, ctx) {
+function ChatHeaderComponent_Conditional_6_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275domElement(0, "span", 6);
+  }
+}
+function ChatHeaderComponent_Conditional_22_Template(rf, ctx) {
   if (rf & 1) {
     const _r1 = \u0275\u0275getCurrentView();
-    \u0275\u0275domElementStart(0, "button", 16);
-    \u0275\u0275domListener("click", function ChatHeaderComponent_Conditional_18_Template_button_click_0_listener() {
+    \u0275\u0275domElementStart(0, "button", 20);
+    \u0275\u0275domListener("click", function ChatHeaderComponent_Conditional_22_Template_button_click_0_listener() {
       \u0275\u0275restoreView(_r1);
       const ctx_r1 = \u0275\u0275nextContext();
       return \u0275\u0275resetView(ctx_r1.closeConversation.emit());
     });
     \u0275\u0275namespaceSVG();
-    \u0275\u0275domElementStart(1, "svg", 17);
-    \u0275\u0275domElement(2, "path", 18);
+    \u0275\u0275domElementStart(1, "svg", 21);
+    \u0275\u0275domElement(2, "path", 22);
     \u0275\u0275domElementEnd();
     \u0275\u0275namespaceHTML();
     \u0275\u0275domElementStart(3, "span");
-    \u0275\u0275text(4, "Cerrar conversaci\xF3n");
+    \u0275\u0275text(4, "Cerrar");
     \u0275\u0275domElementEnd()();
   }
 }
@@ -169,45 +175,443 @@ var ChatHeaderComponent = class _ChatHeaderComponent {
     /* istanbul ignore next */
     []
   ));
+  toggleMobileSidebar = output();
   closeConversation = output();
   static \u0275fac = function ChatHeaderComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _ChatHeaderComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ChatHeaderComponent, selectors: [["app-chat-header"]], inputs: { hasMessages: [1, "hasMessages"] }, outputs: { closeConversation: "closeConversation" }, decls: 19, vars: 1, consts: [[1, "cbb-header", "shrink-0", "bg-[#0050A1]", "text-white", "selection:bg-white", "selection:text-[#0050A1]", "border-b-4", "border-[#BE002E]", "shadow-md", "z-20"], [1, "max-w-6xl", "mx-auto", "px-4", "sm:px-6", "h-16", "sm:h-18", "flex", "items-center", "justify-between", "gap-3"], [1, "flex", "items-center", "gap-3.5", "min-w-0"], [1, "w-10", "h-10", "sm:w-11", "sm:h-11", "rounded-xl", "bg-white", "p-1.5", "flex", "items-center", "justify-center", "shadow-md", "shrink-0"], ["src", "cropped-Favicon-3-1-32x32.png", "alt", "Logo Colegio Bertolt Brecht", 1, "w-full", "h-full", "object-contain"], [1, "min-w-0"], [1, "flex", "items-center", "gap-2.5"], [1, "font-extrabold", "text-white", "text-base", "sm:text-lg", "leading-tight", "tracking-tight", "truncate"], [1, "hidden", "md:inline-flex", "items-center", "px-2.5", "py-0.5", "rounded-full", "text-[10px]", "font-extrabold", "bg-[#BE002E]", "text-white", "uppercase", "tracking-wider", "shadow-2xs"], [1, "flex", "items-center", "gap-1.5", "mt-0.5"], [1, "relative", "flex", "h-2", "w-2"], [1, "animate-ping", "absolute", "inline-flex", "h-full", "w-full", "rounded-full", "bg-emerald-300", "opacity-75"], [1, "relative", "inline-flex", "rounded-full", "h-2", "w-2", "bg-emerald-400"], [1, "text-xs", "text-blue-100", "font-medium", "truncate"], [1, "flex", "items-center", "gap-2", "shrink-0"], ["type", "button", "title", "Finalizar y calificar conversaci\xF3n", 1, "inline-flex", "items-center", "gap-1.5", "px-3.5", "sm:px-4", "py-2", "rounded-xl", "bg-[#BE002E]", "hover:bg-[#9e0026]", "text-white", "text-xs", "font-bold", "shadow-sm", "transition-all", "transform", "active:scale-95", "cursor-pointer"], ["type", "button", "title", "Finalizar y calificar conversaci\xF3n", 1, "inline-flex", "items-center", "gap-1.5", "px-3.5", "sm:px-4", "py-2", "rounded-xl", "bg-[#BE002E]", "hover:bg-[#9e0026]", "text-white", "text-xs", "font-bold", "shadow-sm", "transition-all", "transform", "active:scale-95", "cursor-pointer", 3, "click"], ["fill", "none", "stroke", "currentColor", "viewBox", "0 0 24 24", 1, "w-4", "h-4"], ["stroke-linecap", "round", "stroke-linejoin", "round", "stroke-width", "2.5", "d", "M5 13l4 4L19 7"]], template: function ChatHeaderComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ChatHeaderComponent, selectors: [["app-chat-header"]], inputs: { hasMessages: [1, "hasMessages"] }, outputs: { toggleMobileSidebar: "toggleMobileSidebar", closeConversation: "closeConversation" }, decls: 23, vars: 2, consts: [[1, "cbb-header", "shrink-0", "bg-[#0050A1]", "text-white", "selection:bg-white", "selection:text-[#0050A1]", "border-b-4", "border-[#BE002E]", "shadow-md", "z-20"], [1, "w-full", "px-4", "sm:px-6", "lg:px-8", "h-16", "sm:h-18", "flex", "items-center", "justify-between", "gap-3"], [1, "flex", "items-center", "gap-3", "sm:gap-3.5", "min-w-0"], ["type", "button", "title", "Abrir panel lateral y sugerencias", 1, "lg:hidden", "relative", "w-10", "h-10", "rounded-xl", "bg-white/15", "hover:bg-white/25", "text-white", "flex", "items-center", "justify-center", "shrink-0", "transition-colors", "cursor-pointer", 3, "click"], ["fill", "none", "stroke", "currentColor", "viewBox", "0 0 24 24", 1, "w-5", "h-5"], ["stroke-linecap", "round", "stroke-linejoin", "round", "stroke-width", "2.2", "d", "M4 6h16M4 12h16M4 18h16"], [1, "absolute", "-top-1", "-right-1", "w-3", "h-3", "rounded-full", "bg-[#BE002E]", "ring-2", "ring-white"], [1, "w-10", "h-10", "sm:w-11", "sm:h-11", "rounded-xl", "bg-white", "p-1.5", "flex", "items-center", "justify-center", "shadow-md", "shrink-0"], ["src", "cropped-Favicon-3-1-32x32.png", "alt", "Logo Colegio Bertolt Brecht", 1, "w-full", "h-full", "object-contain"], [1, "min-w-0"], [1, "flex", "items-center", "gap-2.5"], [1, "font-extrabold", "text-white", "text-base", "sm:text-lg", "leading-tight", "tracking-tight", "truncate"], [1, "hidden", "md:inline-flex", "items-center", "px-2.5", "py-0.5", "rounded-full", "text-[10px]", "font-extrabold", "bg-[#BE002E]", "text-white", "uppercase", "tracking-wider", "shadow-2xs"], [1, "flex", "items-center", "gap-1.5", "mt-0.5"], [1, "relative", "flex", "h-2", "w-2"], [1, "animate-ping", "absolute", "inline-flex", "h-full", "w-full", "rounded-full", "bg-emerald-300", "opacity-75"], [1, "relative", "inline-flex", "rounded-full", "h-2", "w-2", "bg-emerald-400"], [1, "text-xs", "text-blue-100", "font-medium", "truncate"], [1, "flex", "items-center", "gap-2", "shrink-0"], ["type", "button", "title", "Finalizar y calificar conversaci\xF3n", 1, "lg:hidden", "inline-flex", "items-center", "gap-1.5", "px-3", "py-1.5", "rounded-xl", "bg-[#BE002E]", "hover:bg-[#9e0026]", "text-white", "text-xs", "font-bold", "shadow-sm", "transition-all", "cursor-pointer"], ["type", "button", "title", "Finalizar y calificar conversaci\xF3n", 1, "lg:hidden", "inline-flex", "items-center", "gap-1.5", "px-3", "py-1.5", "rounded-xl", "bg-[#BE002E]", "hover:bg-[#9e0026]", "text-white", "text-xs", "font-bold", "shadow-sm", "transition-all", "cursor-pointer", 3, "click"], ["fill", "none", "stroke", "currentColor", "viewBox", "0 0 24 24", 1, "w-3.5", "h-3.5"], ["stroke-linecap", "round", "stroke-linejoin", "round", "stroke-width", "2.5", "d", "M5 13l4 4L19 7"]], template: function ChatHeaderComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275domElementStart(0, "header", 0)(1, "div", 1)(2, "div", 2)(3, "div", 3);
-      \u0275\u0275domElement(4, "img", 4);
+      \u0275\u0275domElementStart(0, "header", 0)(1, "div", 1)(2, "div", 2)(3, "button", 3);
+      \u0275\u0275domListener("click", function ChatHeaderComponent_Template_button_click_3_listener() {
+        return ctx.toggleMobileSidebar.emit();
+      });
+      \u0275\u0275namespaceSVG();
+      \u0275\u0275domElementStart(4, "svg", 4);
+      \u0275\u0275domElement(5, "path", 5);
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(5, "div", 5)(6, "div", 6)(7, "h1", 7);
-      \u0275\u0275text(8, " Colegio Bertolt Brecht ");
+      \u0275\u0275conditionalCreate(6, ChatHeaderComponent_Conditional_6_Template, 1, 0, "span", 6);
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(9, "span", 8);
-      \u0275\u0275text(10, " Asistente Oficial ");
+      \u0275\u0275namespaceHTML();
+      \u0275\u0275domElementStart(7, "div", 7);
+      \u0275\u0275domElement(8, "img", 8);
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(9, "div", 9)(10, "div", 10)(11, "h1", 11);
+      \u0275\u0275text(12, " Colegio Bertolt Brecht ");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(13, "span", 12);
+      \u0275\u0275text(14, " Asistente Oficial ");
       \u0275\u0275domElementEnd()();
-      \u0275\u0275domElementStart(11, "div", 9)(12, "span", 10);
-      \u0275\u0275domElement(13, "span", 11)(14, "span", 12);
+      \u0275\u0275domElementStart(15, "div", 13)(16, "span", 14);
+      \u0275\u0275domElement(17, "span", 15)(18, "span", 16);
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(15, "span", 13);
-      \u0275\u0275text(16, " Atenci\xF3n en l\xEDnea 24/7 \u2022 Comunidad educativa CBB ");
+      \u0275\u0275domElementStart(19, "span", 17);
+      \u0275\u0275text(20, " Atenci\xF3n en l\xEDnea 24/7 \u2022 Comunidad educativa CBB ");
       \u0275\u0275domElementEnd()()()();
-      \u0275\u0275domElementStart(17, "div", 14);
-      \u0275\u0275conditionalCreate(18, ChatHeaderComponent_Conditional_18_Template, 5, 0, "button", 15);
+      \u0275\u0275domElementStart(21, "div", 18);
+      \u0275\u0275conditionalCreate(22, ChatHeaderComponent_Conditional_22_Template, 5, 0, "button", 19);
       \u0275\u0275domElementEnd()()();
     }
     if (rf & 2) {
-      \u0275\u0275advance(18);
-      \u0275\u0275conditional(ctx.hasMessages() ? 18 : -1);
+      \u0275\u0275advance(6);
+      \u0275\u0275conditional(ctx.hasMessages() ? 6 : -1);
+      \u0275\u0275advance(16);
+      \u0275\u0275conditional(ctx.hasMessages() ? 22 : -1);
     }
   }, styles: ["\n[_nghost-%COMP%] {\n  display: block;\n}"], changeDetection: 0 });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ChatHeaderComponent, [{
     type: Component,
-    args: [{ selector: "app-chat-header", changeDetection: ChangeDetectionStrategy.OnPush, template: '<header class="cbb-header shrink-0 bg-[#0050A1] text-white selection:bg-white selection:text-[#0050A1] border-b-4 border-[#BE002E] shadow-md z-20">\n  <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 sm:h-18 flex items-center justify-between gap-3">\n    \n    <!-- Identidad Institucional CBB -->\n    <div class="flex items-center gap-3.5 min-w-0">\n      <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-white p-1.5 flex items-center justify-center shadow-md shrink-0">\n        <img \n          src="cropped-Favicon-3-1-32x32.png" \n          alt="Logo Colegio Bertolt Brecht" \n          class="w-full h-full object-contain"\n        />\n      </div>\n      <div class="min-w-0">\n        <div class="flex items-center gap-2.5">\n          <h1 class="font-extrabold text-white text-base sm:text-lg leading-tight tracking-tight truncate">\n            Colegio Bertolt Brecht\n          </h1>\n          <span class="hidden md:inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-extrabold bg-[#BE002E] text-white uppercase tracking-wider shadow-2xs">\n            Asistente Oficial\n          </span>\n        </div>\n        <div class="flex items-center gap-1.5 mt-0.5">\n          <span class="relative flex h-2 w-2">\n            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-300 opacity-75"></span>\n            <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>\n          </span>\n          <span class="text-xs text-blue-100 font-medium truncate">\n            Atenci\xF3n en l\xEDnea 24/7 \u2022 Comunidad educativa CBB\n          </span>\n        </div>\n      </div>\n    </div>\n\n    <!-- Acciones de Cabecera -->\n    <div class="flex items-center gap-2 shrink-0">\n      @if (hasMessages()) {\n        <button\n          type="button"\n          (click)="closeConversation.emit()"\n          title="Finalizar y calificar conversaci\xF3n"\n          class="inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2 rounded-xl bg-[#BE002E] hover:bg-[#9e0026] text-white text-xs font-bold shadow-sm transition-all transform active:scale-95 cursor-pointer">\n          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">\n            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />\n          </svg>\n          <span>Cerrar conversaci\xF3n</span>\n        </button>\n      }\n    </div>\n\n  </div>\n</header>\n', styles: ["/* src/app/features/assistant/components/chat-header/chat-header.component.css */\n:host {\n  display: block;\n}\n"] }]
-  }], null, { hasMessages: [{ type: Input, args: [{ isSignal: true, alias: "hasMessages", required: false }] }], closeConversation: [{ type: Output, args: ["closeConversation"] }] });
+    args: [{ selector: "app-chat-header", changeDetection: ChangeDetectionStrategy.OnPush, template: '<header class="cbb-header shrink-0 bg-[#0050A1] text-white selection:bg-white selection:text-[#0050A1] border-b-4 border-[#BE002E] shadow-md z-20">\n  <div class="w-full px-4 sm:px-6 lg:px-8 h-16 sm:h-18 flex items-center justify-between gap-3">\n    \n    <!-- Identidad Institucional CBB (Colores originales #0050A1, #BE002E y #FFFFFF) -->\n    <div class="flex items-center gap-3 sm:gap-3.5 min-w-0">\n      \n      <!-- Bot\xF3n Hamburger para abrir el Sidebar en M\xF3vil/Tablet (< lg) -->\n      <button\n        type="button"\n        (click)="toggleMobileSidebar.emit()"\n        title="Abrir panel lateral y sugerencias"\n        class="lg:hidden relative w-10 h-10 rounded-xl bg-white/15 hover:bg-white/25 text-white flex items-center justify-center shrink-0 transition-colors cursor-pointer">\n        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">\n          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M4 6h16M4 12h16M4 18h16" />\n        </svg>\n        @if (hasMessages()) {\n          <span class="absolute -top-1 -right-1 w-3 h-3 rounded-full bg-[#BE002E] ring-2 ring-white"></span>\n        }\n      </button>\n\n      <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-white p-1.5 flex items-center justify-center shadow-md shrink-0">\n        <img \n          src="cropped-Favicon-3-1-32x32.png" \n          alt="Logo Colegio Bertolt Brecht" \n          class="w-full h-full object-contain"\n        />\n      </div>\n\n      <div class="min-w-0">\n        <div class="flex items-center gap-2.5">\n          <h1 class="font-extrabold text-white text-base sm:text-lg leading-tight tracking-tight truncate">\n            Colegio Bertolt Brecht\n          </h1>\n          <span class="hidden md:inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-extrabold bg-[#BE002E] text-white uppercase tracking-wider shadow-2xs">\n            Asistente Oficial\n          </span>\n        </div>\n        <div class="flex items-center gap-1.5 mt-0.5">\n          <span class="relative flex h-2 w-2">\n            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-300 opacity-75"></span>\n            <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>\n          </span>\n          <span class="text-xs text-blue-100 font-medium truncate">\n            Atenci\xF3n en l\xEDnea 24/7 \u2022 Comunidad educativa CBB\n          </span>\n        </div>\n      </div>\n\n    </div>\n\n    <!-- Acceso r\xE1pido en M\xF3vil (< lg) para cerrar conversaci\xF3n -->\n    <div class="flex items-center gap-2 shrink-0">\n      @if (hasMessages()) {\n        <button\n          type="button"\n          (click)="closeConversation.emit()"\n          title="Finalizar y calificar conversaci\xF3n"\n          class="lg:hidden inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#BE002E] hover:bg-[#9e0026] text-white text-xs font-bold shadow-sm transition-all cursor-pointer">\n          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">\n            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />\n          </svg>\n          <span>Cerrar</span>\n        </button>\n      }\n    </div>\n\n  </div>\n</header>\n', styles: ["/* src/app/features/assistant/components/chat-header/chat-header.component.css */\n:host {\n  display: block;\n}\n"] }]
+  }], null, { hasMessages: [{ type: Input, args: [{ isSignal: true, alias: "hasMessages", required: false }] }], toggleMobileSidebar: [{ type: Output, args: ["toggleMobileSidebar"] }], closeConversation: [{ type: Output, args: ["closeConversation"] }] });
 })();
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ChatHeaderComponent, { className: "ChatHeaderComponent", filePath: "src/app/features/assistant/components/chat-header/chat-header.component.ts", lineNumber: 9 });
+})();
+
+// src/app/features/assistant/components/chat-sidebar/chat-sidebar.component.ts
+var _forTrack0 = ($index, $item) => $item.prompt;
+function ChatSidebarComponent_Conditional_0_Template(rf, ctx) {
+  if (rf & 1) {
+    const _r1 = \u0275\u0275getCurrentView();
+    \u0275\u0275domElementStart(0, "div", 16);
+    \u0275\u0275domListener("click", function ChatSidebarComponent_Conditional_0_Template_div_click_0_listener() {
+      \u0275\u0275restoreView(_r1);
+      const ctx_r1 = \u0275\u0275nextContext();
+      return \u0275\u0275resetView(ctx_r1.closeMobileSidebar.emit());
+    });
+    \u0275\u0275domElementEnd();
+  }
+}
+function ChatSidebarComponent_Conditional_15_For_8_Template(rf, ctx) {
+  if (rf & 1) {
+    const _r4 = \u0275\u0275getCurrentView();
+    \u0275\u0275domElementStart(0, "button", 26);
+    \u0275\u0275domListener("click", function ChatSidebarComponent_Conditional_15_For_8_Template_button_click_0_listener() {
+      const item_r5 = \u0275\u0275restoreView(_r4).$implicit;
+      const ctx_r1 = \u0275\u0275nextContext(2);
+      return \u0275\u0275resetView(ctx_r1.onSelectSuggestion(item_r5.prompt));
+    });
+    \u0275\u0275domElementStart(1, "span", 27);
+    \u0275\u0275text(2);
+    \u0275\u0275domElementEnd();
+    \u0275\u0275domElementStart(3, "span", 28);
+    \u0275\u0275text(4);
+    \u0275\u0275domElementEnd();
+    \u0275\u0275domElementStart(5, "span", 29);
+    \u0275\u0275text(6, "\u2192");
+    \u0275\u0275domElementEnd()();
+  }
+  if (rf & 2) {
+    const item_r5 = ctx.$implicit;
+    \u0275\u0275advance(2);
+    \u0275\u0275textInterpolate(item_r5.icon);
+    \u0275\u0275advance(2);
+    \u0275\u0275textInterpolate(item_r5.label);
+  }
+}
+function ChatSidebarComponent_Conditional_15_Template(rf, ctx) {
+  if (rf & 1) {
+    const _r3 = \u0275\u0275getCurrentView();
+    \u0275\u0275domElementStart(0, "div", 10)(1, "div", 17)(2, "span", 18);
+    \u0275\u0275text(3, "\u{1F4A1}");
+    \u0275\u0275domElementEnd();
+    \u0275\u0275domElementStart(4, "span", 19);
+    \u0275\u0275text(5, " Consultas Sugeridas ");
+    \u0275\u0275domElementEnd()();
+    \u0275\u0275domElementStart(6, "div", 20);
+    \u0275\u0275repeaterCreate(7, ChatSidebarComponent_Conditional_15_For_8_Template, 7, 2, "button", 21, _forTrack0);
+    \u0275\u0275domElementEnd();
+    \u0275\u0275domElementStart(9, "div", 22)(10, "button", 23);
+    \u0275\u0275domListener("click", function ChatSidebarComponent_Conditional_15_Template_button_click_10_listener() {
+      \u0275\u0275restoreView(_r3);
+      const ctx_r1 = \u0275\u0275nextContext();
+      return \u0275\u0275resetView(ctx_r1.onCloseConversation());
+    });
+    \u0275\u0275namespaceSVG();
+    \u0275\u0275domElementStart(11, "svg", 24);
+    \u0275\u0275domElement(12, "path", 25);
+    \u0275\u0275domElementEnd();
+    \u0275\u0275namespaceHTML();
+    \u0275\u0275domElementStart(13, "span");
+    \u0275\u0275text(14, "Cerrar conversaci\xF3n");
+    \u0275\u0275domElementEnd()()()();
+  }
+  if (rf & 2) {
+    const ctx_r1 = \u0275\u0275nextContext();
+    \u0275\u0275advance(7);
+    \u0275\u0275repeater(ctx_r1.suggestions);
+  }
+}
+function ChatSidebarComponent_Conditional_16_For_21_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275domElementStart(0, "div", 39);
+    \u0275\u0275domElement(1, "span", 40);
+    \u0275\u0275domElementStart(2, "span", 41);
+    \u0275\u0275text(3);
+    \u0275\u0275domElementEnd()();
+  }
+  if (rf & 2) {
+    const source_r6 = ctx.$implicit;
+    \u0275\u0275advance(3);
+    \u0275\u0275textInterpolate(source_r6);
+  }
+}
+function ChatSidebarComponent_Conditional_16_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275domElementStart(0, "div", 10)(1, "div", 17)(2, "span", 18);
+    \u0275\u0275text(3, "\u{1F4DA}");
+    \u0275\u0275domElementEnd();
+    \u0275\u0275domElementStart(4, "span", 19);
+    \u0275\u0275text(5, " Servicios Disponibles ");
+    \u0275\u0275domElementEnd()();
+    \u0275\u0275domElementStart(6, "div", 30)(7, "div", 31)(8, "span", 32);
+    \u0275\u0275text(9, "\u{1F4D6}");
+    \u0275\u0275domElementEnd();
+    \u0275\u0275domElementStart(10, "div", 33)(11, "div", 34);
+    \u0275\u0275text(12, " Documentos CBB ");
+    \u0275\u0275domElementEnd();
+    \u0275\u0275domElementStart(13, "div", 35);
+    \u0275\u0275text(14, " Normativas, admisi\xF3n, tr\xE1mites e informaci\xF3n general ");
+    \u0275\u0275domElementEnd()()();
+    \u0275\u0275domElementStart(15, "span", 36);
+    \u0275\u0275text(16, " \u2713 ");
+    \u0275\u0275domElementEnd()();
+    \u0275\u0275domElementStart(17, "div", 37)(18, "div", 38);
+    \u0275\u0275text(19, " Base de Conocimiento Activa ");
+    \u0275\u0275domElementEnd();
+    \u0275\u0275repeaterCreate(20, ChatSidebarComponent_Conditional_16_For_21_Template, 4, 1, "div", 39, \u0275\u0275repeaterTrackByIdentity);
+    \u0275\u0275domElementEnd()();
+  }
+  if (rf & 2) {
+    const ctx_r1 = \u0275\u0275nextContext();
+    \u0275\u0275advance(20);
+    \u0275\u0275repeater(ctx_r1.activeSources);
+  }
+}
+var ChatSidebarComponent = class _ChatSidebarComponent {
+  hasMessages = input(false, ...ngDevMode ? [{ debugName: "hasMessages" }] : (
+    /* istanbul ignore next */
+    []
+  ));
+  isMobileOpen = input(false, ...ngDevMode ? [{ debugName: "isMobileOpen" }] : (
+    /* istanbul ignore next */
+    []
+  ));
+  selectSuggestion = output();
+  closeConversation = output();
+  closeMobileSidebar = output();
+  suggestions = [
+    {
+      icon: "\u{1F393}",
+      label: "Matr\xEDcula y Admisi\xF3n",
+      prompt: "\xBFCu\xE1les son los requisitos y pasos para el proceso de admisi\xF3n y matr\xEDcula?",
+      category: "matricula"
+    },
+    {
+      icon: "\u{1F4B3}",
+      label: "Pago de pensiones",
+      prompt: "\xBFCu\xE1les son los costos de matr\xEDcula, pensi\xF3n y descuentos disponibles?",
+      category: "pagos"
+    },
+    {
+      icon: "\u{1F4C4}",
+      label: "Certificados y tr\xE1mites",
+      prompt: "\xBFC\xF3mo solicito una constancia de estudios o certificado oficial?",
+      category: "tramites"
+    },
+    {
+      icon: "\u{1F3A8}",
+      label: "Talleres y deportes",
+      prompt: "\xBFQu\xE9 talleres extracurriculares, art\xEDsticos y deportivos ofrecen?",
+      category: "talleres"
+    },
+    {
+      icon: "\u{1F4CD}",
+      label: "Sedes y horarios",
+      prompt: "\xBFCu\xE1les son las sedes del colegio y sus horarios de atenci\xF3n?",
+      category: "horarios"
+    }
+  ];
+  activeSources = [];
+  onSelectSuggestion(prompt) {
+    this.selectSuggestion.emit(prompt);
+    this.closeMobileSidebar.emit();
+  }
+  onCloseConversation() {
+    this.closeMobileSidebar.emit();
+    this.closeConversation.emit();
+  }
+  static \u0275fac = function ChatSidebarComponent_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _ChatSidebarComponent)();
+  };
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ChatSidebarComponent, selectors: [["app-chat-sidebar"]], inputs: { hasMessages: [1, "hasMessages"], isMobileOpen: [1, "isMobileOpen"] }, outputs: { selectSuggestion: "selectSuggestion", closeConversation: "closeConversation", closeMobileSidebar: "closeMobileSidebar" }, decls: 28, vars: 4, consts: [[1, "fixed", "inset-0", "z-30", "bg-slate-900/50", "backdrop-blur-xs", "lg:hidden", "animate-in", "fade-in", "duration-200"], ["type", "button", "title", "Cerrar men\xFA lateral", 1, "lg:hidden", "absolute", "top-3.5", "right-3.5", "w-8", "h-8", "rounded-full", "bg-white/15", "hover:bg-white/25", "text-white", "flex", "items-center", "justify-center", "text-sm", "transition-colors", "cursor-pointer", 3, "click"], [1, "p-5", "pb-4", "border-b", "border-white/15", "flex", "flex-col", "items-center", "text-center"], [1, "relative", "mb-3"], [1, "w-18", "h-18", "rounded-2xl", "bg-white", "p-2.5", "flex", "items-center", "justify-center", "shadow-md", "ring-4", "ring-white/20"], ["src", "cropped-Favicon-3-1-192x192.png", "alt", "Asistente CBB", 1, "w-full", "h-full", "object-contain"], [1, "inline-flex", "items-center", "px-2.5", "py-0.5", "rounded-full", "text-[10px]", "font-extrabold", "bg-[#BE002E]", "text-white", "uppercase", "tracking-wider", "mb-1.5"], [1, "text-base", "font-extrabold", "text-white", "tracking-tight", "leading-snug"], [1, "text-[11px]", "font-medium", "text-blue-100", "mt-0.5"], [1, "flex-1", "overflow-y-auto", "px-4", "py-4", "space-y-4", "sidebar-scroll"], [1, "space-y-3", "animate-in", "fade-in", "duration-200"], [1, "p-4", "pt-3", "border-t", "border-white/15", "space-y-2"], [1, "p-3", "rounded-xl", "bg-white/10", "border", "border-white/15"], [1, "flex", "items-center", "gap-1.5", "text-[11px]", "text-blue-100", "font-medium"], [1, "text-base", "font-extrabold", "text-white", "leading-tight", "mt-0.5"], [1, "text-[10px]", "text-blue-100/80", "mt-0.5"], [1, "fixed", "inset-0", "z-30", "bg-slate-900/50", "backdrop-blur-xs", "lg:hidden", "animate-in", "fade-in", "duration-200", 3, "click"], [1, "flex", "items-center", "gap-1.5", "px-1"], [1, "text-xs"], [1, "text-[11px]", "font-extrabold", "uppercase", "tracking-wider", "text-white"], [1, "p-2.5", "rounded-2xl", "bg-white/10", "border", "border-white/20", "space-y-1.5"], ["type", "button", 1, "w-full", "flex", "items-center", "gap-2.5", "px-3", "py-2.5", "rounded-xl", "bg-white", "text-[#0050A1]", "hover:bg-blue-50", "text-left", "text-xs", "font-bold", "border", "border-white", "transition-all", "shadow-2xs", "cursor-pointer", "group"], [1, "pt-1"], ["type", "button", "title", "Finalizar y calificar conversaci\xF3n", 1, "w-full", "py-2.5", "px-4", "rounded-xl", "bg-[#BE002E]", "hover:bg-[#9e0026]", "text-white", "text-xs", "font-bold", "shadow-md", "flex", "items-center", "justify-center", "gap-2", "transition-all", "transform", "active:scale-95", "cursor-pointer", "border", "border-white/20", 3, "click"], ["fill", "none", "stroke", "currentColor", "viewBox", "0 0 24 24", 1, "w-4", "h-4", "shrink-0"], ["stroke-linecap", "round", "stroke-linejoin", "round", "stroke-width", "2.5", "d", "M5 13l4 4L19 7"], ["type", "button", 1, "w-full", "flex", "items-center", "gap-2.5", "px-3", "py-2.5", "rounded-xl", "bg-white", "text-[#0050A1]", "hover:bg-blue-50", "text-left", "text-xs", "font-bold", "border", "border-white", "transition-all", "shadow-2xs", "cursor-pointer", "group", 3, "click"], [1, "text-base", "shrink-0", "group-hover:scale-110", "transition-transform"], [1, "flex-1", "leading-snug"], [1, "text-[#BE002E]", "group-hover:translate-x-0.5", "transition-transform", "font-extrabold", "text-xs"], [1, "p-3.5", "rounded-xl", "bg-white", "text-slate-800", "border-l-4", "border-l-[#BE002E]", "flex", "items-center", "justify-between", "gap-3", "shadow-sm"], [1, "flex", "items-center", "gap-2.5", "min-w-0"], [1, "text-lg", "shrink-0"], [1, "min-w-0"], [1, "text-xs", "font-extrabold", "text-[#0050A1]", "leading-tight"], [1, "text-[11px]", "text-slate-600", "leading-tight", "mt-0.5"], [1, "w-5", "h-5", "rounded-full", "bg-[#0050A1]", "text-white", "flex", "items-center", "justify-center", "text-xs", "font-bold", "shrink-0"], [1, "p-3.5", "rounded-xl", "bg-white/10", "border", "border-white/20", "space-y-2"], [1, "text-[10px]", "font-extrabold", "uppercase", "tracking-wider", "text-blue-100"], [1, "flex", "items-center", "gap-2", "text-xs", "text-white", "font-medium"], [1, "w-2", "h-2", "rounded-full", "bg-[#BE002E]", "ring-2", "ring-white/40", "shrink-0"], [1, "truncate"]], template: function ChatSidebarComponent_Template(rf, ctx) {
+    if (rf & 1) {
+      \u0275\u0275conditionalCreate(0, ChatSidebarComponent_Conditional_0_Template, 1, 0, "div", 0);
+      \u0275\u0275domElementStart(1, "aside")(2, "button", 1);
+      \u0275\u0275domListener("click", function ChatSidebarComponent_Template_button_click_2_listener() {
+        return ctx.closeMobileSidebar.emit();
+      });
+      \u0275\u0275text(3, " \u2715 ");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(4, "div", 2)(5, "div", 3)(6, "div", 4);
+      \u0275\u0275domElement(7, "img", 5);
+      \u0275\u0275domElementEnd()();
+      \u0275\u0275domElementStart(8, "span", 6);
+      \u0275\u0275text(9, " Orientaci\xF3n Oficial ");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(10, "h2", 7);
+      \u0275\u0275text(11, " Asistente Virtual CBB ");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(12, "p", 8);
+      \u0275\u0275text(13, " Colegio Bertolt Brecht ");
+      \u0275\u0275domElementEnd()();
+      \u0275\u0275domElementStart(14, "div", 9);
+      \u0275\u0275conditionalCreate(15, ChatSidebarComponent_Conditional_15_Template, 15, 0, "div", 10)(16, ChatSidebarComponent_Conditional_16_Template, 22, 0, "div", 10);
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(17, "div", 11)(18, "div", 12)(19, "div", 13)(20, "span");
+      \u0275\u0275text(21, "\u{1F4CD}");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(22, "span");
+      \u0275\u0275text(23, "Sedes Institucionales");
+      \u0275\u0275domElementEnd()();
+      \u0275\u0275domElementStart(24, "div", 14);
+      \u0275\u0275text(25, " 3 Sedes en Lima ");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(26, "div", 15);
+      \u0275\u0275text(27, " Colonial \u2022 Carabayllo \u2022 SJL ");
+      \u0275\u0275domElementEnd()()()();
+    }
+    if (rf & 2) {
+      \u0275\u0275conditional(ctx.isMobileOpen() ? 0 : -1);
+      \u0275\u0275advance();
+      \u0275\u0275classMap(ctx.isMobileOpen() ? "cbb-sidebar fixed inset-y-0 left-0 z-40 w-72 xl:w-80 bg-[#0050A1] text-white flex flex-col justify-between border-r-2 border-[#BE002E] shadow-2xl transition-transform duration-300 translate-x-0 lg:static lg:translate-x-0 lg:shadow-none shrink-0 select-none" : "cbb-sidebar fixed inset-y-0 left-0 z-40 w-72 xl:w-80 bg-[#0050A1] text-white flex flex-col justify-between border-r-2 border-[#BE002E] shadow-2xl transition-transform duration-300 -translate-x-full lg:static lg:translate-x-0 lg:shadow-none shrink-0 select-none");
+      \u0275\u0275advance(14);
+      \u0275\u0275conditional(ctx.hasMessages() ? 15 : 16);
+    }
+  }, styles: ["\n[_nghost-%COMP%] {\n  display: contents;\n}\n.sidebar-scroll[_ngcontent-%COMP%] {\n  scrollbar-width: thin;\n  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;\n}\n.sidebar-scroll[_ngcontent-%COMP%]::-webkit-scrollbar {\n  width: 4px;\n}\n.sidebar-scroll[_ngcontent-%COMP%]::-webkit-scrollbar-track {\n  background: transparent;\n}\n.sidebar-scroll[_ngcontent-%COMP%]::-webkit-scrollbar-thumb {\n  background-color: rgba(255, 255, 255, 0.2);\n  border-radius: 9999px;\n}"], changeDetection: 0 });
+};
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ChatSidebarComponent, [{
+    type: Component,
+    args: [{ selector: "app-chat-sidebar", changeDetection: ChangeDetectionStrategy.OnPush, template: `<!-- Backdrop oscuro para versi\xF3n M\xF3vil/Tablet (< lg) -->
+@if (isMobileOpen()) {
+<div (click)="closeMobileSidebar.emit()"
+  class="fixed inset-0 z-30 bg-slate-900/50 backdrop-blur-xs lg:hidden animate-in fade-in duration-200">
+</div>
+}
+
+<!-- Contenedor Principal del Sidebar Izquierdo (Estrictamente con colores institucionales #0050A1, #BE002E y #FFFFFF) -->
+<aside
+  [class]="isMobileOpen()
+    ? 'cbb-sidebar fixed inset-y-0 left-0 z-40 w-72 xl:w-80 bg-[#0050A1] text-white flex flex-col justify-between border-r-2 border-[#BE002E] shadow-2xl transition-transform duration-300 translate-x-0 lg:static lg:translate-x-0 lg:shadow-none shrink-0 select-none'
+    : 'cbb-sidebar fixed inset-y-0 left-0 z-40 w-72 xl:w-80 bg-[#0050A1] text-white flex flex-col justify-between border-r-2 border-[#BE002E] shadow-2xl transition-transform duration-300 -translate-x-full lg:static lg:translate-x-0 lg:shadow-none shrink-0 select-none'">
+
+  <!-- Bot\xF3n cerrar Drawer en M\xF3vil -->
+  <button type="button" (click)="closeMobileSidebar.emit()" title="Cerrar men\xFA lateral"
+    class="lg:hidden absolute top-3.5 right-3.5 w-8 h-8 rounded-full bg-white/15 hover:bg-white/25 text-white flex items-center justify-center text-sm transition-colors cursor-pointer">
+    \u2715
+  </button>
+
+  <!-- 1. CABECERA DE IDENTIDAD DEL ASISTENTE -->
+  <div class="p-5 pb-4 border-b border-white/15 flex flex-col items-center text-center">
+    <div class="relative mb-3">
+      <div class="w-18 h-18 rounded-2xl bg-white p-2.5 flex items-center justify-center shadow-md ring-4 ring-white/20">
+        <img src="cropped-Favicon-3-1-192x192.png" alt="Asistente CBB" class="w-full h-full object-contain" />
+      </div>
+    </div>
+
+    <span
+      class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-extrabold bg-[#BE002E] text-white uppercase tracking-wider mb-1.5">
+      Orientaci\xF3n Oficial
+    </span>
+    <h2 class="text-base font-extrabold text-white tracking-tight leading-snug">
+      Asistente Virtual CBB
+    </h2>
+    <p class="text-[11px] font-medium text-blue-100 mt-0.5">
+      Colegio Bertolt Brecht
+    </p>
+  </div>
+
+  <!-- 2. SECCI\xD3N CENTRAL DIN\xC1MICA (Sugerencias en consulta / Documentaci\xF3n activa al inicio) -->
+  <div class="flex-1 overflow-y-auto px-4 py-4 space-y-4 sidebar-scroll">
+
+    @if (hasMessages()) {
+    <!-- ESTADO EN CONVERSACI\xD3N: Casilla de Sugerencias R\xE1pidas + Bot\xF3n Cerrar Conversaci\xF3n -->
+    <div class="space-y-3 animate-in fade-in duration-200">
+      <div class="flex items-center gap-1.5 px-1">
+        <span class="text-xs">\u{1F4A1}</span>
+        <span class="text-[11px] font-extrabold uppercase tracking-wider text-white">
+          Consultas Sugeridas
+        </span>
+      </div>
+
+      <div class="p-2.5 rounded-2xl bg-white/10 border border-white/20 space-y-1.5">
+        @for (item of suggestions; track item.prompt) {
+        <button type="button" (click)="onSelectSuggestion(item.prompt)"
+          class="w-full flex items-center gap-2.5 px-3 py-2.5 rounded-xl bg-white text-[#0050A1] hover:bg-blue-50 text-left text-xs font-bold border border-white transition-all shadow-2xs cursor-pointer group">
+          <span class="text-base shrink-0 group-hover:scale-110 transition-transform">{{ item.icon }}</span>
+          <span class="flex-1 leading-snug">{{ item.label }}</span>
+          <span class="text-[#BE002E] group-hover:translate-x-0.5 transition-transform font-extrabold text-xs">\u2192</span>
+        </button>
+        }
+      </div>
+
+      <!-- Bot\xF3n Destacado: Cerrar conversaci\xF3n (#BE002E) -->
+      <div class="pt-1">
+        <button type="button" (click)="onCloseConversation()" title="Finalizar y calificar conversaci\xF3n"
+          class="w-full py-2.5 px-4 rounded-xl bg-[#BE002E] hover:bg-[#9e0026] text-white text-xs font-bold shadow-md flex items-center justify-center gap-2 transition-all transform active:scale-95 cursor-pointer border border-white/20">
+          <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+          </svg>
+          <span>Cerrar conversaci\xF3n</span>
+        </button>
+      </div>
+    </div>
+    } @else {
+    <!-- ESTADO INICIAL: Documentos Oficiales Activos -->
+    <div class="space-y-3 animate-in fade-in duration-200">
+      <div class="flex items-center gap-1.5 px-1">
+        <span class="text-xs">\u{1F4DA}</span>
+        <span class="text-[11px] font-extrabold uppercase tracking-wider text-white">
+          Servicios Disponibles
+        </span>
+      </div>
+
+      <!-- Recuadro activo blanco con acento institucional -->
+      <div
+        class="p-3.5 rounded-xl bg-white text-slate-800 border-l-4 border-l-[#BE002E] flex items-center justify-between gap-3 shadow-sm">
+        <div class="flex items-center gap-2.5 min-w-0">
+          <span class="text-lg shrink-0">\u{1F4D6}</span>
+          <div class="min-w-0">
+            <div class="text-xs font-extrabold text-[#0050A1] leading-tight">
+              Documentos CBB
+            </div>
+            <div class="text-[11px] text-slate-600 leading-tight mt-0.5">
+              Normativas, admisi\xF3n, tr\xE1mites e informaci\xF3n general
+            </div>
+          </div>
+        </div>
+        <span
+          class="w-5 h-5 rounded-full bg-[#0050A1] text-white flex items-center justify-center text-xs font-bold shrink-0">
+          \u2713
+        </span>
+      </div>
+
+      <!-- Lista de fuentes normativas activas -->
+      <div class="p-3.5 rounded-xl bg-white/10 border border-white/20 space-y-2">
+        <div class="text-[10px] font-extrabold uppercase tracking-wider text-blue-100">
+          Base de Conocimiento Activa
+        </div>
+        @for (source of activeSources; track source) {
+        <div class="flex items-center gap-2 text-xs text-white font-medium">
+          <span class="w-2 h-2 rounded-full bg-[#BE002E] ring-2 ring-white/40 shrink-0"></span>
+          <span class="truncate">{{ source }}</span>
+        </div>
+        }
+      </div>
+    </div>
+    }
+
+  </div>
+
+  <!-- 3. TARJETAS INFERIORES DE RESUMEN INSTITUCIONAL -->
+  <div class="p-4 pt-3 border-t border-white/15 space-y-2">
+
+    <div class="p-3 rounded-xl bg-white/10 border border-white/15">
+      <div class="flex items-center gap-1.5 text-[11px] text-blue-100 font-medium">
+        <span>\u{1F4CD}</span>
+        <span>Sedes Institucionales</span>
+      </div>
+      <div class="text-base font-extrabold text-white leading-tight mt-0.5">
+        3 Sedes en Lima
+      </div>
+      <div class="text-[10px] text-blue-100/80 mt-0.5">
+        Colonial \u2022 Carabayllo \u2022 SJL
+      </div>
+    </div>
+
+    <!--<div class="p-3 rounded-xl bg-white/10 border border-white/15">
+      <div class="flex items-center gap-1.5 text-[11px] text-blue-100 font-medium">
+        <span>\u{1F4DE}</span>
+        <span>Central Telef\xF3nica</span>
+      </div>
+      <div class="text-base font-extrabold text-white leading-tight mt-0.5">
+        (01) 480-0303
+      </div>
+      <div class="text-[10px] text-blue-100/80 mt-0.5">
+        Orientaci\xF3n a familias y admisiones
+      </div>
+    </div>-->
+
+  </div>
+
+</aside>`, styles: ["/* src/app/features/assistant/components/chat-sidebar/chat-sidebar.component.css */\n:host {\n  display: contents;\n}\n.sidebar-scroll {\n  scrollbar-width: thin;\n  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;\n}\n.sidebar-scroll::-webkit-scrollbar {\n  width: 4px;\n}\n.sidebar-scroll::-webkit-scrollbar-track {\n  background: transparent;\n}\n.sidebar-scroll::-webkit-scrollbar-thumb {\n  background-color: rgba(255, 255, 255, 0.2);\n  border-radius: 9999px;\n}\n"] }]
+  }], null, { hasMessages: [{ type: Input, args: [{ isSignal: true, alias: "hasMessages", required: false }] }], isMobileOpen: [{ type: Input, args: [{ isSignal: true, alias: "isMobileOpen", required: false }] }], selectSuggestion: [{ type: Output, args: ["selectSuggestion"] }], closeConversation: [{ type: Output, args: ["closeConversation"] }], closeMobileSidebar: [{ type: Output, args: ["closeMobileSidebar"] }] });
+})();
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ChatSidebarComponent, { className: "ChatSidebarComponent", filePath: "src/app/features/assistant/components/chat-sidebar/chat-sidebar.component.ts", lineNumber: 10 });
 })();
 
 // node_modules/marked/lib/marked.esm.js
@@ -3653,7 +4057,7 @@ var ChatMessageItemComponent = class _ChatMessageItemComponent {
   static \u0275fac = function ChatMessageItemComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _ChatMessageItemComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ChatMessageItemComponent, selectors: [["app-chat-message-item"]], inputs: { message: [1, "message"] }, decls: 3, vars: 4, consts: [[1, "max-w-[85%]", "sm:max-w-[75%]", "space-y-1.5"], [1, "flex", "items-start", "gap-3", "sm:gap-4", "w-full", "max-w-[95%]", "sm:max-w-[90%]"], [1, "user-bubble", "px-5", "py-3.5", "rounded-2xl", "rounded-tr-xs", "bg-[#0050A1]", "text-white", "selection:bg-white", "selection:text-[#0050A1]", "text-sm", "sm:text-[15px]", "leading-relaxed", "shadow-sm"], [1, "whitespace-pre-wrap"], [1, "text-[11px]", "text-slate-400", "text-right", "pr-1", "font-medium"], [1, "w-9", "h-9", "rounded-xl", "bg-white", "border", "border-slate-200", "p-1.5", "flex", "items-center", "justify-center", "shrink-0", "shadow-xs", "mt-0.5"], ["src", "cropped-Favicon-3-1-32x32.png", "alt", "CBB", 1, "w-full", "h-full", "object-contain"], [1, "space-y-1.5", "flex-1", "min-w-0"], [1, "chat-markdown", "break-words", 3, "innerHTML"], [1, "flex", "items-center", "justify-between", "px-1"], [1, "text-[11px]", "text-slate-400", "font-medium"], ["type", "button", 1, "inline-flex", "items-center", "gap-1", "text-[11px]", "text-slate-400", "hover:text-[#0050A1]", "transition-colors", "cursor-pointer", "py-0.5", "px-1.5", "rounded-md", "hover:bg-slate-100"], ["type", "button", 1, "inline-flex", "items-center", "gap-1", "text-[11px]", "text-slate-400", "hover:text-[#0050A1]", "transition-colors", "cursor-pointer", "py-0.5", "px-1.5", "rounded-md", "hover:bg-slate-100", 3, "click"], [1, "text-emerald-600", "font-semibold"], ["fill", "none", "stroke", "currentColor", "viewBox", "0 0 24 24", 1, "w-3.5", "h-3.5"], ["stroke-linecap", "round", "stroke-linejoin", "round", "stroke-width", "2", "d", "M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"]], template: function ChatMessageItemComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ChatMessageItemComponent, selectors: [["app-chat-message-item"]], inputs: { message: [1, "message"] }, decls: 3, vars: 4, consts: [[1, "max-w-[85%]", "sm:max-w-[75%]", "space-y-1.5"], [1, "flex", "items-start", "gap-3", "sm:gap-4", "w-full"], [1, "user-bubble", "px-5", "py-3.5", "rounded-2xl", "rounded-tr-xs", "bg-[#0050A1]", "text-white", "selection:bg-white", "selection:text-[#0050A1]", "text-sm", "sm:text-[15px]", "leading-relaxed", "shadow-sm"], [1, "whitespace-pre-wrap"], [1, "text-[11px]", "text-slate-400", "text-right", "pr-1", "font-medium"], [1, "w-9", "h-9", "rounded-xl", "bg-white", "border", "border-slate-200", "p-1.5", "flex", "items-center", "justify-center", "shrink-0", "shadow-xs", "mt-0.5"], ["src", "cropped-Favicon-3-1-32x32.png", "alt", "CBB", 1, "w-full", "h-full", "object-contain"], [1, "space-y-1.5", "flex-1", "min-w-0"], [1, "chat-markdown", "break-words", 3, "innerHTML"], [1, "flex", "items-center", "justify-between", "px-1"], [1, "text-[11px]", "text-slate-400", "font-medium"], ["type", "button", 1, "inline-flex", "items-center", "gap-1", "text-[11px]", "text-slate-400", "hover:text-[#0050A1]", "transition-colors", "cursor-pointer", "py-0.5", "px-1.5", "rounded-md", "hover:bg-slate-100"], ["type", "button", 1, "inline-flex", "items-center", "gap-1", "text-[11px]", "text-slate-400", "hover:text-[#0050A1]", "transition-colors", "cursor-pointer", "py-0.5", "px-1.5", "rounded-md", "hover:bg-slate-100", 3, "click"], [1, "text-emerald-600", "font-semibold"], ["fill", "none", "stroke", "currentColor", "viewBox", "0 0 24 24", 1, "w-3.5", "h-3.5"], ["stroke-linecap", "round", "stroke-linejoin", "round", "stroke-width", "2", "d", "M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"]], template: function ChatMessageItemComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275domElementStart(0, "div");
       \u0275\u0275conditionalCreate(1, ChatMessageItemComponent_Conditional_1_Template, 7, 5, "div", 0);
@@ -3691,7 +4095,7 @@ var ChatMessageItemComponent = class _ChatMessageItemComponent {
 
   <!-- Mensaje del Asistente (Contenido Blanco con acentos #BE002E y #0050A1) -->
   @if (message().sender === 'assistant') {
-    <div class="flex items-start gap-3 sm:gap-4 w-full max-w-[95%] sm:max-w-[90%]">
+    <div class="flex items-start gap-3 sm:gap-4 w-full">
       
       <!-- Avatar con \xCDcono Oficial CBB -->
       <div class="w-9 h-9 rounded-xl bg-white border border-slate-200 p-1.5 flex items-center justify-center shrink-0 shadow-xs mt-0.5">
@@ -3749,7 +4153,7 @@ var ChatMessageItemComponent = class _ChatMessageItemComponent {
 
 // src/app/features/assistant/components/chat-messages/chat-messages.component.ts
 var _c0 = ["scrollContainer"];
-var _forTrack0 = ($index, $item) => $item.title;
+var _forTrack02 = ($index, $item) => $item.title;
 var _forTrack1 = ($index, $item) => $item.id;
 function ChatMessagesComponent_Conditional_3_For_12_Template(rf, ctx) {
   if (rf & 1) {
@@ -3818,7 +4222,7 @@ function ChatMessagesComponent_Conditional_3_Template(rf, ctx) {
     \u0275\u0275text(9, " Resuelve tus dudas al instante sobre matr\xEDculas, pensiones, tr\xE1mites de secretar\xEDa, talleres y sedes con informaci\xF3n oficial vigente. ");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(10, "div", 10);
-    \u0275\u0275repeaterCreate(11, ChatMessagesComponent_Conditional_3_For_12_Template, 17, 16, "button", 11, _forTrack0);
+    \u0275\u0275repeaterCreate(11, ChatMessagesComponent_Conditional_3_For_12_Template, 17, 16, "button", 11, _forTrack02);
     \u0275\u0275elementEnd()();
   }
   if (rf & 2) {
@@ -3956,7 +4360,7 @@ var ChatMessagesComponent = class _ChatMessagesComponent {
     if (rf & 2) {
       \u0275\u0275queryAdvance();
     }
-  }, inputs: { messages: [1, "messages"], isLoading: [1, "isLoading"] }, outputs: { selectPrompt: "selectPrompt" }, decls: 5, vars: 1, consts: [["scrollContainer", ""], [1, "flex-1", "min-h-0", "overflow-y-auto", "chat-scroll", "px-4", "sm:px-6", "py-6", "sm:py-8", "bg-white"], [1, "max-w-3xl", "mx-auto", "w-full", "h-full", "flex", "flex-col"], [1, "my-auto", "py-4", "sm:py-8", "flex", "flex-col", "items-center", "text-center", "animate-in", "fade-in", "duration-300"], [1, "flex-1", "space-y-2", "pb-4"], [1, "w-20", "h-20", "sm:w-24", "sm:h-24", "rounded-3xl", "bg-white", "p-3", "flex", "items-center", "justify-center", "shadow-lg", "border-2", "border-[#0050A1]/15", "ring-4", "ring-[#BE002E]/10", "mb-5"], ["src", "cropped-Favicon-3-1-192x192.png", "alt", "Colegio Bertolt Brecht", 1, "w-full", "h-full", "object-contain"], [1, "inline-flex", "items-center", "gap-2", "px-3.5", "py-1", "rounded-full", "bg-[#BE002E]/10", "border", "border-[#BE002E]/25", "text-[#BE002E]", "text-xs", "font-extrabold", "uppercase", "tracking-wide", "mb-3"], [1, "text-2xl", "sm:text-3xl", "md:text-4xl", "font-black", "text-[#0050A1]", "tracking-tight", "mb-3"], [1, "text-slate-600", "text-sm", "sm:text-base", "max-w-xl", "mb-8", "leading-relaxed"], [1, "grid", "grid-cols-1", "sm:grid-cols-2", "lg:grid-cols-3", "gap-3.5", "w-full", "text-left"], ["type", "button", 3, "class"], ["type", "button", 3, "click"], [1, "pt-1"], [1, "flex", "items-center", "justify-between", "mb-2.5"], [1, "text-xs", "text-slate-500", "mt-1", "line-clamp-2", "leading-relaxed"], [3, "message"], [1, "flex", "items-start", "gap-3", "sm:gap-4", "max-w-[85%]", "mb-4", "animate-in", "fade-in", "duration-150"], [1, "w-9", "h-9", "rounded-xl", "bg-white", "border", "border-slate-200", "p-1.5", "flex", "items-center", "justify-center", "shrink-0", "shadow-xs"], ["src", "cropped-Favicon-3-1-32x32.png", "alt", "CBB", 1, "w-full", "h-full", "object-contain"], [1, "px-5", "py-4", "rounded-2xl", "rounded-tl-xs", "bg-white", "border", "border-slate-200", "shadow-2xs", "flex", "items-center", "gap-2.5"], [1, "flex", "items-center", "gap-1.5"], [1, "w-2", "h-2", "rounded-full", "bg-[#BE002E]", "animate-bounce", "[animation-delay:-0.3s]"], [1, "w-2", "h-2", "rounded-full", "bg-[#0050A1]", "animate-bounce", "[animation-delay:-0.15s]"], [1, "w-2", "h-2", "rounded-full", "bg-[#BE002E]", "animate-bounce"], [1, "text-xs", "text-[#0050A1]", "font-semibold"]], template: function ChatMessagesComponent_Template(rf, ctx) {
+  }, inputs: { messages: [1, "messages"], isLoading: [1, "isLoading"] }, outputs: { selectPrompt: "selectPrompt" }, decls: 5, vars: 1, consts: [["scrollContainer", ""], [1, "flex-1", "min-h-0", "overflow-y-auto", "chat-scroll", "px-4", "sm:px-6", "lg:px-10", "py-6", "sm:py-8", "bg-white"], [1, "w-full", "h-full", "flex", "flex-col"], [1, "my-auto", "py-4", "sm:py-8", "flex", "flex-col", "items-center", "text-center", "animate-in", "fade-in", "duration-300"], [1, "flex-1", "space-y-2", "pb-4"], [1, "w-20", "h-20", "sm:w-24", "sm:h-24", "rounded-3xl", "bg-white", "p-3", "flex", "items-center", "justify-center", "shadow-lg", "border-2", "border-[#0050A1]/15", "ring-4", "ring-[#BE002E]/10", "mb-5"], ["src", "cropped-Favicon-3-1-192x192.png", "alt", "Colegio Bertolt Brecht", 1, "w-full", "h-full", "object-contain"], [1, "inline-flex", "items-center", "gap-2", "px-3.5", "py-1", "rounded-full", "bg-[#BE002E]/10", "border", "border-[#BE002E]/25", "text-[#BE002E]", "text-xs", "font-extrabold", "uppercase", "tracking-wide", "mb-3"], [1, "text-2xl", "sm:text-3xl", "md:text-4xl", "font-black", "text-[#0050A1]", "tracking-tight", "mb-3"], [1, "text-slate-600", "text-sm", "sm:text-base", "max-w-xl", "mb-8", "leading-relaxed"], [1, "grid", "grid-cols-1", "sm:grid-cols-2", "lg:grid-cols-3", "gap-3.5", "w-full", "text-left"], ["type", "button", 3, "class"], ["type", "button", 3, "click"], [1, "pt-1"], [1, "flex", "items-center", "justify-between", "mb-2.5"], [1, "text-xs", "text-slate-500", "mt-1", "line-clamp-2", "leading-relaxed"], [3, "message"], [1, "flex", "items-start", "gap-3", "sm:gap-4", "max-w-[85%]", "mb-4", "animate-in", "fade-in", "duration-150"], [1, "w-9", "h-9", "rounded-xl", "bg-white", "border", "border-slate-200", "p-1.5", "flex", "items-center", "justify-center", "shrink-0", "shadow-xs"], ["src", "cropped-Favicon-3-1-32x32.png", "alt", "CBB", 1, "w-full", "h-full", "object-contain"], [1, "px-5", "py-4", "rounded-2xl", "rounded-tl-xs", "bg-white", "border", "border-slate-200", "shadow-2xs", "flex", "items-center", "gap-2.5"], [1, "flex", "items-center", "gap-1.5"], [1, "w-2", "h-2", "rounded-full", "bg-[#BE002E]", "animate-bounce", "[animation-delay:-0.3s]"], [1, "w-2", "h-2", "rounded-full", "bg-[#0050A1]", "animate-bounce", "[animation-delay:-0.15s]"], [1, "w-2", "h-2", "rounded-full", "bg-[#BE002E]", "animate-bounce"], [1, "text-xs", "text-[#0050A1]", "font-semibold"]], template: function ChatMessagesComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "div", 1, 0)(2, "div", 2);
       \u0275\u0275conditionalCreate(3, ChatMessagesComponent_Conditional_3_Template, 13, 0, "div", 3)(4, ChatMessagesComponent_Conditional_4_Template, 4, 1, "div", 4);
@@ -3971,9 +4375,9 @@ var ChatMessagesComponent = class _ChatMessagesComponent {
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ChatMessagesComponent, [{
     type: Component,
-    args: [{ selector: "app-chat-messages", changeDetection: ChangeDetectionStrategy.OnPush, imports: [ChatMessageItemComponent], template: `<div #scrollContainer class="flex-1 min-h-0 overflow-y-auto chat-scroll px-4 sm:px-6 py-6 sm:py-8 bg-white">
+    args: [{ selector: "app-chat-messages", changeDetection: ChangeDetectionStrategy.OnPush, imports: [ChatMessageItemComponent], template: `<div #scrollContainer class="flex-1 min-h-0 overflow-y-auto chat-scroll px-4 sm:px-6 lg:px-10 py-6 sm:py-8 bg-white">
 
-  <div class="max-w-3xl mx-auto w-full h-full flex flex-col">
+  <div class="w-full h-full flex flex-col">
 
     <!-- ESTADO INICIAL: Pantalla de Bienvenida Institucional -->
     @if (messages().length === 0) {
@@ -4087,105 +4491,6 @@ var ChatMessagesComponent = class _ChatMessagesComponent {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ChatMessagesComponent, { className: "ChatMessagesComponent", filePath: "src/app/features/assistant/components/chat-messages/chat-messages.component.ts", lineNumber: 21 });
 })();
 
-// src/app/features/assistant/components/chat-suggestions/chat-suggestions.component.ts
-var _forTrack02 = ($index, $item) => $item.prompt;
-function ChatSuggestionsComponent_For_5_Template(rf, ctx) {
-  if (rf & 1) {
-    const _r1 = \u0275\u0275getCurrentView();
-    \u0275\u0275domElementStart(0, "button", 7);
-    \u0275\u0275domListener("click", function ChatSuggestionsComponent_For_5_Template_button_click_0_listener() {
-      const item_r2 = \u0275\u0275restoreView(_r1).$implicit;
-      const ctx_r2 = \u0275\u0275nextContext();
-      return \u0275\u0275resetView(ctx_r2.selectSuggestion.emit(item_r2.prompt));
-    });
-    \u0275\u0275domElementStart(1, "span");
-    \u0275\u0275text(2);
-    \u0275\u0275domElementEnd();
-    \u0275\u0275domElementStart(3, "span");
-    \u0275\u0275text(4);
-    \u0275\u0275domElementEnd()();
-  }
-  if (rf & 2) {
-    const item_r2 = ctx.$implicit;
-    \u0275\u0275advance(2);
-    \u0275\u0275textInterpolate(item_r2.icon);
-    \u0275\u0275advance(2);
-    \u0275\u0275textInterpolate(item_r2.label);
-  }
-}
-var ChatSuggestionsComponent = class _ChatSuggestionsComponent {
-  selectSuggestion = output();
-  closeConversation = output();
-  suggestions = [
-    {
-      icon: "\u{1F393}",
-      label: "Matr\xEDcula 2026",
-      prompt: "\xBFCu\xE1les son los requisitos para la matr\xEDcula 2026?",
-      category: "matricula"
-    },
-    {
-      icon: "\u{1F4B3}",
-      label: "Pago de pensiones",
-      prompt: "\xBFCu\xE1les son los canales y fechas de pago de pensiones?",
-      category: "pagos"
-    },
-    {
-      icon: "\u{1F4C4}",
-      label: "Certificados y tr\xE1mites",
-      prompt: "\xBFC\xF3mo solicito una constancia de estudios o certificado?",
-      category: "tramites"
-    },
-    {
-      icon: "\u{1F3A8}",
-      label: "Talleres y deportes",
-      prompt: "\xBFQu\xE9 talleres extracurriculares y deportes ofrecen?",
-      category: "talleres"
-    },
-    {
-      icon: "\u{1F4CD}",
-      label: "Horarios y sedes",
-      prompt: "\xBFCu\xE1les son los horarios de atenci\xF3n y d\xF3nde quedan las sedes?",
-      category: "horarios"
-    }
-  ];
-  static \u0275fac = function ChatSuggestionsComponent_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _ChatSuggestionsComponent)();
-  };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ChatSuggestionsComponent, selectors: [["app-chat-suggestions"]], outputs: { selectSuggestion: "selectSuggestion", closeConversation: "closeConversation" }, decls: 11, vars: 0, consts: [[1, "w-full", "px-4", "sm:px-6", "pt-2", "pb-1", "bg-white", "border-t", "border-slate-100"], [1, "max-w-3xl", "mx-auto", "flex", "items-center", "gap-2", "overflow-x-auto", "pb-1", "scrollbar-thin"], [1, "text-[11px]", "font-extrabold", "text-[#0050A1]", "uppercase", "tracking-wider", "shrink-0"], ["type", "button", 1, "shrink-0", "inline-flex", "items-center", "gap-1.5", "px-3", "py-1.5", "rounded-full", "bg-white", "hover:bg-[#0050A1]/10", "text-slate-700", "hover:text-[#0050A1]", "text-xs", "font-semibold", "border", "border-slate-200", "hover:border-[#0050A1]/30", "transition-all", "shadow-2xs", "cursor-pointer"], ["type", "button", "title", "Finalizar atenci\xF3n y calificar el servicio", 1, "shrink-0", "inline-flex", "items-center", "gap-1.5", "px-3.5", "py-1.5", "rounded-full", "bg-[#BE002E]", "hover:bg-[#9e0026]", "text-white", "text-xs", "font-bold", "shadow-2xs", "transition-all", "cursor-pointer", "ml-auto", 3, "click"], ["fill", "none", "stroke", "currentColor", "viewBox", "0 0 24 24", 1, "w-3.5", "h-3.5"], ["stroke-linecap", "round", "stroke-linejoin", "round", "stroke-width", "2.5", "d", "M5 13l4 4L19 7"], ["type", "button", 1, "shrink-0", "inline-flex", "items-center", "gap-1.5", "px-3", "py-1.5", "rounded-full", "bg-white", "hover:bg-[#0050A1]/10", "text-slate-700", "hover:text-[#0050A1]", "text-xs", "font-semibold", "border", "border-slate-200", "hover:border-[#0050A1]/30", "transition-all", "shadow-2xs", "cursor-pointer", 3, "click"]], template: function ChatSuggestionsComponent_Template(rf, ctx) {
-    if (rf & 1) {
-      \u0275\u0275domElementStart(0, "div", 0)(1, "div", 1)(2, "span", 2);
-      \u0275\u0275text(3, " Sugerencias: ");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275repeaterCreate(4, ChatSuggestionsComponent_For_5_Template, 5, 2, "button", 3, _forTrack02);
-      \u0275\u0275domElementStart(6, "button", 4);
-      \u0275\u0275domListener("click", function ChatSuggestionsComponent_Template_button_click_6_listener() {
-        return ctx.closeConversation.emit();
-      });
-      \u0275\u0275namespaceSVG();
-      \u0275\u0275domElementStart(7, "svg", 5);
-      \u0275\u0275domElement(8, "path", 6);
-      \u0275\u0275domElementEnd();
-      \u0275\u0275namespaceHTML();
-      \u0275\u0275domElementStart(9, "span");
-      \u0275\u0275text(10, "Terminar y calificar");
-      \u0275\u0275domElementEnd()()()();
-    }
-    if (rf & 2) {
-      \u0275\u0275advance(4);
-      \u0275\u0275repeater(ctx.suggestions);
-    }
-  }, styles: ["\n[_nghost-%COMP%] {\n  display: block;\n}"], changeDetection: 0 });
-};
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ChatSuggestionsComponent, [{
-    type: Component,
-    args: [{ selector: "app-chat-suggestions", changeDetection: ChangeDetectionStrategy.OnPush, template: '<div class="w-full px-4 sm:px-6 pt-2 pb-1 bg-white border-t border-slate-100">\n  <div class="max-w-3xl mx-auto flex items-center gap-2 overflow-x-auto pb-1 scrollbar-thin">\n    <span class="text-[11px] font-extrabold text-[#0050A1] uppercase tracking-wider shrink-0">\n      Sugerencias:\n    </span>\n    @for (item of suggestions; track item.prompt) {\n      <button\n        type="button"\n        (click)="selectSuggestion.emit(item.prompt)"\n        class="shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white hover:bg-[#0050A1]/10 text-slate-700 hover:text-[#0050A1] text-xs font-semibold border border-slate-200 hover:border-[#0050A1]/30 transition-all shadow-2xs cursor-pointer">\n        <span>{{ item.icon }}</span>\n        <span>{{ item.label }}</span>\n      </button>\n    }\n    <button\n      type="button"\n      (click)="closeConversation.emit()"\n      title="Finalizar atenci\xF3n y calificar el servicio"\n      class="shrink-0 inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#BE002E] hover:bg-[#9e0026] text-white text-xs font-bold shadow-2xs transition-all cursor-pointer ml-auto">\n      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">\n        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />\n      </svg>\n      <span>Terminar y calificar</span>\n    </button>\n  </div>\n</div>', styles: ["/* src/app/features/assistant/components/chat-suggestions/chat-suggestions.component.css */\n:host {\n  display: block;\n}\n"] }]
-  }], null, { selectSuggestion: [{ type: Output, args: ["selectSuggestion"] }], closeConversation: [{ type: Output, args: ["closeConversation"] }] });
-})();
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ChatSuggestionsComponent, { className: "ChatSuggestionsComponent", filePath: "src/app/features/assistant/components/chat-suggestions/chat-suggestions.component.ts", lineNumber: 10 });
-})();
-
 // src/app/features/assistant/components/chat-input/chat-input.component.ts
 function ChatInputComponent_Conditional_7_Template(rf, ctx) {
   if (rf & 1) {
@@ -4247,7 +4552,7 @@ var ChatInputComponent = class _ChatInputComponent {
   static \u0275fac = function ChatInputComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _ChatInputComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ChatInputComponent, selectors: [["app-chat-input"]], inputs: { disabled: [1, "disabled"] }, outputs: { send: "send" }, decls: 15, vars: 5, consts: [[1, "w-full", "px-4", "sm:px-6", "pb-4", "pt-2", "bg-white", "border-t", "border-slate-100"], [1, "max-w-3xl", "mx-auto"], [1, "flex", "items-end", "gap-2", "p-2", "rounded-2xl", "bg-white", "border-2", "border-slate-200", "shadow-md", "shadow-slate-900/5", "focus-within:border-[#0050A1]", "focus-within:ring-3", "focus-within:ring-[#0050A1]/15", "transition-all", 3, "submit"], [1, "relative", "flex-1"], ["placeholder", "Escribe tu consulta sobre matr\xEDculas, pensiones, tr\xE1mites o sedes...", "rows", "1", 1, "w-full", "resize-none", "bg-transparent", "text-slate-800", "placeholder-slate-400", "text-sm", "sm:text-[15px]", "px-3", "py-2.5", "focus:outline-hidden", "max-h-36", "min-h-[44px]", "disabled:opacity-60", "disabled:cursor-not-allowed", 3, "input", "keydown", "value", "disabled"], ["type", "submit", 1, "h-11", "px-4", "sm:px-5", "rounded-xl", "bg-[#BE002E]", "hover:bg-[#9e0026]", "text-white", "font-bold", "text-sm", "flex", "items-center", "justify-center", "gap-2", "shrink-0", "shadow-sm", "shadow-[#BE002E]/25", "disabled:opacity-40", "disabled:cursor-not-allowed", "transition-all", "transform", "active:scale-95", "cursor-pointer", 3, "disabled"], [1, "text-center", "mt-2.5", "px-2"], [1, "text-[11px]", "text-slate-400"], [1, "font-semibold", "text-[#0050A1]"], ["fill", "none", "viewBox", "0 0 24 24", 1, "animate-spin", "h-4", "w-4", "text-white"], ["cx", "12", "cy", "12", "r", "10", "stroke", "currentColor", "stroke-width", "4", 1, "opacity-25"], ["fill", "currentColor", "d", "M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z", 1, "opacity-75"], [1, "hidden", "sm:inline"], ["fill", "none", "stroke", "currentColor", "viewBox", "0 0 24 24", 1, "w-4", "h-4", "translate-x-0.5"], ["stroke-linecap", "round", "stroke-linejoin", "round", "stroke-width", "2.5", "d", "M12 19l9 2-9-18-9 18 9-2zm0 0v-8"]], template: function ChatInputComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ChatInputComponent, selectors: [["app-chat-input"]], inputs: { disabled: [1, "disabled"] }, outputs: { send: "send" }, decls: 15, vars: 5, consts: [[1, "w-full", "px-4", "sm:px-6", "lg:px-10", "pb-4", "pt-2.5", "bg-white", "border-t", "border-slate-100"], [1, "w-full"], [1, "flex", "items-end", "gap-2", "p-2", "rounded-2xl", "bg-white", "border-2", "border-slate-200", "shadow-md", "shadow-slate-900/5", "focus-within:border-[#0050A1]", "focus-within:ring-3", "focus-within:ring-[#0050A1]/15", "transition-all", 3, "submit"], [1, "relative", "flex-1"], ["placeholder", "Escribe tu consulta sobre matr\xEDculas, pensiones, tr\xE1mites o sedes...", "rows", "1", 1, "w-full", "resize-none", "bg-transparent", "text-slate-800", "placeholder-slate-400", "text-sm", "sm:text-[15px]", "px-3", "py-2.5", "focus:outline-hidden", "max-h-36", "min-h-[44px]", "disabled:opacity-60", "disabled:cursor-not-allowed", 3, "input", "keydown", "value", "disabled"], ["type", "submit", 1, "h-11", "px-4", "sm:px-5", "rounded-xl", "bg-[#BE002E]", "hover:bg-[#9e0026]", "text-white", "font-bold", "text-sm", "flex", "items-center", "justify-center", "gap-2", "shrink-0", "shadow-sm", "shadow-[#BE002E]/25", "disabled:opacity-40", "disabled:cursor-not-allowed", "transition-all", "transform", "active:scale-95", "cursor-pointer", 3, "disabled"], [1, "text-center", "mt-2.5", "px-2"], [1, "text-[11px]", "text-slate-400"], [1, "font-semibold", "text-[#0050A1]"], ["fill", "none", "viewBox", "0 0 24 24", 1, "animate-spin", "h-4", "w-4", "text-white"], ["cx", "12", "cy", "12", "r", "10", "stroke", "currentColor", "stroke-width", "4", 1, "opacity-25"], ["fill", "currentColor", "d", "M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z", 1, "opacity-75"], [1, "hidden", "sm:inline"], ["fill", "none", "stroke", "currentColor", "viewBox", "0 0 24 24", 1, "w-4", "h-4", "translate-x-0.5"], ["stroke-linecap", "round", "stroke-linejoin", "round", "stroke-width", "2.5", "d", "M12 19l9 2-9-18-9 18 9-2zm0 0v-8"]], template: function ChatInputComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275domElementStart(0, "div", 0)(1, "div", 1)(2, "form", 2);
       \u0275\u0275domListener("submit", function ChatInputComponent_Template_form_submit_2_listener($event) {
@@ -4269,7 +4574,7 @@ var ChatInputComponent = class _ChatInputComponent {
       \u0275\u0275domElementStart(12, "span", 8);
       \u0275\u0275text(13, "Colegio Bertolt Brecht");
       \u0275\u0275domElementEnd();
-      \u0275\u0275text(14, " \u2022 Protecci\xF3n de datos personales (Ley N.\xB0 29733) \u2022 Central: (01) 315-7000 ");
+      \u0275\u0275text(14, " \u2022 Protecci\xF3n de datos personales ");
       \u0275\u0275domElementEnd()()()();
     }
     if (rf & 2) {
@@ -4286,42 +4591,36 @@ var ChatInputComponent = class _ChatInputComponent {
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ChatInputComponent, [{
     type: Component,
-    args: [{ selector: "app-chat-input", changeDetection: ChangeDetectionStrategy.OnPush, template: `<div class="w-full px-4 sm:px-6 pb-4 pt-2 bg-white border-t border-slate-100">
-  <div class="max-w-3xl mx-auto">
-    
-    <form 
-      (submit)="onSubmit($event)" 
+    args: [{ selector: "app-chat-input", changeDetection: ChangeDetectionStrategy.OnPush, template: `<div class="w-full px-4 sm:px-6 lg:px-10 pb-4 pt-2.5 bg-white border-t border-slate-100">
+  <div class="w-full">
+
+    <form (submit)="onSubmit($event)"
       class="flex items-end gap-2 p-2 rounded-2xl bg-white border-2 border-slate-200 shadow-md shadow-slate-900/5 focus-within:border-[#0050A1] focus-within:ring-3 focus-within:ring-[#0050A1]/15 transition-all">
-      
+
       <div class="relative flex-1">
-        <textarea
-          [value]="promptText()"
-          (input)="onInput($event)"
-          (keydown)="onKeydown($event)"
-          [disabled]="disabled()"
-          placeholder="Escribe tu consulta sobre matr\xEDculas, pensiones, tr\xE1mites o sedes..."
-          rows="1"
+        <textarea [value]="promptText()" (input)="onInput($event)" (keydown)="onKeydown($event)" [disabled]="disabled()"
+          placeholder="Escribe tu consulta sobre matr\xEDculas, pensiones, tr\xE1mites o sedes..." rows="1"
           class="w-full resize-none bg-transparent text-slate-800 placeholder-slate-400 text-sm sm:text-[15px] px-3 py-2.5 focus:outline-hidden max-h-36 min-h-[44px] disabled:opacity-60 disabled:cursor-not-allowed">
         </textarea>
       </div>
 
-      <button
-        type="submit"
-        [disabled]="!canSend()"
-        [attr.aria-label]="'Enviar mensaje'"
+      <button type="submit" [disabled]="!canSend()" [attr.aria-label]="'Enviar mensaje'"
         class="h-11 px-4 sm:px-5 rounded-xl bg-[#BE002E] hover:bg-[#9e0026] text-white font-bold text-sm flex items-center justify-center gap-2 shrink-0 shadow-sm shadow-[#BE002E]/25 disabled:opacity-40 disabled:cursor-not-allowed transition-all transform active:scale-95 cursor-pointer">
-        
+
         @if (disabled()) {
-          <svg class="animate-spin h-4 w-4 text-white" fill="none" viewBox="0 0 24 24">
-            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-          </svg>
-          <span class="hidden sm:inline">Enviando</span>
+        <svg class="animate-spin h-4 w-4 text-white" fill="none" viewBox="0 0 24 24">
+          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+          <path class="opacity-75" fill="currentColor"
+            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+          </path>
+        </svg>
+        <span class="hidden sm:inline">Enviando</span>
         } @else {
-          <span class="hidden sm:inline">Enviar</span>
-          <svg class="w-4 h-4 translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-          </svg>
+        <span class="hidden sm:inline">Enviar</span>
+        <svg class="w-4 h-4 translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+            d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+        </svg>
         }
 
       </button>
@@ -4331,13 +4630,13 @@ var ChatInputComponent = class _ChatInputComponent {
     <!-- Nota institucional y protecci\xF3n de datos -->
     <div class="text-center mt-2.5 px-2">
       <p class="text-[11px] text-slate-400">
-        Orientaci\xF3n oficial basada en reglamentos vigentes del <span class="font-semibold text-[#0050A1]">Colegio Bertolt Brecht</span> \u2022 Protecci\xF3n de datos personales (Ley N.\xB0 29733) \u2022 Central: (01) 315-7000
+        Orientaci\xF3n oficial basada en reglamentos vigentes del <span class="font-semibold text-[#0050A1]">Colegio
+          Bertolt Brecht</span> \u2022 Protecci\xF3n de datos personales
       </p>
     </div>
 
   </div>
-</div>
-`, styles: ["/* src/app/features/assistant/components/chat-input/chat-input.component.css */\n:host {\n  display: block;\n}\n"] }]
+</div>`, styles: ["/* src/app/features/assistant/components/chat-input/chat-input.component.css */\n:host {\n  display: block;\n}\n"] }]
   }], null, { disabled: [{ type: Input, args: [{ isSignal: true, alias: "disabled", required: false }] }], send: [{ type: Output, args: ["send"] }] });
 })();
 (() => {
@@ -4660,22 +4959,6 @@ var ChatFeedbackModalComponent = class _ChatFeedbackModalComponent {
 
 // src/app/features/assistant/assistant.component.ts
 var _c02 = ["feedbackModal"];
-function AssistantComponent_Conditional_3_Template(rf, ctx) {
-  if (rf & 1) {
-    const _r1 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "app-chat-suggestions", 7);
-    \u0275\u0275listener("selectSuggestion", function AssistantComponent_Conditional_3_Template_app_chat_suggestions_selectSuggestion_0_listener($event) {
-      \u0275\u0275restoreView(_r1);
-      const ctx_r1 = \u0275\u0275nextContext();
-      return \u0275\u0275resetView(ctx_r1.sendMessage($event));
-    })("closeConversation", function AssistantComponent_Conditional_3_Template_app_chat_suggestions_closeConversation_0_listener() {
-      \u0275\u0275restoreView(_r1);
-      const ctx_r1 = \u0275\u0275nextContext();
-      return \u0275\u0275resetView(ctx_r1.openFeedbackModal());
-    });
-    \u0275\u0275elementEnd();
-  }
-}
 var AssistantComponent = class _AssistantComponent {
   assistantService = inject(AssistantService);
   feedbackModal = viewChild("feedbackModal", ...ngDevMode ? [{ debugName: "feedbackModal" }] : (
@@ -4691,6 +4974,10 @@ var AssistantComponent = class _AssistantComponent {
     []
   ));
   hasMessages = computed(() => this.messages().length > 0, ...ngDevMode ? [{ debugName: "hasMessages" }] : (
+    /* istanbul ignore next */
+    []
+  ));
+  isMobileSidebarOpen = signal(false, ...ngDevMode ? [{ debugName: "isMobileSidebarOpen" }] : (
     /* istanbul ignore next */
     []
   ));
@@ -4715,9 +5002,16 @@ var AssistantComponent = class _AssistantComponent {
       this.openFeedbackModal();
     }
   }
+  toggleMobileSidebar() {
+    this.isMobileSidebarOpen.update((open) => !open);
+  }
+  closeMobileSidebar() {
+    this.isMobileSidebarOpen.set(false);
+  }
   sendMessage(text2) {
     if (!text2.trim() || this.isLoading())
       return;
+    this.isMobileSidebarOpen.set(false);
     const userMsg = {
       id: "usr_" + Date.now(),
       sender: "user",
@@ -4752,6 +5046,7 @@ var AssistantComponent = class _AssistantComponent {
     });
   }
   openFeedbackModal() {
+    this.isMobileSidebarOpen.set(false);
     this.isFeedbackModalOpen.set(true);
   }
   closeFeedbackModal() {
@@ -4801,41 +5096,51 @@ var AssistantComponent = class _AssistantComponent {
         return ctx.onPopState($event);
       }, \u0275\u0275resolveWindow);
     }
-  }, decls: 7, vars: 7, consts: [["feedbackModal", ""], [1, "w-full", "h-dvh", "flex", "flex-col", "bg-white", "overflow-hidden"], [1, "shrink-0", 3, "closeConversation", "hasMessages"], [1, "flex-1", "min-h-0", "flex", "flex-col", "overflow-hidden", 3, "selectPrompt", "messages", "isLoading"], [1, "shrink-0"], [1, "shrink-0", 3, "send", "disabled"], [3, "cancel", "skipAndClose", "submitFeedback", "isOpen", "isSubmitting"], [1, "shrink-0", 3, "selectSuggestion", "closeConversation"]], template: function AssistantComponent_Template(rf, ctx) {
+  }, decls: 8, vars: 8, consts: [["feedbackModal", ""], [1, "w-full", "h-dvh", "flex", "bg-white", "overflow-hidden"], [3, "selectSuggestion", "closeConversation", "closeMobileSidebar", "hasMessages", "isMobileOpen"], [1, "flex-1", "min-w-0", "h-full", "flex", "flex-col", "bg-white", "overflow-hidden"], [1, "shrink-0", 3, "toggleMobileSidebar", "closeConversation", "hasMessages"], [1, "flex-1", "min-h-0", "flex", "flex-col", "overflow-hidden", 3, "selectPrompt", "messages", "isLoading"], [1, "shrink-0", 3, "send", "disabled"], [3, "cancel", "skipAndClose", "submitFeedback", "isOpen", "isSubmitting"]], template: function AssistantComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "div", 1)(1, "app-chat-header", 2);
-      \u0275\u0275listener("closeConversation", function AssistantComponent_Template_app_chat_header_closeConversation_1_listener() {
+      \u0275\u0275elementStart(0, "div", 1)(1, "app-chat-sidebar", 2);
+      \u0275\u0275listener("selectSuggestion", function AssistantComponent_Template_app_chat_sidebar_selectSuggestion_1_listener($event) {
+        return ctx.sendMessage($event);
+      })("closeConversation", function AssistantComponent_Template_app_chat_sidebar_closeConversation_1_listener() {
+        return ctx.openFeedbackModal();
+      })("closeMobileSidebar", function AssistantComponent_Template_app_chat_sidebar_closeMobileSidebar_1_listener() {
+        return ctx.closeMobileSidebar();
+      });
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(2, "div", 3)(3, "app-chat-header", 4);
+      \u0275\u0275listener("toggleMobileSidebar", function AssistantComponent_Template_app_chat_header_toggleMobileSidebar_3_listener() {
+        return ctx.toggleMobileSidebar();
+      })("closeConversation", function AssistantComponent_Template_app_chat_header_closeConversation_3_listener() {
         return ctx.openFeedbackModal();
       });
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(2, "app-chat-messages", 3);
-      \u0275\u0275listener("selectPrompt", function AssistantComponent_Template_app_chat_messages_selectPrompt_2_listener($event) {
+      \u0275\u0275elementStart(4, "app-chat-messages", 5);
+      \u0275\u0275listener("selectPrompt", function AssistantComponent_Template_app_chat_messages_selectPrompt_4_listener($event) {
         return ctx.sendMessage($event);
       });
       \u0275\u0275elementEnd();
-      \u0275\u0275conditionalCreate(3, AssistantComponent_Conditional_3_Template, 1, 0, "app-chat-suggestions", 4);
-      \u0275\u0275elementStart(4, "app-chat-input", 5);
-      \u0275\u0275listener("send", function AssistantComponent_Template_app_chat_input_send_4_listener($event) {
+      \u0275\u0275elementStart(5, "app-chat-input", 6);
+      \u0275\u0275listener("send", function AssistantComponent_Template_app_chat_input_send_5_listener($event) {
         return ctx.sendMessage($event);
       });
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(5, "app-chat-feedback-modal", 6, 0);
-      \u0275\u0275listener("cancel", function AssistantComponent_Template_app_chat_feedback_modal_cancel_5_listener() {
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(6, "app-chat-feedback-modal", 7, 0);
+      \u0275\u0275listener("cancel", function AssistantComponent_Template_app_chat_feedback_modal_cancel_6_listener() {
         return ctx.closeFeedbackModal();
-      })("skipAndClose", function AssistantComponent_Template_app_chat_feedback_modal_skipAndClose_5_listener() {
+      })("skipAndClose", function AssistantComponent_Template_app_chat_feedback_modal_skipAndClose_6_listener() {
         return ctx.finalizeSession();
-      })("submitFeedback", function AssistantComponent_Template_app_chat_feedback_modal_submitFeedback_5_listener($event) {
+      })("submitFeedback", function AssistantComponent_Template_app_chat_feedback_modal_submitFeedback_6_listener($event) {
         return ctx.onSubmitFeedback($event);
       });
       \u0275\u0275elementEnd()();
     }
     if (rf & 2) {
       \u0275\u0275advance();
+      \u0275\u0275property("hasMessages", ctx.hasMessages())("isMobileOpen", ctx.isMobileSidebarOpen());
+      \u0275\u0275advance(2);
       \u0275\u0275property("hasMessages", ctx.hasMessages());
       \u0275\u0275advance();
       \u0275\u0275property("messages", ctx.messages())("isLoading", ctx.isLoading());
-      \u0275\u0275advance();
-      \u0275\u0275conditional(ctx.hasMessages() ? 3 : -1);
       \u0275\u0275advance();
       \u0275\u0275property("disabled", ctx.isLoading());
       \u0275\u0275advance();
@@ -4843,8 +5148,8 @@ var AssistantComponent = class _AssistantComponent {
     }
   }, dependencies: [
     ChatHeaderComponent,
+    ChatSidebarComponent,
     ChatMessagesComponent,
-    ChatSuggestionsComponent,
     ChatInputComponent,
     ChatFeedbackModalComponent
   ], styles: ["\n[_nghost-%COMP%] {\n  display: block;\n}"], changeDetection: 0 });
@@ -4854,11 +5159,11 @@ var AssistantComponent = class _AssistantComponent {
     type: Component,
     args: [{ selector: "app-assistant", changeDetection: ChangeDetectionStrategy.OnPush, imports: [
       ChatHeaderComponent,
+      ChatSidebarComponent,
       ChatMessagesComponent,
-      ChatSuggestionsComponent,
       ChatInputComponent,
       ChatFeedbackModalComponent
-    ], template: '<div class="w-full h-dvh flex flex-col bg-white overflow-hidden">\n  \n  <!-- Cabecera Superior Institucional (#0050A1 + #BE002E) -->\n  <app-chat-header \n    class="shrink-0"\n    [hasMessages]="hasMessages()"\n    (closeConversation)="openFeedbackModal()" \n  />\n\n  <!-- \xC1rea Principal sobre Blanco (Pantalla de Bienvenida + Hilo de Conversaci\xF3n) -->\n  <app-chat-messages \n    class="flex-1 min-h-0 flex flex-col overflow-hidden"\n    [messages]="messages()" \n    [isLoading]="isLoading()"\n    (selectPrompt)="sendMessage($event)"\n  />\n\n  <!-- Chips de Sugerencias R\xE1pidas (visibles durante la conversaci\xF3n) -->\n  @if (hasMessages()) {\n    <app-chat-suggestions \n      class="shrink-0"\n      (selectSuggestion)="sendMessage($event)"\n      (closeConversation)="openFeedbackModal()" \n    />\n  }\n\n  <!-- Barra de Entrada Inferior -->\n  <app-chat-input \n    class="shrink-0"\n    [disabled]="isLoading()" \n    (send)="sendMessage($event)" \n  />\n\n  <!-- Popup de Satisfacci\xF3n al Cerrar Conversaci\xF3n -->\n  <app-chat-feedback-modal\n    #feedbackModal\n    [isOpen]="isFeedbackModalOpen()"\n    [isSubmitting]="isSubmittingFeedback()"\n    (cancel)="closeFeedbackModal()"\n    (skipAndClose)="finalizeSession()"\n    (submitFeedback)="onSubmitFeedback($event)"\n  />\n\n</div>\n', styles: ["/* src/app/features/assistant/assistant.component.css */\n:host {\n  display: block;\n}\n"] }]
+    ], template: '<div class="w-full h-dvh flex bg-white overflow-hidden">\n\n  <!-- Columna Izquierda: Sidebar Institucional (#0050A1, #BE002E, #FFFFFF) -->\n  <app-chat-sidebar\n    [hasMessages]="hasMessages()"\n    [isMobileOpen]="isMobileSidebarOpen()"\n    (selectSuggestion)="sendMessage($event)"\n    (closeConversation)="openFeedbackModal()"\n    (closeMobileSidebar)="closeMobileSidebar()"\n  />\n\n  <!-- Columna Derecha: \xC1rea Principal de Trabajo (Ocupa todo el ancho restante) -->\n  <div class="flex-1 min-w-0 h-full flex flex-col bg-white overflow-hidden">\n\n    <!-- Cabecera Superior Institucional (#0050A1 + #BE002E) -->\n    <app-chat-header\n      class="shrink-0"\n      [hasMessages]="hasMessages()"\n      (toggleMobileSidebar)="toggleMobileSidebar()"\n      (closeConversation)="openFeedbackModal()"\n    />\n\n    <!-- Lienzo Principal Expandido -->\n    <app-chat-messages\n      class="flex-1 min-h-0 flex flex-col overflow-hidden"\n      [messages]="messages()"\n      [isLoading]="isLoading()"\n      (selectPrompt)="sendMessage($event)"\n    />\n\n    <!-- Barra de Entrada Inferior Expandida -->\n    <app-chat-input\n      class="shrink-0"\n      [disabled]="isLoading()"\n      (send)="sendMessage($event)"\n    />\n\n  </div>\n\n  <!-- Popup de Satisfacci\xF3n al Cerrar Conversaci\xF3n -->\n  <app-chat-feedback-modal\n    #feedbackModal\n    [isOpen]="isFeedbackModalOpen()"\n    [isSubmitting]="isSubmittingFeedback()"\n    (cancel)="closeFeedbackModal()"\n    (skipAndClose)="finalizeSession()"\n    (submitFeedback)="onSubmitFeedback($event)"\n  />\n\n</div>\n', styles: ["/* src/app/features/assistant/assistant.component.css */\n:host {\n  display: block;\n}\n"] }]
   }], null, { feedbackModal: [{ type: ViewChild, args: ["feedbackModal", { isSignal: true }] }], onPopState: [{
     type: HostListener,
     args: ["window:popstate", ["$event"]]

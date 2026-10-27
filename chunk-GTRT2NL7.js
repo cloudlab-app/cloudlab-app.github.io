@@ -32053,7 +32053,6 @@ export {
   ɵɵviewQuerySignal,
   ɵɵqueryAdvance,
   ɵɵstyleProp,
-  ɵɵclassProp,
   ɵɵclassMap,
   ɵɵtext,
   ɵɵtextInterpolate,
