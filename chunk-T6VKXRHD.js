@@ -4285,9 +4285,9 @@ var ChatMessagesComponent = class _ChatMessagesComponent {
   welcomeCards = [
     {
       icon: "\u{1F393}",
-      title: "Matr\xEDcula 2026",
+      title: "Matr\xEDcula 2027",
       description: "Requisitos, cronograma, edades y proceso para estudiantes nuevos o traslados.",
-      prompt: "\xBFCu\xE1les son los requisitos y pasos para el proceso de matr\xEDcula 2026?",
+      prompt: "\xBFCu\xE1les son los requisitos y pasos para el proceso de matr\xEDcula 2027?",
       badge: "Admisi\xF3n",
       accent: "red"
     },

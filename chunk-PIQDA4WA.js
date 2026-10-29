@@ -1462,7 +1462,7 @@ var DocumentUploadModalComponent = class _DocumentUploadModalComponent {
   static \u0275fac = function DocumentUploadModalComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _DocumentUploadModalComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _DocumentUploadModalComponent, selectors: [["app-document-upload-modal"]], inputs: { isOpen: [1, "isOpen"], isUploading: [1, "isUploading"], defaultArea: [1, "defaultArea"] }, outputs: { close: "close", upload: "upload" }, decls: 1, vars: 1, consts: [[1, "fixed", "inset-0", "z-50", "flex", "items-center", "justify-center", "p-4", "bg-slate-900/60", "backdrop-blur-xs", "animate-in", "fade-in", "duration-150"], [1, "modal-card", "bg-white", "w-full", "max-w-lg", "rounded-3xl", "shadow-2xl", "border", "border-slate-200", "overflow-hidden"], [1, "px-6", "py-4", "bg-[#0050A1]", "border-b-4", "border-[#BE002E]", "text-white", "flex", "items-center", "justify-between"], [1, "flex", "items-center", "gap-2.5"], [1, "text-xl"], [1, "text-base", "font-extrabold", "leading-tight"], [1, "text-[11px]", "text-blue-100"], ["type", "button", 1, "w-8", "h-8", "rounded-full", "bg-white/15", "hover:bg-white/25", "flex", "items-center", "justify-center", "text-white", "transition-colors", "cursor-pointer", "disabled:opacity-40", 3, "click", "disabled"], [1, "p-6", "space-y-4", 3, "submit"], [3, "class"], [1, "p-3.5", "rounded-2xl", "bg-slate-50", "border", "border-slate-200", "flex", "items-center", "justify-between", "gap-3"], [1, "p-3", "rounded-xl", "bg-red-50", "border", "border-red-200", "text-xs", "font-semibold", "text-[#BE002E]", "flex", "items-center", "gap-2"], [1, "grid", "grid-cols-1", "sm:grid-cols-2", "gap-3.5"], [1, "block", "text-xs", "font-bold", "text-slate-700", "mb-1"], ["type", "text", "placeholder", "Ej: doc_reglamento_2026", "required", "", 1, "w-full", "px-3.5", "py-2", "rounded-xl", "border", "border-slate-200", "text-sm", "text-slate-800", "font-mono", "focus:outline-hidden", "focus:border-[#0050A1]", "focus:ring-2", "focus:ring-[#0050A1]/15", "disabled:bg-slate-100", 3, "input", "value", "disabled"], [1, "text-[10px]", "text-slate-400"], [1, "w-full", "px-3.5", "py-2", "rounded-xl", "border", "border-slate-200", "text-sm", "text-slate-800", "bg-white", "focus:outline-hidden", "focus:border-[#0050A1]", "disabled:bg-slate-100", 3, "change", "value", "disabled"], ["value", "GENERAL"], ["value", "ADMISIONES"], ["value", "SECRETARIA"], ["value", "TESORERIA"], ["value", "DIRECCION"], ["value", "PSICOLOGIA"], ["type", "text", "placeholder", "Ej: Gu\xEDa Oficial de Matr\xEDcula y Pensiones 2026", "required", "", 1, "w-full", "px-3.5", "py-2", "rounded-xl", "border", "border-slate-200", "text-sm", "text-slate-800", "focus:outline-hidden", "focus:border-[#0050A1]", "focus:ring-2", "focus:ring-[#0050A1]/15", "disabled:bg-slate-100", 3, "input", "value", "disabled"], [1, "p-4", "rounded-2xl", "bg-[#0050A1]", "text-white", "space-y-3"], [1, "pt-2", "flex", "items-center", "justify-end", "gap-2.5", "border-t", "border-slate-100"], ["type", "button", 1, "px-4", "py-2.5", "rounded-xl", "border", "border-slate-200", "text-xs", "font-bold", "text-slate-600", "hover:bg-slate-50", "transition-colors", "cursor-pointer", "disabled:opacity-40", 3, "click", "disabled"], ["type", "submit", 1, "px-5", "py-2.5", "rounded-xl", "bg-[#BE002E]", "hover:bg-[#9e0026]", "text-white", "text-xs", "font-bold", "shadow-md", "shadow-[#BE002E]/20", "transition-all", "flex", "items-center", "gap-2", "cursor-pointer", "disabled:opacity-40", "disabled:cursor-not-allowed", 3, "disabled"], [3, "dragover", "dragleave", "drop"], ["type", "file", "accept", ".pdf,.docx,.pptx", 1, "absolute", "inset-0", "w-full", "h-full", "opacity-0", "cursor-pointer", 3, "change"], [1, "w-12", "h-12", "rounded-2xl", "bg-[#0050A1]/10", "text-[#0050A1]", "flex", "items-center", "justify-center", "text-2xl", "mx-auto", "mb-2.5"], [1, "text-sm", "font-bold", "text-slate-800"], [1, "text-[#BE002E]", "underline", "font-extrabold"], [1, "text-xs", "text-slate-400", "mt-1"], [1, "flex", "items-center", "gap-3", "min-w-0"], [1, "w-10", "h-10", "rounded-xl", "bg-[#0050A1]/10", "text-[#0050A1]", "flex", "items-center", "justify-center", "text-lg", "shrink-0"], [1, "min-w-0"], [1, "text-sm", "font-bold", "text-slate-800", "truncate"], [1, "text-xs", "text-slate-500"], ["type", "button", 1, "px-2.5", "py-1", "rounded-lg", "text-xs", "font-bold", "text-[#BE002E]", "hover:bg-red-50", "transition-colors", "cursor-pointer", "shrink-0"], ["type", "button", 1, "px-2.5", "py-1", "rounded-lg", "text-xs", "font-bold", "text-[#BE002E]", "hover:bg-red-50", "transition-colors", "cursor-pointer", "shrink-0", 3, "click"], [1, "flex", "items-center", "gap-3"], [1, "w-6", "h-6", "border-3", "border-white/30", "border-t-white", "rounded-full", "animate-spin", "shrink-0"], [1, "text-xs", "font-bold", "tracking-wide"], [1, "w-full", "h-1.5", "bg-white/20", "rounded-full", "overflow-hidden"], [1, "h-full", "bg-[#BE002E]", "transition-all", "duration-500"], [1, "w-4", "h-4", "border-2", "border-white", "border-t-transparent", "rounded-full", "animate-spin"]], template: function DocumentUploadModalComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _DocumentUploadModalComponent, selectors: [["app-document-upload-modal"]], inputs: { isOpen: [1, "isOpen"], isUploading: [1, "isUploading"], defaultArea: [1, "defaultArea"] }, outputs: { close: "close", upload: "upload" }, decls: 1, vars: 1, consts: [[1, "fixed", "inset-0", "z-50", "flex", "items-center", "justify-center", "p-4", "bg-slate-900/60", "backdrop-blur-xs", "animate-in", "fade-in", "duration-150"], [1, "modal-card", "bg-white", "w-full", "max-w-lg", "rounded-3xl", "shadow-2xl", "border", "border-slate-200", "overflow-hidden"], [1, "px-6", "py-4", "bg-[#0050A1]", "border-b-4", "border-[#BE002E]", "text-white", "flex", "items-center", "justify-between"], [1, "flex", "items-center", "gap-2.5"], [1, "text-xl"], [1, "text-base", "font-extrabold", "leading-tight"], [1, "text-[11px]", "text-blue-100"], ["type", "button", 1, "w-8", "h-8", "rounded-full", "bg-white/15", "hover:bg-white/25", "flex", "items-center", "justify-center", "text-white", "transition-colors", "cursor-pointer", "disabled:opacity-40", 3, "click", "disabled"], [1, "p-6", "space-y-4", 3, "submit"], [3, "class"], [1, "p-3.5", "rounded-2xl", "bg-slate-50", "border", "border-slate-200", "flex", "items-center", "justify-between", "gap-3"], [1, "p-3", "rounded-xl", "bg-red-50", "border", "border-red-200", "text-xs", "font-semibold", "text-[#BE002E]", "flex", "items-center", "gap-2"], [1, "grid", "grid-cols-1", "sm:grid-cols-2", "gap-3.5"], [1, "block", "text-xs", "font-bold", "text-slate-700", "mb-1"], ["type", "text", "placeholder", "Ej: doc_reglamento_2026", "required", "", 1, "w-full", "px-3.5", "py-2", "rounded-xl", "border", "border-slate-200", "text-sm", "text-slate-800", "font-mono", "focus:outline-hidden", "focus:border-[#0050A1]", "focus:ring-2", "focus:ring-[#0050A1]/15", "disabled:bg-slate-100", 3, "input", "value", "disabled"], [1, "text-[10px]", "text-slate-400"], [1, "w-full", "px-3.5", "py-2", "rounded-xl", "border", "border-slate-200", "text-sm", "text-slate-800", "bg-white", "focus:outline-hidden", "focus:border-[#0050A1]", "disabled:bg-slate-100", 3, "change", "value", "disabled"], ["value", "GENERAL"], ["value", "ADMISIONES"], ["value", "SECRETARIA"], ["value", "TESORERIA"], ["value", "DIRECCION"], ["value", "PSICOLOGIA"], ["type", "text", "placeholder", "Ej: Gu\xEDa Oficial de Matr\xEDcula y Pensiones 2027", "required", "", 1, "w-full", "px-3.5", "py-2", "rounded-xl", "border", "border-slate-200", "text-sm", "text-slate-800", "focus:outline-hidden", "focus:border-[#0050A1]", "focus:ring-2", "focus:ring-[#0050A1]/15", "disabled:bg-slate-100", 3, "input", "value", "disabled"], [1, "p-4", "rounded-2xl", "bg-[#0050A1]", "text-white", "space-y-3"], [1, "pt-2", "flex", "items-center", "justify-end", "gap-2.5", "border-t", "border-slate-100"], ["type", "button", 1, "px-4", "py-2.5", "rounded-xl", "border", "border-slate-200", "text-xs", "font-bold", "text-slate-600", "hover:bg-slate-50", "transition-colors", "cursor-pointer", "disabled:opacity-40", 3, "click", "disabled"], ["type", "submit", 1, "px-5", "py-2.5", "rounded-xl", "bg-[#BE002E]", "hover:bg-[#9e0026]", "text-white", "text-xs", "font-bold", "shadow-md", "shadow-[#BE002E]/20", "transition-all", "flex", "items-center", "gap-2", "cursor-pointer", "disabled:opacity-40", "disabled:cursor-not-allowed", 3, "disabled"], [3, "dragover", "dragleave", "drop"], ["type", "file", "accept", ".pdf,.docx,.pptx", 1, "absolute", "inset-0", "w-full", "h-full", "opacity-0", "cursor-pointer", 3, "change"], [1, "w-12", "h-12", "rounded-2xl", "bg-[#0050A1]/10", "text-[#0050A1]", "flex", "items-center", "justify-center", "text-2xl", "mx-auto", "mb-2.5"], [1, "text-sm", "font-bold", "text-slate-800"], [1, "text-[#BE002E]", "underline", "font-extrabold"], [1, "text-xs", "text-slate-400", "mt-1"], [1, "flex", "items-center", "gap-3", "min-w-0"], [1, "w-10", "h-10", "rounded-xl", "bg-[#0050A1]/10", "text-[#0050A1]", "flex", "items-center", "justify-center", "text-lg", "shrink-0"], [1, "min-w-0"], [1, "text-sm", "font-bold", "text-slate-800", "truncate"], [1, "text-xs", "text-slate-500"], ["type", "button", 1, "px-2.5", "py-1", "rounded-lg", "text-xs", "font-bold", "text-[#BE002E]", "hover:bg-red-50", "transition-colors", "cursor-pointer", "shrink-0"], ["type", "button", 1, "px-2.5", "py-1", "rounded-lg", "text-xs", "font-bold", "text-[#BE002E]", "hover:bg-red-50", "transition-colors", "cursor-pointer", "shrink-0", 3, "click"], [1, "flex", "items-center", "gap-3"], [1, "w-6", "h-6", "border-3", "border-white/30", "border-t-white", "rounded-full", "animate-spin", "shrink-0"], [1, "text-xs", "font-bold", "tracking-wide"], [1, "w-full", "h-1.5", "bg-white/20", "rounded-full", "overflow-hidden"], [1, "h-full", "bg-[#BE002E]", "transition-all", "duration-500"], [1, "w-4", "h-4", "border-2", "border-white", "border-t-transparent", "rounded-full", "animate-spin"]], template: function DocumentUploadModalComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275conditionalCreate(0, DocumentUploadModalComponent_Conditional_0_Template, 51, 13, "div", 0);
     }
@@ -1475,194 +1475,164 @@ var DocumentUploadModalComponent = class _DocumentUploadModalComponent {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(DocumentUploadModalComponent, [{
     type: Component,
     args: [{ selector: "app-document-upload-modal", changeDetection: ChangeDetectionStrategy.OnPush, template: `@if (isOpen()) {
-  <div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs animate-in fade-in duration-150">
-    
-    <div class="modal-card bg-white w-full max-w-lg rounded-3xl shadow-2xl border border-slate-200 overflow-hidden">
-      
-      <!-- Cabecera del Modal (#0050A1 + #BE002E) -->
-      <div class="px-6 py-4 bg-[#0050A1] border-b-4 border-[#BE002E] text-white flex items-center justify-between">
-        <div class="flex items-center gap-2.5">
-          <span class="text-xl">\u{1F4E4}</span>
-          <div>
-            <h3 class="text-base font-extrabold leading-tight">Ingestar Nuevo Documento</h3>
-            <p class="text-[11px] text-blue-100">Se procesar\xE1 con OCR, Sentence Window y Gemini Embeddings</p>
-          </div>
-        </div>
-        <button
-          type="button"
-          (click)="onClose()"
-          [disabled]="isUploading()"
-          class="w-8 h-8 rounded-full bg-white/15 hover:bg-white/25 flex items-center justify-center text-white transition-colors cursor-pointer disabled:opacity-40">
-          \u2715
-        </button>
-      </div>
+<div
+  class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs animate-in fade-in duration-150">
 
-      <!-- Cuerpo del Modal -->
-      <form (submit)="onSubmit($event)" class="p-6 space-y-4">
-        
-        <!-- Zona Drag & Drop -->
-        @if (!selectedFile()) {
-          <div
-            (dragover)="onDragOver($event)"
-            (dragleave)="onDragLeave($event)"
-            (drop)="onDrop($event)"
-            [class]="isDragging()
+  <div class="modal-card bg-white w-full max-w-lg rounded-3xl shadow-2xl border border-slate-200 overflow-hidden">
+
+    <!-- Cabecera del Modal (#0050A1 + #BE002E) -->
+    <div class="px-6 py-4 bg-[#0050A1] border-b-4 border-[#BE002E] text-white flex items-center justify-between">
+      <div class="flex items-center gap-2.5">
+        <span class="text-xl">\u{1F4E4}</span>
+        <div>
+          <h3 class="text-base font-extrabold leading-tight">Ingestar Nuevo Documento</h3>
+          <p class="text-[11px] text-blue-100">Se procesar\xE1 con OCR, Sentence Window y Gemini Embeddings</p>
+        </div>
+      </div>
+      <button type="button" (click)="onClose()" [disabled]="isUploading()"
+        class="w-8 h-8 rounded-full bg-white/15 hover:bg-white/25 flex items-center justify-center text-white transition-colors cursor-pointer disabled:opacity-40">
+        \u2715
+      </button>
+    </div>
+
+    <!-- Cuerpo del Modal -->
+    <form (submit)="onSubmit($event)" class="p-6 space-y-4">
+
+      <!-- Zona Drag & Drop -->
+      @if (!selectedFile()) {
+      <div (dragover)="onDragOver($event)" (dragleave)="onDragLeave($event)" (drop)="onDrop($event)"
+        [class]="isDragging()
               ? 'border-2 border-dashed border-[#0050A1] bg-[#0050A1]/5 rounded-2xl p-6 text-center transition-all cursor-pointer relative'
               : 'border-2 border-dashed border-slate-300 hover:border-[#0050A1] rounded-2xl p-6 text-center transition-all cursor-pointer relative'">
-            
-            <input
-              type="file"
-              accept=".pdf,.docx,.pptx"
-              (change)="onFileSelected($event)"
-              class="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
-            />
-            
-            <div class="w-12 h-12 rounded-2xl bg-[#0050A1]/10 text-[#0050A1] flex items-center justify-center text-2xl mx-auto mb-2.5">
-              \u{1F4C4}
-            </div>
-            <div class="text-sm font-bold text-slate-800">
-              Arrastra tu archivo aqu\xED o <span class="text-[#BE002E] underline font-extrabold">haz clic para explorar</span>
-            </div>
-            <p class="text-xs text-slate-400 mt-1">
-              Soporta \xFAnicamente archivos PDF (.pdf), Word (.docx) y PowerPoint (.pptx)
-            </p>
+
+        <input type="file" accept=".pdf,.docx,.pptx" (change)="onFileSelected($event)"
+          class="absolute inset-0 w-full h-full opacity-0 cursor-pointer" />
+
+        <div
+          class="w-12 h-12 rounded-2xl bg-[#0050A1]/10 text-[#0050A1] flex items-center justify-center text-2xl mx-auto mb-2.5">
+          \u{1F4C4}
+        </div>
+        <div class="text-sm font-bold text-slate-800">
+          Arrastra tu archivo aqu\xED o <span class="text-[#BE002E] underline font-extrabold">haz clic para explorar</span>
+        </div>
+        <p class="text-xs text-slate-400 mt-1">
+          Soporta \xFAnicamente archivos PDF (.pdf), Word (.docx) y PowerPoint (.pptx)
+        </p>
+      </div>
+      } @else {
+      <!-- Archivo Seleccionado -->
+      <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200 flex items-center justify-between gap-3">
+        <div class="flex items-center gap-3 min-w-0">
+          <div
+            class="w-10 h-10 rounded-xl bg-[#0050A1]/10 text-[#0050A1] flex items-center justify-center text-lg shrink-0">
+            \u{1F4CE}
           </div>
-        } @else {
-          <!-- Archivo Seleccionado -->
-          <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200 flex items-center justify-between gap-3">
-            <div class="flex items-center gap-3 min-w-0">
-              <div class="w-10 h-10 rounded-xl bg-[#0050A1]/10 text-[#0050A1] flex items-center justify-center text-lg shrink-0">
-                \u{1F4CE}
-              </div>
-              <div class="min-w-0">
-                <div class="text-sm font-bold text-slate-800 truncate">{{ selectedFile()!.name }}</div>
-                <div class="text-xs text-slate-500">{{ formatFileSize(selectedFile()!.size) }} \u2022 Listo para indexar</div>
-              </div>
-            </div>
-            @if (!isUploading()) {
-              <button
-                type="button"
-                (click)="removeFile()"
-                class="px-2.5 py-1 rounded-lg text-xs font-bold text-[#BE002E] hover:bg-red-50 transition-colors cursor-pointer shrink-0">
-                Cambiar
-              </button>
-            }
+          <div class="min-w-0">
+            <div class="text-sm font-bold text-slate-800 truncate">{{ selectedFile()!.name }}</div>
+            <div class="text-xs text-slate-500">{{ formatFileSize(selectedFile()!.size) }} \u2022 Listo para indexar</div>
           </div>
+        </div>
+        @if (!isUploading()) {
+        <button type="button" (click)="removeFile()"
+          class="px-2.5 py-1 rounded-lg text-xs font-bold text-[#BE002E] hover:bg-red-50 transition-colors cursor-pointer shrink-0">
+          Cambiar
+        </button>
         }
+      </div>
+      }
 
-        @if (validationError()) {
-          <div class="p-3 rounded-xl bg-red-50 border border-red-200 text-xs font-semibold text-[#BE002E] flex items-center gap-2">
-            <span>\u26A0\uFE0F</span>
-            <span>{{ validationError() }}</span>
-          </div>
-        }
+      @if (validationError()) {
+      <div
+        class="p-3 rounded-xl bg-red-50 border border-red-200 text-xs font-semibold text-[#BE002E] flex items-center gap-2">
+        <span>\u26A0\uFE0F</span>
+        <span>{{ validationError() }}</span>
+      </div>
+      }
 
-        <!-- Metadatos del Documento -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
-          <div>
-            <label class="block text-xs font-bold text-slate-700 mb-1">ID \xDAnico del Documento *</label>
-            <input
-              type="text"
-              [value]="documentoId()"
-              (input)="onDocumentoIdInput($event)"
-              [disabled]="isUploading()"
-              placeholder="Ej: doc_reglamento_2026"
-              required
-              class="w-full px-3.5 py-2 rounded-xl border border-slate-200 text-sm text-slate-800 font-mono focus:outline-hidden focus:border-[#0050A1] focus:ring-2 focus:ring-[#0050A1]/15 disabled:bg-slate-100"
-            />
-            <span class="text-[10px] text-slate-400">Si el ID ya existe, actualizar\xE1 sus fragmentos.</span>
-          </div>
-
-          <div>
-            <label class="block text-xs font-bold text-slate-700 mb-1">\xC1rea Institucional *</label>
-            <select
-              [value]="areaOrigen()"
-              (change)="onAreaChange($event)"
-              [disabled]="isUploading()"
-              class="w-full px-3.5 py-2 rounded-xl border border-slate-200 text-sm text-slate-800 bg-white focus:outline-hidden focus:border-[#0050A1] disabled:bg-slate-100">
-              <option value="GENERAL">GENERAL</option>
-              <option value="ADMISIONES">ADMISIONES</option>
-              <option value="SECRETARIA">SECRETAR\xCDA ACAD\xC9MICA</option>
-              <option value="TESORERIA">TESORER\xCDA / PENSIONES</option>
-              <option value="DIRECCION">DIRECCI\xD3N</option>
-              <option value="PSICOLOGIA">DPTO. PSICOL\xD3GICO</option>
-            </select>
-          </div>
+      <!-- Metadatos del Documento -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1">ID \xDAnico del Documento *</label>
+          <input type="text" [value]="documentoId()" (input)="onDocumentoIdInput($event)" [disabled]="isUploading()"
+            placeholder="Ej: doc_reglamento_2026" required
+            class="w-full px-3.5 py-2 rounded-xl border border-slate-200 text-sm text-slate-800 font-mono focus:outline-hidden focus:border-[#0050A1] focus:ring-2 focus:ring-[#0050A1]/15 disabled:bg-slate-100" />
+          <span class="text-[10px] text-slate-400">Si el ID ya existe, actualizar\xE1 sus fragmentos.</span>
         </div>
 
         <div>
-          <label class="block text-xs font-bold text-slate-700 mb-1">Nombre de la Fuente / T\xEDtulo Oficial *</label>
-          <input
-            type="text"
-            [value]="fuente()"
-            (input)="onFuenteInput($event)"
-            [disabled]="isUploading()"
-            placeholder="Ej: Gu\xEDa Oficial de Matr\xEDcula y Pensiones 2026"
-            required
-            class="w-full px-3.5 py-2 rounded-xl border border-slate-200 text-sm text-slate-800 focus:outline-hidden focus:border-[#0050A1] focus:ring-2 focus:ring-[#0050A1]/15 disabled:bg-slate-100"
-          />
+          <label class="block text-xs font-bold text-slate-700 mb-1">\xC1rea Institucional *</label>
+          <select [value]="areaOrigen()" (change)="onAreaChange($event)" [disabled]="isUploading()"
+            class="w-full px-3.5 py-2 rounded-xl border border-slate-200 text-sm text-slate-800 bg-white focus:outline-hidden focus:border-[#0050A1] disabled:bg-slate-100">
+            <option value="GENERAL">GENERAL</option>
+            <option value="ADMISIONES">ADMISIONES</option>
+            <option value="SECRETARIA">SECRETAR\xCDA ACAD\xC9MICA</option>
+            <option value="TESORERIA">TESORER\xCDA / PENSIONES</option>
+            <option value="DIRECCION">DIRECCI\xD3N</option>
+            <option value="PSICOLOGIA">DPTO. PSICOL\xD3GICO</option>
+          </select>
         </div>
+      </div>
 
-        <!-- Stepper de Progreso Inteligente mientras se procesa en Backend -->
-        @if (isUploading()) {
-          <div class="p-4 rounded-2xl bg-[#0050A1] text-white space-y-3">
-            <div class="flex items-center gap-3">
-              <div class="w-6 h-6 border-3 border-white/30 border-t-white rounded-full animate-spin shrink-0"></div>
-              <div class="text-xs font-bold tracking-wide">
-                @if (uploadStep() === 1) {
-                  Paso 1/3: Extrayendo texto y aplicando OCR si es escaneado...
-                } @else if (uploadStep() === 2) {
-                  Paso 2/3: Segmentando secciones y encabezados...
-                } @else {
-                  Paso 3/3: Calculando vectores (768 dim) con gemini-embedding-001...
-                }
-              </div>
-            </div>
+      <div>
+        <label class="block text-xs font-bold text-slate-700 mb-1">Nombre de la Fuente / T\xEDtulo Oficial *</label>
+        <input type="text" [value]="fuente()" (input)="onFuenteInput($event)" [disabled]="isUploading()"
+          placeholder="Ej: Gu\xEDa Oficial de Matr\xEDcula y Pensiones 2027" required
+          class="w-full px-3.5 py-2 rounded-xl border border-slate-200 text-sm text-slate-800 focus:outline-hidden focus:border-[#0050A1] focus:ring-2 focus:ring-[#0050A1]/15 disabled:bg-slate-100" />
+      </div>
 
-            <!-- Barra de progreso visual -->
-            <div class="w-full h-1.5 bg-white/20 rounded-full overflow-hidden">
-              <div 
-                class="h-full bg-[#BE002E] transition-all duration-500"
-                [style.width]="uploadStep() === 1 ? '35%' : uploadStep() === 2 ? '70%' : '95%'">
-              </div>
-            </div>
-            <p class="text-[11px] text-blue-100">
-              Por favor espera unos segundos mientras se guarda transaccionalmente en PostgreSQL.
-            </p>
-          </div>
-        }
-
-        <!-- Botones de Acci\xF3n -->
-        <div class="pt-2 flex items-center justify-end gap-2.5 border-t border-slate-100">
-          <button
-            type="button"
-            (click)="onClose()"
-            [disabled]="isUploading()"
-            class="px-4 py-2.5 rounded-xl border border-slate-200 text-xs font-bold text-slate-600 hover:bg-slate-50 transition-colors cursor-pointer disabled:opacity-40">
-            Cancelar
-          </button>
-
-          <button
-            type="submit"
-            [disabled]="!canSubmit()"
-            class="px-5 py-2.5 rounded-xl bg-[#BE002E] hover:bg-[#9e0026] text-white text-xs font-bold shadow-md shadow-[#BE002E]/20 transition-all flex items-center gap-2 cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed">
-            @if (isUploading()) {
-              <span class="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
-              <span>Procesando Ingesta...</span>
+      <!-- Stepper de Progreso Inteligente mientras se procesa en Backend -->
+      @if (isUploading()) {
+      <div class="p-4 rounded-2xl bg-[#0050A1] text-white space-y-3">
+        <div class="flex items-center gap-3">
+          <div class="w-6 h-6 border-3 border-white/30 border-t-white rounded-full animate-spin shrink-0"></div>
+          <div class="text-xs font-bold tracking-wide">
+            @if (uploadStep() === 1) {
+            Paso 1/3: Extrayendo texto y aplicando OCR si es escaneado...
+            } @else if (uploadStep() === 2) {
+            Paso 2/3: Segmentando secciones y encabezados...
             } @else {
-              <span>\u{1F680}</span>
-              <span>Iniciar Ingesta Vectorial</span>
+            Paso 3/3: Calculando vectores (768 dim) con gemini-embedding-001...
             }
-          </button>
+          </div>
         </div>
 
-      </form>
+        <!-- Barra de progreso visual -->
+        <div class="w-full h-1.5 bg-white/20 rounded-full overflow-hidden">
+          <div class="h-full bg-[#BE002E] transition-all duration-500"
+            [style.width]="uploadStep() === 1 ? '35%' : uploadStep() === 2 ? '70%' : '95%'">
+          </div>
+        </div>
+        <p class="text-[11px] text-blue-100">
+          Por favor espera unos segundos mientras se guarda transaccionalmente en PostgreSQL.
+        </p>
+      </div>
+      }
 
-    </div>
+      <!-- Botones de Acci\xF3n -->
+      <div class="pt-2 flex items-center justify-end gap-2.5 border-t border-slate-100">
+        <button type="button" (click)="onClose()" [disabled]="isUploading()"
+          class="px-4 py-2.5 rounded-xl border border-slate-200 text-xs font-bold text-slate-600 hover:bg-slate-50 transition-colors cursor-pointer disabled:opacity-40">
+          Cancelar
+        </button>
+
+        <button type="submit" [disabled]="!canSubmit()"
+          class="px-5 py-2.5 rounded-xl bg-[#BE002E] hover:bg-[#9e0026] text-white text-xs font-bold shadow-md shadow-[#BE002E]/20 transition-all flex items-center gap-2 cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed">
+          @if (isUploading()) {
+          <span class="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
+          <span>Procesando Ingesta...</span>
+          } @else {
+          <span>\u{1F680}</span>
+          <span>Iniciar Ingesta Vectorial</span>
+          }
+        </button>
+      </div>
+
+    </form>
 
   </div>
-}
-`, styles: ["/* src/app/features/backoffice/components/document-upload-modal/document-upload-modal.component.css */\n.modal-card {\n  animation: modalAppear 0.2s cubic-bezier(0.16, 1, 0.3, 1);\n}\n@keyframes modalAppear {\n  from {\n    opacity: 0;\n    transform: scale(0.96) translateY(8px);\n  }\n  to {\n    opacity: 1;\n    transform: scale(1) translateY(0);\n  }\n}\n"] }]
+
+</div>
+}`, styles: ["/* src/app/features/backoffice/components/document-upload-modal/document-upload-modal.component.css */\n.modal-card {\n  animation: modalAppear 0.2s cubic-bezier(0.16, 1, 0.3, 1);\n}\n@keyframes modalAppear {\n  from {\n    opacity: 0;\n    transform: scale(0.96) translateY(8px);\n  }\n  to {\n    opacity: 1;\n    transform: scale(1) translateY(0);\n  }\n}\n"] }]
   }], () => [], { isOpen: [{ type: Input, args: [{ isSignal: true, alias: "isOpen", required: false }] }], isUploading: [{ type: Input, args: [{ isSignal: true, alias: "isUploading", required: false }] }], defaultArea: [{ type: Input, args: [{ isSignal: true, alias: "defaultArea", required: false }] }], close: [{ type: Output, args: ["close"] }], upload: [{ type: Output, args: ["upload"] }] });
 })();
 (() => {
