@@ -43,7 +43,7 @@ var routes = [
   {
     path: "backoffice",
     canActivate: [adminAuthGuard],
-    loadComponent: () => import("./chunk-IRSCI2DS.js").then(
+    loadComponent: () => import("./chunk-FXHI24EX.js").then(
       (m) => m.AdminDashboardComponent
     )
   },
