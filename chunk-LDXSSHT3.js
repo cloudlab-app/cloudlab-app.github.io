@@ -2,7 +2,7 @@ import {
   BackofficeService,
   Router,
   RouterLink
-} from "./chunk-A6GZHEZQ.js";
+} from "./chunk-Z7USECQD.js";
 import {
   ChangeDetectionStrategy,
   Component,
@@ -50,7 +50,7 @@ import {
   ɵɵtextInterpolate1,
   ɵɵtextInterpolate2,
   ɵɵviewQuerySignal
-} from "./chunk-ZJRNLJ6C.js";
+} from "./chunk-GTRT2NL7.js";
 
 // src/app/features/backoffice/components/admin-navbar/admin-navbar.component.ts
 function AdminNavbarComponent_Conditional_9_Template(rf, ctx) {
