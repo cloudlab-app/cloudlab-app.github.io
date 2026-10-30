@@ -110,7 +110,7 @@ function AdminNavbarComponent_Conditional_19_Template(rf, ctx) {
     \u0275\u0275advance(2);
     \u0275\u0275textInterpolate1(" ", user_r3.username.slice(0, 2).toUpperCase(), " ");
     \u0275\u0275advance(4);
-    \u0275\u0275textInterpolate(user_r3.nombre || user_r3.username);
+    \u0275\u0275textInterpolate(user_r3.username);
     \u0275\u0275advance();
     \u0275\u0275conditional(user_r3.role === "admin" ? 7 : 8);
     \u0275\u0275advance(3);
@@ -161,17 +161,16 @@ var AdminNavbarComponent = class _AdminNavbarComponent {
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(AdminNavbarComponent, [{
     type: Component,
-    args: [{ selector: "app-admin-navbar", changeDetection: ChangeDetectionStrategy.OnPush, imports: [RouterLink], template: `<header class="cbb-header shrink-0 bg-[#0050A1] text-white selection:bg-white selection:text-[#0050A1] border-b-4 border-[#BE002E] shadow-md sticky top-0 z-30">
+    args: [{ selector: "app-admin-navbar", changeDetection: ChangeDetectionStrategy.OnPush, imports: [RouterLink], template: `<header
+  class="cbb-header shrink-0 bg-[#0050A1] text-white selection:bg-white selection:text-[#0050A1] border-b-4 border-[#BE002E] shadow-md sticky top-0 z-30">
   <div class="w-full px-4 sm:px-6 lg:px-10 h-16 sm:h-18 flex items-center justify-between gap-4">
-    
+
     <!-- Izquierda: \xCDcono Oficial CBB + Identidad del Backoffice -->
     <div class="flex items-center gap-3.5 min-w-0">
-      <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-white p-1.5 flex items-center justify-center shadow-md shrink-0">
-        <img 
-          src="cropped-Favicon-3-1-32x32.png" 
-          alt="Logo Colegio Bertolt Brecht" 
-          class="w-full h-full object-contain"
-        />
+      <div
+        class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-white p-1.5 flex items-center justify-center shadow-md shrink-0">
+        <img src="cropped-Favicon-3-1-32x32.png" alt="Logo Colegio Bertolt Brecht"
+          class="w-full h-full object-contain" />
       </div>
 
       <div class="min-w-0">
@@ -180,13 +179,15 @@ var AdminNavbarComponent = class _AdminNavbarComponent {
             Backoffice RAG \u2014 Colegio Bertolt Brecht
           </h1>
           @if (session()?.role === 'admin') {
-            <span class="hidden md:inline-flex items-center px-2.5 py-0.5 text-[10px] font-extrabold uppercase tracking-wider bg-[#BE002E] text-white rounded-full shadow-2xs">
-              Panel Administrador
-            </span>
+          <span
+            class="hidden md:inline-flex items-center px-2.5 py-0.5 text-[10px] font-extrabold uppercase tracking-wider bg-[#BE002E] text-white rounded-full shadow-2xs">
+            Panel Administrador
+          </span>
           } @else if (session()?.role === 'viewer') {
-            <span class="hidden md:inline-flex items-center px-2.5 py-0.5 text-[10px] font-extrabold uppercase tracking-wider bg-emerald-600 text-white rounded-full shadow-2xs">
-              Modo Consulta (Solo Lectura)
-            </span>
+          <span
+            class="hidden md:inline-flex items-center px-2.5 py-0.5 text-[10px] font-extrabold uppercase tracking-wider bg-emerald-600 text-white rounded-full shadow-2xs">
+            Modo Consulta (Solo Lectura)
+          </span>
           }
         </div>
         <p class="text-xs text-blue-100 hidden sm:block truncate">
@@ -197,43 +198,42 @@ var AdminNavbarComponent = class _AdminNavbarComponent {
 
     <!-- Derecha: Accesos R\xE1pidos y Operador Activo -->
     <div class="flex items-center gap-3 sm:gap-4 shrink-0">
-      <a 
-        routerLink="/" 
+      <a routerLink="/"
         class="text-xs font-bold text-white bg-white/15 hover:bg-white/25 px-3.5 py-2 rounded-xl transition-colors flex items-center gap-1.5">
         <span>\u{1F310}</span>
         <span class="hidden md:inline">Ver Asistente P\xFAblico</span>
       </a>
 
       @if (session(); as user) {
-        <div class="hidden sm:flex items-center gap-2.5 pl-3 border-l border-white/20">
-          <div class="w-8 h-8 rounded-full bg-white text-[#0050A1] flex items-center justify-center text-xs font-extrabold shadow-xs">
-            {{ user.username.slice(0, 2).toUpperCase() }}
-          </div>
-          <div class="hidden md:block text-left">
-            <div class="text-xs font-bold text-white leading-none flex items-center gap-1.5">
-              <span>{{ user.nombre || user.username }}</span>
-              @if (user.role === 'admin') {
-                <span class="px-1.5 py-0.5 rounded-full text-[9px] font-extrabold bg-[#BE002E] text-white uppercase tracking-wider">Admin</span>
-              } @else {
-                <span class="px-1.5 py-0.5 rounded-full text-[9px] font-extrabold bg-emerald-500 text-white uppercase tracking-wider">Consulta</span>
-              }
-            </div>
-            <div class="text-[10px] text-blue-100 mt-0.5">{{ user.username }}</div>
-          </div>
+      <div class="hidden sm:flex items-center gap-2.5 pl-3 border-l border-white/20">
+        <div
+          class="w-8 h-8 rounded-full bg-white text-[#0050A1] flex items-center justify-center text-xs font-extrabold shadow-xs">
+          {{ user.username.slice(0, 2).toUpperCase() }}
         </div>
+        <div class="hidden md:block text-left">
+          <div class="text-xs font-bold text-white leading-none flex items-center gap-1.5">
+            <span>{{ user.username }}</span>
+            @if (user.role === 'admin') {
+            <span
+              class="px-1.5 py-0.5 rounded-full text-[9px] font-extrabold bg-[#BE002E] text-white uppercase tracking-wider">Admin</span>
+            } @else {
+            <span
+              class="px-1.5 py-0.5 rounded-full text-[9px] font-extrabold bg-emerald-500 text-white uppercase tracking-wider">Consulta</span>
+            }
+          </div>
+          <div class="text-[10px] text-blue-100 mt-0.5">{{ user.username }}</div>
+        </div>
+      </div>
 
-        <button
-          type="button"
-          (click)="logout.emit()"
-          class="px-3.5 py-2 rounded-xl text-xs font-bold text-white bg-[#BE002E] hover:bg-[#9e0026] shadow-sm transition-colors cursor-pointer flex items-center gap-1">
-          <span>Salir</span>
-        </button>
+      <button type="button" (click)="logout.emit()"
+        class="px-3.5 py-2 rounded-xl text-xs font-bold text-white bg-[#BE002E] hover:bg-[#9e0026] shadow-sm transition-colors cursor-pointer flex items-center gap-1">
+        <span>Salir</span>
+      </button>
       }
     </div>
 
   </div>
-</header>
-`, styles: ["/* src/app/features/backoffice/components/admin-navbar/admin-navbar.component.css */\n.admin-navbar {\n  -webkit-backdrop-filter: blur(8px);\n  backdrop-filter: blur(8px);\n}\n"] }]
+</header>`, styles: ["/* src/app/features/backoffice/components/admin-navbar/admin-navbar.component.css */\n.admin-navbar {\n  -webkit-backdrop-filter: blur(8px);\n  backdrop-filter: blur(8px);\n}\n"] }]
   }], null, { session: [{ type: Input, args: [{ isSignal: true, alias: "session", required: true }] }], logout: [{ type: Output, args: ["logout"] }] });
 })();
 (() => {
