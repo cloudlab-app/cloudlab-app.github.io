@@ -3,7 +3,7 @@ import {
   Router,
   RouterOutlet,
   provideRouter
-} from "./chunk-RVBCZNP3.js";
+} from "./chunk-A6GZHEZQ.js";
 import {
   ChangeDetectionStrategy,
   Component,
@@ -16,7 +16,7 @@ import {
   ɵsetClassDebugInfo,
   ɵɵdefineComponent,
   ɵɵelement
-} from "./chunk-GTRT2NL7.js";
+} from "./chunk-ZJRNLJ6C.js";
 
 // src/app/core/guards/admin-auth.guard.ts
 var adminAuthGuard = () => {
@@ -32,18 +32,18 @@ var adminAuthGuard = () => {
 var routes = [
   {
     path: "",
-    loadComponent: () => import("./chunk-T6VKXRHD.js").then((m) => m.AssistantComponent)
+    loadComponent: () => import("./chunk-SGWXFDGZ.js").then((m) => m.AssistantComponent)
   },
   {
     path: "backoffice/login",
-    loadComponent: () => import("./chunk-L7UCYA6W.js").then(
+    loadComponent: () => import("./chunk-JIOLIEQ7.js").then(
       (m) => m.AdminLoginComponent
     )
   },
   {
     path: "backoffice",
     canActivate: [adminAuthGuard],
-    loadComponent: () => import("./chunk-PIQDA4WA.js").then(
+    loadComponent: () => import("./chunk-FKR77AZD.js").then(
       (m) => m.AdminDashboardComponent
     )
   },

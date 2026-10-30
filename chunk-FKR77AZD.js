@@ -2,7 +2,7 @@ import {
   BackofficeService,
   Router,
   RouterLink
-} from "./chunk-RVBCZNP3.js";
+} from "./chunk-A6GZHEZQ.js";
 import {
   ChangeDetectionStrategy,
   Component,
@@ -50,39 +50,71 @@ import {
   ɵɵtextInterpolate1,
   ɵɵtextInterpolate2,
   ɵɵviewQuerySignal
-} from "./chunk-GTRT2NL7.js";
+} from "./chunk-ZJRNLJ6C.js";
 
 // src/app/features/backoffice/components/admin-navbar/admin-navbar.component.ts
+function AdminNavbarComponent_Conditional_9_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "span", 8);
+    \u0275\u0275text(1, " Panel Administrador ");
+    \u0275\u0275elementEnd();
+  }
+}
+function AdminNavbarComponent_Conditional_10_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "span", 9);
+    \u0275\u0275text(1, " Modo Consulta (Solo Lectura) ");
+    \u0275\u0275elementEnd();
+  }
+}
+function AdminNavbarComponent_Conditional_19_Conditional_7_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "span", 18);
+    \u0275\u0275text(1, "Admin");
+    \u0275\u0275elementEnd();
+  }
+}
+function AdminNavbarComponent_Conditional_19_Conditional_8_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "span", 19);
+    \u0275\u0275text(1, "Consulta");
+    \u0275\u0275elementEnd();
+  }
+}
 function AdminNavbarComponent_Conditional_19_Template(rf, ctx) {
   if (rf & 1) {
     const _r1 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "div", 13)(1, "div", 14);
+    \u0275\u0275elementStart(0, "div", 14)(1, "div", 15);
     \u0275\u0275text(2);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(3, "div", 15)(4, "div", 16);
-    \u0275\u0275text(5);
+    \u0275\u0275elementStart(3, "div", 16)(4, "div", 17)(5, "span");
+    \u0275\u0275text(6);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(6, "div", 17);
-    \u0275\u0275text(7);
+    \u0275\u0275conditionalCreate(7, AdminNavbarComponent_Conditional_19_Conditional_7_Template, 2, 0, "span", 18)(8, AdminNavbarComponent_Conditional_19_Conditional_8_Template, 2, 0, "span", 19);
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(9, "div", 20);
+    \u0275\u0275text(10);
     \u0275\u0275elementEnd()()();
-    \u0275\u0275elementStart(8, "button", 18);
-    \u0275\u0275listener("click", function AdminNavbarComponent_Conditional_19_Template_button_click_8_listener() {
+    \u0275\u0275elementStart(11, "button", 21);
+    \u0275\u0275listener("click", function AdminNavbarComponent_Conditional_19_Template_button_click_11_listener() {
       \u0275\u0275restoreView(_r1);
       const ctx_r1 = \u0275\u0275nextContext();
       return \u0275\u0275resetView(ctx_r1.logout.emit());
     });
-    \u0275\u0275elementStart(9, "span");
-    \u0275\u0275text(10, "Salir");
+    \u0275\u0275elementStart(12, "span");
+    \u0275\u0275text(13, "Salir");
     \u0275\u0275elementEnd()();
   }
   if (rf & 2) {
     const user_r3 = ctx;
     \u0275\u0275advance(2);
     \u0275\u0275textInterpolate1(" ", user_r3.username.slice(0, 2).toUpperCase(), " ");
+    \u0275\u0275advance(4);
+    \u0275\u0275textInterpolate(user_r3.nombre || user_r3.username);
+    \u0275\u0275advance();
+    \u0275\u0275conditional(user_r3.role === "admin" ? 7 : 8);
     \u0275\u0275advance(3);
     \u0275\u0275textInterpolate(user_r3.username);
-    \u0275\u0275advance(2);
-    \u0275\u0275textInterpolate2("", user_r3.role, " \u2022 \xC1rea: ", user_r3.areaDefault);
   }
 }
 var AdminNavbarComponent = class _AdminNavbarComponent {
@@ -94,7 +126,7 @@ var AdminNavbarComponent = class _AdminNavbarComponent {
   static \u0275fac = function AdminNavbarComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _AdminNavbarComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AdminNavbarComponent, selectors: [["app-admin-navbar"]], inputs: { session: [1, "session"] }, outputs: { logout: "logout" }, decls: 20, vars: 1, consts: [[1, "cbb-header", "shrink-0", "bg-[#0050A1]", "text-white", "selection:bg-white", "selection:text-[#0050A1]", "border-b-4", "border-[#BE002E]", "shadow-md", "sticky", "top-0", "z-30"], [1, "w-full", "px-4", "sm:px-6", "lg:px-10", "h-16", "sm:h-18", "flex", "items-center", "justify-between", "gap-4"], [1, "flex", "items-center", "gap-3.5", "min-w-0"], [1, "w-10", "h-10", "sm:w-11", "sm:h-11", "rounded-xl", "bg-white", "p-1.5", "flex", "items-center", "justify-center", "shadow-md", "shrink-0"], ["src", "cropped-Favicon-3-1-32x32.png", "alt", "Logo Colegio Bertolt Brecht", 1, "w-full", "h-full", "object-contain"], [1, "min-w-0"], [1, "flex", "items-center", "gap-2.5"], [1, "text-base", "sm:text-lg", "font-extrabold", "text-white", "tracking-tight", "truncate"], [1, "hidden", "md:inline-flex", "items-center", "px-2.5", "py-0.5", "text-[10px]", "font-extrabold", "uppercase", "tracking-wider", "bg-[#BE002E]", "text-white", "rounded-full", "shadow-2xs"], [1, "text-xs", "text-blue-100", "hidden", "sm:block", "truncate"], [1, "flex", "items-center", "gap-3", "sm:gap-4", "shrink-0"], ["routerLink", "/", 1, "text-xs", "font-bold", "text-white", "bg-white/15", "hover:bg-white/25", "px-3.5", "py-2", "rounded-xl", "transition-colors", "flex", "items-center", "gap-1.5"], [1, "hidden", "md:inline"], [1, "hidden", "sm:flex", "items-center", "gap-2.5", "pl-3", "border-l", "border-white/20"], [1, "w-8", "h-8", "rounded-full", "bg-white", "text-[#0050A1]", "flex", "items-center", "justify-center", "text-xs", "font-extrabold", "shadow-xs"], [1, "hidden", "md:block", "text-left"], [1, "text-xs", "font-bold", "text-white", "leading-none"], [1, "text-[10px]", "text-blue-100", "mt-0.5"], ["type", "button", 1, "px-3.5", "py-2", "rounded-xl", "text-xs", "font-bold", "text-white", "bg-[#BE002E]", "hover:bg-[#9e0026]", "shadow-sm", "transition-colors", "cursor-pointer", "flex", "items-center", "gap-1", 3, "click"]], template: function AdminNavbarComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AdminNavbarComponent, selectors: [["app-admin-navbar"]], inputs: { session: [1, "session"] }, outputs: { logout: "logout" }, decls: 20, vars: 2, consts: [[1, "cbb-header", "shrink-0", "bg-[#0050A1]", "text-white", "selection:bg-white", "selection:text-[#0050A1]", "border-b-4", "border-[#BE002E]", "shadow-md", "sticky", "top-0", "z-30"], [1, "w-full", "px-4", "sm:px-6", "lg:px-10", "h-16", "sm:h-18", "flex", "items-center", "justify-between", "gap-4"], [1, "flex", "items-center", "gap-3.5", "min-w-0"], [1, "w-10", "h-10", "sm:w-11", "sm:h-11", "rounded-xl", "bg-white", "p-1.5", "flex", "items-center", "justify-center", "shadow-md", "shrink-0"], ["src", "cropped-Favicon-3-1-32x32.png", "alt", "Logo Colegio Bertolt Brecht", 1, "w-full", "h-full", "object-contain"], [1, "min-w-0"], [1, "flex", "items-center", "gap-2.5"], [1, "text-base", "sm:text-lg", "font-extrabold", "text-white", "tracking-tight", "truncate"], [1, "hidden", "md:inline-flex", "items-center", "px-2.5", "py-0.5", "text-[10px]", "font-extrabold", "uppercase", "tracking-wider", "bg-[#BE002E]", "text-white", "rounded-full", "shadow-2xs"], [1, "hidden", "md:inline-flex", "items-center", "px-2.5", "py-0.5", "text-[10px]", "font-extrabold", "uppercase", "tracking-wider", "bg-emerald-600", "text-white", "rounded-full", "shadow-2xs"], [1, "text-xs", "text-blue-100", "hidden", "sm:block", "truncate"], [1, "flex", "items-center", "gap-3", "sm:gap-4", "shrink-0"], ["routerLink", "/", 1, "text-xs", "font-bold", "text-white", "bg-white/15", "hover:bg-white/25", "px-3.5", "py-2", "rounded-xl", "transition-colors", "flex", "items-center", "gap-1.5"], [1, "hidden", "md:inline"], [1, "hidden", "sm:flex", "items-center", "gap-2.5", "pl-3", "border-l", "border-white/20"], [1, "w-8", "h-8", "rounded-full", "bg-white", "text-[#0050A1]", "flex", "items-center", "justify-center", "text-xs", "font-extrabold", "shadow-xs"], [1, "hidden", "md:block", "text-left"], [1, "text-xs", "font-bold", "text-white", "leading-none", "flex", "items-center", "gap-1.5"], [1, "px-1.5", "py-0.5", "rounded-full", "text-[9px]", "font-extrabold", "bg-[#BE002E]", "text-white", "uppercase", "tracking-wider"], [1, "px-1.5", "py-0.5", "rounded-full", "text-[9px]", "font-extrabold", "bg-emerald-500", "text-white", "uppercase", "tracking-wider"], [1, "text-[10px]", "text-blue-100", "mt-0.5"], ["type", "button", 1, "px-3.5", "py-2", "rounded-xl", "text-xs", "font-bold", "text-white", "bg-[#BE002E]", "hover:bg-[#9e0026]", "shadow-sm", "transition-colors", "cursor-pointer", "flex", "items-center", "gap-1", 3, "click"]], template: function AdminNavbarComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "header", 0)(1, "div", 1)(2, "div", 2)(3, "div", 3);
       \u0275\u0275element(4, "img", 4);
@@ -102,32 +134,106 @@ var AdminNavbarComponent = class _AdminNavbarComponent {
       \u0275\u0275elementStart(5, "div", 5)(6, "div", 6)(7, "h1", 7);
       \u0275\u0275text(8, " Backoffice RAG \u2014 Colegio Bertolt Brecht ");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(9, "span", 8);
-      \u0275\u0275text(10, " Panel Oficial ");
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(11, "p", 9);
+      \u0275\u0275conditionalCreate(9, AdminNavbarComponent_Conditional_9_Template, 2, 0, "span", 8)(10, AdminNavbarComponent_Conditional_10_Template, 2, 0, "span", 9);
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(11, "p", 10);
       \u0275\u0275text(12, " Gesti\xF3n de Base de Conocimiento y Satisfacci\xF3n del Usuario ");
       \u0275\u0275elementEnd()()();
-      \u0275\u0275elementStart(13, "div", 10)(14, "a", 11)(15, "span");
+      \u0275\u0275elementStart(13, "div", 11)(14, "a", 12)(15, "span");
       \u0275\u0275text(16, "\u{1F310}");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(17, "span", 12);
+      \u0275\u0275elementStart(17, "span", 13);
       \u0275\u0275text(18, "Ver Asistente P\xFAblico");
       \u0275\u0275elementEnd()();
-      \u0275\u0275conditionalCreate(19, AdminNavbarComponent_Conditional_19_Template, 11, 4);
+      \u0275\u0275conditionalCreate(19, AdminNavbarComponent_Conditional_19_Template, 14, 4);
       \u0275\u0275elementEnd()()();
     }
     if (rf & 2) {
       let tmp_0_0;
-      \u0275\u0275advance(19);
-      \u0275\u0275conditional((tmp_0_0 = ctx.session()) ? 19 : -1, tmp_0_0);
+      let tmp_1_0;
+      \u0275\u0275advance(9);
+      \u0275\u0275conditional(((tmp_0_0 = ctx.session()) == null ? null : tmp_0_0.role) === "admin" ? 9 : ((tmp_0_0 = ctx.session()) == null ? null : tmp_0_0.role) === "viewer" ? 10 : -1);
+      \u0275\u0275advance(10);
+      \u0275\u0275conditional((tmp_1_0 = ctx.session()) ? 19 : -1, tmp_1_0);
     }
   }, dependencies: [RouterLink], styles: ["\n.admin-navbar[_ngcontent-%COMP%] {\n  -webkit-backdrop-filter: blur(8px);\n  backdrop-filter: blur(8px);\n}"], changeDetection: 0 });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(AdminNavbarComponent, [{
     type: Component,
-    args: [{ selector: "app-admin-navbar", changeDetection: ChangeDetectionStrategy.OnPush, imports: [RouterLink], template: '<header class="cbb-header shrink-0 bg-[#0050A1] text-white selection:bg-white selection:text-[#0050A1] border-b-4 border-[#BE002E] shadow-md sticky top-0 z-30">\n  <div class="w-full px-4 sm:px-6 lg:px-10 h-16 sm:h-18 flex items-center justify-between gap-4">\n    \n    <!-- Izquierda: \xCDcono Oficial CBB + Identidad del Backoffice -->\n    <div class="flex items-center gap-3.5 min-w-0">\n      <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-white p-1.5 flex items-center justify-center shadow-md shrink-0">\n        <img \n          src="cropped-Favicon-3-1-32x32.png" \n          alt="Logo Colegio Bertolt Brecht" \n          class="w-full h-full object-contain"\n        />\n      </div>\n\n      <div class="min-w-0">\n        <div class="flex items-center gap-2.5">\n          <h1 class="text-base sm:text-lg font-extrabold text-white tracking-tight truncate">\n            Backoffice RAG \u2014 Colegio Bertolt Brecht\n          </h1>\n          <span class="hidden md:inline-flex items-center px-2.5 py-0.5 text-[10px] font-extrabold uppercase tracking-wider bg-[#BE002E] text-white rounded-full shadow-2xs">\n            Panel Oficial\n          </span>\n        </div>\n        <p class="text-xs text-blue-100 hidden sm:block truncate">\n          Gesti\xF3n de Base de Conocimiento y Satisfacci\xF3n del Usuario\n        </p>\n      </div>\n    </div>\n\n    <!-- Derecha: Accesos R\xE1pidos y Operador Activo -->\n    <div class="flex items-center gap-3 sm:gap-4 shrink-0">\n      <a \n        routerLink="/" \n        class="text-xs font-bold text-white bg-white/15 hover:bg-white/25 px-3.5 py-2 rounded-xl transition-colors flex items-center gap-1.5">\n        <span>\u{1F310}</span>\n        <span class="hidden md:inline">Ver Asistente P\xFAblico</span>\n      </a>\n\n      @if (session(); as user) {\n        <div class="hidden sm:flex items-center gap-2.5 pl-3 border-l border-white/20">\n          <div class="w-8 h-8 rounded-full bg-white text-[#0050A1] flex items-center justify-center text-xs font-extrabold shadow-xs">\n            {{ user.username.slice(0, 2).toUpperCase() }}\n          </div>\n          <div class="hidden md:block text-left">\n            <div class="text-xs font-bold text-white leading-none">{{ user.username }}</div>\n            <div class="text-[10px] text-blue-100 mt-0.5">{{ user.role }} \u2022 \xC1rea: {{ user.areaDefault }}</div>\n          </div>\n        </div>\n\n        <button\n          type="button"\n          (click)="logout.emit()"\n          class="px-3.5 py-2 rounded-xl text-xs font-bold text-white bg-[#BE002E] hover:bg-[#9e0026] shadow-sm transition-colors cursor-pointer flex items-center gap-1">\n          <span>Salir</span>\n        </button>\n      }\n    </div>\n\n  </div>\n</header>\n', styles: ["/* src/app/features/backoffice/components/admin-navbar/admin-navbar.component.css */\n.admin-navbar {\n  -webkit-backdrop-filter: blur(8px);\n  backdrop-filter: blur(8px);\n}\n"] }]
+    args: [{ selector: "app-admin-navbar", changeDetection: ChangeDetectionStrategy.OnPush, imports: [RouterLink], template: `<header class="cbb-header shrink-0 bg-[#0050A1] text-white selection:bg-white selection:text-[#0050A1] border-b-4 border-[#BE002E] shadow-md sticky top-0 z-30">
+  <div class="w-full px-4 sm:px-6 lg:px-10 h-16 sm:h-18 flex items-center justify-between gap-4">
+    
+    <!-- Izquierda: \xCDcono Oficial CBB + Identidad del Backoffice -->
+    <div class="flex items-center gap-3.5 min-w-0">
+      <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-white p-1.5 flex items-center justify-center shadow-md shrink-0">
+        <img 
+          src="cropped-Favicon-3-1-32x32.png" 
+          alt="Logo Colegio Bertolt Brecht" 
+          class="w-full h-full object-contain"
+        />
+      </div>
+
+      <div class="min-w-0">
+        <div class="flex items-center gap-2.5">
+          <h1 class="text-base sm:text-lg font-extrabold text-white tracking-tight truncate">
+            Backoffice RAG \u2014 Colegio Bertolt Brecht
+          </h1>
+          @if (session()?.role === 'admin') {
+            <span class="hidden md:inline-flex items-center px-2.5 py-0.5 text-[10px] font-extrabold uppercase tracking-wider bg-[#BE002E] text-white rounded-full shadow-2xs">
+              Panel Administrador
+            </span>
+          } @else if (session()?.role === 'viewer') {
+            <span class="hidden md:inline-flex items-center px-2.5 py-0.5 text-[10px] font-extrabold uppercase tracking-wider bg-emerald-600 text-white rounded-full shadow-2xs">
+              Modo Consulta (Solo Lectura)
+            </span>
+          }
+        </div>
+        <p class="text-xs text-blue-100 hidden sm:block truncate">
+          Gesti\xF3n de Base de Conocimiento y Satisfacci\xF3n del Usuario
+        </p>
+      </div>
+    </div>
+
+    <!-- Derecha: Accesos R\xE1pidos y Operador Activo -->
+    <div class="flex items-center gap-3 sm:gap-4 shrink-0">
+      <a 
+        routerLink="/" 
+        class="text-xs font-bold text-white bg-white/15 hover:bg-white/25 px-3.5 py-2 rounded-xl transition-colors flex items-center gap-1.5">
+        <span>\u{1F310}</span>
+        <span class="hidden md:inline">Ver Asistente P\xFAblico</span>
+      </a>
+
+      @if (session(); as user) {
+        <div class="hidden sm:flex items-center gap-2.5 pl-3 border-l border-white/20">
+          <div class="w-8 h-8 rounded-full bg-white text-[#0050A1] flex items-center justify-center text-xs font-extrabold shadow-xs">
+            {{ user.username.slice(0, 2).toUpperCase() }}
+          </div>
+          <div class="hidden md:block text-left">
+            <div class="text-xs font-bold text-white leading-none flex items-center gap-1.5">
+              <span>{{ user.nombre || user.username }}</span>
+              @if (user.role === 'admin') {
+                <span class="px-1.5 py-0.5 rounded-full text-[9px] font-extrabold bg-[#BE002E] text-white uppercase tracking-wider">Admin</span>
+              } @else {
+                <span class="px-1.5 py-0.5 rounded-full text-[9px] font-extrabold bg-emerald-500 text-white uppercase tracking-wider">Consulta</span>
+              }
+            </div>
+            <div class="text-[10px] text-blue-100 mt-0.5">{{ user.username }}</div>
+          </div>
+        </div>
+
+        <button
+          type="button"
+          (click)="logout.emit()"
+          class="px-3.5 py-2 rounded-xl text-xs font-bold text-white bg-[#BE002E] hover:bg-[#9e0026] shadow-sm transition-colors cursor-pointer flex items-center gap-1">
+          <span>Salir</span>
+        </button>
+      }
+    </div>
+
+  </div>
+</header>
+`, styles: ["/* src/app/features/backoffice/components/admin-navbar/admin-navbar.component.css */\n.admin-navbar {\n  -webkit-backdrop-filter: blur(8px);\n  backdrop-filter: blur(8px);\n}\n"] }]
   }], null, { session: [{ type: Input, args: [{ isSignal: true, alias: "session", required: true }] }], logout: [{ type: Output, args: ["logout"] }] });
 })();
 (() => {
@@ -135,6 +241,23 @@ var AdminNavbarComponent = class _AdminNavbarComponent {
 })();
 
 // src/app/features/backoffice/components/admin-stats/admin-stats.component.ts
+function AdminStatsComponent_Conditional_13_Template(rf, ctx) {
+  if (rf & 1) {
+    const _r1 = \u0275\u0275getCurrentView();
+    \u0275\u0275domElementStart(0, "button", 17);
+    \u0275\u0275domListener("click", function AdminStatsComponent_Conditional_13_Template_button_click_0_listener() {
+      \u0275\u0275restoreView(_r1);
+      const ctx_r1 = \u0275\u0275nextContext();
+      return \u0275\u0275resetView(ctx_r1.openUpload.emit());
+    });
+    \u0275\u0275domElementStart(1, "span");
+    \u0275\u0275text(2, "\u2795");
+    \u0275\u0275domElementEnd();
+    \u0275\u0275domElementStart(3, "span");
+    \u0275\u0275text(4, "Ingestar Documento");
+    \u0275\u0275domElementEnd()();
+  }
+}
 var AdminStatsComponent = class _AdminStatsComponent {
   totalDocumentos = input(0, ...ngDevMode ? [{ debugName: "totalDocumentos" }] : (
     /* istanbul ignore next */
@@ -148,12 +271,16 @@ var AdminStatsComponent = class _AdminStatsComponent {
     /* istanbul ignore next */
     []
   ));
+  isAdmin = input(true, ...ngDevMode ? [{ debugName: "isAdmin" }] : (
+    /* istanbul ignore next */
+    []
+  ));
   openUpload = output();
   refresh = output();
   static \u0275fac = function AdminStatsComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _AdminStatsComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AdminStatsComponent, selectors: [["app-admin-stats"]], inputs: { totalDocumentos: [1, "totalDocumentos"], totalFragmentos: [1, "totalFragmentos"], isLoading: [1, "isLoading"] }, outputs: { openUpload: "openUpload", refresh: "refresh" }, decls: 51, vars: 5, consts: [[1, "space-y-6"], [1, "flex", "flex-col", "sm:flex-row", "sm:items-center", "sm:justify-between", "gap-4", "bg-white", "p-6", "rounded-2xl", "border", "border-slate-200", "border-l-4", "border-l-[#0050A1]", "shadow-2xs"], [1, "text-xl", "font-extrabold", "text-[#0050A1]"], [1, "text-xs", "sm:text-sm", "text-slate-500", "mt-1"], [1, "flex", "items-center", "gap-3", "shrink-0"], ["type", "button", 1, "px-4", "py-2.5", "rounded-xl", "border", "border-slate-200", "bg-white", "hover:bg-slate-50", "text-[#0050A1]", "text-xs", "sm:text-sm", "font-bold", "transition-all", "flex", "items-center", "gap-2", "cursor-pointer", "disabled:opacity-50", 3, "click", "disabled"], ["type", "button", 1, "px-5", "py-2.5", "rounded-xl", "bg-[#BE002E]", "hover:bg-[#9e0026]", "text-white", "text-xs", "sm:text-sm", "font-bold", "shadow-md", "shadow-[#BE002E]/20", "transition-all", "flex", "items-center", "gap-2", "cursor-pointer", "active:scale-95", 3, "click"], [1, "grid", "grid-cols-1", "sm:grid-cols-3", "gap-4"], [1, "stat-card", "bg-white", "p-5", "rounded-2xl", "border", "border-slate-200", "border-t-4", "border-t-[#BE002E]", "shadow-2xs", "flex", "items-center", "gap-4"], [1, "w-12", "h-12", "rounded-2xl", "bg-[#BE002E]/10", "text-[#BE002E]", "flex", "items-center", "justify-center", "text-2xl", "shrink-0"], [1, "text-xs", "font-bold", "text-slate-500", "uppercase", "tracking-wider"], [1, "text-2xl", "font-black", "text-slate-900", "mt-0.5"], [1, "text-[11px]", "text-slate-400"], [1, "stat-card", "bg-white", "p-5", "rounded-2xl", "border", "border-slate-200", "border-t-4", "border-t-[#0050A1]", "shadow-2xs", "flex", "items-center", "justify-center", "sm:justify-start", "gap-4"], [1, "w-12", "h-12", "rounded-2xl", "bg-[#0050A1]/10", "text-[#0050A1]", "flex", "items-center", "justify-center", "text-2xl", "shrink-0"], [1, "text-2xl", "font-black", "text-[#0050A1]", "mt-0.5"], [1, "stat-card", "bg-white", "p-5", "rounded-2xl", "border", "border-slate-200", "border-t-4", "border-t-[#0050A1]", "shadow-2xs", "flex", "items-center", "gap-4"], [1, "w-12", "h-12", "rounded-2xl", "bg-emerald-50", "border", "border-emerald-100", "text-emerald-600", "flex", "items-center", "justify-center", "text-2xl", "shrink-0"], [1, "text-base", "font-extrabold", "text-slate-900", "mt-1", "flex", "items-center", "gap-1.5"], [1, "w-2", "h-2", "rounded-full", "bg-emerald-500", "animate-pulse"]], template: function AdminStatsComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AdminStatsComponent, selectors: [["app-admin-stats"]], inputs: { totalDocumentos: [1, "totalDocumentos"], totalFragmentos: [1, "totalFragmentos"], isLoading: [1, "isLoading"], isAdmin: [1, "isAdmin"] }, outputs: { openUpload: "openUpload", refresh: "refresh" }, decls: 45, vars: 6, consts: [[1, "space-y-6"], [1, "flex", "flex-col", "sm:flex-row", "sm:items-center", "sm:justify-between", "gap-4", "bg-white", "p-6", "rounded-2xl", "border", "border-slate-200", "border-l-4", "border-l-[#0050A1]", "shadow-2xs"], [1, "text-xl", "font-extrabold", "text-[#0050A1]"], [1, "text-xs", "sm:text-sm", "text-slate-500", "mt-1"], [1, "flex", "items-center", "gap-3", "shrink-0"], ["type", "button", 1, "px-4", "py-2.5", "rounded-xl", "border", "border-slate-200", "bg-white", "hover:bg-slate-50", "text-[#0050A1]", "text-xs", "sm:text-sm", "font-bold", "transition-all", "flex", "items-center", "gap-2", "cursor-pointer", "disabled:opacity-50", 3, "click", "disabled"], ["type", "button", 1, "px-5", "py-2.5", "rounded-xl", "bg-[#BE002E]", "hover:bg-[#9e0026]", "text-white", "text-xs", "sm:text-sm", "font-bold", "shadow-md", "shadow-[#BE002E]/20", "transition-all", "flex", "items-center", "gap-2", "cursor-pointer", "active:scale-95"], [1, "grid", "grid-cols-1", "sm:grid-cols-3", "gap-4"], [1, "stat-card", "bg-white", "p-5", "rounded-2xl", "border", "border-slate-200", "border-t-4", "border-t-[#BE002E]", "shadow-2xs", "flex", "items-center", "gap-4"], [1, "w-12", "h-12", "rounded-2xl", "bg-[#BE002E]/10", "text-[#BE002E]", "flex", "items-center", "justify-center", "text-2xl", "shrink-0"], [1, "text-xs", "font-bold", "text-slate-500", "uppercase", "tracking-wider"], [1, "text-2xl", "font-black", "text-slate-900", "mt-0.5"], [1, "text-[11px]", "text-slate-400"], [1, "stat-card", "bg-white", "p-5", "rounded-2xl", "border", "border-slate-200", "border-t-4", "border-t-[#0050A1]", "shadow-2xs", "flex", "items-center", "justify-center", "sm:justify-start", "gap-4"], [1, "w-12", "h-12", "rounded-2xl", "bg-[#0050A1]/10", "text-[#0050A1]", "flex", "items-center", "justify-center", "text-2xl", "shrink-0"], [1, "stat-card", "bg-white", "p-5", "rounded-2xl", "border", "border-slate-200", "border-t-4", "border-t-emerald-500", "shadow-2xs", "flex", "items-center", "gap-4"], [1, "w-12", "h-12", "rounded-2xl", "bg-emerald-50", "text-emerald-600", "flex", "items-center", "justify-center", "text-2xl", "shrink-0"], ["type", "button", 1, "px-5", "py-2.5", "rounded-xl", "bg-[#BE002E]", "hover:bg-[#9e0026]", "text-white", "text-xs", "sm:text-sm", "font-bold", "shadow-md", "shadow-[#BE002E]/20", "transition-all", "flex", "items-center", "gap-2", "cursor-pointer", "active:scale-95", 3, "click"]], template: function AdminStatsComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275domElementStart(0, "div", 0)(1, "div", 1)(2, "div")(3, "h2", 2);
       \u0275\u0275text(4, "Panel de Documentos Oficiales");
@@ -171,53 +298,43 @@ var AdminStatsComponent = class _AdminStatsComponent {
       \u0275\u0275domElementStart(11, "span");
       \u0275\u0275text(12, "Actualizar");
       \u0275\u0275domElementEnd()();
-      \u0275\u0275domElementStart(13, "button", 6);
-      \u0275\u0275domListener("click", function AdminStatsComponent_Template_button_click_13_listener() {
-        return ctx.openUpload.emit();
-      });
-      \u0275\u0275domElementStart(14, "span");
-      \u0275\u0275text(15, "\u2795");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(16, "span");
-      \u0275\u0275text(17, "Ingestar Documento");
-      \u0275\u0275domElementEnd()()()();
-      \u0275\u0275domElementStart(18, "div", 7)(19, "div", 8)(20, "div", 9);
-      \u0275\u0275text(21, " \u{1F4C4} ");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(22, "div")(23, "div", 10);
-      \u0275\u0275text(24, "Documentos Activos");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(25, "div", 11);
-      \u0275\u0275text(26);
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(27, "div", 12);
-      \u0275\u0275text(28, "Archivos indexados en BD");
-      \u0275\u0275domElementEnd()()();
-      \u0275\u0275domElementStart(29, "div", 13)(30, "div", 14);
-      \u0275\u0275text(31, " \u{1F9E9} ");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(32, "div")(33, "div", 10);
-      \u0275\u0275text(34, "Fragmentos Vectoriales");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(35, "div", 15);
-      \u0275\u0275text(36);
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(37, "div", 12);
-      \u0275\u0275text(38, "Chunks sem\xE1nticos (768 dim)");
-      \u0275\u0275domElementEnd()()();
-      \u0275\u0275domElementStart(39, "div", 16)(40, "div", 17);
-      \u0275\u0275text(41, " \u26A1 ");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(42, "div")(43, "div", 10);
-      \u0275\u0275text(44, "Motor IA Conectado");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(45, "div", 18);
-      \u0275\u0275domElement(46, "span", 19);
-      \u0275\u0275domElementStart(47, "span");
-      \u0275\u0275text(48, "Gemini 3.5 Flash Lite");
+      \u0275\u0275conditionalCreate(13, AdminStatsComponent_Conditional_13_Template, 5, 0, "button", 6);
       \u0275\u0275domElementEnd()();
-      \u0275\u0275domElementStart(49, "div", 12);
-      \u0275\u0275text(50, "PostgreSQL pgvector + HNSW");
+      \u0275\u0275domElementStart(14, "div", 7)(15, "div", 8)(16, "div", 9);
+      \u0275\u0275text(17, " \u{1F4C4} ");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(18, "div")(19, "div", 10);
+      \u0275\u0275text(20, "Documentos Activos");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(21, "div", 11);
+      \u0275\u0275text(22);
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(23, "div", 12);
+      \u0275\u0275text(24, "Archivos indexados en BD");
+      \u0275\u0275domElementEnd()()();
+      \u0275\u0275domElementStart(25, "div", 13)(26, "div", 14);
+      \u0275\u0275text(27, " \u{1F9E9} ");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(28, "div")(29, "div", 10);
+      \u0275\u0275text(30, "Fragmentos Vectoriales");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(31, "div", 11);
+      \u0275\u0275text(32);
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(33, "div", 12);
+      \u0275\u0275text(34, "Chunks con embeddings generados");
+      \u0275\u0275domElementEnd()()();
+      \u0275\u0275domElementStart(35, "div", 15)(36, "div", 16);
+      \u0275\u0275text(37, " \u{1F3DB}\uFE0F ");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(38, "div")(39, "div", 10);
+      \u0275\u0275text(40, "\xC1reas Institucionales");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(41, "div", 11);
+      \u0275\u0275text(42, "3 Sedes");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(43, "div", 12);
+      \u0275\u0275text(44, "Colonial, SJL y Carabayllo");
       \u0275\u0275domElementEnd()()()()();
     }
     if (rf & 2) {
@@ -225,7 +342,9 @@ var AdminStatsComponent = class _AdminStatsComponent {
       \u0275\u0275domProperty("disabled", ctx.isLoading());
       \u0275\u0275advance();
       \u0275\u0275classMap(ctx.isLoading() ? "animate-spin" : "");
-      \u0275\u0275advance(17);
+      \u0275\u0275advance(4);
+      \u0275\u0275conditional(ctx.isAdmin() ? 13 : -1);
+      \u0275\u0275advance(9);
       \u0275\u0275textInterpolate(ctx.totalDocumentos());
       \u0275\u0275advance(10);
       \u0275\u0275textInterpolate(ctx.totalFragmentos());
@@ -255,13 +374,15 @@ var AdminStatsComponent = class _AdminStatsComponent {
         <span>Actualizar</span>
       </button>
 
-      <button
-        type="button"
-        (click)="openUpload.emit()"
-        class="px-5 py-2.5 rounded-xl bg-[#BE002E] hover:bg-[#9e0026] text-white text-xs sm:text-sm font-bold shadow-md shadow-[#BE002E]/20 transition-all flex items-center gap-2 cursor-pointer active:scale-95">
-        <span>\u2795</span>
-        <span>Ingestar Documento</span>
-      </button>
+      @if (isAdmin()) {
+        <button
+          type="button"
+          (click)="openUpload.emit()"
+          class="px-5 py-2.5 rounded-xl bg-[#BE002E] hover:bg-[#9e0026] text-white text-xs sm:text-sm font-bold shadow-md shadow-[#BE002E]/20 transition-all flex items-center gap-2 cursor-pointer active:scale-95">
+          <span>\u2795</span>
+          <span>Ingestar Documento</span>
+        </button>
+      }
     </div>
   </div>
 
@@ -287,30 +408,27 @@ var AdminStatsComponent = class _AdminStatsComponent {
       </div>
       <div>
         <div class="text-xs font-bold text-slate-500 uppercase tracking-wider">Fragmentos Vectoriales</div>
-        <div class="text-2xl font-black text-[#0050A1] mt-0.5">{{ totalFragmentos() }}</div>
-        <div class="text-[11px] text-slate-400">Chunks sem\xE1nticos (768 dim)</div>
+        <div class="text-2xl font-black text-slate-900 mt-0.5">{{ totalFragmentos() }}</div>
+        <div class="text-[11px] text-slate-400">Chunks con embeddings generados</div>
       </div>
     </div>
 
-    <!-- KPI 3: Estado del Motor RAG -->
-    <div class="stat-card bg-white p-5 rounded-2xl border border-slate-200 border-t-4 border-t-[#0050A1] shadow-2xs flex items-center gap-4">
-      <div class="w-12 h-12 rounded-2xl bg-emerald-50 border border-emerald-100 text-emerald-600 flex items-center justify-center text-2xl shrink-0">
-        \u26A1
+    <!-- KPI 3: \xC1rea de Cobertura -->
+    <div class="stat-card bg-white p-5 rounded-2xl border border-slate-200 border-t-4 border-t-emerald-500 shadow-2xs flex items-center gap-4">
+      <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-2xl shrink-0">
+        \u{1F3DB}\uFE0F
       </div>
       <div>
-        <div class="text-xs font-bold text-slate-500 uppercase tracking-wider">Motor IA Conectado</div>
-        <div class="text-base font-extrabold text-slate-900 mt-1 flex items-center gap-1.5">
-          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-          <span>Gemini 3.5 Flash Lite</span>
-        </div>
-        <div class="text-[11px] text-slate-400">PostgreSQL pgvector + HNSW</div>
+        <div class="text-xs font-bold text-slate-500 uppercase tracking-wider">\xC1reas Institucionales</div>
+        <div class="text-2xl font-black text-slate-900 mt-0.5">3 Sedes</div>
+        <div class="text-[11px] text-slate-400">Colonial, SJL y Carabayllo</div>
       </div>
     </div>
 
   </div>
 </div>
 `, styles: ["/* src/app/features/backoffice/components/admin-stats/admin-stats.component.css */\n.stat-card {\n  transition: transform 0.2s ease, box-shadow 0.2s ease;\n}\n.stat-card:hover {\n  transform: translateY(-2px);\n  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);\n}\n"] }]
-  }], null, { totalDocumentos: [{ type: Input, args: [{ isSignal: true, alias: "totalDocumentos", required: false }] }], totalFragmentos: [{ type: Input, args: [{ isSignal: true, alias: "totalFragmentos", required: false }] }], isLoading: [{ type: Input, args: [{ isSignal: true, alias: "isLoading", required: false }] }], openUpload: [{ type: Output, args: ["openUpload"] }], refresh: [{ type: Output, args: ["refresh"] }] });
+  }], null, { totalDocumentos: [{ type: Input, args: [{ isSignal: true, alias: "totalDocumentos", required: false }] }], totalFragmentos: [{ type: Input, args: [{ isSignal: true, alias: "totalFragmentos", required: false }] }], isLoading: [{ type: Input, args: [{ isSignal: true, alias: "isLoading", required: false }] }], isAdmin: [{ type: Input, args: [{ isSignal: true, alias: "isAdmin", required: false }] }], openUpload: [{ type: Output, args: ["openUpload"] }], refresh: [{ type: Output, args: ["refresh"] }] });
 })();
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(AdminStatsComponent, { className: "AdminStatsComponent", filePath: "src/app/features/backoffice/components/admin-stats/admin-stats.component.ts", lineNumber: 9 });
@@ -334,7 +452,7 @@ function DocumentTableComponent_For_12_Template(rf, ctx) {
 function DocumentTableComponent_Conditional_25_Template(rf, ctx) {
   if (rf & 1) {
     const _r2 = \u0275\u0275getCurrentView();
-    \u0275\u0275domElementStart(0, "button", 15);
+    \u0275\u0275domElementStart(0, "button", 18);
     \u0275\u0275domListener("click", function DocumentTableComponent_Conditional_25_Template_button_click_0_listener() {
       \u0275\u0275restoreView(_r2);
       const ctx_r2 = \u0275\u0275nextContext();
@@ -346,45 +464,55 @@ function DocumentTableComponent_Conditional_25_Template(rf, ctx) {
 }
 function DocumentTableComponent_Conditional_26_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275domElementStart(0, "div", 13);
-    \u0275\u0275domElement(1, "div", 16);
-    \u0275\u0275domElementStart(2, "div", 17);
+    \u0275\u0275domElementStart(0, "div", 16);
+    \u0275\u0275domElement(1, "div", 19);
+    \u0275\u0275domElementStart(2, "div", 20);
     \u0275\u0275text(3, "Consultando base de datos vectorial...");
     \u0275\u0275domElementEnd();
-    \u0275\u0275domElementStart(4, "p", 18);
+    \u0275\u0275domElementStart(4, "p", 21);
     \u0275\u0275text(5, "Sincronizando registros de PostgreSQL + pgvector");
     \u0275\u0275domElementEnd()();
   }
 }
-function DocumentTableComponent_Conditional_27_Conditional_3_Template(rf, ctx) {
+function DocumentTableComponent_Conditional_27_Conditional_3_Conditional_4_Template(rf, ctx) {
   if (rf & 1) {
     const _r4 = \u0275\u0275getCurrentView();
-    \u0275\u0275domElementStart(0, "h3", 20);
-    \u0275\u0275text(1, "A\xFAn no hay documentos indexados");
-    \u0275\u0275domElementEnd();
-    \u0275\u0275domElementStart(2, "p", 21);
-    \u0275\u0275text(3, " Comienza subiendo reglamentos en PDF, Word o Markdown para que el Asistente Virtual pueda responder consultas oficiales. ");
-    \u0275\u0275domElementEnd();
-    \u0275\u0275domElementStart(4, "button", 22);
-    \u0275\u0275domListener("click", function DocumentTableComponent_Conditional_27_Conditional_3_Template_button_click_4_listener() {
+    \u0275\u0275domElementStart(0, "button", 26);
+    \u0275\u0275domListener("click", function DocumentTableComponent_Conditional_27_Conditional_3_Conditional_4_Template_button_click_0_listener() {
       \u0275\u0275restoreView(_r4);
-      const ctx_r2 = \u0275\u0275nextContext(2);
+      const ctx_r2 = \u0275\u0275nextContext(3);
       return \u0275\u0275resetView(ctx_r2.openUpload.emit());
     });
-    \u0275\u0275text(5, " \u2795 Subir primer documento ");
+    \u0275\u0275text(1, " \u2795 Subir primer documento ");
     \u0275\u0275domElementEnd();
+  }
+}
+function DocumentTableComponent_Conditional_27_Conditional_3_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275domElementStart(0, "h3", 23);
+    \u0275\u0275text(1, "A\xFAn no hay documentos indexados");
+    \u0275\u0275domElementEnd();
+    \u0275\u0275domElementStart(2, "p", 24);
+    \u0275\u0275text(3, " Comienza subiendo reglamentos en PDF, Word o Markdown para que el Asistente Virtual pueda responder consultas oficiales. ");
+    \u0275\u0275domElementEnd();
+    \u0275\u0275conditionalCreate(4, DocumentTableComponent_Conditional_27_Conditional_3_Conditional_4_Template, 2, 0, "button", 25);
+  }
+  if (rf & 2) {
+    const ctx_r2 = \u0275\u0275nextContext(2);
+    \u0275\u0275advance(4);
+    \u0275\u0275conditional(ctx_r2.isAdmin() ? 4 : -1);
   }
 }
 function DocumentTableComponent_Conditional_27_Conditional_4_Template(rf, ctx) {
   if (rf & 1) {
     const _r5 = \u0275\u0275getCurrentView();
-    \u0275\u0275domElementStart(0, "h3", 20);
+    \u0275\u0275domElementStart(0, "h3", 23);
     \u0275\u0275text(1, "Sin coincidencias para tu b\xFAsqueda");
     \u0275\u0275domElementEnd();
-    \u0275\u0275domElementStart(2, "p", 21);
+    \u0275\u0275domElementStart(2, "p", 24);
     \u0275\u0275text(3);
     \u0275\u0275domElementEnd();
-    \u0275\u0275domElementStart(4, "button", 23);
+    \u0275\u0275domElementStart(4, "button", 27);
     \u0275\u0275domListener("click", function DocumentTableComponent_Conditional_27_Conditional_4_Template_button_click_4_listener() {
       \u0275\u0275restoreView(_r5);
       const ctx_r2 = \u0275\u0275nextContext(2);
@@ -401,10 +529,10 @@ function DocumentTableComponent_Conditional_27_Conditional_4_Template(rf, ctx) {
 }
 function DocumentTableComponent_Conditional_27_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275domElementStart(0, "div", 14)(1, "div", 19);
+    \u0275\u0275domElementStart(0, "div", 17)(1, "div", 22);
     \u0275\u0275text(2, " \u{1F4C2} ");
     \u0275\u0275domElementEnd();
-    \u0275\u0275conditionalCreate(3, DocumentTableComponent_Conditional_27_Conditional_3_Template, 6, 0)(4, DocumentTableComponent_Conditional_27_Conditional_4_Template, 6, 1);
+    \u0275\u0275conditionalCreate(3, DocumentTableComponent_Conditional_27_Conditional_3_Template, 5, 1)(4, DocumentTableComponent_Conditional_27_Conditional_4_Template, 6, 1);
     \u0275\u0275domElementEnd();
   }
   if (rf & 2) {
@@ -413,15 +541,22 @@ function DocumentTableComponent_Conditional_27_Template(rf, ctx) {
     \u0275\u0275conditional(ctx_r2.documentos().length === 0 ? 3 : 4);
   }
 }
-function DocumentTableComponent_Conditional_28_For_18_Conditional_27_Template(rf, ctx) {
+function DocumentTableComponent_Conditional_28_Conditional_14_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275domElement(0, "span", 46);
+    \u0275\u0275domElementStart(0, "th", 33);
+    \u0275\u0275text(1, "Acciones");
+    \u0275\u0275domElementEnd();
+  }
+}
+function DocumentTableComponent_Conditional_28_For_17_Conditional_25_Conditional_2_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275domElement(0, "span", 50);
     \u0275\u0275domElementStart(1, "span");
     \u0275\u0275text(2, "Eliminando...");
     \u0275\u0275domElementEnd();
   }
 }
-function DocumentTableComponent_Conditional_28_For_18_Conditional_28_Template(rf, ctx) {
+function DocumentTableComponent_Conditional_28_For_17_Conditional_25_Conditional_3_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275domElementStart(0, "span");
     \u0275\u0275text(1, "\u{1F5D1}\uFE0F");
@@ -431,42 +566,57 @@ function DocumentTableComponent_Conditional_28_For_18_Conditional_28_Template(rf
     \u0275\u0275domElementEnd();
   }
 }
-function DocumentTableComponent_Conditional_28_For_18_Template(rf, ctx) {
+function DocumentTableComponent_Conditional_28_For_17_Conditional_25_Template(rf, ctx) {
   if (rf & 1) {
     const _r6 = \u0275\u0275getCurrentView();
-    \u0275\u0275domElementStart(0, "tr", 31)(1, "td", 36)(2, "span", 37);
+    \u0275\u0275domElementStart(0, "td", 33)(1, "button", 49);
+    \u0275\u0275domListener("click", function DocumentTableComponent_Conditional_28_For_17_Conditional_25_Template_button_click_1_listener() {
+      \u0275\u0275restoreView(_r6);
+      const doc_r7 = \u0275\u0275nextContext().$implicit;
+      const ctx_r2 = \u0275\u0275nextContext(2);
+      return \u0275\u0275resetView(ctx_r2.requestDelete.emit(doc_r7));
+    });
+    \u0275\u0275conditionalCreate(2, DocumentTableComponent_Conditional_28_For_17_Conditional_25_Conditional_2_Template, 3, 0)(3, DocumentTableComponent_Conditional_28_For_17_Conditional_25_Conditional_3_Template, 4, 0);
+    \u0275\u0275domElementEnd()();
+  }
+  if (rf & 2) {
+    const doc_r7 = \u0275\u0275nextContext().$implicit;
+    const ctx_r2 = \u0275\u0275nextContext(2);
+    \u0275\u0275advance();
+    \u0275\u0275domProperty("disabled", ctx_r2.deletingId() === doc_r7.documento_id);
+    \u0275\u0275advance();
+    \u0275\u0275conditional(ctx_r2.deletingId() === doc_r7.documento_id ? 2 : 3);
+  }
+}
+function DocumentTableComponent_Conditional_28_For_17_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275domElementStart(0, "tr", 35)(1, "td", 40)(2, "span", 41);
     \u0275\u0275text(3);
     \u0275\u0275domElementEnd()();
-    \u0275\u0275domElementStart(4, "td", 27)(5, "div", 38)(6, "span", 39);
+    \u0275\u0275domElementStart(4, "td", 31)(5, "div", 42)(6, "span", 43);
     \u0275\u0275text(7, "\u{1F4D8}");
     \u0275\u0275domElementEnd();
-    \u0275\u0275domElementStart(8, "div")(9, "div", 40);
+    \u0275\u0275domElementStart(8, "div")(9, "div", 44);
     \u0275\u0275text(10);
     \u0275\u0275domElementEnd();
-    \u0275\u0275domElementStart(11, "div", 41);
+    \u0275\u0275domElementStart(11, "div", 45);
     \u0275\u0275text(12, "Vectorizado con gemini-embedding-001");
     \u0275\u0275domElementEnd()()()();
-    \u0275\u0275domElementStart(13, "td", 27)(14, "span", 42);
+    \u0275\u0275domElementStart(13, "td", 31)(14, "span", 46);
     \u0275\u0275text(15);
     \u0275\u0275domElementEnd()();
-    \u0275\u0275domElementStart(16, "td", 28)(17, "span", 43)(18, "span");
+    \u0275\u0275domElementStart(16, "td", 32)(17, "span", 47)(18, "span");
     \u0275\u0275text(19, "\u{1F9E9}");
     \u0275\u0275domElementEnd();
     \u0275\u0275domElementStart(20, "span");
     \u0275\u0275text(21);
     \u0275\u0275domElementEnd()()();
-    \u0275\u0275domElementStart(22, "td", 44);
+    \u0275\u0275domElementStart(22, "td", 48);
     \u0275\u0275text(23);
     \u0275\u0275pipe(24, "date");
     \u0275\u0275domElementEnd();
-    \u0275\u0275domElementStart(25, "td", 29)(26, "button", 45);
-    \u0275\u0275domListener("click", function DocumentTableComponent_Conditional_28_For_18_Template_button_click_26_listener() {
-      const doc_r7 = \u0275\u0275restoreView(_r6).$implicit;
-      const ctx_r2 = \u0275\u0275nextContext(2);
-      return \u0275\u0275resetView(ctx_r2.requestDelete.emit(doc_r7));
-    });
-    \u0275\u0275conditionalCreate(27, DocumentTableComponent_Conditional_28_For_18_Conditional_27_Template, 3, 0)(28, DocumentTableComponent_Conditional_28_For_18_Conditional_28_Template, 4, 0);
-    \u0275\u0275domElementEnd()()();
+    \u0275\u0275conditionalCreate(25, DocumentTableComponent_Conditional_28_For_17_Conditional_25_Template, 4, 2, "td", 33);
+    \u0275\u0275domElementEnd();
   }
   if (rf & 2) {
     const doc_r7 = ctx.$implicit;
@@ -480,47 +630,27 @@ function DocumentTableComponent_Conditional_28_For_18_Template(rf, ctx) {
     \u0275\u0275advance(6);
     \u0275\u0275textInterpolate(doc_r7.fragmentos);
     \u0275\u0275advance(2);
-    \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind2(24, 7, doc_r7.creado_en, "dd/MM/yyyy HH:mm"), " ");
-    \u0275\u0275advance(3);
-    \u0275\u0275domProperty("disabled", ctx_r2.deletingId() === doc_r7.documento_id);
-    \u0275\u0275advance();
-    \u0275\u0275conditional(ctx_r2.deletingId() === doc_r7.documento_id ? 27 : 28);
+    \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind2(24, 6, doc_r7.creado_en, "dd/MM/yyyy HH:mm"), " ");
+    \u0275\u0275advance(2);
+    \u0275\u0275conditional(ctx_r2.isAdmin() ? 25 : -1);
   }
 }
-function DocumentTableComponent_Conditional_28_Conditional_31_For_4_Template(rf, ctx) {
-  if (rf & 1) {
-    const _r9 = \u0275\u0275getCurrentView();
-    \u0275\u0275domElementStart(0, "button", 49);
-    \u0275\u0275domListener("click", function DocumentTableComponent_Conditional_28_Conditional_31_For_4_Template_button_click_0_listener() {
-      const page_r10 = \u0275\u0275restoreView(_r9).$implicit;
-      const ctx_r2 = \u0275\u0275nextContext(3);
-      return \u0275\u0275resetView(ctx_r2.goToPage(page_r10));
-    });
-    \u0275\u0275text(1);
-    \u0275\u0275domElementEnd();
-  }
-  if (rf & 2) {
-    const page_r10 = ctx.$implicit;
-    const ctx_r2 = \u0275\u0275nextContext(3);
-    \u0275\u0275classMap(ctx_r2.currentPage() === page_r10 ? "w-8 h-8 rounded-lg border text-xs font-extrabold transition-colors cursor-pointer bg-[#0050A1] text-white border-[#0050A1]" : "w-8 h-8 rounded-lg border border-slate-200 text-xs font-bold transition-colors cursor-pointer bg-white text-slate-700 hover:bg-slate-100");
-    \u0275\u0275advance();
-    \u0275\u0275textInterpolate1(" ", page_r10, " ");
-  }
-}
-function DocumentTableComponent_Conditional_28_Conditional_31_Template(rf, ctx) {
+function DocumentTableComponent_Conditional_28_Conditional_30_Template(rf, ctx) {
   if (rf & 1) {
     const _r8 = \u0275\u0275getCurrentView();
-    \u0275\u0275domElementStart(0, "div", 35)(1, "button", 47);
-    \u0275\u0275domListener("click", function DocumentTableComponent_Conditional_28_Conditional_31_Template_button_click_1_listener() {
+    \u0275\u0275domElementStart(0, "div", 39)(1, "button", 51);
+    \u0275\u0275domListener("click", function DocumentTableComponent_Conditional_28_Conditional_30_Template_button_click_1_listener() {
       \u0275\u0275restoreView(_r8);
       const ctx_r2 = \u0275\u0275nextContext(2);
       return \u0275\u0275resetView(ctx_r2.goToPage(ctx_r2.currentPage() - 1));
     });
     \u0275\u0275text(2, " \u2190 Anterior ");
     \u0275\u0275domElementEnd();
-    \u0275\u0275repeaterCreate(3, DocumentTableComponent_Conditional_28_Conditional_31_For_4_Template, 2, 3, "button", 48, \u0275\u0275repeaterTrackByIdentity);
-    \u0275\u0275domElementStart(5, "button", 47);
-    \u0275\u0275domListener("click", function DocumentTableComponent_Conditional_28_Conditional_31_Template_button_click_5_listener() {
+    \u0275\u0275domElementStart(3, "span", 52);
+    \u0275\u0275text(4);
+    \u0275\u0275domElementEnd();
+    \u0275\u0275domElementStart(5, "button", 51);
+    \u0275\u0275domListener("click", function DocumentTableComponent_Conditional_28_Conditional_30_Template_button_click_5_listener() {
       \u0275\u0275restoreView(_r8);
       const ctx_r2 = \u0275\u0275nextContext(2);
       return \u0275\u0275resetView(ctx_r2.goToPage(ctx_r2.currentPage() + 1));
@@ -532,56 +662,57 @@ function DocumentTableComponent_Conditional_28_Conditional_31_Template(rf, ctx) 
     const ctx_r2 = \u0275\u0275nextContext(2);
     \u0275\u0275advance();
     \u0275\u0275domProperty("disabled", ctx_r2.currentPage() === 1);
-    \u0275\u0275advance(2);
-    \u0275\u0275repeater(ctx_r2.pageNumbers());
-    \u0275\u0275advance(2);
+    \u0275\u0275advance(3);
+    \u0275\u0275textInterpolate2(" P\xE1gina ", ctx_r2.currentPage(), " de ", ctx_r2.totalPages(), " ");
+    \u0275\u0275advance();
     \u0275\u0275domProperty("disabled", ctx_r2.currentPage() === ctx_r2.totalPages());
   }
 }
 function DocumentTableComponent_Conditional_28_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275domElementStart(0, "div", 24)(1, "table", 25)(2, "thead")(3, "tr", 26)(4, "th", 27);
+    \u0275\u0275domElementStart(0, "div", 28)(1, "table", 29)(2, "thead")(3, "tr", 30)(4, "th", 31);
     \u0275\u0275text(5, "ID Documento");
     \u0275\u0275domElementEnd();
-    \u0275\u0275domElementStart(6, "th", 27);
+    \u0275\u0275domElementStart(6, "th", 31);
     \u0275\u0275text(7, "Fuente Oficial / T\xEDtulo");
     \u0275\u0275domElementEnd();
-    \u0275\u0275domElementStart(8, "th", 27);
+    \u0275\u0275domElementStart(8, "th", 31);
     \u0275\u0275text(9, "\xC1rea Origen");
     \u0275\u0275domElementEnd();
-    \u0275\u0275domElementStart(10, "th", 28);
+    \u0275\u0275domElementStart(10, "th", 32);
     \u0275\u0275text(11, "Fragmentos (Chunks)");
     \u0275\u0275domElementEnd();
-    \u0275\u0275domElementStart(12, "th", 27);
+    \u0275\u0275domElementStart(12, "th", 31);
     \u0275\u0275text(13, "Fecha Indexaci\xF3n");
     \u0275\u0275domElementEnd();
-    \u0275\u0275domElementStart(14, "th", 29);
-    \u0275\u0275text(15, "Acciones");
+    \u0275\u0275conditionalCreate(14, DocumentTableComponent_Conditional_28_Conditional_14_Template, 2, 0, "th", 33);
+    \u0275\u0275domElementEnd()();
+    \u0275\u0275domElementStart(15, "tbody", 34);
+    \u0275\u0275repeaterCreate(16, DocumentTableComponent_Conditional_28_For_17_Template, 26, 9, "tr", 35, _forTrack0);
     \u0275\u0275domElementEnd()()();
-    \u0275\u0275domElementStart(16, "tbody", 30);
-    \u0275\u0275repeaterCreate(17, DocumentTableComponent_Conditional_28_For_18_Template, 29, 10, "tr", 31, _forTrack0);
-    \u0275\u0275domElementEnd()()();
-    \u0275\u0275domElementStart(19, "div", 32)(20, "div", 33);
-    \u0275\u0275text(21, " Mostrando ");
-    \u0275\u0275domElementStart(22, "span", 34);
-    \u0275\u0275text(23);
+    \u0275\u0275domElementStart(18, "div", 36)(19, "div", 37);
+    \u0275\u0275text(20, " Mostrando ");
+    \u0275\u0275domElementStart(21, "span", 38);
+    \u0275\u0275text(22);
     \u0275\u0275domElementEnd();
-    \u0275\u0275text(24, " a ");
-    \u0275\u0275domElementStart(25, "span", 34);
-    \u0275\u0275text(26);
+    \u0275\u0275text(23, " a ");
+    \u0275\u0275domElementStart(24, "span", 38);
+    \u0275\u0275text(25);
     \u0275\u0275domElementEnd();
-    \u0275\u0275text(27, " de ");
-    \u0275\u0275domElementStart(28, "span", 34);
-    \u0275\u0275text(29);
+    \u0275\u0275text(26, " de ");
+    \u0275\u0275domElementStart(27, "span", 38);
+    \u0275\u0275text(28);
     \u0275\u0275domElementEnd();
-    \u0275\u0275text(30, " registros ");
+    \u0275\u0275text(29, " registros ");
     \u0275\u0275domElementEnd();
-    \u0275\u0275conditionalCreate(31, DocumentTableComponent_Conditional_28_Conditional_31_Template, 7, 2, "div", 35);
+    \u0275\u0275conditionalCreate(30, DocumentTableComponent_Conditional_28_Conditional_30_Template, 7, 4, "div", 39);
     \u0275\u0275domElementEnd();
   }
   if (rf & 2) {
     const ctx_r2 = \u0275\u0275nextContext();
-    \u0275\u0275advance(17);
+    \u0275\u0275advance(14);
+    \u0275\u0275conditional(ctx_r2.isAdmin() ? 14 : -1);
+    \u0275\u0275advance(2);
     \u0275\u0275repeater(ctx_r2.paginatedDocuments());
     \u0275\u0275advance(6);
     \u0275\u0275textInterpolate(ctx_r2.startIndex());
@@ -590,7 +721,7 @@ function DocumentTableComponent_Conditional_28_Template(rf, ctx) {
     \u0275\u0275advance(3);
     \u0275\u0275textInterpolate(ctx_r2.filteredDocuments().length);
     \u0275\u0275advance(2);
-    \u0275\u0275conditional(ctx_r2.totalPages() > 1 ? 31 : -1);
+    \u0275\u0275conditional(ctx_r2.totalPages() > 1 ? 30 : -1);
   }
 }
 var DocumentTableComponent = class _DocumentTableComponent {
@@ -603,6 +734,10 @@ var DocumentTableComponent = class _DocumentTableComponent {
     []
   ));
   deletingId = input(null, ...ngDevMode ? [{ debugName: "deletingId" }] : (
+    /* istanbul ignore next */
+    []
+  ));
+  isAdmin = input(true, ...ngDevMode ? [{ debugName: "isAdmin" }] : (
     /* istanbul ignore next */
     []
   ));
@@ -642,15 +777,15 @@ var DocumentTableComponent = class _DocumentTableComponent {
     const query = this.searchQuery().trim().toLowerCase();
     const area = this.selectedArea();
     return this.documentos().filter((doc) => {
-      const matchesArea = area === "TODOS" || doc.area_origen?.toUpperCase() === area;
-      const matchesQuery = !query || doc.documento_id.toLowerCase().includes(query) || doc.fuente.toLowerCase().includes(query) || doc.area_origen.toLowerCase().includes(query);
-      return matchesArea && matchesQuery;
+      const matchText = !query || doc.documento_id.toLowerCase().includes(query) || doc.fuente.toLowerCase().includes(query);
+      const matchArea = area === "TODOS" || doc.area_origen.toUpperCase() === area;
+      return matchText && matchArea;
     });
   }, ...ngDevMode ? [{ debugName: "filteredDocuments" }] : (
     /* istanbul ignore next */
     []
   ));
-  // Total de páginas
+  // Paginación reactiva
   totalPages = computed(() => {
     const total = this.filteredDocuments().length;
     return Math.max(1, Math.ceil(total / this.pageSize()));
@@ -658,7 +793,6 @@ var DocumentTableComponent = class _DocumentTableComponent {
     /* istanbul ignore next */
     []
   ));
-  // Documentos de la página actual
   paginatedDocuments = computed(() => {
     const page = Math.min(this.currentPage(), this.totalPages());
     const size = this.pageSize();
@@ -671,47 +805,30 @@ var DocumentTableComponent = class _DocumentTableComponent {
   startIndex = computed(() => {
     if (this.filteredDocuments().length === 0)
       return 0;
-    const page = Math.min(this.currentPage(), this.totalPages());
-    return (page - 1) * this.pageSize() + 1;
+    return (this.currentPage() - 1) * this.pageSize() + 1;
   }, ...ngDevMode ? [{ debugName: "startIndex" }] : (
     /* istanbul ignore next */
     []
   ));
   endIndex = computed(() => {
-    const total = this.filteredDocuments().length;
-    if (total === 0)
-      return 0;
-    const page = Math.min(this.currentPage(), this.totalPages());
-    return Math.min(page * this.pageSize(), total);
+    const calculated = this.currentPage() * this.pageSize();
+    return Math.min(calculated, this.filteredDocuments().length);
   }, ...ngDevMode ? [{ debugName: "endIndex" }] : (
     /* istanbul ignore next */
     []
   ));
-  pageNumbers = computed(() => {
-    const total = this.totalPages();
-    return Array.from({ length: total }, (_, i) => i + 1);
-  }, ...ngDevMode ? [{ debugName: "pageNumbers" }] : (
-    /* istanbul ignore next */
-    []
-  ));
-  onSearchChange(event) {
-    const value = event.target.value;
-    this.searchQuery.set(value);
+  onSearch(event) {
+    const val = event.target.value;
+    this.searchQuery.set(val);
     this.currentPage.set(1);
   }
-  onAreaChange(event) {
-    const value = event.target.value;
-    this.selectedArea.set(value);
+  onAreaSelect(area) {
+    this.selectedArea.set(area);
     this.currentPage.set(1);
   }
   onPageSizeChange(event) {
-    const value = Number(event.target.value);
-    this.pageSize.set(value);
-    this.currentPage.set(1);
-  }
-  clearFilters() {
-    this.searchQuery.set("");
-    this.selectedArea.set("TODOS");
+    const size = Number(event.target.value) || 5;
+    this.pageSize.set(size);
     this.currentPage.set(1);
   }
   goToPage(page) {
@@ -719,17 +836,22 @@ var DocumentTableComponent = class _DocumentTableComponent {
       this.currentPage.set(page);
     }
   }
+  clearFilters() {
+    this.searchQuery.set("");
+    this.selectedArea.set("TODOS");
+    this.currentPage.set(1);
+  }
   static \u0275fac = function DocumentTableComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _DocumentTableComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _DocumentTableComponent, selectors: [["app-document-table"]], inputs: { documentos: [1, "documentos"], isLoading: [1, "isLoading"], deletingId: [1, "deletingId"] }, outputs: { requestDelete: "requestDelete", openUpload: "openUpload" }, decls: 29, vars: 13, consts: [[1, "bg-white", "rounded-2xl", "border", "border-slate-200", "shadow-2xs", "overflow-hidden"], [1, "p-4", "sm:p-5", "border-b", "border-slate-200", "bg-slate-50/50", "flex", "flex-col", "md:flex-row", "md:items-center", "justify-between", "gap-3"], [1, "relative", "flex-1", "max-w-md"], [1, "absolute", "inset-y-0", "left-3", "flex", "items-center", "text-slate-400", "text-sm"], ["type", "text", "placeholder", "Buscar por ID, nombre de fuente o \xE1rea...", 1, "w-full", "pl-9", "pr-4", "py-2", "rounded-xl", "border", "border-slate-200", "bg-white", "text-sm", "text-slate-800", "placeholder-slate-400", "focus:outline-hidden", "focus:border-[#0050A1]", "focus:ring-2", "focus:ring-[#0050A1]/15", "transition-all", 3, "input", "value"], [1, "flex", "flex-wrap", "items-center", "gap-2.5"], [1, "flex", "items-center", "gap-2"], [1, "text-xs", "font-bold", "text-slate-600"], [1, "px-3", "py-2", "rounded-xl", "border", "border-slate-200", "bg-white", "text-xs", "font-bold", "text-slate-700", "focus:outline-hidden", "focus:border-[#0050A1]", "cursor-pointer", 3, "change", "value"], [3, "value"], [1, "px-2.5", "py-2", "rounded-xl", "border", "border-slate-200", "bg-white", "text-xs", "font-bold", "text-slate-700", "focus:outline-hidden", "focus:border-[#0050A1]", "cursor-pointer", 3, "change", "value"], [3, "value", "selected"], ["type", "button", 1, "px-3", "py-2", "rounded-xl", "text-xs", "font-bold", "text-[#BE002E]", "hover:bg-red-50", "transition-colors", "cursor-pointer"], [1, "p-12", "flex", "flex-col", "items-center", "justify-center", "text-center", "space-y-3"], [1, "p-12", "flex", "flex-col", "items-center", "justify-center", "text-center"], ["type", "button", 1, "px-3", "py-2", "rounded-xl", "text-xs", "font-bold", "text-[#BE002E]", "hover:bg-red-50", "transition-colors", "cursor-pointer", 3, "click"], [1, "w-10", "h-10", "border-4", "border-blue-100", "border-t-[#0050A1]", "rounded-full", "animate-spin"], [1, "text-sm", "font-bold", "text-[#0050A1]"], [1, "text-xs", "text-slate-400"], [1, "w-14", "h-14", "rounded-2xl", "bg-[#0050A1]/10", "flex", "items-center", "justify-center", "text-2xl", "mb-3"], [1, "text-base", "font-extrabold", "text-slate-800"], [1, "text-xs", "text-slate-500", "max-w-sm", "mt-1", "mb-4"], ["type", "button", 1, "px-4", "py-2", "rounded-xl", "bg-[#BE002E]", "text-white", "text-xs", "font-bold", "hover:bg-[#9e0026]", "transition-colors", "cursor-pointer", 3, "click"], ["type", "button", 1, "px-4", "py-2", "rounded-xl", "border", "border-slate-200", "text-[#0050A1]", "text-xs", "font-bold", "hover:bg-slate-50", "transition-colors", "cursor-pointer", 3, "click"], [1, "overflow-x-auto"], [1, "w-full", "text-left", "border-collapse"], [1, "bg-slate-50/80", "border-b", "border-slate-200", "text-[11px]", "font-extrabold", "text-[#0050A1]", "uppercase", "tracking-wider"], [1, "py-3.5", "px-4"], [1, "py-3.5", "px-4", "text-center"], [1, "py-3.5", "px-4", "text-right"], [1, "divide-y", "divide-slate-200/70", "text-sm"], [1, "doc-row", "hover:bg-slate-50/90", "transition-colors"], [1, "p-4", "border-t", "border-slate-200", "bg-slate-50/50", "flex", "flex-col", "sm:flex-row", "items-center", "justify-between", "gap-3"], [1, "text-xs", "text-slate-500"], [1, "font-bold", "text-slate-800"], [1, "flex", "items-center", "gap-1.5"], [1, "py-3.5", "px-4", "font-mono", "text-xs", "font-semibold", "text-slate-700"], [1, "px-2", "py-1", "rounded-md", "bg-slate-100", "border", "border-slate-200"], [1, "flex", "items-center", "gap-2.5"], [1, "text-base"], [1, "font-bold", "text-slate-900"], [1, "text-[11px]", "text-slate-400"], [1, "inline-flex", "items-center", "px-2.5", "py-0.5", "rounded-full", "text-xs", "font-bold", "bg-[#BE002E]/10", "text-[#BE002E]", "border", "border-[#BE002E]/25"], [1, "inline-flex", "items-center", "gap-1", "px-2.5", "py-1", "rounded-lg", "bg-[#0050A1]/10", "text-[#0050A1]", "font-extrabold", "text-xs", "border", "border-[#0050A1]/20"], [1, "py-3.5", "px-4", "text-xs", "text-slate-500", "font-medium"], ["type", "button", 1, "inline-flex", "items-center", "gap-1.5", "px-3", "py-1.5", "rounded-xl", "text-xs", "font-bold", "text-[#BE002E]", "hover:text-white", "hover:bg-[#BE002E]", "border", "border-[#BE002E]/30", "hover:border-[#BE002E]", "transition-all", "cursor-pointer", "disabled:opacity-50", 3, "click", "disabled"], [1, "w-3.5", "h-3.5", "border-2", "border-current", "border-t-transparent", "rounded-full", "animate-spin"], ["type", "button", 1, "px-3", "py-1.5", "rounded-lg", "border", "border-slate-200", "bg-white", "hover:bg-slate-100", "text-xs", "font-bold", "text-slate-700", "disabled:opacity-40", "disabled:cursor-not-allowed", "cursor-pointer", 3, "click", "disabled"], ["type", "button", 3, "class"], ["type", "button", 3, "click"]], template: function DocumentTableComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _DocumentTableComponent, selectors: [["app-document-table"]], inputs: { documentos: [1, "documentos"], isLoading: [1, "isLoading"], deletingId: [1, "deletingId"], isAdmin: [1, "isAdmin"] }, outputs: { requestDelete: "requestDelete", openUpload: "openUpload" }, decls: 29, vars: 9, consts: [[1, "bg-white", "rounded-2xl", "border", "border-slate-200", "shadow-2xs", "overflow-hidden"], [1, "p-4", "sm:p-5", "border-b", "border-slate-200", "bg-slate-50/50", "flex", "flex-col", "md:flex-row", "md:items-center", "justify-between", "gap-3"], [1, "relative", "flex-1", "max-w-md"], [1, "absolute", "inset-y-0", "left-3", "flex", "items-center", "text-slate-400", "text-sm"], ["type", "text", "placeholder", "Buscar por ID, nombre de fuente o \xE1rea...", 1, "w-full", "pl-9", "pr-4", "py-2", "rounded-xl", "border", "border-slate-200", "bg-white", "text-sm", "text-slate-800", "placeholder-slate-400", "focus:outline-hidden", "focus:border-[#0050A1]", "focus:ring-2", "focus:ring-[#0050A1]/15", "transition-all", 3, "input", "value"], [1, "flex", "flex-wrap", "items-center", "gap-2.5"], [1, "flex", "items-center", "gap-2"], [1, "text-xs", "font-bold", "text-slate-600"], [1, "px-3", "py-2", "rounded-xl", "border", "border-slate-200", "bg-white", "text-xs", "font-bold", "text-slate-700", "focus:outline-hidden", "focus:border-[#0050A1]", "cursor-pointer", 3, "change", "value"], [3, "value"], [1, "px-2.5", "py-2", "rounded-xl", "border", "border-slate-200", "bg-white", "text-xs", "font-bold", "text-slate-700", "focus:outline-hidden", "focus:border-[#0050A1]", "cursor-pointer", 3, "change", "value"], ["value", "5", 3, "selected"], ["value", "10", 3, "selected"], ["value", "20", 3, "selected"], ["value", "50", 3, "selected"], ["type", "button", 1, "px-3", "py-2", "rounded-xl", "text-xs", "font-bold", "text-[#BE002E]", "hover:bg-red-50", "transition-colors", "cursor-pointer"], [1, "p-12", "flex", "flex-col", "items-center", "justify-center", "text-center", "space-y-3"], [1, "p-12", "flex", "flex-col", "items-center", "justify-center", "text-center"], ["type", "button", 1, "px-3", "py-2", "rounded-xl", "text-xs", "font-bold", "text-[#BE002E]", "hover:bg-red-50", "transition-colors", "cursor-pointer", 3, "click"], [1, "w-10", "h-10", "border-4", "border-blue-100", "border-t-[#0050A1]", "rounded-full", "animate-spin"], [1, "text-sm", "font-bold", "text-[#0050A1]"], [1, "text-xs", "text-slate-400"], [1, "w-14", "h-14", "rounded-2xl", "bg-[#0050A1]/10", "flex", "items-center", "justify-center", "text-2xl", "mb-3"], [1, "text-base", "font-extrabold", "text-slate-800"], [1, "text-xs", "text-slate-500", "max-w-sm", "mt-1", "mb-4"], ["type", "button", 1, "px-4", "py-2", "rounded-xl", "bg-[#BE002E]", "text-white", "text-xs", "font-bold", "hover:bg-[#9e0026]", "transition-colors", "cursor-pointer"], ["type", "button", 1, "px-4", "py-2", "rounded-xl", "bg-[#BE002E]", "text-white", "text-xs", "font-bold", "hover:bg-[#9e0026]", "transition-colors", "cursor-pointer", 3, "click"], ["type", "button", 1, "px-4", "py-2", "rounded-xl", "border", "border-slate-200", "text-[#0050A1]", "text-xs", "font-bold", "hover:bg-slate-50", "transition-colors", "cursor-pointer", 3, "click"], [1, "overflow-x-auto"], [1, "w-full", "text-left", "border-collapse"], [1, "bg-slate-50/80", "border-b", "border-slate-200", "text-[11px]", "font-extrabold", "text-[#0050A1]", "uppercase", "tracking-wider"], [1, "py-3.5", "px-4"], [1, "py-3.5", "px-4", "text-center"], [1, "py-3.5", "px-4", "text-right"], [1, "divide-y", "divide-slate-200/70", "text-sm"], [1, "doc-row", "hover:bg-slate-50/90", "transition-colors"], [1, "p-4", "border-t", "border-slate-200", "bg-slate-50/50", "flex", "flex-col", "sm:flex-row", "items-center", "justify-between", "gap-3"], [1, "text-xs", "text-slate-500"], [1, "font-bold", "text-slate-800"], [1, "flex", "items-center", "gap-1.5"], [1, "py-3.5", "px-4", "font-mono", "text-xs", "font-semibold", "text-slate-700"], [1, "px-2", "py-1", "rounded-md", "bg-slate-100", "border", "border-slate-200"], [1, "flex", "items-center", "gap-2.5"], [1, "text-base"], [1, "font-bold", "text-slate-900"], [1, "text-[11px]", "text-slate-400"], [1, "inline-flex", "items-center", "px-2.5", "py-0.5", "rounded-full", "text-xs", "font-bold", "bg-[#BE002E]/10", "text-[#BE002E]", "border", "border-[#BE002E]/25"], [1, "inline-flex", "items-center", "gap-1", "px-2.5", "py-1", "rounded-lg", "bg-[#0050A1]/10", "text-[#0050A1]", "font-extrabold", "text-xs", "border", "border-[#0050A1]/20"], [1, "py-3.5", "px-4", "text-xs", "text-slate-500", "font-medium"], ["type", "button", 1, "inline-flex", "items-center", "gap-1.5", "px-3", "py-1.5", "rounded-xl", "text-xs", "font-bold", "text-[#BE002E]", "hover:text-white", "hover:bg-[#BE002E]", "border", "border-[#BE002E]/30", "hover:border-[#BE002E]", "transition-all", "cursor-pointer", "disabled:opacity-50", 3, "click", "disabled"], [1, "w-3.5", "h-3.5", "border-2", "border-current", "border-t-transparent", "rounded-full", "animate-spin"], ["type", "button", 1, "px-3", "py-1.5", "rounded-lg", "border", "border-slate-200", "bg-white", "hover:bg-slate-100", "text-xs", "font-bold", "text-slate-700", "disabled:opacity-40", "disabled:cursor-not-allowed", "cursor-pointer", 3, "click", "disabled"], [1, "px-2", "text-xs", "font-bold", "text-slate-600"]], template: function DocumentTableComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275domElementStart(0, "div", 0)(1, "div", 1)(2, "div", 2)(3, "span", 3);
       \u0275\u0275text(4, "\u{1F50D}");
       \u0275\u0275domElementEnd();
       \u0275\u0275domElementStart(5, "input", 4);
       \u0275\u0275domListener("input", function DocumentTableComponent_Template_input_input_5_listener($event) {
-        return ctx.onSearchChange($event);
+        return ctx.onSearch($event);
       });
       \u0275\u0275domElementEnd()();
       \u0275\u0275domElementStart(6, "div", 5)(7, "div", 6)(8, "label", 7);
@@ -737,7 +859,7 @@ var DocumentTableComponent = class _DocumentTableComponent {
       \u0275\u0275domElementEnd();
       \u0275\u0275domElementStart(10, "select", 8);
       \u0275\u0275domListener("change", function DocumentTableComponent_Template_select_change_10_listener($event) {
-        return ctx.onAreaChange($event);
+        return ctx.onAreaSelect($event.target.value);
       });
       \u0275\u0275repeaterCreate(11, DocumentTableComponent_For_12_Template, 2, 2, "option", 9, \u0275\u0275repeaterTrackByIdentity);
       \u0275\u0275domElementEnd()();
@@ -751,18 +873,18 @@ var DocumentTableComponent = class _DocumentTableComponent {
       \u0275\u0275domElementStart(17, "option", 11);
       \u0275\u0275text(18, "5 filas");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(19, "option", 11);
+      \u0275\u0275domElementStart(19, "option", 12);
       \u0275\u0275text(20, "10 filas");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(21, "option", 11);
+      \u0275\u0275domElementStart(21, "option", 13);
       \u0275\u0275text(22, "20 filas");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(23, "option", 11);
+      \u0275\u0275domElementStart(23, "option", 14);
       \u0275\u0275text(24, "50 filas");
       \u0275\u0275domElementEnd()()();
-      \u0275\u0275conditionalCreate(25, DocumentTableComponent_Conditional_25_Template, 2, 0, "button", 12);
+      \u0275\u0275conditionalCreate(25, DocumentTableComponent_Conditional_25_Template, 2, 0, "button", 15);
       \u0275\u0275domElementEnd()();
-      \u0275\u0275conditionalCreate(26, DocumentTableComponent_Conditional_26_Template, 6, 0, "div", 13)(27, DocumentTableComponent_Conditional_27_Template, 5, 1, "div", 14)(28, DocumentTableComponent_Conditional_28_Template, 32, 4);
+      \u0275\u0275conditionalCreate(26, DocumentTableComponent_Conditional_26_Template, 6, 0, "div", 16)(27, DocumentTableComponent_Conditional_27_Template, 5, 1, "div", 17)(28, DocumentTableComponent_Conditional_28_Template, 31, 5);
       \u0275\u0275domElementEnd();
     }
     if (rf & 2) {
@@ -775,13 +897,13 @@ var DocumentTableComponent = class _DocumentTableComponent {
       \u0275\u0275advance(5);
       \u0275\u0275domProperty("value", ctx.pageSize());
       \u0275\u0275advance();
-      \u0275\u0275domProperty("value", 5)("selected", ctx.pageSize() === 5);
+      \u0275\u0275domProperty("selected", ctx.pageSize() === 5);
       \u0275\u0275advance(2);
-      \u0275\u0275domProperty("value", 10)("selected", ctx.pageSize() === 10);
+      \u0275\u0275domProperty("selected", ctx.pageSize() === 10);
       \u0275\u0275advance(2);
-      \u0275\u0275domProperty("value", 20)("selected", ctx.pageSize() === 20);
+      \u0275\u0275domProperty("selected", ctx.pageSize() === 20);
       \u0275\u0275advance(2);
-      \u0275\u0275domProperty("value", 50)("selected", ctx.pageSize() === 50);
+      \u0275\u0275domProperty("selected", ctx.pageSize() === 50);
       \u0275\u0275advance(2);
       \u0275\u0275conditional(ctx.searchQuery() || ctx.selectedArea() !== "TODOS" ? 25 : -1);
       \u0275\u0275advance();
@@ -803,7 +925,7 @@ var DocumentTableComponent = class _DocumentTableComponent {
       <input
         type="text"
         [value]="searchQuery()"
-        (input)="onSearchChange($event)"
+        (input)="onSearch($event)"
         placeholder="Buscar por ID, nombre de fuente o \xE1rea..."
         class="w-full pl-9 pr-4 py-2 rounded-xl border border-slate-200 bg-white text-sm text-slate-800 placeholder-slate-400 focus:outline-hidden focus:border-[#0050A1] focus:ring-2 focus:ring-[#0050A1]/15 transition-all"
       />
@@ -815,7 +937,7 @@ var DocumentTableComponent = class _DocumentTableComponent {
         <label class="text-xs font-bold text-slate-600">\xC1rea:</label>
         <select
           [value]="selectedArea()"
-          (change)="onAreaChange($event)"
+          (change)="onAreaSelect($any($event.target).value)"
           class="px-3 py-2 rounded-xl border border-slate-200 bg-white text-xs font-bold text-slate-700 focus:outline-hidden focus:border-[#0050A1] cursor-pointer">
           @for (area of areasDisponibles(); track area) {
             <option [value]="area">{{ area === 'TODOS' ? 'Todas las \xE1reas' : area }}</option>
@@ -829,10 +951,10 @@ var DocumentTableComponent = class _DocumentTableComponent {
           [value]="pageSize()"
           (change)="onPageSizeChange($event)"
           class="px-2.5 py-2 rounded-xl border border-slate-200 bg-white text-xs font-bold text-slate-700 focus:outline-hidden focus:border-[#0050A1] cursor-pointer">
-          <option [value]="5" [selected]="pageSize() === 5">5 filas</option>
-          <option [value]="10" [selected]="pageSize() === 10">10 filas</option>
-          <option [value]="20" [selected]="pageSize() === 20">20 filas</option>
-          <option [value]="50" [selected]="pageSize() === 50">50 filas</option>
+          <option value="5" [selected]="pageSize() === 5">5 filas</option>
+          <option value="10" [selected]="pageSize() === 10">10 filas</option>
+          <option value="20" [selected]="pageSize() === 20">20 filas</option>
+          <option value="50" [selected]="pageSize() === 50">50 filas</option>
         </select>
       </div>
 
@@ -865,12 +987,14 @@ var DocumentTableComponent = class _DocumentTableComponent {
         <p class="text-xs text-slate-500 max-w-sm mt-1 mb-4">
           Comienza subiendo reglamentos en PDF, Word o Markdown para que el Asistente Virtual pueda responder consultas oficiales.
         </p>
-        <button
-          type="button"
-          (click)="openUpload.emit()"
-          class="px-4 py-2 rounded-xl bg-[#BE002E] text-white text-xs font-bold hover:bg-[#9e0026] transition-colors cursor-pointer">
-          \u2795 Subir primer documento
-        </button>
+        @if (isAdmin()) {
+          <button
+            type="button"
+            (click)="openUpload.emit()"
+            class="px-4 py-2 rounded-xl bg-[#BE002E] text-white text-xs font-bold hover:bg-[#9e0026] transition-colors cursor-pointer">
+            \u2795 Subir primer documento
+          </button>
+        }
       } @else {
         <h3 class="text-base font-extrabold text-slate-800">Sin coincidencias para tu b\xFAsqueda</h3>
         <p class="text-xs text-slate-500 max-w-sm mt-1 mb-4">
@@ -895,7 +1019,9 @@ var DocumentTableComponent = class _DocumentTableComponent {
             <th class="py-3.5 px-4">\xC1rea Origen</th>
             <th class="py-3.5 px-4 text-center">Fragmentos (Chunks)</th>
             <th class="py-3.5 px-4">Fecha Indexaci\xF3n</th>
-            <th class="py-3.5 px-4 text-right">Acciones</th>
+            @if (isAdmin()) {
+              <th class="py-3.5 px-4 text-right">Acciones</th>
+            }
           </tr>
         </thead>
         <tbody class="divide-y divide-slate-200/70 text-sm">
@@ -940,22 +1066,24 @@ var DocumentTableComponent = class _DocumentTableComponent {
                 {{ doc.creado_en | date:'dd/MM/yyyy HH:mm' }}
               </td>
 
-              <!-- Acciones -->
-              <td class="py-3.5 px-4 text-right">
-                <button
-                  type="button"
-                  (click)="requestDelete.emit(doc)"
-                  [disabled]="deletingId() === doc.documento_id"
-                  class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold text-[#BE002E] hover:text-white hover:bg-[#BE002E] border border-[#BE002E]/30 hover:border-[#BE002E] transition-all cursor-pointer disabled:opacity-50">
-                  @if (deletingId() === doc.documento_id) {
-                    <span class="w-3.5 h-3.5 border-2 border-current border-t-transparent rounded-full animate-spin"></span>
-                    <span>Eliminando...</span>
-                  } @else {
-                    <span>\u{1F5D1}\uFE0F</span>
-                    <span>Eliminar</span>
-                  }
-                </button>
-              </td>
+              <!-- Acciones (Solo Admin) -->
+              @if (isAdmin()) {
+                <td class="py-3.5 px-4 text-right">
+                  <button
+                    type="button"
+                    (click)="requestDelete.emit(doc)"
+                    [disabled]="deletingId() === doc.documento_id"
+                    class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold text-[#BE002E] hover:text-white hover:bg-[#BE002E] border border-[#BE002E]/30 hover:border-[#BE002E] transition-all cursor-pointer disabled:opacity-50">
+                    @if (deletingId() === doc.documento_id) {
+                      <span class="w-3.5 h-3.5 border-2 border-current border-t-transparent rounded-full animate-spin"></span>
+                      <span>Eliminando...</span>
+                    } @else {
+                      <span>\u{1F5D1}\uFE0F</span>
+                      <span>Eliminar</span>
+                    }
+                  </button>
+                </td>
+              }
 
             </tr>
           }
@@ -981,16 +1109,9 @@ var DocumentTableComponent = class _DocumentTableComponent {
             \u2190 Anterior
           </button>
 
-          @for (page of pageNumbers(); track page) {
-            <button
-              type="button"
-              (click)="goToPage(page)"
-              [class]="currentPage() === page
-                ? 'w-8 h-8 rounded-lg border text-xs font-extrabold transition-colors cursor-pointer bg-[#0050A1] text-white border-[#0050A1]'
-                : 'w-8 h-8 rounded-lg border border-slate-200 text-xs font-bold transition-colors cursor-pointer bg-white text-slate-700 hover:bg-slate-100'">
-              {{ page }}
-            </button>
-          }
+          <span class="px-2 text-xs font-bold text-slate-600">
+            P\xE1gina {{ currentPage() }} de {{ totalPages() }}
+          </span>
 
           <button
             type="button"
@@ -1006,7 +1127,7 @@ var DocumentTableComponent = class _DocumentTableComponent {
 
 </div>
 `, styles: ["/* src/app/features/backoffice/components/document-table/document-table.component.css */\n.doc-row {\n  transition: background-color 0.15s ease;\n}\n"] }]
-  }], null, { documentos: [{ type: Input, args: [{ isSignal: true, alias: "documentos", required: true }] }], isLoading: [{ type: Input, args: [{ isSignal: true, alias: "isLoading", required: false }] }], deletingId: [{ type: Input, args: [{ isSignal: true, alias: "deletingId", required: false }] }], requestDelete: [{ type: Output, args: ["requestDelete"] }], openUpload: [{ type: Output, args: ["openUpload"] }] });
+  }], null, { documentos: [{ type: Input, args: [{ isSignal: true, alias: "documentos", required: true }] }], isLoading: [{ type: Input, args: [{ isSignal: true, alias: "isLoading", required: false }] }], deletingId: [{ type: Input, args: [{ isSignal: true, alias: "deletingId", required: false }] }], isAdmin: [{ type: Input, args: [{ isSignal: true, alias: "isAdmin", required: false }] }], requestDelete: [{ type: Output, args: ["requestDelete"] }], openUpload: [{ type: Output, args: ["openUpload"] }] });
 })();
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(DocumentTableComponent, { className: "DocumentTableComponent", filePath: "src/app/features/backoffice/components/document-table/document-table.component.ts", lineNumber: 12 });
@@ -2382,7 +2503,7 @@ var _forTrack03 = ($index, $item) => $item.id;
 function AdminDashboardComponent_Conditional_19_Template(rf, ctx) {
   if (rf & 1) {
     const _r1 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "app-admin-stats", 12);
+    \u0275\u0275elementStart(0, "app-admin-stats", 10);
     \u0275\u0275listener("openUpload", function AdminDashboardComponent_Conditional_19_Template_app_admin_stats_openUpload_0_listener() {
       \u0275\u0275restoreView(_r1);
       const ctx_r1 = \u0275\u0275nextContext();
@@ -2393,7 +2514,7 @@ function AdminDashboardComponent_Conditional_19_Template(rf, ctx) {
       return \u0275\u0275resetView(ctx_r1.cargarDocumentos());
     });
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(1, "app-document-table", 13);
+    \u0275\u0275elementStart(1, "app-document-table", 11);
     \u0275\u0275listener("requestDelete", function AdminDashboardComponent_Conditional_19_Template_app_document_table_requestDelete_1_listener($event) {
       \u0275\u0275restoreView(_r1);
       const ctx_r1 = \u0275\u0275nextContext();
@@ -2407,15 +2528,15 @@ function AdminDashboardComponent_Conditional_19_Template(rf, ctx) {
   }
   if (rf & 2) {
     const ctx_r1 = \u0275\u0275nextContext();
-    \u0275\u0275property("totalDocumentos", ctx_r1.totalDocumentos())("totalFragmentos", ctx_r1.totalFragmentos())("isLoading", ctx_r1.isLoadingList());
+    \u0275\u0275property("totalDocumentos", ctx_r1.totalDocumentos())("totalFragmentos", ctx_r1.totalFragmentos())("isLoading", ctx_r1.isLoadingList())("isAdmin", ctx_r1.isAdmin());
     \u0275\u0275advance();
-    \u0275\u0275property("documentos", ctx_r1.documentos())("isLoading", ctx_r1.isLoadingList())("deletingId", ctx_r1.deletingId());
+    \u0275\u0275property("documentos", ctx_r1.documentos())("isLoading", ctx_r1.isLoadingList())("deletingId", ctx_r1.deletingId())("isAdmin", ctx_r1.isAdmin());
   }
 }
 function AdminDashboardComponent_Conditional_20_Template(rf, ctx) {
   if (rf & 1) {
     const _r3 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "app-feedback-panel", 14);
+    \u0275\u0275elementStart(0, "app-feedback-panel", 12);
     \u0275\u0275listener("refresh", function AdminDashboardComponent_Conditional_20_Template_app_feedback_panel_refresh_0_listener() {
       \u0275\u0275restoreView(_r3);
       const ctx_r1 = \u0275\u0275nextContext();
@@ -2428,51 +2549,70 @@ function AdminDashboardComponent_Conditional_20_Template(rf, ctx) {
     \u0275\u0275property("items", ctx_r1.feedbackItems())("totalFeedback", ctx_r1.totalFeedback())("totalSi", ctx_r1.totalSi())("totalParcial", ctx_r1.totalParcial())("totalNo", ctx_r1.totalNo())("porcentajeSatisfaccion", ctx_r1.porcentajeSatisfaccion())("isLoading", ctx_r1.isLoadingFeedback());
   }
 }
-function AdminDashboardComponent_For_26_Conditional_3_Template(rf, ctx) {
-  if (rf & 1) {
-    \u0275\u0275text(0, " \u2705 ");
-  }
-}
-function AdminDashboardComponent_For_26_Conditional_4_Template(rf, ctx) {
-  if (rf & 1) {
-    \u0275\u0275text(0, " \u274C ");
-  }
-}
-function AdminDashboardComponent_For_26_Conditional_5_Template(rf, ctx) {
-  if (rf & 1) {
-    \u0275\u0275text(0, " \u2139\uFE0F ");
-  }
-}
-function AdminDashboardComponent_For_26_Template(rf, ctx) {
+function AdminDashboardComponent_Conditional_21_Template(rf, ctx) {
   if (rf & 1) {
     const _r4 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "div")(1, "div", 15)(2, "span", 16);
-    \u0275\u0275conditionalCreate(3, AdminDashboardComponent_For_26_Conditional_3_Template, 1, 0)(4, AdminDashboardComponent_For_26_Conditional_4_Template, 1, 0)(5, AdminDashboardComponent_For_26_Conditional_5_Template, 1, 0);
-    \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(6, "div")(7, "div", 17);
-    \u0275\u0275text(8);
-    \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(9, "div", 18);
-    \u0275\u0275text(10);
-    \u0275\u0275elementEnd()()();
-    \u0275\u0275elementStart(11, "button", 19);
-    \u0275\u0275listener("click", function AdminDashboardComponent_For_26_Template_button_click_11_listener() {
-      const toast_r5 = \u0275\u0275restoreView(_r4).$implicit;
+    \u0275\u0275elementStart(0, "app-document-upload-modal", 13, 0);
+    \u0275\u0275listener("close", function AdminDashboardComponent_Conditional_21_Template_app_document_upload_modal_close_0_listener() {
+      \u0275\u0275restoreView(_r4);
       const ctx_r1 = \u0275\u0275nextContext();
-      return \u0275\u0275resetView(ctx_r1.dismissToast(toast_r5.id));
+      return \u0275\u0275resetView(ctx_r1.closeUploadModal());
+    })("upload", function AdminDashboardComponent_Conditional_21_Template_app_document_upload_modal_upload_0_listener($event) {
+      \u0275\u0275restoreView(_r4);
+      const ctx_r1 = \u0275\u0275nextContext();
+      return \u0275\u0275resetView(ctx_r1.onUploadDocument($event));
     });
-    \u0275\u0275text(12, " \u2715 ");
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(2, "app-confirm-delete-modal", 14);
+    \u0275\u0275listener("close", function AdminDashboardComponent_Conditional_21_Template_app_confirm_delete_modal_close_2_listener() {
+      \u0275\u0275restoreView(_r4);
+      const ctx_r1 = \u0275\u0275nextContext();
+      return \u0275\u0275resetView(ctx_r1.onCancelDelete());
+    })("confirm", function AdminDashboardComponent_Conditional_21_Template_app_confirm_delete_modal_confirm_2_listener() {
+      \u0275\u0275restoreView(_r4);
+      const ctx_r1 = \u0275\u0275nextContext();
+      return \u0275\u0275resetView(ctx_r1.onConfirmDelete());
+    });
+    \u0275\u0275elementEnd();
+  }
+  if (rf & 2) {
+    let tmp_4_0;
+    const ctx_r1 = \u0275\u0275nextContext();
+    \u0275\u0275property("isOpen", ctx_r1.isUploadModalOpen())("isUploading", ctx_r1.isUploading())("defaultArea", ((tmp_4_0 = ctx_r1.session()) == null ? null : tmp_4_0.areaDefault) || "GENERAL");
+    \u0275\u0275advance(2);
+    \u0275\u0275property("documento", ctx_r1.docToDelete())("isDeleting", !!ctx_r1.deletingId());
+  }
+}
+function AdminDashboardComponent_For_24_Template(rf, ctx) {
+  if (rf & 1) {
+    const _r5 = \u0275\u0275getCurrentView();
+    \u0275\u0275elementStart(0, "div", 15)(1, "span", 16);
+    \u0275\u0275text(2);
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(3, "div", 17)(4, "div", 18);
+    \u0275\u0275text(5);
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(6, "div", 19);
+    \u0275\u0275text(7);
+    \u0275\u0275elementEnd()();
+    \u0275\u0275elementStart(8, "button", 20);
+    \u0275\u0275listener("click", function AdminDashboardComponent_For_24_Template_button_click_8_listener() {
+      const toast_r6 = \u0275\u0275restoreView(_r5).$implicit;
+      const ctx_r1 = \u0275\u0275nextContext();
+      return \u0275\u0275resetView(ctx_r1.removeToast(toast_r6.id));
+    });
+    \u0275\u0275text(9, " \u2715 ");
     \u0275\u0275elementEnd()();
   }
   if (rf & 2) {
-    const toast_r5 = ctx.$implicit;
-    \u0275\u0275classMap(toast_r5.type === "success" ? "toast-item pointer-events-auto p-4 rounded-2xl shadow-xl border flex items-start justify-between gap-3 bg-white border-emerald-200 border-l-4 border-l-emerald-500" : toast_r5.type === "error" ? "toast-item pointer-events-auto p-4 rounded-2xl shadow-xl border flex items-start justify-between gap-3 bg-white border-red-200 border-l-4 border-l-[#BE002E]" : "toast-item pointer-events-auto p-4 rounded-2xl shadow-xl border flex items-start justify-between gap-3 bg-white border-blue-200 border-l-4 border-l-[#0050A1]");
-    \u0275\u0275advance(3);
-    \u0275\u0275conditional(toast_r5.type === "success" ? 3 : toast_r5.type === "error" ? 4 : 5);
-    \u0275\u0275advance(5);
-    \u0275\u0275textInterpolate(toast_r5.title);
+    const toast_r6 = ctx.$implicit;
+    \u0275\u0275classMap(toast_r6.type === "success" ? "bg-emerald-50 border-emerald-200 text-emerald-900" : toast_r6.type === "error" ? "bg-red-50 border-red-200 text-[#BE002E]" : "bg-blue-50 border-blue-200 text-[#0050A1]");
     \u0275\u0275advance(2);
-    \u0275\u0275textInterpolate(toast_r5.message);
+    \u0275\u0275textInterpolate1(" ", toast_r6.type === "success" ? "\u2705" : toast_r6.type === "error" ? "\u274C" : "\u2139\uFE0F", " ");
+    \u0275\u0275advance(3);
+    \u0275\u0275textInterpolate(toast_r6.title);
+    \u0275\u0275advance(2);
+    \u0275\u0275textInterpolate(toast_r6.message);
   }
 }
 var AdminDashboardComponent = class _AdminDashboardComponent {
@@ -2483,6 +2623,7 @@ var AdminDashboardComponent = class _AdminDashboardComponent {
     []
   ));
   session = this.backofficeService.currentSession;
+  isAdmin = this.backofficeService.isAdmin;
   activeTab = signal("documentos", ...ngDevMode ? [{ debugName: "activeTab" }] : (
     /* istanbul ignore next */
     []
@@ -2557,22 +2698,19 @@ var AdminDashboardComponent = class _AdminDashboardComponent {
   }
   setTab(tab) {
     this.activeTab.set(tab);
-    if (tab === "feedback") {
-      this.cargarFeedback();
-    }
   }
   cargarDocumentos() {
     this.isLoadingList.set(true);
     this.backofficeService.listarDocumentos().subscribe({
       next: (res) => {
-        this.documentos.set(res.documentos || []);
-        this.totalDocumentos.set(res.total_documentos ?? res.documentos.length);
-        this.totalFragmentos.set(res.total_fragmentos ?? 0);
+        this.documentos.set(res.documentos);
+        this.totalDocumentos.set(res.total_documentos);
+        this.totalFragmentos.set(res.total_fragmentos);
         this.isLoadingList.set(false);
       },
       error: (err) => {
         this.isLoadingList.set(false);
-        this.showToast("error", "Error al cargar documentos", err.message);
+        this.addToast("error", "Error al cargar documentos", err.message);
       }
     });
   }
@@ -2580,64 +2718,71 @@ var AdminDashboardComponent = class _AdminDashboardComponent {
     this.isLoadingFeedback.set(true);
     this.backofficeService.listarFeedback().subscribe({
       next: (res) => {
-        this.feedbackItems.set(res.items || []);
-        this.totalFeedback.set(res.total_feedback ?? 0);
-        this.totalSi.set(res.total_si ?? 0);
-        this.totalParcial.set(res.total_parcial ?? 0);
-        this.totalNo.set(res.total_no ?? 0);
-        this.porcentajeSatisfaccion.set(res.porcentaje_satisfaccion ?? 0);
+        this.feedbackItems.set(res.items);
+        this.totalFeedback.set(res.total_feedback);
+        this.totalSi.set(res.total_si);
+        this.totalParcial.set(res.total_parcial);
+        this.totalNo.set(res.total_no);
+        this.porcentajeSatisfaccion.set(res.porcentaje_satisfaccion);
         this.isLoadingFeedback.set(false);
       },
       error: (err) => {
         this.isLoadingFeedback.set(false);
-        this.showToast("error", "Error al cargar comentarios", err.message);
+        this.addToast("error", "Error al cargar feedback", err.message);
       }
     });
   }
   openUploadModal() {
+    if (!this.isAdmin())
+      return;
     this.isUploadModalOpen.set(true);
   }
   closeUploadModal() {
     this.isUploadModalOpen.set(false);
   }
-  onUploadDocument(payload) {
+  onUploadDocument(data) {
+    if (!this.isAdmin())
+      return;
     this.isUploading.set(true);
-    this.backofficeService.indexarDocumento(payload).subscribe({
+    this.backofficeService.indexarDocumento(data).subscribe({
       next: (res) => {
         this.isUploading.set(false);
-        this.isUploadModalOpen.set(false);
+        this.closeUploadModal();
         this.uploadModal()?.resetForm();
-        this.showToast("success", "Documento indexado con \xE9xito", `Se guardaron ${res.fragmentos_indexados} fragmentos vectoriales para "${payload.fuente}".`);
+        this.addToast("success", "Documento indexado con \xE9xito", `Se generaron y almacenaron ${res.fragmentos_indexados} fragmentos vectoriales en PostgreSQL.`);
         this.cargarDocumentos();
       },
       error: (err) => {
         this.isUploading.set(false);
-        this.showToast("error", "Error en la ingesta", err.message);
+        this.addToast("error", "Fallo al procesar documento", err.message);
       }
     });
   }
   onRequestDelete(doc) {
+    if (!this.isAdmin())
+      return;
     this.docToDelete.set(doc);
   }
   onCancelDelete() {
-    if (this.deletingId())
-      return;
     this.docToDelete.set(null);
   }
-  onConfirmDelete(documentoId) {
-    this.deletingId.set(documentoId);
-    const fuenteName = this.docToDelete()?.fuente || documentoId;
-    this.backofficeService.eliminarDocumento(documentoId).subscribe({
+  onConfirmDelete() {
+    if (!this.isAdmin())
+      return;
+    const doc = this.docToDelete();
+    if (!doc)
+      return;
+    this.deletingId.set(doc.documento_id);
+    this.docToDelete.set(null);
+    this.backofficeService.eliminarDocumento(doc.documento_id).subscribe({
       next: () => {
         this.deletingId.set(null);
-        this.docToDelete.set(null);
-        this.showToast("info", "Documento eliminado", `Se elimin\xF3 "${fuenteName}" y todos sus vectores de PostgreSQL.`);
+        this.addToast("success", "Documento eliminado", `El documento '${doc.fuente}' y sus fragmentos fueron eliminados.`);
         this.cargarDocumentos();
       },
       error: (err) => {
         this.deletingId.set(null);
-        this.docToDelete.set(null);
-        this.showToast("error", "No se pudo eliminar", err.message);
+        this.addToast("error", "Error al eliminar", err.message);
       }
     });
   }
@@ -2645,15 +2790,16 @@ var AdminDashboardComponent = class _AdminDashboardComponent {
     this.backofficeService.logout();
     this.router.navigate(["/backoffice/login"]);
   }
-  showToast(type, title, message) {
-    const id = "toast_" + Date.now();
-    this.toasts.update((list) => [...list, { id, type, title, message }]);
+  addToast(type, title, message) {
+    const id = `${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
+    const toast = { id, type, title, message };
+    this.toasts.update((current) => [...current, toast]);
     setTimeout(() => {
-      this.dismissToast(id);
-    }, 5e3);
+      this.removeToast(id);
+    }, 4500);
   }
-  dismissToast(id) {
-    this.toasts.update((list) => list.filter((t) => t.id !== id));
+  removeToast(id) {
+    this.toasts.update((current) => current.filter((t) => t.id !== id));
   }
   static \u0275fac = function AdminDashboardComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _AdminDashboardComponent)();
@@ -2665,7 +2811,7 @@ var AdminDashboardComponent = class _AdminDashboardComponent {
     if (rf & 2) {
       \u0275\u0275queryAdvance();
     }
-  }, decls: 27, vars: 18, consts: [["uploadModal", ""], [1, "min-h-dvh", "bg-white", "flex", "flex-col"], [3, "logout", "session"], [1, "flex-1", "w-full", "px-4", "sm:px-6", "lg:px-10", "py-6", "space-y-6", "bg-white"], [1, "flex", "flex-wrap", "items-center", "justify-between", "gap-4", "border-b", "border-slate-200", "pb-4"], [1, "inline-flex", "p-1.5", "rounded-2xl", "bg-slate-100", "border", "border-slate-200", "gap-1.5"], ["type", "button", 3, "click"], [3, "items", "totalFeedback", "totalSi", "totalParcial", "totalNo", "porcentajeSatisfaccion", "isLoading"], [3, "close", "upload", "isOpen", "isUploading", "defaultArea"], [3, "cancel", "confirm", "documento", "isDeleting"], [1, "fixed", "bottom-5", "right-5", "z-50", "flex", "flex-col", "gap-2.5", "max-w-sm", "w-full", "pointer-events-none"], [3, "class"], [3, "openUpload", "refresh", "totalDocumentos", "totalFragmentos", "isLoading"], [3, "requestDelete", "openUpload", "documentos", "isLoading", "deletingId"], [3, "refresh", "items", "totalFeedback", "totalSi", "totalParcial", "totalNo", "porcentajeSatisfaccion", "isLoading"], [1, "flex", "items-start", "gap-2.5"], [1, "text-lg"], [1, "text-xs", "font-bold", "text-slate-900"], [1, "text-xs", "text-slate-600", "mt-0.5", "leading-relaxed"], ["type", "button", 1, "text-xs", "text-slate-400", "hover:text-slate-700", "cursor-pointer", 3, "click"]], template: function AdminDashboardComponent_Template(rf, ctx) {
+  }, decls: 25, vars: 14, consts: [["uploadModal", ""], [1, "min-h-dvh", "bg-white", "flex", "flex-col"], [3, "logout", "session"], [1, "flex-1", "w-full", "px-4", "sm:px-6", "lg:px-10", "py-6", "space-y-6", "bg-white"], [1, "flex", "flex-wrap", "items-center", "justify-between", "gap-4", "border-b", "border-slate-200", "pb-4"], [1, "inline-flex", "p-1.5", "rounded-2xl", "bg-slate-100", "border", "border-slate-200", "gap-1.5"], ["type", "button", 3, "click"], [3, "items", "totalFeedback", "totalSi", "totalParcial", "totalNo", "porcentajeSatisfaccion", "isLoading"], ["aria-label", "Notificaciones del sistema", 1, "fixed", "bottom-6", "right-6", "z-50", "flex", "flex-col", "gap-2.5", "max-w-sm", "pointer-events-none"], [1, "pointer-events-auto", "p-4", "rounded-2xl", "shadow-xl", "border", "flex", "items-start", "gap-3", "transform", "transition-all", "animate-in", "slide-in-from-bottom-2", "duration-200", 3, "class"], [3, "openUpload", "refresh", "totalDocumentos", "totalFragmentos", "isLoading", "isAdmin"], [3, "requestDelete", "openUpload", "documentos", "isLoading", "deletingId", "isAdmin"], [3, "refresh", "items", "totalFeedback", "totalSi", "totalParcial", "totalNo", "porcentajeSatisfaccion", "isLoading"], [3, "close", "upload", "isOpen", "isUploading", "defaultArea"], [3, "close", "confirm", "documento", "isDeleting"], [1, "pointer-events-auto", "p-4", "rounded-2xl", "shadow-xl", "border", "flex", "items-start", "gap-3", "transform", "transition-all", "animate-in", "slide-in-from-bottom-2", "duration-200"], [1, "text-base", "shrink-0"], [1, "flex-1", "min-w-0"], [1, "text-xs", "font-bold", "leading-tight"], [1, "text-[11px]", "opacity-90", "mt-0.5", "leading-snug"], ["type", "button", 1, "text-xs", "font-bold", "opacity-60", "hover:opacity-100", "transition-opacity", "shrink-0", "cursor-pointer", 3, "click"]], template: function AdminDashboardComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "div", 1)(1, "app-admin-navbar", 2);
       \u0275\u0275listener("logout", function AdminDashboardComponent_Template_app_admin_navbar_logout_1_listener() {
@@ -2698,29 +2844,15 @@ var AdminDashboardComponent = class _AdminDashboardComponent {
       \u0275\u0275elementStart(17, "span");
       \u0275\u0275text(18);
       \u0275\u0275elementEnd()()()();
-      \u0275\u0275conditionalCreate(19, AdminDashboardComponent_Conditional_19_Template, 2, 6);
+      \u0275\u0275conditionalCreate(19, AdminDashboardComponent_Conditional_19_Template, 2, 8);
       \u0275\u0275conditionalCreate(20, AdminDashboardComponent_Conditional_20_Template, 1, 7, "app-feedback-panel", 7);
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(21, "app-document-upload-modal", 8, 0);
-      \u0275\u0275listener("close", function AdminDashboardComponent_Template_app_document_upload_modal_close_21_listener() {
-        return ctx.closeUploadModal();
-      })("upload", function AdminDashboardComponent_Template_app_document_upload_modal_upload_21_listener($event) {
-        return ctx.onUploadDocument($event);
-      });
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(23, "app-confirm-delete-modal", 9);
-      \u0275\u0275listener("cancel", function AdminDashboardComponent_Template_app_confirm_delete_modal_cancel_23_listener() {
-        return ctx.onCancelDelete();
-      })("confirm", function AdminDashboardComponent_Template_app_confirm_delete_modal_confirm_23_listener($event) {
-        return ctx.onConfirmDelete($event);
-      });
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(24, "div", 10);
-      \u0275\u0275repeaterCreate(25, AdminDashboardComponent_For_26_Template, 13, 5, "div", 11, _forTrack03);
+      \u0275\u0275conditionalCreate(21, AdminDashboardComponent_Conditional_21_Template, 3, 5);
+      \u0275\u0275elementStart(22, "aside", 8);
+      \u0275\u0275repeaterCreate(23, AdminDashboardComponent_For_24_Template, 10, 5, "div", 9, _forTrack03);
       \u0275\u0275elementEnd()();
     }
     if (rf & 2) {
-      let tmp_12_0;
       \u0275\u0275advance();
       \u0275\u0275property("session", ctx.session());
       \u0275\u0275advance(4);
@@ -2740,9 +2872,7 @@ var AdminDashboardComponent = class _AdminDashboardComponent {
       \u0275\u0275advance();
       \u0275\u0275conditional(ctx.activeTab() === "feedback" ? 20 : -1);
       \u0275\u0275advance();
-      \u0275\u0275property("isOpen", ctx.isUploadModalOpen())("isUploading", ctx.isUploading())("defaultArea", ((tmp_12_0 = ctx.session()) == null ? null : tmp_12_0.areaDefault) || "GENERAL");
-      \u0275\u0275advance(2);
-      \u0275\u0275property("documento", ctx.docToDelete())("isDeleting", !!ctx.deletingId());
+      \u0275\u0275conditional(ctx.isAdmin() ? 21 : -1);
       \u0275\u0275advance(2);
       \u0275\u0275repeater(ctx.toasts());
     }
@@ -2823,6 +2953,7 @@ var AdminDashboardComponent = class _AdminDashboardComponent {
         [totalDocumentos]="totalDocumentos()"
         [totalFragmentos]="totalFragmentos()"
         [isLoading]="isLoadingList()"
+        [isAdmin]="isAdmin()"
         (openUpload)="openUploadModal()"
         (refresh)="cargarDocumentos()"
       />
@@ -2831,6 +2962,7 @@ var AdminDashboardComponent = class _AdminDashboardComponent {
         [documentos]="documentos()"
         [isLoading]="isLoadingList()"
         [deletingId]="deletingId()"
+        [isAdmin]="isAdmin()"
         (requestDelete)="onRequestDelete($event)"
         (openUpload)="openUploadModal()"
       />
@@ -2852,55 +2984,57 @@ var AdminDashboardComponent = class _AdminDashboardComponent {
 
   </main>
 
-  <!-- Modal de Ingesta / Carga de Documentos -->
-  <app-document-upload-modal
-    #uploadModal
-    [isOpen]="isUploadModalOpen()"
-    [isUploading]="isUploading()"
-    [defaultArea]="session()?.areaDefault || 'GENERAL'"
-    (close)="closeUploadModal()"
-    (upload)="onUploadDocument($event)"
-  />
+  <!-- Modal de Ingesta / Carga de Documentos (Solo Admin) -->
+  @if (isAdmin()) {
+    <app-document-upload-modal
+      #uploadModal
+      [isOpen]="isUploadModalOpen()"
+      [isUploading]="isUploading()"
+      [defaultArea]="session()?.areaDefault || 'GENERAL'"
+      (close)="closeUploadModal()"
+      (upload)="onUploadDocument($event)"
+    />
 
-  <!-- Modal de Confirmaci\xF3n de Eliminaci\xF3n -->
-  <app-confirm-delete-modal
-    [documento]="docToDelete()"
-    [isDeleting]="!!deletingId()"
-    (cancel)="onCancelDelete()"
-    (confirm)="onConfirmDelete($event)"
-  />
+    <!-- Modal de Confirmaci\xF3n de Eliminaci\xF3n -->
+    <app-confirm-delete-modal
+      [documento]="docToDelete()"
+      [isDeleting]="!!deletingId()"
+      (close)="onCancelDelete()"
+      (confirm)="onConfirmDelete()"
+    />
+  }
 
-  <!-- Contenedor de Notificaciones Toast Flotantes -->
-  <div class="fixed bottom-5 right-5 z-50 flex flex-col gap-2.5 max-w-sm w-full pointer-events-none">
+  <!-- Contenedor Flotante de Toasts / Notificaciones -->
+  <aside
+    class="fixed bottom-6 right-6 z-50 flex flex-col gap-2.5 max-w-sm pointer-events-none"
+    aria-label="Notificaciones del sistema">
     @for (toast of toasts(); track toast.id) {
       <div
+        class="pointer-events-auto p-4 rounded-2xl shadow-xl border flex items-start gap-3 transform transition-all animate-in slide-in-from-bottom-2 duration-200"
         [class]="toast.type === 'success'
-          ? 'toast-item pointer-events-auto p-4 rounded-2xl shadow-xl border flex items-start justify-between gap-3 bg-white border-emerald-200 border-l-4 border-l-emerald-500'
+          ? 'bg-emerald-50 border-emerald-200 text-emerald-900'
           : (toast.type === 'error'
-              ? 'toast-item pointer-events-auto p-4 rounded-2xl shadow-xl border flex items-start justify-between gap-3 bg-white border-red-200 border-l-4 border-l-[#BE002E]'
-              : 'toast-item pointer-events-auto p-4 rounded-2xl shadow-xl border flex items-start justify-between gap-3 bg-white border-blue-200 border-l-4 border-l-[#0050A1]')">
+              ? 'bg-red-50 border-red-200 text-[#BE002E]'
+              : 'bg-blue-50 border-blue-200 text-[#0050A1]')">
+        
+        <span class="text-base shrink-0">
+          {{ toast.type === 'success' ? '\u2705' : (toast.type === 'error' ? '\u274C' : '\u2139\uFE0F') }}
+        </span>
 
-        <div class="flex items-start gap-2.5">
-          <span class="text-lg">
-            @if (toast.type === 'success') { \u2705 }
-            @else if (toast.type === 'error') { \u274C }
-            @else { \u2139\uFE0F }
-          </span>
-          <div>
-            <div class="text-xs font-bold text-slate-900">{{ toast.title }}</div>
-            <div class="text-xs text-slate-600 mt-0.5 leading-relaxed">{{ toast.message }}</div>
-          </div>
+        <div class="flex-1 min-w-0">
+          <div class="text-xs font-bold leading-tight">{{ toast.title }}</div>
+          <div class="text-[11px] opacity-90 mt-0.5 leading-snug">{{ toast.message }}</div>
         </div>
 
         <button
           type="button"
-          (click)="dismissToast(toast.id)"
-          class="text-xs text-slate-400 hover:text-slate-700 cursor-pointer">
+          (click)="removeToast(toast.id)"
+          class="text-xs font-bold opacity-60 hover:opacity-100 transition-opacity shrink-0 cursor-pointer">
           \u2715
         </button>
       </div>
     }
-  </div>
+  </aside>
 
 </div>
 `, styles: ["/* src/app/features/backoffice/pages/admin-dashboard/admin-dashboard.component.css */\n.toast-item {\n  animation: slideInRight 0.25s cubic-bezier(0.16, 1, 0.3, 1);\n}\n@keyframes slideInRight {\n  from {\n    opacity: 0;\n    transform: translateX(20px);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n"] }]

@@ -31934,7 +31934,8 @@ var HydrationFeatureKind;
 // src/environments/environment.ts
 var environment = {
   production: false,
-  apiUrl: "https://api.cbb.digital.cloudlab.lat:8443/osia/v1"
+  //apiUrl: 'https://api.cbb.digital.cloudlab.lat:8443/osia/v1'
+  apiUrl: "http://localhost:8000/osia/v1"
 };
 
 export {

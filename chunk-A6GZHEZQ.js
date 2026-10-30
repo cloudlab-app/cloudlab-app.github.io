@@ -116,7 +116,7 @@ import {
   ɵɵloadQuery,
   ɵɵqueryRefresh,
   ɵɵsanitizeUrlOrResourceUrl
-} from "./chunk-GTRT2NL7.js";
+} from "./chunk-ZJRNLJ6C.js";
 
 // node_modules/@angular/router/fesm2022/_router-chunk.mjs
 var PRIMARY_OUTLET = "primary";
@@ -5866,6 +5866,14 @@ var BackofficeService = class _BackofficeService {
     /* istanbul ignore next */
     []
   ));
+  isAdmin = computed(() => this.currentSession()?.role === "admin", ...ngDevMode ? [{ debugName: "isAdmin" }] : (
+    /* istanbul ignore next */
+    []
+  ));
+  isViewer = computed(() => this.currentSession()?.role === "viewer", ...ngDevMode ? [{ debugName: "isViewer" }] : (
+    /* istanbul ignore next */
+    []
+  ));
   loadStoredSession() {
     try {
       const raw = sessionStorage.getItem(SESSION_STORAGE_KEY);
@@ -5881,16 +5889,16 @@ var BackofficeService = class _BackofficeService {
     });
   }
   /**
-   * Valida la clave administrativa contra el backend y guarda la sesión del operador
+   * Autentica el usuario contra el endpoint /admin/auth/login y almacena la sesión
    */
-  login(username, role, areaDefault, adminKey) {
-    const headers = this.getAdminHeaders(adminKey.trim());
-    return this.http.get(`${this.baseUrl}/rag/documentos`, { headers }).pipe(tap(() => {
+  login(credentials) {
+    return this.http.post(`${this.baseUrl}/auth/login`, credentials).pipe(tap((res) => {
       const session = {
-        username: username.trim() || "Administrador CBB",
-        role,
-        areaDefault,
-        adminKey: adminKey.trim(),
+        username: res.username,
+        role: res.role,
+        nombre: res.nombre,
+        areaDefault: res.area_default,
+        adminKey: res.token,
         loginTime: (/* @__PURE__ */ new Date()).toISOString()
       };
       sessionStorage.setItem(SESSION_STORAGE_KEY, JSON.stringify(session));
@@ -5918,7 +5926,7 @@ var BackofficeService = class _BackofficeService {
     }).pipe(catchError((err) => this.handleError(err)));
   }
   /**
-   * Sube e indexa un nuevo documento en la base vectorial
+   * Sube e indexa un nuevo documento en la base vectorial (Solo Administrador)
    */
   indexarDocumento(params) {
     const formData = new FormData();
@@ -5932,7 +5940,7 @@ var BackofficeService = class _BackofficeService {
     }).pipe(catchError((err) => this.handleError(err)));
   }
   /**
-   * Elimina un documento y todos sus fragmentos vectoriales de PostgreSQL
+   * Elimina un documento y todos sus fragmentos vectoriales de PostgreSQL (Solo Administrador)
    */
   eliminarDocumento(documentoId) {
     return this.http.delete(`${this.baseUrl}/rag/documentos/${encodeURIComponent(documentoId)}`, {
@@ -5942,7 +5950,9 @@ var BackofficeService = class _BackofficeService {
   handleError(error) {
     let errorMessage = "No se pudo conectar con el servidor de administraci\xF3n.";
     if (error.status === 401) {
-      errorMessage = "Clave administrativa (X-Admin-Key) inv\xE1lida o no autorizada.";
+      errorMessage = error.error?.detail || "Usuario o contrase\xF1a incorrectos.";
+    } else if (error.status === 403) {
+      errorMessage = error.error?.detail || "Acceso denegado: su perfil de consultor no tiene permisos para esta acci\xF3n.";
     } else if (error.status === 413) {
       errorMessage = "El archivo supera el l\xEDmite m\xE1ximo permitido de 25 MB.";
     } else if (error.status === 415) {
